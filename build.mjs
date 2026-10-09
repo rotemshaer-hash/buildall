@@ -125,7 +125,7 @@ home = withIcons(home)
 write('index.html', page({
   path: '', root: '',
   title: 'בונים הכל | בניית אתרים, דפי נחיתה ואפליקציות לעסקים',
-  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
+  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, faqSchema(homeFaq)],
   body: home
 }));
@@ -164,6 +164,7 @@ ${i.pains.map(p => `      <div class="pain"><span>✕</span><p>${p}</p></div>`).
     <h2 class="h2">הפתרונות ל${i.short}</h2>
     <div class="grid">
 ${i.solutions.map(s => `      <div class="card"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('\n')}
+      <div class="card"><div class="ic">${icon('bot')}</div><h3>עם AI, אם תרצה</h3><p>צ׳אט שעונה ללקוחות, סיכומים ומסמכים שממלאים את עצמם. משלבים רק איפה שזה חוסך לך זמן.</p></div>
       <div class="card idea"><div class="ic">${icon('bulb')}</div><h3>צריך משהו אחר?</h3><p>כל תהליך בעסק שלך אפשר להפוך לכלי פשוט. ספר לנו מה מעיק.</p></div>
     </div>
   </div>
