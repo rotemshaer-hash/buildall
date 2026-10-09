@@ -6,6 +6,7 @@ exclude:
   - CLAUDE.md
   - src
   - build.mjs
+  - tools
 include:
   - robots.txt
   - sitemap.xml

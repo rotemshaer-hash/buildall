@@ -40,3 +40,10 @@ document.addEventListener('pointermove', e => {
   c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
   c.style.setProperty('--my', (e.clientY - r.top) + 'px');
 });
+
+// Counts WhatsApp and phone clicks, per page, once Google Analytics is connected (GA_ID in src/layout.mjs).
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('[data-wa], [data-call], #lead button');
+  if (!a || typeof window.gtag !== 'function') return;
+  gtag('event', a.hasAttribute('data-call') ? 'phone_click' : 'whatsapp_click', { page: location.pathname });
+});

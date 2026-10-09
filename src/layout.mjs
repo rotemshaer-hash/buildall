@@ -8,6 +8,12 @@ export const BRAND = 'בונים הכל';
 export const FULL_NAME = 'בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות';
 export const PHONE = { display: '054-202-0812', intl: '+972-54-202-0812', tel: '+972542020812' };
 
+// Tracking. Both stay empty until Rotem creates them; while empty nothing is loaded.
+// GA_ID: the Google Analytics measurement ID, looks like 'G-XXXXXXXXXX'.
+export const GA_ID = '';
+// GSC_VERIFY: the content="..." value of the Search Console HTML-tag verification.
+export const GSC_VERIFY = '';
+
 // Line icons, 24×24, drawn with the brand gradient. Used as <svg class="i"><use href="#i-NAME"/></svg>.
 const ICONS = {
   globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
@@ -33,6 +39,8 @@ const ICONS = {
   wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
   dumbbell: '<path d="M6.5 6.5h11M6.5 17.5h11"/><path d="M6 20V4M18 20V4M3 16V8M21 16V8"/>',
   arrow: '<path d="M19 12H5M12 19l-7-7 7-7"/>',
+  call: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  book: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
   clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>'
 };
 
@@ -80,6 +88,15 @@ export function head({ title, description, path, schemas = [], root }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
+<meta property="og:image" content="${BASE}og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="בונים הכל – בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${BASE}og.jpg">${GSC_VERIFY ? `
+<meta name="google-site-verification" content="${GSC_VERIFY}">` : ''}${GA_ID ? `
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');</script>` : ''}
 <link rel="icon" href="${favicon}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,21 +114,26 @@ export function header(root) {
       <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="url(#lg)">${LOGO_SHAPES}</g></svg>
       <span><b>בונים <em>הכל</em></b><small>BUILD ALL</small></span>
     </a>
-    <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg>וואטסאפ</a>
+    <div class="head-actions">
+      <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
+      <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg>וואטסאפ</a>
+    </div>
   </div>
 </header>`;
 }
 
-export function footer(root, industries) {
+export function footer(root, nav) {
+  const links = (title, items, dir) => `<div><b class="ft">${title}</b><nav class="foot-links" aria-label="${title}">${items.map(i => `<a href="${root}${dir}${i.slug}/">${i.short}</a>`).join('')}</nav></div>`;
   return `<footer>
   <div class="wrap">
     <div><b>${BRAND}</b> · בניית אתרים, דפי נחיתה ואפליקציות לעסקים</div>
-    <nav class="foot-links" aria-label="פתרונות לפי תחום">${industries.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
-    <div><a href="tel:${PHONE.tel}">${PHONE.display}</a> · עובדים עם עסקים בכל הארץ</div>
-    <details>
-      <summary>הצהרת נגישות</summary>
-      <p>האתר נבנה כדי להיות נגיש לכלל המשתמשים: מבנה כותרות תקין, ניגודיות צבעים גבוהה, תמיכה בהגדלת טקסט ובניווט במקלדת, ותמיכה בהעדפת הפחתת תנועה. נתקלת בבעיית נגישות? שלח לנו הודעה בוואטסאפ ונטפל בה.</p>
-    </details>
+    <div class="foot-cols">
+      ${links('פתרונות לפי תחום', nav.industries, '')}
+      ${links('מדריכים', nav.guides, 'guides/')}
+      ${links('עבודות', nav.cases, 'work/')}
+    </div>
+    <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a> · עובדים עם עסקים בכל הארץ</div>
+    <nav class="foot-links" aria-label="מידע">${nav.legal.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
     <div>© <span id="y"></span> ${BRAND}. כל הזכויות שמורות.</div>
   </div>
 </footer>

@@ -6,7 +6,7 @@
 node build.mjs
 ```
 
-הפקודה כותבת את `index.html`, דף לכל תחום (`restaurants/`, `beauty/` וכו'), `sitemap.xml` ו־`robots.txt`.
+הפקודה כותבת את `index.html`, דף לכל תחום (`restaurants/`, `beauty/` וכו'), מדריכים (`guides/`), סיפורי פרויקטים (`work/`), `accessibility/`, `privacy/`, `sitemap.xml` ו־`robots.txt`.
 **את הקבצים האלה לא עורכים ישירות.** עורכים את המקור ובונים מחדש.
 
 | מה משנים | איפה |
@@ -17,4 +17,9 @@ node build.mjs
 | דפי התחומים: הוספה, עריכה | `src/industries.mjs` |
 | ביקורות מגוגל (רק אמיתיות) | `src/reviews.mjs` |
 | מספר הוואטסאפ | `WA_NUMBER` ב־`site.js` |
+| מדריכים | `src/guides.mjs` |
+| סיפורי פרויקטים | `src/cases.mjs` |
+| הצהרת נגישות ומדיניות פרטיות | `src/legal.mjs` (ותאריך העדכון `UPDATED`) |
+| Google Analytics ו־Search Console | `GA_ID` ו־`GSC_VERIFY` ב־`src/layout.mjs` |
+| תמונת השיתוף (`og.jpg`) | `node tools/og.mjs` (צריך Playwright) |
 | עיצוב | `style.css` |
