@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>בונים הכל | בניית אתרים, דפי נחיתה ואפליקציות לעסקים</title>
+<meta name="description" content="בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – דוגמה עובדת לפני שמחליטים.">
+<link rel="canonical" href="https://buildall.co.il/">
+<meta name="theme-color" content="#0F1A1F">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="בונים הכל">
+<meta property="og:title" content="בונים הכל | בניית אתרים, דפי נחיתה ואפליקציות לעסקים">
+<meta property="og:description" content="מדף נחיתה ועד אפליקציה מלאה – ופתרונות לכל מה שהעסק צריך. אנחנו בונים הכל.">
+<meta property="og:url" content="https://buildall.co.il/">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%230e7a72'/%3E%3Cstop offset='1' stop-color='%238b2fc9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230F1A1F'/%3E%3Crect x='12' y='38' width='10' height='14' rx='2' fill='url(%23g)'/%3E%3Crect x='27' y='27' width='10' height='25' rx='2' fill='url(%23g)'/%3E%3Crect x='42' y='14' width='10' height='38' rx='2' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות",
+  "alternateName": "Build All",
+  "url": "https://buildall.co.il/",
+  "slogan": "מדף נחיתה ועד אפליקציה מלאה. אנחנו בונים הכל.",
+  "description": "בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים: ניהול עובדים, משמרות, משימות, מסמכים, לקוחות, הדרכת עובדים וכלים לעבודה בשטח.",
+  "areaServed": [
+    {"@type": "City", "name": "תל אביב-יפו"},
+    {"@type": "Country", "name": "ישראל"}
+  ],
+  "address": {"@type": "PostalAddress", "addressLocality": "תל אביב-יפו", "addressCountry": "IL"},
+  "knowsAbout": ["בניית אתרים", "דפי נחיתה", "פיתוח אפליקציות", "מערכות ניהול לעסקים", "ניהול עובדים", "ניהול מסמכים"]
+}
+</script>
+<script type="application/ld+json" id="faq-schema"></script>
+
+<style>
+:root{
+  --ink:#0F1A1F; --teal:#0e7a72; --purple:#8b2fc9;
+  --grad:linear-gradient(150deg,#0F1A1F 0%,#0e7a72 45%,#8b2fc9 100%);
+  --accent:linear-gradient(90deg,#0e7a72,#8b2fc9);
+  --bg:#F5F7F8; --card:#FFFFFF; --text:#16232A; --muted:#55656D; --line:#E2E8EB;
+  --wa:#1fa855;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Assistant,system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Heebo,Assistant,sans-serif;line-height:1.25}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+section{padding:64px 0}
+.eyebrow{display:inline-block;font-weight:600;font-size:14px;color:var(--teal);letter-spacing:.3px;margin-bottom:8px}
+.h2{font-size:clamp(26px,5vw,38px);margin-bottom:12px}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:Heebo,sans-serif;font-weight:700;font-size:17px;border-radius:14px;padding:15px 24px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px rgba(31,168,85,.35)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(15,26,31,.92);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo b{font-family:Heebo,sans-serif;font-size:21px;font-weight:800}
+.logo small{display:block;font-size:11px;opacity:.7;letter-spacing:1px;direction:ltr;text-align:right}
+.head-cta{font-size:15px;padding:10px 16px}
+
+/* hero */
+.hero{background:var(--grad);color:#fff;padding:56px 0 72px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto -20% -40% auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 65%);pointer-events:none}
+.hero h1{font-size:clamp(32px,7vw,56px);font-weight:800;margin:10px 0 16px;max-width:780px}
+.hero h1 span{background:linear-gradient(90deg,#5ee2d4,#d9a6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;opacity:.92;max-width:620px;margin-bottom:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.pill{font-size:14px;font-weight:600;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:6px 14px}
+.hero .tag{font-size:15px;font-weight:600;background:rgba(0,0,0,.25);border-radius:99px;padding:6px 14px}
+
+/* services */
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.card .ic{width:46px;height:46px;border-radius:13px;background:var(--accent);display:grid;place-items:center;font-size:23px;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+.card.idea{background:var(--ink);color:#fff;border:0}
+.card.idea p{color:rgba(255,255,255,.8)}
+.group-title{font-family:Heebo,sans-serif;font-size:20px;margin:40px 0 -12px;display:flex;align-items:center;gap:10px}
+.group-title:after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ladder */
+.ladder{background:#fff}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:32px;align-items:end}
+.step{border-radius:var(--r);padding:20px;color:#fff;background:var(--grad);position:relative}
+.step:nth-child(1){min-height:150px}.step:nth-child(2){min-height:180px}.step:nth-child(3){min-height:210px}.step:nth-child(4){min-height:240px}
+.step .n{font-family:Heebo,sans-serif;font-size:13px;opacity:.75}
+.step h3{font-size:20px;margin:4px 0 6px}
+.step p{font-size:15px;opacity:.9}
+.step .t{position:absolute;bottom:14px;font-size:13px;font-weight:600;background:rgba(0,0,0,.25);border-radius:99px;padding:3px 10px}
+
+/* why */
+.why{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
+.why .card{display:flex;gap:14px}
+.why .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-family:Heebo,sans-serif;font-weight:800;display:grid;place-items:center}
+
+/* portfolio */
+.work{background:var(--ink);color:#fff}
+.work .lead{color:rgba(255,255,255,.75)}
+.projects{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:32px}
+.proj{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:18px}
+.phone{width:132px;height:236px;margin:0 auto 16px;border-radius:24px;border:5px solid #2b3a41;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.phone .bar{height:44px;background:var(--grad);color:#fff;font:700 12px Heebo,sans-serif;display:flex;align-items:flex-end;padding:0 9px 7px}
+.phone .row{margin:7px 8px 0;height:22px;border-radius:7px;background:#EEF2F3;display:flex;align-items:center;padding:0 6px;font-size:10px;color:#40525a;gap:4px}
+.phone .row.ok:before{content:"✓";color:var(--teal);font-weight:800}
+.phone .row.go{background:var(--accent);color:#fff;justify-content:center;font-weight:700;margin-top:auto;margin-bottom:9px}
+.phone .vid{margin:8px;height:70px;border-radius:9px;background:#1b2a31;display:grid;place-items:center;color:#fff;font-size:22px}
+.proj .size{font-size:12px;font-weight:700;color:#5ee2d4;letter-spacing:.4px}
+.proj h3{font-size:19px;margin:4px 0 6px}
+.proj p{font-size:15px;color:rgba(255,255,255,.78)}
+
+/* process */
+.process{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:32px}
+.process .card{position:relative;padding-top:52px}
+.process .card:before{counter-increment:s;content:counter(s);position:absolute;top:18px;right:22px;font:800 28px Heebo,sans-serif;background:var(--accent);-webkit-background-clip:text;background-clip:text;color:transparent}
+.process .card.hl{border:2px solid var(--teal)}
+
+/* guarantee */
+.guarantee{background:var(--grad);color:#fff;border-radius:24px;padding:36px 26px;text-align:center;margin:0 18px}
+.guarantee h2{font-size:clamp(24px,5vw,34px);margin-bottom:10px}
+.guarantee p{font-size:18px;opacity:.92;max-width:560px;margin:0 auto}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:10px}
+summary{font-family:Heebo,sans-serif;font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:22px;color:var(--teal);line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+
+/* contact */
+.contact{background:#fff}
+form{max-width:560px;margin:28px auto 0;display:grid;gap:12px}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:17px;border:1px solid var(--line);border-radius:12px;padding:13px 14px;background:var(--bg);color:var(--text);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);border-color:transparent}
+textarea{min-height:96px;resize:vertical}
+form .btn{width:100%;margin-top:6px}
+.note{font-size:14px;color:var(--muted);text-align:center}
+
+footer{background:var(--ink);color:rgba(255,255,255,.7);padding:36px 0 110px;font-size:15px}
+footer .wrap{display:grid;gap:14px}
+footer b{color:#fff;font-family:Heebo,sans-serif}
+footer details{background:transparent;border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.8)}
+footer summary{font-size:15px;color:#fff}
+footer details p{color:rgba(255,255,255,.7);font-size:14px}
+
+/* floating whatsapp */
+.fab{position:fixed;bottom:18px;left:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.fab svg{width:32px;height:32px}
+
+@media (min-width:760px){
+  section{padding:88px 0}
+  .hero{padding:90px 0 110px}
+  .guarantee{margin:0 auto;max-width:1044px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2fd3c3"/><stop offset="1" stop-color="#c58bff"/></linearGradient>
+    <symbol id="wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="בונים הכל – לראש הדף">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="38" width="12" height="16" rx="3" fill="url(#lg)"/><rect x="26" y="25" width="12" height="29" rx="3" fill="url(#lg)"/><rect x="42" y="10" width="12" height="44" rx="3" fill="url(#lg)"/></svg>
+      <span><b>בונים הכל</b><small>BUILD ALL</small></span>
+    </a>
+    <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg>וואטסאפ</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">📍 תל אביב · עובדים עם עסקים בכל הארץ</span>
+    <h1>בניית אתרים, דפי נחיתה ואפליקציות <span>לעסקים</span></h1>
+    <p>וגם כל פתרון שהעסק שלך צריך: ניהול עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן שמוכן תוך ימים ועד מערכת מלאה. <b>אנחנו בונים הכל.</b></p>
+    <div class="ctas">
+      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>קבל דוגמה בחינם</a>
+      <a class="btn btn-ghost" href="#services">מה אפשר לבנות?</a>
+    </div>
+    <div class="pills">
+      <span class="pill">✓ דוגמה עובדת לפני תשלום</span>
+      <span class="pill">✓ מחיר סגור מראש</span>
+      <span class="pill">✓ התחייבות למחיר הכי משתלם</span>
+      <span class="pill">✓ איש קשר אחד מההתחלה עד הסוף</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">מה אנחנו בונים</span>
+    <h2 class="h2">כל מה שהעסק שלך צריך. במקום אחד.</h2>
+    <p class="lead">לא רק אתר ולא רק אפליקציה. כל תהליך שהיום מתנהל בפתקים, באקסל או בהודעות בוואטסאפ, אנחנו הופכים לכלי דיגיטלי פשוט.</p>
+
+    <h3 class="group-title">נוכחות ברשת</h3>
+    <div class="grid">
+      <div class="card"><div class="ic">🌐</div><h3>בניית אתר לעסק</h3><p>אתר תדמית מהיר ויפה, מותאם לנייד ובנוי כדי להופיע בגוגל.</p></div>
+      <div class="card"><div class="ic">🎯</div><h3>בניית דף נחיתה</h3><p>עמוד אחד שמביא פניות, עם טופס, כפתור וואטסאפ ומעקב אחרי לידים.</p></div>
+      <div class="card"><div class="ic">📱</div><h3>בניית אפליקציה</h3><p>מאפיון ועד חנות האפליקציות: משתמשים, הרשמה, מסד נתונים וממשק ניהול.</p></div>
+      <div class="card"><div class="ic">🛒</div><h3>חנות ותורים אונליין</h3><p>מכירה, הזמנות וקביעת תורים ישירות מהאתר או מהטלפון.</p></div>
+    </div>
+
+    <h3 class="group-title">ניהול העסק</h3>
+    <div class="grid">
+      <div class="card"><div class="ic">👥</div><h3>ניהול עובדים</h3><p>פרטי עובדים, נוכחות, הרשאות ותיעוד. הכול במקום אחד ונגיש מהנייד.</p></div>
+      <div class="card"><div class="ic">🗓️</div><h3>סידור עבודה ומשמרות</h3><p>סידור שבועי שהעובדים רואים בקישור, עם בקשות, החלפות ועדכונים.</p></div>
+      <div class="card"><div class="ic">✅</div><h3>משימות לצוות</h3><p>מקצים משימה, העובד מקבל קישור ומחזיר אישור ביצוע עם תמונה ושעה.</p></div>
+      <div class="card"><div class="ic">📄</div><h3>ניהול מסמכים וטפסים</h3><p>טפסים דיגיטליים, חתימות, תיוק ואיתור מסמך בשנייה. בלי ניירת.</p></div>
+      <div class="card"><div class="ic">🤝</div><h3>ניהול לקוחות ופניות</h3><p>כל לקוח, כל פנייה וכל הצעת מחיר. אף ליד לא נופל בין הכיסאות.</p></div>
+      <div class="card"><div class="ic">🎓</div><h3>הדרכת עובדים</h3><p>סרטוני הדרכה שאי אפשר לדלג עליהם, מבחן בסוף, והתוצאות אצלך במייל.</p></div>
+      <div class="card"><div class="ic">📸</div><h3>כלים לעבודה בשטח</h3><p>העובד מצלם ומתעד מהשטח, ואתה מקבל דוח אקסל מסודר.</p></div>
+      <div class="card"><div class="ic">📦</div><h3>מלאי והזמנות</h3><p>מעקב מלאי, הזמנות מספקים והתראה לפני שמשהו נגמר.</p></div>
+      <div class="card"><div class="ic">⚡</div><h3>אוטומציות וחיבורים</h3><p>חיבור בין וואטסאפ, מייל, אקסל והמערכות שכבר יש לך, כדי שדברים יקרו לבד.</p></div>
+      <div class="card"><div class="ic">📊</div><h3>דשבורד ודוחות</h3><p>כל המספרים של העסק במסך אחד, מעודכנים בזמן אמת.</p></div>
+      <div class="card idea"><div class="ic">💡</div><h3>יש לך רעיון אחר?</h3><p>לא מצאת את מה שאתה צריך ברשימה? ספר לנו, ואנחנו נבנה את זה.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LADDER -->
+<section class="ladder">
+  <div class="wrap center">
+    <span class="eyebrow">בגודל הנכון</span>
+    <h2 class="h2">מכלי קטן ועד מערכת מלאה</h2>
+    <p class="lead">לא מוכרים לך מערכת ענקית כשצריך כלי פשוט. מתחילים בדיוק במה שהעסק צריך, ומרחיבים כשזה עובד, אצל אותו אחד.</p>
+    <div class="steps" style="text-align:right">
+      <div class="step"><span class="n">שלב 1</span><h3>כלי קטן</h3><p>פותר בעיה אחת: טופס, דוח, תיעוד.</p><span class="t">ימים</span></div>
+      <div class="step"><span class="n">שלב 2</span><h3>אתר ודף נחיתה</h3><p>נוכחות בגוגל שמביאה לקוחות.</p><span class="t">ימים עד שבועיים</span></div>
+      <div class="step"><span class="n">שלב 3</span><h3>מערכת ניהול</h3><p>עובדים, משימות, מסמכים ולקוחות.</p><span class="t">שבועות</span></div>
+      <div class="step"><span class="n">שלב 4</span><h3>אפליקציה מלאה</h3><p>משתמשים, הרשמה, מסד נתונים וחנות האפליקציות.</p><span class="t">לפי היקף</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">למה בונים הכל</span>
+    <h2 class="h2">מה מקבלים אצלנו ולא אצל אחרים</h2>
+    <div class="why">
+      <div class="card"><span class="num">1</span><div><h3>הכול אצל אחד</h3><p>לא צריך משרד לאתר, מפתח לאפליקציה וחברה שלישית למערכת ניהול. מי שמדבר איתך הוא מי שבונה.</p></div></div>
+      <div class="card"><span class="num">2</span><div><h3>רואים לפני שמשלמים</h3><p>מקבלים דוגמה עובדת לפני שמחליטים. רוב המתחרים מבקשים מקדמה לפני שראית משהו.</p></div></div>
+      <div class="card"><span class="num">3</span><div><h3>בגודל הנכון, וגדל איתך</h3><p>מתחילים קטן ומרחיבים כשזה עובד. לא מחליפים ספק באמצע הדרך.</p></div></div>
+      <div class="card"><span class="num">4</span><div><h3>העובדים לא מתקינים כלום</h3><p>בכלים לניהול צוות העובד רק לוחץ על קישור. בלי אפליקציה, בלי סיסמה ובלי תשלום לפי עובד.</p></div></div>
+      <div class="card"><span class="num">5</span><div><h3>מחיר סגור והכי משתלם</h3><p>המחיר נקבע מראש, בלי הפתעות. קיבלת הצעה זולה יותר על אותה עבודה? נשווה אותה.</p></div></div>
+      <div class="card"><span class="num">6</span><div><h3>נבנה קודם לנייד</h3><p>שם נמצאים הלקוחות והעובדים שלך, ולכן כל דבר שאנחנו בונים מתחיל מהטלפון.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="work" id="work">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#5ee2d4">עבודות</span>
+    <h2 class="h2">מערכות שבנינו ועובדות היום</h2>
+    <p class="lead">כל הסולם, מכלי קטן ועד אפליקציה מלאה. רוצה לראות אחת מהן בפעולה? שלח הודעה ונשלח לך הדגמה.</p>
+    <div class="projects">
+      <div class="proj">
+        <div class="phone" aria-hidden="true"><div class="bar">שיוך תמונות</div><div class="vid">📷</div><div class="row">כתובת · עיר</div><div class="row">ספק · אלמנט</div><div class="row go">הכנת אקסל</div></div>
+        <span class="size">כלי קטן</span><h3>תיעוד שטח לסניפים</h3><p>העובד מצלם בסניף, ממלא כמה פרטים, והמנהל מקבל דוח אקסל מוכן.</p>
+      </div>
+      <div class="proj">
+        <div class="phone" aria-hidden="true"><div class="bar">מבחן עובדים</div><div class="vid">▶</div><div class="row ok">צפיתי בסרטון</div><div class="row">שאלה 1 מתוך 8</div><div class="row go">שליחה</div></div>
+        <span class="size">מערכת הדרכה</span><h3>מבחן עובדים</h3><p>סרטוני הדרכה בלי דילוג, מבחן, קישור אישי לכל עובד והתוצאות במייל של המנהל.</p>
+      </div>
+      <div class="proj">
+        <div class="phone" aria-hidden="true"><div class="bar">Work It</div><div class="row ok">ניקוי מחסן</div><div class="row ok">קבלת סחורה</div><div class="row">סידור מדפים</div><div class="row">ספירת מלאי</div><div class="row go">+ משימה</div></div>
+        <span class="size">ניהול צוות</span><h3>Work It</h3><p>משימות לצוות דרך קישור בוואטסאפ, עם הוכחת ביצוע ותמונה עם שעה. העובד לא מתקין כלום.</p>
+      </div>
+      <div class="proj">
+        <div class="phone" aria-hidden="true"><div class="bar">Drushe</div><div class="row">התחברות</div><div class="row ok">חשבון אושר</div><div class="row">פרופיל · הודעות</div><div class="row">ממשק ניהול</div><div class="row go">כניסה</div></div>
+        <span class="size">אפליקציה מלאה</span><h3>Drushe</h3><p>אפליקציה מלאה עם משתמשים, הרשמה, אישורים, מסד נתונים וממשק ניהול.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">איך זה עובד</span>
+    <h2 class="h2">ארבעה צעדים, ואתה רק מאשר</h2>
+    <div class="process">
+      <div class="card"><h3>מספרים לנו</h3><p>הודעה בוואטסאפ: מה העסק, ומה מעיק או חסר.</p></div>
+      <div class="card hl"><h3>דוגמה בחינם</h3><p>מקבלים דוגמה עובדת איך זה ייראה. בלי התחייבות.</p></div>
+      <div class="card"><h3>בונים במחיר סגור</h3><p>אהבת? סוגרים מחיר מראש ובונים. אתה רואה כל שלב.</p></div>
+      <div class="card"><h3>עולים לאוויר ומלווים</h3><p>מעלים, מלמדים, וממשיכים ללוות בעדכונים ובהרחבות.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="guarantee">
+  <h2>התחייבות למחיר הכי משתלם</h2>
+  <p>קיבלת הצעה זולה יותר על אותה עבודה? שלח לנו אותה, ונשווה.</p>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow">שאלות נפוצות</span>
+    <h2 class="h2">מה שכולם שואלים</h2>
+    <div id="faq-list">
+    <details><summary>כמה עולה לבנות אתר או אפליקציה?</summary><p>זה תלוי בגודל. כלי קטן או דף נחיתה עולים הרבה פחות מאפליקציה מלאה. אחרי שיחה קצרה מקבלים מחיר סגור מראש, בלי הפתעות, ובהתחייבות למחיר הכי משתלם: קיבלת הצעה זולה יותר על אותה עבודה? נשווה אותה.</p></details>
+    <details><summary>כמה זמן לוקח?</summary><p>כלי קטן מוכן תוך ימים, דף נחיתה ואתר תוך ימים עד שבועיים, ומערכת ניהול או אפליקציה תוך כמה שבועות, לפי ההיקף. את לוח הזמנים סוגרים מראש.</p></details>
+    <details><summary>אפשר לראות משהו לפני שמשלמים?</summary><p>כן. זה הבסיס של איך שאנחנו עובדים: קודם מקבלים דוגמה עובדת, ורק אם אהבת מתחילים.</p></details>
+    <details><summary>העובדים שלי יצטרכו להתקין אפליקציה?</summary><p>בכלים לניהול צוות, לא. העובד מקבל קישור בוואטסאפ ולוחץ עליו. בלי התקנה, בלי סיסמה ובלי תשלום לפי עובד.</p></details>
+    <details><summary>אתם בונים רק אתרים?</summary><p>לא. אנחנו בונים הכל: אתרים, דפי נחיתה, אפליקציות, ומערכות לניהול עובדים, משמרות, משימות, מסמכים, לקוחות ומלאי. ואם יש לך רעיון שלא מופיע כאן, נבנה גם אותו.</p></details>
+    <details><summary>מה קורה אם אחרי ההשקה צריך שינוי?</summary><p>ממשיכים ללוות. אפשר לבקש עדכונים, תיקונים והרחבות, ואותו איש קשר מטפל בהכול.</p></details>
+    <details><summary>אתם עובדים רק בתל אביב?</summary><p>אנחנו בתל אביב, ועובדים עם עסקים בכל הארץ. כל התהליך יכול להתנהל בוואטסאפ ובטלפון.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap center">
+    <span class="eyebrow">מתחילים</span>
+    <h2 class="h2">ספר לנו מה אתה צריך</h2>
+    <p class="lead">שלוש שורות, והן נשלחות אלינו בוואטסאפ. תשובה עוד היום.</p>
+    <form id="lead" style="text-align:right">
+      <label>שם<input name="name" autocomplete="name" required></label>
+      <label>שם העסק<input name="biz" autocomplete="organization"></label>
+      <label>מה צריך לבנות?
+        <select name="what">
+          <option>אתר לעסק</option>
+          <option>דף נחיתה</option>
+          <option>אפליקציה</option>
+          <option>מערכת ניהול (עובדים, משמרות, מסמכים, לקוחות)</option>
+          <option>כלי או פתרון אחר</option>
+          <option>עוד לא בטוח, רוצה להתייעץ</option>
+        </select>
+      </label>
+      <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
+      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח בוואטסאפ וקבל דוגמה</button>
+      <p class="note">בלי התחייבות. הדוגמה בחינם.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>בונים הכל</b> · בניית אתרים, דפי נחיתה ואפליקציות לעסקים</div>
+    <div>buildall.co.il · תל אביב · עובדים עם עסקים בכל הארץ</div>
+    <details>
+      <summary>הצהרת נגישות</summary>
+      <p>האתר נבנה כדי להיות נגיש לכלל המשתמשים: מבנה כותרות תקין, ניגודיות צבעים גבוהה, תמיכה בהגדלת טקסט ובניווט במקלדת, ותמיכה בהעדפת הפחתת תנועה. נתקלת בבעיית נגישות? שלח לנו הודעה בוואטסאפ ונטפל בה.</p>
+    </details>
+    <div>© <span id="y"></span> בונים הכל. כל הזכויות שמורות.</div>
+  </div>
+</footer>
+
+<a class="fab" data-wa href="#contact" aria-label="שליחת הודעה בוואטסאפ"><svg><use href="#wa"/></svg></a>
+
+<script>
+// The one place the WhatsApp number lives. International format, digits only (972...).
+const WA_NUMBER = '';
+
+// The FAQ is written once, in the HTML above; the schema Google reads is built from it.
+const faq = [...document.querySelectorAll('#faq-list details')].map(d => ({
+  '@type': 'Question', name: d.querySelector('summary').textContent,
+  acceptedAnswer: { '@type': 'Answer', text: d.querySelector('p').textContent }
+}));
+document.getElementById('faq-schema').textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq });
+
+const waLink = text => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+const GREETING = 'היי, הגעתי מהאתר של בונים הכל ואשמח לדוגמה בחינם 🙂';
+if (WA_NUMBER) {
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = waLink(GREETING); a.target = '_blank'; a.rel = 'noopener'; });
+}
+
+document.getElementById('lead').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const text = [
+    'היי, הגעתי מהאתר של בונים הכל 🙂',
+    'שם: ' + f.get('name'),
+    f.get('biz') ? 'עסק: ' + f.get('biz') : '',
+    'צריך: ' + f.get('what'),
+    f.get('msg') ? 'הרעיון: ' + f.get('msg') : ''
+  ].filter(Boolean).join('\n');
+  if (WA_NUMBER) window.open(waLink(text), '_blank', 'noopener');
+});
+
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
