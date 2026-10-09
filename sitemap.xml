@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://rotemshaer-hash.github.io/buildall/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/restaurants/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/beauty/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/retail/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/clinics/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/contractors/</loc></url>
+  <url><loc>https://rotemshaer-hash.github.io/buildall/fitness/</loc></url>
 </urlset>
