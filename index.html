@@ -171,6 +171,32 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 .fab{position:fixed;bottom:18px;left:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px rgba(0,0,0,.3)}
 .fab svg{width:32px;height:32px}
 
+
+/* hero visual: desktop only */
+.hero-grid{display:block}
+.hero-vis{display:none}
+@media (min-width:980px){
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero-vis{display:block;position:relative;height:380px}
+}
+.browser{position:absolute;inset:20px 0 30px 60px;background:#fff;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.35);overflow:hidden;color:var(--text)}
+.browser .top{height:30px;background:#E9EEF0;display:flex;align-items:center;gap:6px;padding:0 12px;direction:ltr}
+.browser .top i{width:9px;height:9px;border-radius:50%;background:#c9d3d7}
+.browser .top span{margin-left:10px;font-size:11px;color:#6b7b82;background:#fff;border-radius:6px;padding:2px 10px}
+.dash{display:grid;grid-template-columns:90px 1fr;height:calc(100% - 30px)}
+.dash nav{background:var(--ink);padding:12px 8px;display:grid;gap:8px;align-content:start}
+.dash nav b{height:9px;border-radius:5px;background:rgba(255,255,255,.18)}
+.dash nav b:first-child{background:var(--accent)}
+.dash .body{padding:14px;display:grid;gap:10px;align-content:start}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kpi{background:var(--bg);border-radius:10px;padding:8px 10px;font-size:11px;color:var(--muted)}
+.kpi strong{display:block;font:800 18px Heebo,sans-serif;color:var(--text)}
+.chart{height:92px;border-radius:10px;background:var(--bg);display:flex;align-items:flex-end;gap:7px;padding:10px}
+.chart i{flex:1;border-radius:4px 4px 0 0;background:var(--accent)}
+.trow{display:flex;justify-content:space-between;font-size:11px;background:var(--bg);border-radius:8px;padding:6px 10px}
+.trow em{font-style:normal;color:var(--teal);font-weight:700}
+.hero-vis .phone{position:absolute;left:0;bottom:0;margin:0;box-shadow:0 24px 50px rgba(0,0,0,.4);border-color:#0b1418}
+
 @media (min-width:760px){
   section{padding:88px 0}
   .hero{padding:90px 0 110px}
@@ -202,7 +228,8 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div>
     <span class="tag">📍 תל אביב · עובדים עם עסקים בכל הארץ</span>
     <h1>בניית אתרים, דפי נחיתה ואפליקציות <span>לעסקים</span></h1>
     <p>וגם כל פתרון שהעסק שלך צריך: ניהול עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן שמוכן תוך ימים ועד מערכת מלאה. <b>אנחנו בונים הכל.</b></p>
@@ -215,6 +242,22 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
       <span class="pill">✓ מחיר סגור מראש</span>
       <span class="pill">✓ התחייבות למחיר הכי משתלם</span>
       <span class="pill">✓ איש קשר אחד מההתחלה עד הסוף</span>
+    </div>
+   </div>
+    <div class="hero-vis" aria-hidden="true">
+      <div class="browser">
+        <div class="top"><i></i><i></i><i></i><span>מערכת ניהול · העסק שלך</span></div>
+        <div class="dash">
+          <nav><b></b><b></b><b></b><b></b><b></b></nav>
+          <div class="body">
+            <div class="kpis"><div class="kpi">עובדים במשמרת<strong>12</strong></div><div class="kpi">משימות היום<strong>34</strong></div><div class="kpi">פניות חדשות<strong>8</strong></div></div>
+            <div class="chart"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:75%"></i><i style="height:58%"></i><i style="height:90%"></i><i style="height:70%"></i></div>
+            <div class="trow">סידור עבודה – שבוע הבא <em>פורסם ✓</em></div>
+            <div class="trow">חוזה ספק – נחתם דיגיטלית <em>✓</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="phone"><div class="bar">העסק שלך</div><div class="row ok">משימה בוצעה</div><div class="row ok">משמרת אושרה</div><div class="row">מסמך לחתימה</div><div class="row">תור חדש · 16:00</div><div class="row go">פתח</div></div>
     </div>
   </div>
 </section>
