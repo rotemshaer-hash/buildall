@@ -1,0 +1,11 @@
+# GitHub Pages builds the site from this repo. Only the site itself is served:
+# the plan, the notes and the build sources stay in the repo and never reach the site.
+exclude:
+  - PLAN.md
+  - README.md
+  - CLAUDE.md
+  - src
+  - build.mjs
+include:
+  - robots.txt
+  - sitemap.xml
