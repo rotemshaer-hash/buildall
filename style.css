@@ -264,3 +264,70 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 .foot-links a:hover{color:#fff;text-decoration:underline}
 
 @media (prefers-reduced-motion:reduce){.logo .lb{animation:none}}
+
+/* ---------- portfolio mockups: each project in its own look ---------- */
+.mock{position:relative;height:270px;margin-bottom:18px;display:flex;align-items:center;justify-content:center}
+.mock .dev{width:138px;height:240px;border-radius:24px;border:5px solid #0b1418;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 40px rgba(0,0,0,.35);font-size:10px;transition:transform .4s}
+@media (hover:hover){.proj:hover .mock .dev{transform:translateY(-4px) rotate(-2deg)}}
+
+/* field tool: light form with dashed buttons, and the Excel report it produces */
+.m-tag .dev{background:#f3f6fb;color:#1e293b;padding:10px 8px;gap:6px;margin-right:30px}
+.tg-title{font:800 11px Heebo,sans-serif;text-align:right}
+.tg-btns{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.tg-btns span{border:1.5px dashed #2563eb;color:#2563eb;border-radius:8px;padding:7px 2px;text-align:center;font-weight:700;font-size:9px;background:#fff}
+.tg-f{background:#fff;border-radius:7px;padding:4px 6px;display:grid}
+.tg-f i{font-style:normal;color:#64748b;font-size:8px}
+.tg-f b{font-size:10px}
+.tg-save{margin-top:auto;background:#2563eb;color:#fff;border-radius:8px;text-align:center;padding:7px;font-weight:800}
+.xls{position:absolute;left:8px;bottom:22px;width:118px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.4);transform:rotate(-6deg)}
+.xh{background:#1d6f42;color:#fff;font:700 9px Assistant,sans-serif;padding:5px 7px;direction:ltr}
+.xg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d7e4dc;padding:1px}
+.xg i{height:12px;background:#fff}
+.xg i:nth-child(-n+3){background:#e7f4ec}
+
+/* training: a laptop with a locked video and a question */
+.m-quiz .lap{width:210px;height:140px;background:#0b1418;border-radius:12px 12px 4px 4px;padding:7px;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.m-quiz .scr{background:#fff;height:100%;border-radius:5px;padding:6px;display:flex;flex-direction:column;gap:4px;color:#1e293b;font-size:9px}
+.m-quiz .base{position:absolute;bottom:58px;width:250px;height:9px;background:linear-gradient(#c9d3d9,#8d9aa2);border-radius:0 0 10px 10px}
+.qz-vid{background:#0e2440;border-radius:5px;height:48px;position:relative;display:grid;place-items:center;color:#fff}
+.qz-vid span{width:20px;height:20px;border-radius:50%;background:#0b63c4;display:grid;place-items:center;font-size:9px}
+.qz-bar{position:absolute;bottom:5px;left:6px;right:6px;height:3px;background:rgba(255,255,255,.25);border-radius:2px}
+.qz-bar i{position:absolute;right:0;top:0;bottom:0;width:62%;background:#41b8f0;border-radius:2px}
+.qz-vid em{position:absolute;top:3px;left:5px;font-style:normal;font-size:7px;opacity:.85}
+.qz-q{font-weight:800;font-size:9px}
+.qz-o{border:1px solid #e2e8ec;border-radius:5px;padding:2px 5px;font-size:8px}
+.qz-o.on{border-color:#0b63c4;background:#eaf3fd;color:#0b63c4;font-weight:700}
+
+/* team tasks: it lives inside a WhatsApp chat */
+.m-wa .dev{background:#efeae2}
+.wa-h{background:#075e54;color:#fff;font:700 11px Heebo,sans-serif;padding:22px 8px 7px;display:flex;align-items:center;gap:6px}
+.wa-h .av{width:20px;height:20px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:10px}
+.wa-chat{padding:8px 6px;display:flex;flex-direction:column;gap:6px;color:#111b21}
+.wa-chat .b{max-width:88%;border-radius:8px;padding:5px 6px 12px;position:relative;font-size:9px;box-shadow:0 1px 1px rgba(0,0,0,.12)}
+.wa-chat .b s{position:absolute;bottom:2px;left:6px;text-decoration:none;font-size:7px;color:#667781}
+.wa-chat .out{align-self:flex-start;background:#d9fdd3}
+.wa-chat .in{align-self:flex-end;background:#fff}
+.lnk{background:rgba(7,94,84,.08);border-right:3px solid #075e54;border-radius:5px;padding:4px 5px;display:grid;gap:2px}
+.lnk b{font-size:9px}
+.lnk i{font-style:normal;color:#075e54;font-weight:700;font-size:8px}
+
+/* full app: two dark app screens, dashboard and login */
+.m-dr .dev{position:absolute;background:#0F1A1F;color:#fff;padding:10px 9px;gap:8px}
+.m-dr .d1{right:calc(50% - 88px);top:10px;z-index:2}
+.m-dr .d2{left:calc(50% - 80px);top:28px;transform:rotate(-7deg);opacity:.92}
+.dr-hd{margin-top:18px;font:800 13px Heebo,sans-serif;text-align:right}
+.dr-in{height:22px;border-radius:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.dr-btn{margin-top:auto;border-radius:9px;padding:8px;text-align:center;font-weight:800;background:linear-gradient(90deg,#14B8A6,#06B6D4);color:#0F1A1F}
+.dr-top{display:flex;align-items:center;gap:6px}
+.dr-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#14B8A6,#8b2fc9)}
+.dr-nm{height:7px;width:56px;border-radius:4px;background:rgba(255,255,255,.25)}
+.dr-ring{width:78px;height:78px;margin:6px auto 0;border-radius:50%;background:conic-gradient(#14B8A6 0 87%,rgba(255,255,255,.1) 0);display:grid;place-items:center;position:relative}
+.dr-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#0F1A1F}
+.dr-ring b{position:relative;font:800 15px Heebo,sans-serif}
+.dr-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.dr-stats i{height:26px;border-radius:7px;background:rgba(20,184,166,.18)}
+.dr-stats i:nth-child(2){background:rgba(6,182,212,.18)}
+.dr-nav{margin-top:auto;display:flex;justify-content:space-around;padding-top:6px;border-top:1px solid rgba(255,255,255,.1)}
+.dr-nav i{width:12px;height:12px;border-radius:4px;background:rgba(255,255,255,.2)}
+.dr-nav i.on{background:#14B8A6}
+@media (prefers-reduced-motion:reduce){.mock .dev{transition:none}}

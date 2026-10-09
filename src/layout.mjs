@@ -107,7 +107,7 @@ export function footer(root, industries) {
   <div class="wrap">
     <div><b>${BRAND}</b> · בניית אתרים, דפי נחיתה ואפליקציות לעסקים</div>
     <nav class="foot-links" aria-label="פתרונות לפי תחום">${industries.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
-    <div><a href="tel:${PHONE.tel}">${PHONE.display}</a> · תל אביב · עובדים עם עסקים בכל הארץ</div>
+    <div><a href="tel:${PHONE.tel}">${PHONE.display}</a> · עובדים עם עסקים בכל הארץ</div>
     <details>
       <summary>הצהרת נגישות</summary>
       <p>האתר נבנה כדי להיות נגיש לכלל המשתמשים: מבנה כותרות תקין, ניגודיות צבעים גבוהה, תמיכה בהגדלת טקסט ובניווט במקלדת, ותמיכה בהעדפת הפחתת תנועה. נתקלת בבעיית נגישות? שלח לנו הודעה בוואטסאפ ונטפל בה.</p>
@@ -145,7 +145,7 @@ export function contact(lead = 'שלוש שורות, והן נשלחות אלי�
       </label>
       <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
       <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח וקבע שיחת ייעוץ חינם</button>
-      <p class="note"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg> עונים תוך שעה בימים א׳–ה׳ · בלי התחייבות</p>
+      <p class="note">בלי התחייבות. שיחת הייעוץ בחינם.</p>
     </form>
   </div>
 </section>`;
@@ -161,8 +161,7 @@ export const business = {
   telephone: PHONE.intl,
   slogan: 'מדף נחיתה ועד אפליקציה מלאה. אנחנו בונים הכל.',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים: ניהול עובדים, משמרות, משימות, מסמכים, לקוחות, הדרכת עובדים וכלים לעבודה בשטח.',
-  areaServed: [{ '@type': 'City', name: 'תל אביב-יפו' }, { '@type': 'Country', name: 'ישראל' }],
-  address: { '@type': 'PostalAddress', addressLocality: 'תל אביב-יפו', addressCountry: 'IL' },
+  areaServed: { '@type': 'Country', name: 'ישראל' },
   knowsAbout: ['בניית אתרים', 'דפי נחיתה', 'פיתוח אפליקציות', 'מערכות ניהול לעסקים', 'ניהול עובדים', 'ניהול מסמכים']
 };
 

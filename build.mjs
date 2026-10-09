@@ -145,7 +145,7 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
         '@context': 'https://schema.org', '@type': 'Service',
         name: i.h1, serviceType: i.short, description: i.description,
         provider: { '@id': BASE + '#business' },
-        areaServed: [{ '@type': 'City', name: 'תל אביב-יפו' }, { '@type': 'Country', name: 'ישראל' }],
+        areaServed: { '@type': 'Country', name: 'ישראל' },
         url: BASE + i.slug + '/'
       },
       {
