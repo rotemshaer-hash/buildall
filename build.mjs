@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { BASE, head, header, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
+import { BASE, BRAND, FULL_NAME, head, header, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
@@ -124,8 +124,8 @@ home = withIcons(home)
 
 write('index.html', page({
   path: '', root: '',
-  title: 'בונים הכל | בניית אתרים, דפי נחיתה ואפליקציות לעסקים',
-  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
+  title: 'בונים הכל | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
+  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, faqSchema(homeFaq)],
   body: home
 }));
@@ -286,6 +286,21 @@ for (const l of legal) {
     body: l.body + `\n<p class="updated">עודכן לאחרונה: ${UPDATED}</p>`
   }));
 }
+
+// ---------- manifest: lets the phone install the site to the home screen ----------
+write('manifest.webmanifest', JSON.stringify({
+  name: FULL_NAME, short_name: BRAND,
+  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.',
+  start_url: BASE, scope: BASE, id: BASE,
+  display: 'standalone', orientation: 'portrait', lang: 'he', dir: 'rtl',
+  background_color: '#0F1A1F', theme_color: '#0F1A1F',
+  categories: ['business', 'productivity'],
+  icons: [
+    { src: BASE + 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+    { src: BASE + 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+    { src: BASE + 'icons/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+  ]
+}, null, 2) + '\n');
 
 // ---------- sitemap + robots ----------
 const urls = ['', ...industries.map(i => i.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),

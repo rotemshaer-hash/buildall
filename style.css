@@ -30,12 +30,12 @@ section{padding:64px 0}
 
 /* header */
 header{position:sticky;top:0;z-index:20;background:rgba(15,26,31,.86);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.08)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
-.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
-.logo svg{width:34px;height:34px}
-.logo b{font-family:Heebo,sans-serif;font-size:21px;font-weight:800}
-.logo small{display:block;font-size:11px;opacity:.7;letter-spacing:1px;direction:ltr;text-align:right}
-.head-cta{font-size:15px;padding:10px 16px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;flex:none}
+.logo svg{width:30px;height:30px;flex:none}
+.logo b{font-family:Heebo,sans-serif;font-size:20px;font-weight:800;line-height:1.05;white-space:nowrap;display:block}
+.logo small{display:block;font-size:9.5px;opacity:.65;letter-spacing:2.2px;direction:ltr;text-align:right;line-height:1;margin-top:3px;white-space:nowrap}
+.head-cta{font-size:15px;padding:10px 15px;white-space:nowrap}
 
 /* hero */
 .hero{background:var(--grad);color:#fff;padding:56px 0 72px;position:relative;overflow:hidden}
@@ -336,7 +336,14 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 .head-actions{display:flex;gap:8px;align-items:center}
 .btn-call{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);font-size:15px;padding:10px 14px}
 .btn-call .i{width:20px;height:20px;stroke:#fff}
-@media (max-width:420px){.btn-call span{display:none}.btn-call{padding:10px 12px}}
+@media (max-width:480px){
+  .btn-call span{display:none}
+  .btn-call{padding:9px 11px}
+  .logo b{font-size:18px}
+  .logo svg{width:27px;height:27px}
+  .head-cta{font-size:14px;padding:9px 13px}
+}
+@media (max-width:360px){.head-cta span,.head-cta{font-size:0;padding:9px 11px}.head-cta svg{width:20px;height:20px}}
 
 /* ---------- text pages: guides, stories, legal ---------- */
 .prose{max-width:760px}
@@ -394,3 +401,18 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 .ai-note{margin-top:22px;font-weight:600;color:#fff;opacity:.9;display:flex;align-items:center;gap:8px}
 .ai-note:before{content:"✦";background:linear-gradient(90deg,#5ee2d4,#d9a6ff);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:20px}
 .ai .grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+
+/* ---------- who this is for: the small business ---------- */
+.small-biz{background:#fff;position:relative;overflow:hidden}
+.small-biz:before{content:"";position:absolute;top:-180px;left:-120px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,114,.1),transparent 65%);pointer-events:none}
+.sb-head{position:relative}
+.sb-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:32px;position:relative}
+.sb{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:linear-gradient(170deg,#fff,#F7FAFB)}
+.sb .n{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(150deg,rgba(14,122,114,.1),rgba(139,47,201,.12));border:1px solid rgba(14,122,114,.18);margin-bottom:12px}
+.sb h3{font-size:19px;margin-bottom:6px}
+.sb p{color:var(--muted);font-size:16px}
+.sb-cta{margin-top:26px;background:var(--ink);color:#fff;border-radius:22px;padding:24px 26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+.sb-cta:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent)}
+.sb-cta p{font-size:18px;max-width:600px}
+.sb-cta b{color:#5ee2d4}
+.sb-cta .btn{flex:none}

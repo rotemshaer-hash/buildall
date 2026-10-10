@@ -1,0 +1,38 @@
+{
+  "name": "בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות",
+  "short_name": "בונים הכל",
+  "description": "בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.",
+  "start_url": "https://rotemshaer-hash.github.io/buildall/",
+  "scope": "https://rotemshaer-hash.github.io/buildall/",
+  "id": "https://rotemshaer-hash.github.io/buildall/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "he",
+  "dir": "rtl",
+  "background_color": "#0F1A1F",
+  "theme_color": "#0F1A1F",
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -102,6 +102,10 @@ export function head({ title, description, path, schemas = [], root }) {
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');</script>` : ''}
 <link rel="icon" href="${favicon}">
+<link rel="apple-touch-icon" href="${BASE}icons/icon-192.png">
+<link rel="manifest" href="${root}manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="${BRAND}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@700;800&display=swap" rel="stylesheet">
@@ -144,6 +148,7 @@ export function footer(root, nav) {
 
 <a class="fab" data-wa href="#contact" aria-label="שליחת הודעה בוואטסאפ"><svg><use href="#wa"/></svg></a>
 <script src="${root}site.js" defer></script>
+<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('${BASE}sw.js').catch(()=>{}));</script>
 </body>
 </html>
 `;
@@ -185,10 +190,10 @@ export const business = {
   alternateName: 'Build All',
   url: BASE,
   telephone: PHONE.intl,
-  slogan: 'מדף נחיתה ועד אפליקציה מלאה. אנחנו בונים הכל.',
-  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים, עם שילוב AI לפי בקשה: ניהול עובדים, משמרות, משימות, מסמכים, לקוחות, הדרכת עובדים וכלים לעבודה בשטח.',
+  slogan: 'הטכנולוגיה שעסקים גדולים משלמים עליה הון, במחיר של עסק קטן.',
+  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, במחיר שמתאים להם, עם שילוב AI לפי בקשה: ניהול עובדים, משמרות, משימות, מסמכים, לקוחות, הדרכת עובדים וכלים לעבודה בשטח.',
   areaServed: { '@type': 'Country', name: 'ישראל' },
-  knowsAbout: ['בינה מלאכותית (AI)', 'בניית אתרים', 'דפי נחיתה', 'פיתוח אפליקציות', 'מערכות ניהול לעסקים', 'ניהול עובדים', 'ניהול מסמכים']
+  knowsAbout: ['פתרונות דיגיטליים לעסקים קטנים', 'בינה מלאכותית (AI)', 'בניית אתרים', 'דפי נחיתה', 'פיתוח אפליקציות', 'מערכות ניהול לעסקים', 'ניהול עובדים', 'ניהול מסמכים']
 };
 
 export const faqSchema = pairs => ({
