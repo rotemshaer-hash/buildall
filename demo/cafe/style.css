@@ -1,0 +1,135 @@
+/* A demo site for a café that does not exist, built to show what a small
+   business site looks like. Deliberately NOT the Build All palette: warm and
+   printed, to show the work is tailored and not one template. */
+
+:root{
+  --ink:#2A1D14;
+  --cream:#FBF6EF;
+  --paper:#FFFFFF;
+  --clay:#B4491F;
+  --olive:#5C6B4A;
+  --line:#E6DCCD;
+  --muted:#7A6A5C;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Assistant,system-ui,sans-serif;
+  background:var(--cream);color:var(--ink);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3{font-family:Frank Ruhl Libre,Heebo,serif;line-height:1.2;font-weight:700}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
+.c-wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.c-sec{padding:64px 0}
+.c-alt{background:var(--paper)}
+.c-eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--clay);margin-bottom:8px}
+.c-sec h2{font-size:clamp(26px,5vw,36px);margin-bottom:var(--s3,16px)}
+.c-two{display:grid;gap:34px;grid-template-columns:1fr;align-items:start}
+@media (min-width:860px){.c-two{grid-template-columns:1fr 1fr;gap:48px}}
+
+/* hero */
+.c-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#3A2A1C 0%,#2A1D14 60%,#1E140D 100%);
+  color:var(--cream);padding:56px 0 64px;
+}
+.c-hero:before{
+  content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,#FBF6EF 1px,transparent 0);
+  background-size:22px 22px;
+}
+.c-hero .c-wrap{position:relative;z-index:1;max-width:1020px}
+.c-brand{
+  display:inline-block;font-family:Frank Ruhl Libre,serif;font-size:21px;font-weight:700;
+  border:1px solid rgba(251,246,239,.4);border-radius:3px;padding:5px 15px;margin-bottom:22px;letter-spacing:.04em;
+}
+.c-hero h1{font-size:clamp(34px,7.5vw,58px);margin-bottom:16px}
+.c-hero p{font-size:19px;opacity:.86;max-width:480px;margin-bottom:26px}
+.c-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.c-btn{
+  display:inline-block;background:var(--clay);color:#fff;text-decoration:none;
+  font-weight:700;font-size:17px;padding:14px 28px;border-radius:3px;
+  transition:background .2s,transform .15s;
+}
+.c-btn:hover{background:#9C3C16}
+.c-btn:active{transform:scale(.98)}
+.c-btn-ghost{background:transparent;border:1px solid rgba(251,246,239,.45)}
+.c-btn-ghost:hover{background:rgba(251,246,239,.12)}
+.c-facts{list-style:none;display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:30px;font-size:15px;opacity:.8}
+.c-facts b{color:var(--cream);font-weight:700}
+.c-hero-art{display:none}
+@media (min-width:900px){
+  .c-hero .c-wrap{max-width:1020px}
+  .c-hero-art{display:block;position:absolute;left:8%;top:50%;transform:translateY(-50%);z-index:1}
+  .c-cup{
+    display:block;width:190px;height:190px;border-radius:50%;
+    background:radial-gradient(circle at 36% 32%,#6B4A33,#2A1D14 72%);
+    box-shadow:0 0 0 12px rgba(251,246,239,.06),0 24px 50px rgba(0,0,0,.45);
+    position:relative;
+  }
+  .c-cup:before{
+    content:"";position:absolute;inset:26px;border-radius:50%;
+    background:radial-gradient(circle at 40% 34%,#C98A55,#7A4A28 70%);
+  }
+  .c-cup:after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    box-shadow:inset 0 10px 24px rgba(0,0,0,.4);
+  }
+}
+
+/* menu */
+.c-menu{display:grid;gap:30px;grid-template-columns:1fr}
+@media (min-width:760px){.c-menu{grid-template-columns:repeat(3,1fr);gap:34px}}
+.c-group h3{font-size:21px;color:var(--clay);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.c-group ul{list-style:none;display:grid;gap:11px}
+.c-group li{display:flex;align-items:baseline;gap:6px;font-size:16px}
+.c-group li span{font-weight:600;white-space:nowrap}
+.c-group li i{flex:1;border-bottom:1px dotted var(--line);min-width:14px}
+.c-group li em{font-style:normal;color:var(--muted);font-size:14px;text-align:left;white-space:nowrap}
+
+/* about */
+.c-sec p{margin-bottom:12px;color:var(--muted)}
+.c-points{list-style:none;display:grid;gap:12px}
+.c-points li{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:15px 17px;display:grid;gap:2px}
+.c-points b{font-family:Frank Ruhl Libre,serif;font-size:18px}
+.c-points span{color:var(--muted);font-size:15px}
+
+/* booking */
+.c-contact{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.c-contact p{margin:0;color:var(--ink)}
+.c-form{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:24px;display:grid;gap:14px}
+.c-form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.c-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.c-form input,.c-form select{
+  font:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line);
+  border-radius:3px;background:var(--cream);color:var(--ink);width:100%;
+}
+.c-form input:focus,.c-form select:focus{outline:2px solid var(--clay);border-color:transparent;background:#fff}
+.c-form button{
+  font:700 17px Assistant,sans-serif;background:var(--olive);color:#fff;
+  border:0;border-radius:3px;padding:14px;cursor:pointer;transition:background .2s;
+}
+.c-form button:hover{background:#4C5A3C}
+.c-note{font-size:14px;color:var(--muted);text-align:center;margin:0}
+.c-note.ok{color:var(--olive);font-weight:700}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .c-btn,.c-form button{transition:none}
+}
+
+/* ---------- the banner that keeps this honest ---------- */
+.demo-ribbon{
+  background:#0F1A1F;color:#fff;font-size:14px;
+  display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:center;
+  padding:9px 18px;text-align:center;
+}
+.demo-ribbon b{color:#5ee2d4}
+.demo-ribbon a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.c-foot{background:var(--ink);color:rgba(251,246,239,.8);padding:34px 0;font-size:15px;text-align:center}
+.c-foot b{color:var(--cream)}
+.c-dis{margin-top:10px;font-size:13.5px;color:rgba(251,246,239,.6)}
+.c-dis a{color:rgba(251,246,239,.85)}

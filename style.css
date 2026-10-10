@@ -754,3 +754,55 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .proof-note{text-align:center;margin-top:var(--s4)}
 .proof-note a{color:var(--teal);font-weight:700;text-decoration:none}
 .proof-note a:hover{text-decoration:underline}
+
+/* ---------- ארבע כניסות לשירותים ---------- */
+.svc-pick{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:var(--s5)}
+.svc-p{
+  display:grid;gap:4px;justify-items:start;text-decoration:none;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;
+  transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.svc-p .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);margin-bottom:6px}
+.svc-p b{font-family:Heebo,sans-serif;font-size:17px}
+.svc-p span:last-child{color:var(--muted);font-size:15px}
+@media (hover:hover){.svc-p:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:rgba(14,122,114,.3)}}
+.group-title:target{scroll-margin-top:calc(var(--head-h) + 60px)}
+
+/* מוקאפ אתר בית הקפה בתיק */
+.proj-demo .size{color:#e8b98a}
+.m-cafe .dev{background:#FBF6EF;color:#2A1D14;padding:0;gap:0}
+.cf-hero{background:linear-gradient(160deg,#3A2A1C,#1E140D);color:#FBF6EF;padding:26px 10px 14px;display:grid;gap:3px}
+.cf-hero b{font:700 14px Frank Ruhl Libre,serif}
+.cf-hero span{font-size:9px;opacity:.75}
+.cf-row{display:flex;align-items:center;margin:8px 10px 0;padding-bottom:5px;border-bottom:1px dotted #E6DCCD}
+.cf-row i{font-style:normal;font-size:10px;font-weight:600}
+.cf-go{margin:auto 10px 12px;background:#B4491F;color:#fff;border-radius:3px;text-align:center;padding:8px;font-weight:700;font-size:10px}
+
+/* ---------- שני הצדדים בסיפור של כל עבודה ---------- */
+.sides{display:grid;gap:12px;grid-template-columns:1fr;margin:0 0 var(--s4)}
+@media (min-width:640px){.sides{grid-template-columns:1fr 1fr}}
+.side{border-radius:var(--r);padding:18px;border:1px solid var(--line);background:var(--card)}
+.side-b{background:var(--ink);color:#fff;border-color:transparent}
+.side-tag{display:inline-flex;align-items:center;gap:8px;font-family:Heebo,sans-serif;font-weight:700;font-size:16px;margin-bottom:6px}
+.side-tag .i{width:20px;height:20px}
+.side-b .side-tag .i{stroke:var(--teal-light)}
+.side p{font-size:16px!important;margin:0!important;color:var(--muted)}
+.side-b p{color:rgba(255,255,255,.82)!important}
+
+/* ---------- כבר יש לך משהו ---------- */
+.existing{background:var(--card)}
+.ex-box{background:var(--accent-soft);border:1px solid rgba(14,122,114,.18);border-radius:var(--r-lg);padding:30px 26px;display:grid;gap:var(--s4);align-items:center}
+@media (min-width:860px){.ex-box{grid-template-columns:1fr auto}}
+.ex-list{list-style:none;display:grid;gap:8px;margin:var(--s3) 0}
+.ex-list li{display:flex;gap:10px;font-size:16.5px}
+.ex-list li:before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:11px}
+.ex-small{color:var(--muted);font-size:15.5px}
+.ex-box .btn{white-space:nowrap}
+
+/* ---------- חתימה אישית ---------- */
+.sig{background:var(--bg);padding-block:var(--s6)}
+.sig-box{display:grid;justify-items:center;text-align:center;gap:12px;max-width:620px;margin-inline:auto}
+.sig-face{width:72px;height:72px;border-radius:50%;background:var(--ink);display:grid;place-items:center;box-shadow:var(--sh)}
+.sig-face svg{width:40px;height:40px}
+.sig blockquote{font-family:Heebo,sans-serif;font-size:clamp(20px,3.6vw,26px);line-height:1.45;font-weight:700}
+.sig figcaption{color:var(--muted);font-weight:600}

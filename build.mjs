@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { BASE, BRAND, FULL_NAME, FORM_KEY, head, header, navBar, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
+import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
@@ -354,6 +354,11 @@ for (const c of cases) {
 <p>${c.problem}</p>
 <h2>מה בנינו</h2>
 <p>${c.solution}</p>
+<h2>שני הצדדים</h2>
+<div class="sides">
+  <div class="side side-a"><span class="side-tag">${icon('users')} ${c.sides.workerT}</span><p>${c.sides.worker}</p></div>
+  <div class="side side-b"><span class="side-tag">${icon('chart')} ${c.sides.mgrT}</span><p>${c.sides.mgr}</p></div>
+</div>
 <h2>איך זה עובד</h2>
 <ol class="steps-list">
 ${c.how.map(h => `  <li>${h}</li>`).join('\n')}
@@ -386,6 +391,52 @@ write('manifest.webmanifest', JSON.stringify({
     { src: BASE + 'icons/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
   ]
 }, null, 2) + '\n');
+
+// ---------- demo project ----------
+// A site for a café that does not exist, built to show what a small business site
+// looks like. It carries its own look, and a banner that says plainly it is a demo.
+write('demo/cafe/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>לחם ושקד · בית קפה ומאפייה | פרויקט הדגמה של ${BRAND}</title>
+<meta name="description" content="פרויקט הדגמה: אתר לבית קפה שכונתי, עם תפריט, שעות פתיחה והזמנת שולחן. נבנה על ידי בונים הכל כדי להראות איך נראה אתר לעסק קטן.">
+<link rel="canonical" href="${BASE}demo/cafe/">
+<meta name="theme-color" content="#2A1D14">
+<!-- A demo business: keep it out of search so nobody mistakes it for a real café. -->
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-ribbon">
+  <span><b>פרויקט הדגמה</b> · עסק לדוגמה שאינו קיים</span>
+  <a href="${BASE}">נבנה על ידי בונים הכל ←</a>
+</div>
+<main>
+${readFileSync('src/demo-cafe.html', 'utf8')}
+</main>
+<footer class="c-foot">
+  <div class="c-wrap">
+    <p><b>לחם ושקד</b> · הלוחמים 14, חולון · 03-000-0000</p>
+    <p class="c-dis">זהו פרויקט הדגמה. העסק, הכתובת והטלפון אינם אמיתיים. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות איך נראה אתר לעסק קטן.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('c-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const n = document.getElementById('c-note');
+  n.textContent = 'תודה! בהדגמה הזו לא נשלחה בקשה. באתר אמיתי הבקשה הייתה מגיעה לבית הקפה.';
+  n.className = 'c-note ok';
+});
+</script>
+</body>
+</html>
+`);
 
 // ---------- sitemap + robots ----------
 const urls = ['', ...industries.map(i => i.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),
