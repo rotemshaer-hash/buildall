@@ -48,12 +48,23 @@ const ICONS = {
   clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>'
 };
 
-// The logo: three rising blocks — a building going up and a growth chart at once.
-// The tallest has a pointed top, the arrow of growth.
-const LOGO_SHAPES = `
-  <rect class="lb lb1" x="6" y="36" width="13" height="22" rx="3.5"/>
-  <rect class="lb lb2" x="25" y="23" width="13" height="35" rx="3.5"/>
-  <path class="lb lb3" d="M44 18.5 50.5 7 57 18.5V54.5a3.5 3.5 0 0 1-3.5 3.5h-6A3.5 3.5 0 0 1 44 54.5z"/>`;
+// The logo: code brackets with "הכל" as the dot held between them.
+// It is defined once here and reused by the header, the favicon, the app icons
+// (tools/icons.mjs) and the share card (tools/og.mjs). Change it only here.
+// `stroke`/`fill` are set by whatever draws it, so it works in light and dark.
+export const LOGO_SHAPES = `
+  <g class="lk" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path class="lk-r" d="M22 12 8 32l14 20"/>
+    <path class="lk-l" d="M42 12l14 20-14 20"/>
+  </g>
+  <circle class="lk-d" cx="32" cy="32" r="5"/>`;
+
+// The same mark with no classes, for files that cannot carry a stylesheet.
+export const logoPlain = (color = 'url(#g)') =>
+  LOGO_SHAPES.replace(/ class="[^"]*"/g, '')
+    .replace('<g fill="none"', `<g fill="none" stroke="${color}"`)
+    .replace('<circle', `<circle fill="${color}"`);
+
 
 export const sprite = `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
@@ -69,7 +80,7 @@ export const icon = name => {
   return `<svg class="i" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 };
 
-const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#2fd3c3'/><stop offset='1' stop-color='#c58bff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#0F1A1F'/><g fill='url(#g)' transform='translate(4 3) scale(.88)'>${LOGO_SHAPES.replace(/class="[^"]*"/g, '').replace(/"/g, "'")}</g></svg>`;
+const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#2fd3c3'/><stop offset='1' stop-color='#c58bff'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#0F1A1F'/>${logoPlain().replace(/"/g, "'")}</svg>`;
 export const favicon = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg.replace(/\s+/g, ' '));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
@@ -119,7 +130,7 @@ export function header(root) {
 <header>
   <div class="wrap">
     <a class="logo" href="${root || './'}" aria-label="${BRAND} – לדף הבית">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="url(#lg)">${LOGO_SHAPES}</g></svg>
+      <svg viewBox="0 0 64 64" aria-hidden="true" stroke="url(#lg)" fill="url(#lg)">${LOGO_SHAPES}</svg>
       <span><b>בונים <em>הכל</em></b><small>BUILD ALL</small></span>
     </a>
     <div class="head-actions">

@@ -1,7 +1,7 @@
 // Renders og.jpg, the card WhatsApp and other apps show when the site's link is shared.
 // Run after changing the brand: node tools/og.mjs  (needs Playwright)
 import { chromium } from 'playwright';
-import { sprite } from '../src/layout.mjs';
+import { sprite, LOGO_SHAPES } from '../src/layout.mjs';
 
 const html = `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Heebo:wght@800&display=block" rel="stylesheet">

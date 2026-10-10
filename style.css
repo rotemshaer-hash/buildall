@@ -132,11 +132,21 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .logo b{font-family:Heebo,sans-serif;font-size:20px;font-weight:800;line-height:1.05;white-space:nowrap;display:block}
 .logo b em{font-style:normal;background:linear-gradient(90deg,var(--teal-light),var(--purple-light));-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo small{display:block;font-size:9.5px;opacity:.6;letter-spacing:2.2px;direction:ltr;text-align:right;line-height:1;margin-top:3px;white-space:nowrap}
-.logo .lb{transform-box:fill-box;transform-origin:bottom;animation:rise .7s cubic-bezier(.2,.9,.3,1.3) both}
-.logo .lb2{animation-delay:.12s}.logo .lb3{animation-delay:.24s}
-@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@media (hover:hover){.logo:hover .lb3{animation:bounce .6s ease}}
-@keyframes bounce{40%{transform:scaleY(1.12)}}
+/* הסוגריים נפתחים והנקודה קופצת פנימה כשהדף נטען */
+.logo svg{overflow:visible}
+.logo .lk path{transform-box:fill-box;transform-origin:center;animation:bracket .6s cubic-bezier(.2,.9,.3,1.25) both}
+.logo .lk-r{animation-name:bracket-r}
+.logo .lk-l{animation-name:bracket-l}
+.logo .lk-d{transform-box:fill-box;transform-origin:center;animation:dot .5s cubic-bezier(.2,.9,.3,1.6) .28s both}
+@keyframes bracket-r{from{opacity:0;transform:translateX(9px)}to{opacity:1;transform:none}}
+@keyframes bracket-l{from{opacity:0;transform:translateX(-9px)}to{opacity:1;transform:none}}
+@keyframes dot{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+@media (hover:hover){
+  .logo:hover .lk-r{animation:nudge-r .5s ease}
+  .logo:hover .lk-l{animation:nudge-l .5s ease}
+}
+@keyframes nudge-r{50%{transform:translateX(-3px)}}
+@keyframes nudge-l{50%{transform:translateX(3px)}}
 .head-actions{display:flex;gap:8px;align-items:center}
 .head-cta{font-size:15px;padding:10px 15px;white-space:nowrap}
 
@@ -587,7 +597,7 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .blob,.hero h1 span,.btn-wa:after,.guarantee:after,.hero-vis .phone,
-  .marquee .track,.fab.show,.logo .lb{animation:none}
+  .marquee .track,.fab.show,.logo .lk path,.logo .lk-d{animation:none;opacity:1;transform:none}
   .reveal{opacity:1;transform:none;transition:none}
   .btn,.card,.ind,.step,.proj,.mock .dev{transition:none}
 }
