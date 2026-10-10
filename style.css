@@ -720,3 +720,37 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .demo-act{padding:8px;background:#f0f2f5;border-top:1px solid rgba(0,0,0,.08)}
 .demo-act button{width:100%;background:var(--wa);color:#fff;border:0;border-radius:9px;padding:10px;font:700 13px Heebo,sans-serif;cursor:pointer}
 .demo-note{text-align:center;color:rgba(255,255,255,.6);font-size:14px;margin-top:var(--s4)}
+
+/* ---------- ניווט בהדר: מוצג כשיש מקום, ובנייד יש סרגל תחתון במקומו ---------- */
+.head-nav{display:none;gap:18px;font-family:Heebo,sans-serif;font-weight:700;font-size:15px}
+.head-nav a{color:rgba(255,255,255,.82);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.head-nav a:hover{color:#fff;border-color:var(--teal-light)}
+@media (min-width:900px){.head-nav{display:flex}}
+
+/* בנייד: סרגל ניווט מתחת להדר, נגלל הצידה */
+.nav-bar{position:sticky;top:var(--head-h);z-index:28;background:rgba(15,26,31,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-bar ul{display:flex;gap:6px;list-style:none;padding:8px 18px;margin:0;width:max-content;min-width:100%}
+.nav-bar a{color:rgba(255,255,255,.85);text-decoration:none;font:700 14px Heebo,sans-serif;white-space:nowrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-pill);padding:7px 14px}
+.nav-bar a:active{background:rgba(255,255,255,.18)}
+@media (min-width:900px){.nav-bar{display:none}}
+
+/* ---------- הוכחה מוקדמת: שתי עבודות מיד אחרי הבעיות ---------- */
+.proof{background:var(--card)}
+.proof-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.proof-card{
+  display:block;text-decoration:none;position:relative;overflow:hidden;
+  background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:26px 24px;
+  transition:transform .28s ease,box-shadow .28s ease;
+}
+.proof-card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent)}
+.proof-card:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,114,.3),transparent 66%);bottom:-150px;left:-110px;pointer-events:none}
+@media (hover:hover){.proof-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}}
+.proof-tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal-light);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);padding:4px 12px;margin-bottom:10px}
+.proof-card h3{font-size:25px;margin-bottom:8px;position:relative}
+.proof-card p{color:rgba(255,255,255,.82);font-size:16.5px;position:relative}
+.proof-go{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--teal-light);font-weight:700;position:relative}
+.proof-go .i{width:19px;height:19px;stroke:var(--teal-light)}
+.proof-note{text-align:center;margin-top:var(--s4)}
+.proof-note a{color:var(--teal);font-weight:700;text-decoration:none}
+.proof-note a:hover{text-decoration:underline}

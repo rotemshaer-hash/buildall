@@ -142,12 +142,34 @@ export function header(root) {
       <svg viewBox="0 0 64 64" aria-hidden="true" stroke="url(#lg)" fill="url(#lg)">${LOGO_SHAPES}</svg>
       <span><b>בונים <em>הכל</em></b><small>BUILD ALL</small></span>
     </a>
+    <nav class="head-nav" aria-label="ניווט ראשי">
+      <a href="${root || './'}#problems">בעיות</a>
+      <a href="${root || './'}#services">שירותים</a>
+      <a href="${root || './'}#work">עבודות</a>
+      <a href="${root || './'}#process">איך עובדים</a>
+    </nav>
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
       <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg>וואטסאפ</a>
     </div>
   </div>
 </header>`;
+}
+
+// A scrollable strip under the header, for phones where the header has no room for links.
+export function navBar(root) {
+  const r = root || './';
+  return `<nav class="nav-bar" aria-label="ניווט מהיר">
+  <ul>
+    <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
+    <li><a href="${r}#services">שירותים</a></li>
+    <li><a href="${r}#work">עבודות</a></li>
+    <li><a href="${r}#industries">לפי תחום</a></li>
+    <li><a href="${r}#ai">AI</a></li>
+    <li><a href="${r}#process">איך עובדים</a></li>
+    <li><a href="#contact">יצירת קשר</a></li>
+  </ul>
+</nav>`;
 }
 
 export function footer(root, nav) {

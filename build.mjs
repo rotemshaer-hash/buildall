@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { BASE, BRAND, FULL_NAME, FORM_KEY, head, header, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
+import { BASE, BRAND, FULL_NAME, FORM_KEY, head, header, navBar, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
@@ -145,6 +145,7 @@ const page = ({ path, root, title, description, schemas, body, greeting, from })
   head({ title, description, path, schemas, root }) + `
 <body${greeting ? ` data-greeting="${greeting}"` : ''}${from ? ` data-from="${from}"` : ''}${FORM_KEY ? ` data-formkey="${FORM_KEY}"` : ''}>
 ${header(root)}
+${navBar(root)}
 <main id="top">
 ${body}
 </main>
