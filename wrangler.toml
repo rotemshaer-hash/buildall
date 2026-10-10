@@ -1,0 +1,8 @@
+# Tells Cloudflare this is a site of ready-made files, with nothing to run.
+# Without it, Cloudflare's newer flow assumes a Worker and tries `npx wrangler deploy`,
+# which fails on a plain static site.
+name = "buildall"
+compatibility_date = "2026-10-10"
+
+[assets]
+directory = "./"
