@@ -14,7 +14,7 @@
   --grad:linear-gradient(150deg,#0F1A1F 0%,#0e7a72 45%,#8b2fc9 100%);
   --accent:linear-gradient(90deg,var(--teal),var(--purple));
   --accent-soft:linear-gradient(150deg,rgba(14,122,114,.1),rgba(139,47,201,.12));
-  --wa:#1fa855;
+  --wa:#178442;
 
   /* משטחים וטקסט */
   --bg:#F4F7F8;
@@ -647,3 +647,18 @@ a.sb{transition:transform .25s,box-shadow .25s,border-color .25s}
 .form-msg{font-size:15px;font-weight:600;text-align:center;min-height:1.2em;margin-top:2px}
 .form-msg.ok{color:var(--teal)}
 .form-msg.bad{color:#c0392b}
+
+/* ---------- דפי תחום: בעיה מובילה לפתרון, דוגמה מובילה לשיחה ---------- */
+a.pain,a.example{text-decoration:none;cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s}
+a.pain{display:flex}
+@media (hover:hover){
+  a.pain:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:rgba(224,86,122,.4)}
+  a.example:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+}
+.pain-go{align-self:flex-end;margin-top:auto;color:var(--teal);font-weight:700;font-size:14px;white-space:nowrap}
+a.pain p{flex:1}
+.pain{align-items:flex-start;gap:12px}
+a.example{display:block}
+.ex-go{display:inline-block;margin-top:14px;color:var(--teal);font-weight:700;font-size:16px}
+/* הפתרון שאליו הגיעו מסומן לרגע, כדי שיהיה ברור לאן קפצנו */
+.card:target{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,122,114,.16),var(--sh)}

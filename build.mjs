@@ -164,7 +164,7 @@ for (const i of industries) {
       <h2 class="h2">מה מעיק על ${i.short}</h2>
     </div>
     <div class="pains">
-${i.pains.map(p => `      <div class="pain"><span>✕</span><p>${p}</p></div>`).join('\n')}
+${i.pains.map(p => `      <a class="pain" href="#s${p.fix}"><span>✕</span><p>${p.t}</p><span class="pain-go">לפתרון ←</span></a>`).join('\n')}
     </div>
   </div>
 </section>
@@ -176,7 +176,7 @@ ${i.pains.map(p => `      <div class="pain"><span>✕</span><p>${p}</p></div>`).
       <h2 class="h2">הפתרונות ל${i.short}</h2>
     </div>
     <div class="grid">
-${i.solutions.map(s => `      <a class="card" data-wa data-msg="${s.t}" href="#contact"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('\n')}
+${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="${s.t}" href="#contact"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('\n')}
       <a class="card" data-wa data-msg="שילוב AI" href="#contact"><div class="ic">${icon('bot')}</div><h3>עם AI, אם תרצה</h3><p>צ׳אט שעונה ללקוחות, סיכומים ומסמכים שממלאים את עצמם. משלבים רק איפה שזה חוסך לך זמן.</p></a>
       <a class="card idea" data-wa data-msg="רעיון משלי" href="#contact"><div class="ic">${icon('bulb')}</div><h3>צריך משהו אחר?</h3><p>כל תהליך בעסק שלך אפשר להפוך לכלי פשוט. ספר לנו מה מעיק.</p></a>
     </div>
@@ -185,10 +185,11 @@ ${i.solutions.map(s => `      <a class="card" data-wa data-msg="${s.t}" href="#c
 
 <section class="services">
   <div class="wrap">
-    <div class="example">
+    <a class="example" data-wa data-msg="${i.short}" href="#contact">
       <span class="eyebrow">איך זה נראה ביום־יום</span>
       <p>${i.example}</p>
-    </div>
+      <span class="ex-go">נדבר על העסק שלך ←</span>
+    </a>
   </div>
 </section>
 
@@ -209,7 +210,7 @@ ${i.faq.map(([q, a]) => `    <details><summary>${q}</summary><p>${a}</p></detail
   </div>
 </section>
 
-${contact('ספר לנו על העסק, והתשובה מגיעה בוואטסאפ עוד היום.')}
+${contact('ספר לנו על העסק, ונחזור אליך.')}
 
 <section class="more">
   <div class="wrap">

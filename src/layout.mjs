@@ -175,7 +175,7 @@ export function footer(root, nav) {
 }
 
 // The contact form — the same on every page, so a visitor can ask from wherever they landed.
-export function contact(lead = 'שלוש שורות, והן נשלחות אלינו בוואטסאפ. תשובה עוד היום.') {
+export function contact(lead = 'ממלאים שלוש שורות, ובוחרים לשלוח בוואטסאפ או במייל.') {
   return `<section class="contact" id="contact">
   <div class="wrap center">
     <div class="sec-head">
@@ -199,10 +199,10 @@ export function contact(lead = 'שלוש שורות, והן נשלחות אלי�
       <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
       <!-- מלכודת ספאם: שדה שרק בוט ממלא. הוא מוסתר מהעין ומקוראי מסך. -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח וקבע שיחת ייעוץ חינם</button>${FORM_KEY ? `
+      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>${FORM_KEY ? `
       <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שלח במייל</button>` : ''}
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
-      <p class="note">בלי התחייבות. שיחת הייעוץ בחינם.</p>
+      <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
     </form>
   </div>
 </section>`;
