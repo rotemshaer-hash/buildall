@@ -106,3 +106,62 @@ if (fab && hero && 'IntersectionObserver' in window) {
 } else if (fab) {
   fab.classList.add('show');
 }
+
+// ---------- Work It demo ----------
+// Runs only on the page that contains it. Nothing is sent anywhere; it plays out
+// the same sequence the real system does, so a visitor can see both sides at once.
+(() => {
+  const root = document.querySelector('[data-demo]');
+  if (!root) return;
+  const $ = id => document.getElementById(id);
+  const chat = $('d-chat'), log = $('d-log'), act = $('d-act');
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const now = () => new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' });
+
+  const bubble = (side, html) => {
+    const d = document.createElement('div');
+    d.className = 'b ' + side;
+    d.innerHTML = html + `<s>${now()}</s>`;
+    chat.append(d);
+    chat.scrollTop = chat.scrollHeight;
+    return d;
+  };
+  const note = (text, state) => {
+    log.querySelector('.empty')?.remove();
+    const li = document.createElement('li');
+    li.className = state || '';
+    li.innerHTML = `<span>${text}</span><time>${now()}</time>`;
+    log.append(li);
+  };
+
+  let busy = false;
+  $('d-send').addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    const task = ($('d-task').value || 'משימה').trim();
+    const who = $('d-who').value;
+    $('d-name').textContent = who;
+    chat.innerHTML = '';
+    log.innerHTML = '';
+    act.hidden = true;
+
+    note('המשימה נשלחה ל' + who);
+    bubble('out', `<div class="lnk"><b>משימה חדשה: ${task}</b><i>לחץ לפתיחה ›</i></div>`);
+
+    await wait(900);
+    note('נמסר', 'ok');
+    await wait(700);
+    act.hidden = false;
+    busy = false;
+  });
+
+  $('d-open').addEventListener('click', async () => {
+    act.hidden = true;
+    note('נפתח על ידי ' + $('d-who').value, 'ok');
+    await wait(700);
+    bubble('in', '✓ בוצע · צירפתי תמונה 📷');
+    note('בוצע, עם תמונה ושעה', 'done');
+    await wait(600);
+    bubble('out', 'תודה! 🙏');
+  });
+})();

@@ -7,6 +7,7 @@ import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
 import { cases } from './src/cases.mjs';
 import { legal, UPDATED } from './src/legal.mjs';
+import { problems } from './src/problems.mjs';
 
 const nav = { industries, guides, cases, legal };
 
@@ -113,6 +114,33 @@ ${contact()}`
   });
 };
 
+// "מה היית רוצה להפסיק לעשות ידנית?" — the visitor picks a problem and gets the answer in place.
+const problemsSection = root => `<section class="problems" id="problems">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
+      <h2 class="h2">מה היית רוצה להפסיק לעשות ידנית?</h2>
+      <p class="lead">אל תדאג אם אתה לא יודע אם צריך אתר, מערכת או אפליקציה. תבחר את מה שמעיק עליך, ונראה לך מה אפשר לעשות עם זה.</p>
+    </div>
+    <div class="prob-grid">
+${problems.map(p => `      <details class="prob" name="prob">
+        <summary><span class="ic">${icon(p.icon)}</span><b>${p.t}</b></summary>
+        <div class="prob-body">
+          <p class="prob-why">${p.why}</p>
+          <p class="prob-fix"><b>מה אפשר לעשות:</b> ${p.fix}</p>
+          <div class="prob-cta">
+            <a class="btn btn-wa" data-wa data-msg="${p.t}" href="#contact"><svg><use href="#wa"/></svg>בדיוק זה אצלי</a>
+            ${p.work ? `<a class="btn btn-line" href="${root}work/${p.work}/">ראה את ${p.workName} ←</a>` : ''}
+          </div>
+        </div>
+      </details>`).join('\n')}
+      <a class="prob prob-other" data-wa data-msg="משהו אחר שמעיק עליי" href="#contact">
+        <span class="ic">${icon('bulb')}</span><b>יש לי משהו אחר</b>
+      </a>
+    </div>
+  </div>
+</section>`;
+
 const page = ({ path, root, title, description, schemas, body, greeting, from }) =>
   head({ title, description, path, schemas, root }) + `
 <body${greeting ? ` data-greeting="${greeting}"` : ''}${from ? ` data-from="${from}"` : ''}${FORM_KEY ? ` data-formkey="${FORM_KEY}"` : ''}>
@@ -128,6 +156,7 @@ const homeFaq = [...home.matchAll(/<details><summary>(.*?)<\/summary><p>(.*?)<\/
 home = withIcons(home)
   .replace('<!--INDUSTRIES-->', industriesSection(''))
   .replace('<!--REVIEWS-->', reviewsSection())
+  .replace('<!--PROBLEMS-->', problemsSection(''))
   .replace('<!--GUIDES-->', guidesSection(''))
   .replace('<!--CONTACT-->', contact());
 
@@ -275,6 +304,45 @@ for (const g of guides) {
   }));
 }
 
+// The Work It demo: the visitor assigns a task and watches both screens react.
+const workItDemo = () => `<section class="demo-sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">${icon('zap')} נסה בעצמך</span>
+      <h2 class="h2">תן משימה, וראה את שני הצדדים</h2>
+      <p class="lead">זו הדגמה אמיתית שרצה כאן בדף. מימין מה שאתה רואה כמנהל, ומשמאל מה שהעובד מקבל בטלפון.</p>
+    </div>
+    <div class="demo" data-demo>
+      <div class="demo-side">
+        <span class="demo-tag">${icon('users')} המסך שלך</span>
+        <div class="demo-panel">
+          <label class="demo-f">מה צריך לעשות?
+            <input id="d-task" value="לספור מלאי במחסן" maxlength="40">
+          </label>
+          <label class="demo-f">מי מבצע?
+            <select id="d-who"><option>דני</option><option>מאיה</option><option>אבי</option></select>
+          </label>
+          <button class="btn btn-wa" id="d-send" type="button"><svg><use href="#wa"/></svg>שלח משימה</button>
+          <ul class="demo-log" id="d-log"><li class="empty">כאן יופיע מה שקורה עם המשימה</li></ul>
+        </div>
+      </div>
+      <div class="demo-side">
+        <span class="demo-tag">${icon('phone')} הטלפון של העובד</span>
+        <div class="dev demo-phone">
+          <div class="wa-h"><span class="av">ב</span><span id="d-name">דני</span></div>
+          <div class="wa-chat" id="d-chat">
+            <div class="b out empty-msg">שלח משימה כדי לראות מה מגיע אליו</div>
+          </div>
+          <div class="demo-act" id="d-act" hidden>
+            <button type="button" id="d-open">פתח משימה</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">אין כאן וואטסאפ אמיתי ולא נשלחת הודעה. זו הדגמה של הזרימה.</p>
+  </div>
+</section>`;
+
 // ---------- project stories ----------
 for (const c of cases) {
   const others = cases.filter(o => o !== c);
@@ -290,7 +358,7 @@ for (const c of cases) {
 ${c.how.map(h => `  <li>${h}</li>`).join('\n')}
 </ol>
 <div class="callout"><b>מה זה אומר בשבילך</b><p>${c.shows}</p></div>`,
-    related: `<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד עבודות</h2></div>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
+    related: `${c.demo ? workItDemo() : ''}<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד עבודות</h2></div>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
   }));
 }
 
