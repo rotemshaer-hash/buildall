@@ -29,9 +29,11 @@ const withIcons = html => html.replace(/\{\{icon:([a-z]+)\}\}/g, (_, n) => icon(
 // ---------- shared sections ----------
 const industriesSection = root => `<section class="industries" id="industries">
   <div class="wrap">
-    <span class="eyebrow">פתרונות לפי תחום</span>
-    <h2 class="h2">מה בונים לעסק כמו שלך</h2>
-    <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו בונים הכל.</p>
+    <div class="sec-head">
+      <span class="eyebrow">פתרונות לפי תחום</span>
+      <h2 class="h2">מה בונים לעסק כמו שלך</h2>
+      <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו בונים הכל.</p>
+    </div>
     <div class="ind-grid">
 ${industries.map(i => `      <a class="ind" href="${root}${i.slug}/"><span class="ic">${icon(i.icon)}</span><b>${i.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
     </div>
@@ -42,9 +44,11 @@ const reviewsSection = () => {
   if (!reviews.length) return '';
   return `<section class="reviews">
   <div class="wrap center">
-    <span class="eyebrow">ביקורות מגוגל</span>
-    <h2 class="h2">מה אומרים עלינו</h2>
-    <div class="rev-grid" style="text-align:right">
+    <div class="sec-head">
+      <span class="eyebrow">ביקורות מגוגל</span>
+      <h2 class="h2">מה אומרים עלינו</h2>
+    </div>
+    <div class="rev-grid">
 ${reviews.map(r => `      <figure class="card rev"><div class="stars" aria-label="${r.stars} כוכבים">${'★'.repeat(r.stars)}</div><blockquote>${r.text}</blockquote><figcaption>${r.name} · ביקורת בגוגל</figcaption></figure>`).join('\n')}
     </div>
     ${REVIEW_URL ? `<a class="btn btn-line" href="${REVIEW_URL}" target="_blank" rel="noopener">${icon('star')} לכל הביקורות בגוגל</a>` : ''}
@@ -52,10 +56,13 @@ ${reviews.map(r => `      <figure class="card rev"><div class="stars" aria-label
 </section>`;
 };
 
-const guidesSection = root => `<section class="guides-strip">
+const guidesSection = root => `<section class="guides-strip" id="guides">
   <div class="wrap">
-    <span class="eyebrow">מדריכים</span>
-    <h2 class="h2">לפני שמחליטים</h2>
+    <div class="sec-head">
+      <span class="eyebrow">מדריכים</span>
+      <h2 class="h2">לפני שמחליטים</h2>
+      <p class="lead">תשובות ברורות לשאלות שכל בעל עסק שואל, לפני שהוא מוציא שקל.</p>
+    </div>
     <div class="ind-grid">
 ${guides.map(g => `      <a class="ind" href="${root}guides/${g.slug}/"><span class="ic">${icon(g.icon)}</span><b>${g.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
     </div>
@@ -68,7 +75,7 @@ const crumbsSchema = trail => ({
 });
 
 // A text page: guides, project stories, legal. `trail` is [[name, path], ...] from the home page down.
-const article = ({ root, trail, eyebrow, h1, lead, body, faq, extraSchemas = [], title, description, related = '' }) => {
+const article = ({ root, trail, eyebrow, h1, lead, body, faq, extraSchemas = [], title, description, related = '', wide = false }) => {
   const path = trail[trail.length - 1][1];
   const crumbs = trail.map(([name, p], n) => n === trail.length - 1 ? name : `<a href="${root}${p}">${name}</a>`).join(' <span>›</span> ');
   return page({
@@ -85,15 +92,17 @@ const article = ({ root, trail, eyebrow, h1, lead, body, faq, extraSchemas = [],
 </section>
 
 <section>
-  <div class="wrap prose">
+  <div class="wrap${wide ? '' : ' prose'}">
 ${body}
   </div>
 </section>
 ${faq ? `
-<section id="faq">
-  <div class="wrap" style="max-width:760px">
-    <span class="eyebrow">שאלות נפוצות</span>
-    <h2 class="h2">שאלות על הנושא</h2>
+<section class="faq-sec" id="faq">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">שאלות נפוצות</span>
+      <h2 class="h2">שאלות על הנושא</h2>
+    </div>
     <div id="faq-list">
 ${faq.map(([q, a]) => `    <details><summary>${q}</summary><p>${a}</p></details>`).join('\n')}
     </div>
@@ -148,10 +157,12 @@ for (const i of industries) {
   </div>
 </section>
 
-<section>
+<section class="why-sec">
   <div class="wrap">
-    <span class="eyebrow">מכירים את זה?</span>
-    <h2 class="h2">מה מעיק על ${i.short}</h2>
+    <div class="sec-head">
+      <span class="eyebrow">מכירים את זה?</span>
+      <h2 class="h2">מה מעיק על ${i.short}</h2>
+    </div>
     <div class="pains">
 ${i.pains.map(p => `      <div class="pain"><span>✕</span><p>${p}</p></div>`).join('\n')}
     </div>
@@ -160,8 +171,10 @@ ${i.pains.map(p => `      <div class="pain"><span>✕</span><p>${p}</p></div>`).
 
 <section class="ladder" id="solutions">
   <div class="wrap">
-    <span class="eyebrow">מה אנחנו בונים</span>
-    <h2 class="h2">הפתרונות ל${i.short}</h2>
+    <div class="sec-head">
+      <span class="eyebrow">מה אנחנו בונים</span>
+      <h2 class="h2">הפתרונות ל${i.short}</h2>
+    </div>
     <div class="grid">
 ${i.solutions.map(s => `      <div class="card"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></div>`).join('\n')}
       <div class="card"><div class="ic">${icon('bot')}</div><h3>עם AI, אם תרצה</h3><p>צ׳אט שעונה ללקוחות, סיכומים ומסמכים שממלאים את עצמם. משלבים רק איפה שזה חוסך לך זמן.</p></div>
@@ -170,7 +183,7 @@ ${i.solutions.map(s => `      <div class="card"><div class="ic">${icon(s.icon)}<
   </div>
 </section>
 
-<section>
+<section class="services">
   <div class="wrap">
     <div class="example">
       <span class="eyebrow">איך זה נראה ביום־יום</span>
@@ -184,10 +197,12 @@ ${i.solutions.map(s => `      <div class="card"><div class="ic">${icon(s.icon)}<
   <p>קיבלת הצעה זולה יותר על אותה עבודה? שלח לנו אותה, ונשווה.</p>
 </div>
 
-<section id="faq">
-  <div class="wrap" style="max-width:760px">
-    <span class="eyebrow">שאלות נפוצות</span>
-    <h2 class="h2">מה ${i.short} שואלים אותנו</h2>
+<section class="faq-sec" id="faq">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">שאלות נפוצות</span>
+      <h2 class="h2">מה ${i.short} שואלים אותנו</h2>
+    </div>
     <div id="faq-list">
 ${i.faq.map(([q, a]) => `    <details><summary>${q}</summary><p>${a}</p></details>`).join('\n')}
     </div>
@@ -198,7 +213,7 @@ ${contact('ספר לנו על העסק, והתשובה מגיעה בוואטסא
 
 <section class="more">
   <div class="wrap">
-    <h2 class="h2">עוד תחומים שאנחנו בונים להם</h2>
+    <div class="sec-head"><h2 class="h2">עוד תחומים שאנחנו בונים להם</h2></div>
     <div class="ind-grid">
 ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic">${icon(o.icon)}</span><b>${o.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
     </div>
@@ -240,7 +255,7 @@ write('guides/index.html', article({
   title: 'מדריכים לבעלי עסקים: אתרים, אפליקציות וניהול | בונים הכל',
   description: 'מדריכים קצרים וברורים לבעלי עסקים: כמה עולה אתר, אתר או אפליקציה, ואיך לנהל משמרות בלי בלגן.',
   h1: 'מדריכים לבעלי עסקים', lead: 'תשובות ברורות לשאלות שכל בעל עסק שואל, לפני שהוא מוציא שקל.',
-  body: `    ${linkCards('', guides, '')}`
+  body: `    ${linkCards('', guides, '')}`, wide: true
 }));
 for (const g of guides) {
   const others = guides.filter(o => o !== g);
@@ -255,7 +270,7 @@ for (const g of guides) {
       author: { '@id': BASE + '#business' }, publisher: { '@id': BASE + '#business' },
       image: BASE + 'og.jpg', mainEntityOfPage: BASE + `guides/${g.slug}/`
     }],
-    related: `<section class="more"><div class="wrap"><h2 class="h2">עוד מדריכים</h2>${linkCards('../../', others, 'guides/')}</div></section>`
+    related: `<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד מדריכים</h2></div>${linkCards('../../', others, 'guides/')}</div></section>`
   }));
 }
 
@@ -274,7 +289,7 @@ for (const c of cases) {
 ${c.how.map(h => `  <li>${h}</li>`).join('\n')}
 </ol>
 <div class="callout"><b>מה זה אומר בשבילך</b><p>${c.shows}</p></div>`,
-    related: `<section class="more"><div class="wrap"><h2 class="h2">עוד עבודות</h2>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
+    related: `<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד עבודות</h2></div>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
   }));
 }
 

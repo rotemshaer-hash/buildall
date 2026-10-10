@@ -20,7 +20,8 @@ body{width:1200px;height:630px;overflow:hidden;font-family:Heebo,sans-serif;colo
 .brand b{font-size:84px;line-height:1}
 .brand b em{font-style:normal;background:linear-gradient(90deg,#5ee2d4,#d9a6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand small{display:block;font:600 22px Assistant,sans-serif;letter-spacing:6px;opacity:.75;direction:ltr;text-align:right;margin-top:6px}
-h1{font-size:56px;line-height:1.2;margin-top:56px;max-width:900px}
+h1{font-size:54px;line-height:1.25;margin-top:52px;max-width:960px}
+h1 em{font-style:normal;background:linear-gradient(90deg,#5ee2d4,#d9a6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .pills{display:flex;gap:14px;margin-top:auto}
 .pills span{font:600 26px Assistant,sans-serif;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:10px 26px}
 </style></head><body>
@@ -33,8 +34,8 @@ ${sprite}
       <path d="M44 18.5 50.5 7 57 18.5V54.5a3.5 3.5 0 0 1-3.5 3.5h-6A3.5 3.5 0 0 1 44 54.5z"/></g></svg>
     <div><b>בונים <em>הכל</em></b><small>BUILD ALL</small></div>
   </div>
-  <h1>בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים</h1>
-  <div class="pills"><span>מכלי קטן ועד מערכת מלאה</span><span>שיחת ייעוץ חינם</span></div>
+  <h1>הטכנולוגיה שעסקים גדולים משלמים עליה הון,<br><em>במחיר של עסק קטן</em></h1>
+  <div class="pills"><span>אתרים · אפליקציות · מערכות · AI</span><span>שיחת ייעוץ חינם</span></div>
 </div></body></html>`;
 
 const b = await chromium.launch({ executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });

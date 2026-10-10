@@ -140,7 +140,7 @@ export function footer(root, nav) {
       ${links('מדריכים', nav.guides, 'guides/')}
       ${links('עבודות', nav.cases, 'work/')}
     </div>
-    <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a> · עובדים עם עסקים בכל הארץ</div>
+    <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a></div>
     <nav class="foot-links" aria-label="מידע">${nav.legal.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
     <div>© <span id="y"></span> ${BRAND}. כל הזכויות שמורות.</div>
   </div>
@@ -158,10 +158,12 @@ export function footer(root, nav) {
 export function contact(lead = 'שלוש שורות, והן נשלחות אלינו בוואטסאפ. תשובה עוד היום.') {
   return `<section class="contact" id="contact">
   <div class="wrap center">
-    <span class="eyebrow">מתחילים</span>
-    <h2 class="h2">ספר לנו מה אתה צריך</h2>
-    <p class="lead">${lead}</p>
-    <form id="lead" style="text-align:right">
+    <div class="sec-head">
+      <span class="eyebrow">מתחילים</span>
+      <h2 class="h2">ספר לנו מה אתה צריך</h2>
+      <p class="lead">${lead}</p>
+    </div>
+    <form id="lead">
       <label>שם<input name="name" autocomplete="name" required></label>
       <label>שם העסק<input name="biz" autocomplete="organization"></label>
       <label>מה צריך לבנות?

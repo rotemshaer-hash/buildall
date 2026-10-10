@@ -47,3 +47,16 @@ document.addEventListener('click', e => {
   if (!a || typeof window.gtag !== 'function') return;
   gtag('event', a.hasAttribute('data-call') ? 'phone_click' : 'whatsapp_click', { page: location.pathname });
 });
+
+// The floating WhatsApp button appears only past the hero, so it never sits
+// next to the buttons that are already in the header and in the hero itself.
+const fab = document.querySelector('.fab');
+const hero = document.querySelector('.hero');
+if (fab && hero && 'IntersectionObserver' in window) {
+  new IntersectionObserver(
+    ([e]) => fab.classList.toggle('show', !e.isIntersecting),
+    { threshold: 0 }
+  ).observe(hero);
+} else if (fab) {
+  fab.classList.add('show');
+}
