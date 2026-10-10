@@ -17,6 +17,8 @@ node build.mjs
 | דפי התחומים: הוספה, עריכה | `src/industries.mjs` |
 | ביקורות מגוגל (רק אמיתיות) | `src/reviews.mjs` |
 | מספר הוואטסאפ | `WA_NUMBER` ב־`site.js` |
+| שליחת הטופס במייל | `FORM_KEY` ב־`src/layout.mjs` (מפתח מ־web3forms.com) |
+| כתובת המייל שמוצגת באתר | `EMAIL` ב־`src/layout.mjs` |
 | מדריכים | `src/guides.mjs` |
 | סיפורי פרויקטים | `src/cases.mjs` |
 | הצהרת נגישות ומדיניות פרטיות | `src/legal.mjs` (ותאריך העדכון `UPDATED`) |

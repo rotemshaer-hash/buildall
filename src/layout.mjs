@@ -14,6 +14,14 @@ export const GA_ID = '';
 // GSC_VERIFY: the content="..." value of the Search Console HTML-tag verification.
 export const GSC_VERIFY = '';
 
+// שליחת הטופס במייל, דרך Web3Forms (חינם, עד 250 פניות בחודש).
+// הכתובת עצמה שמורה אצלם ולא מופיעה בקוד, כי המאגר ציבורי וכתובת גלויה אוספת ספאם.
+// להשיג מפתח: web3forms.com -> מקלידים את המייל העסקי -> המפתח מגיע למייל.
+// כל עוד הוא ריק, כפתור המייל לא מוצג והטופס עובד בוואטסאפ בלבד.
+export const FORM_KEY = '';
+// הכתובת להצגה באתר ובפוטר. ריק = לא מוצגת.
+export const EMAIL = '';
+
 // Line icons, 24×24, drawn with the brand gradient. Used as <svg class="i"><use href="#i-NAME"/></svg>.
 const ICONS = {
   globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
@@ -38,6 +46,7 @@ const ICONS = {
   heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>',
   wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
   dumbbell: '<path d="M6.5 6.5h11M6.5 17.5h11"/><path d="M6 20V4M18 20V4M3 16V8M21 16V8"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>',
   arrow: '<path d="M19 12H5M12 19l-7-7 7-7"/>',
   call: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
   bot: '<path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/>',
@@ -151,7 +160,7 @@ export function footer(root, nav) {
       ${links('מדריכים', nav.guides, 'guides/')}
       ${links('עבודות', nav.cases, 'work/')}
     </div>
-    <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a></div>
+    <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a>${EMAIL ? ` · <a href="mailto:${EMAIL}">${EMAIL}</a>` : ''}</div>
     <nav class="foot-links" aria-label="מידע">${nav.legal.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
     <div>© <span id="y"></span> ${BRAND}. כל הזכויות שמורות.</div>
   </div>
@@ -188,7 +197,11 @@ export function contact(lead = 'שלוש שורות, והן נשלחות אלי�
         </select>
       </label>
       <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
-      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח וקבע שיחת ייעוץ חינם</button>
+      <!-- מלכודת ספאם: שדה שרק בוט ממלא. הוא מוסתר מהעין ומקוראי מסך. -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח וקבע שיחת ייעוץ חינם</button>${FORM_KEY ? `
+      <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שלח במייל</button>` : ''}
+      <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">בלי התחייבות. שיחת הייעוץ בחינם.</p>
     </form>
   </div>

@@ -12,17 +12,58 @@ if (WA_NUMBER) {
   });
 }
 
-document.getElementById('lead')?.addEventListener('submit', e => {
+const form = document.getElementById('lead');
+
+// The same filled form goes out two ways, so the fields are read in one place.
+const formText = f => [
+  (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
+  'שם: ' + f.get('name'),
+  f.get('biz') ? 'עסק: ' + f.get('biz') : '',
+  'צריך: ' + f.get('what'),
+  f.get('msg') ? 'הרעיון: ' + f.get('msg') : ''
+].filter(Boolean).join('\n');
+
+const say = (text, ok) => {
+  const el = document.getElementById('form-msg');
+  if (el) { el.textContent = text; el.className = 'form-msg' + (ok === true ? ' ok' : ok === false ? ' bad' : ''); }
+};
+
+form?.addEventListener('submit', e => {
   e.preventDefault();
-  const f = new FormData(e.target);
-  const text = [
-    (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
-    'שם: ' + f.get('name'),
-    f.get('biz') ? 'עסק: ' + f.get('biz') : '',
-    'צריך: ' + f.get('what'),
-    f.get('msg') ? 'הרעיון: ' + f.get('msg') : ''
-  ].filter(Boolean).join('\n');
-  if (WA_NUMBER) window.open(waLink(text), '_blank', 'noopener');
+  if (WA_NUMBER) window.open(waLink(formText(new FormData(e.target))), '_blank', 'noopener');
+});
+
+// Sending by email needs a key from web3forms.com; without one the button is not rendered.
+const mailBtn = document.getElementById('send-mail');
+mailBtn?.addEventListener('click', async () => {
+  if (!form.reportValidity()) return;
+  const f = new FormData(form);
+  if (f.get('_gotcha')) return;                       // a bot filled the hidden field
+  mailBtn.disabled = true;
+  say('שולח…');
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: document.body.dataset.formkey,
+        subject: 'פנייה חדשה מהאתר: ' + (f.get('biz') || f.get('name')),
+        from_name: 'בונים הכל',
+        שם: f.get('name'),
+        עסק: f.get('biz') || '—',
+        צריך: f.get('what'),
+        הרעיון: f.get('msg') || '—',
+        הגיע_מהדף: location.pathname
+      })
+    });
+    if (!res.ok) throw new Error(res.status);
+    say('ההודעה נשלחה. נחזור אליך בהקדם 🙂', true);
+    form.reset();
+    if (typeof window.gtag === 'function') gtag('event', 'email_submit', { page: location.pathname });
+  } catch {
+    say('השליחה נכשלה. אפשר לשלוח בוואטסאפ, או להתקשר.', false);
+    mailBtn.disabled = false;
+  }
 });
 
 const y = document.getElementById('y');

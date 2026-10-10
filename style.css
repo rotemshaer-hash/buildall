@@ -639,3 +639,11 @@ a.sb .go-i{
   a.sb:hover .go-i{opacity:1;transform:none}
 }
 a.sb{transition:transform .25s,box-shadow .25s,border-color .25s}
+
+/* ---------- טופס: שליחה בוואטסאפ או במייל ---------- */
+.hp{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px}
+#send-mail{width:100%}
+#send-mail:disabled{opacity:.6;cursor:wait}
+.form-msg{font-size:15px;font-weight:600;text-align:center;min-height:1.2em;margin-top:2px}
+.form-msg.ok{color:var(--teal)}
+.form-msg.bad{color:#c0392b}
