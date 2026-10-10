@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rotemshaer-hash.github.io/buildall/sitemap.xml
+Sitemap: https://buildall.pages.dev/sitemap.xml

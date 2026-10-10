@@ -2,7 +2,7 @@
 // Change it here and `node build.mjs` writes it into every page.
 
 // The site's address. When buildall.co.il is bought, change this one line and rebuild.
-export const BASE = 'https://rotemshaer-hash.github.io/buildall/';
+export const BASE = 'https://buildall.pages.dev/';
 
 export const BRAND = 'בונים הכל';
 export const FULL_NAME = 'בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות';

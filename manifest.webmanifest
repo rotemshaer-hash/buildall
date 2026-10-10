@@ -2,9 +2,9 @@
   "name": "בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות",
   "short_name": "בונים הכל",
   "description": "בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.",
-  "start_url": "https://rotemshaer-hash.github.io/buildall/",
-  "scope": "https://rotemshaer-hash.github.io/buildall/",
-  "id": "https://rotemshaer-hash.github.io/buildall/",
+  "start_url": "https://buildall.pages.dev/",
+  "scope": "https://buildall.pages.dev/",
+  "id": "https://buildall.pages.dev/",
   "display": "standalone",
   "orientation": "portrait",
   "lang": "he",
@@ -17,19 +17,19 @@
   ],
   "icons": [
     {
-      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-192.png",
+      "src": "https://buildall.pages.dev/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-512.png",
+      "src": "https://buildall.pages.dev/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://rotemshaer-hash.github.io/buildall/icons/icon-maskable.png",
+      "src": "https://buildall.pages.dev/icons/icon-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
