@@ -151,7 +151,8 @@ export function header(root) {
     </nav>
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
-      <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg>וואטסאפ</a>
+      <button class="btn btn-ai ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
+      <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
     </div>
   </div>
 </header>`;
@@ -163,6 +164,7 @@ export function navBar(root) {
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
   <ul>
     <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
+    <li><a href="${r}#film">סרטון הדגמה</a></li>
     <li><a href="${r}#services">שירותים</a></li>
     <li><a href="${r}#work">עבודות</a></li>
     <li><a href="${r}#industries">לפי תחום</a></li>
@@ -189,12 +191,10 @@ export function footer(root, nav) {
   </div>
 </footer>
 
-<a class="fab" data-wa href="#contact" aria-label="שליחת הודעה בוואטסאפ"><svg><use href="#wa"/></svg></a>
-
 <!-- נציג השירות. נפתח רק בלחיצה, ולא טוען כלום עד אז. -->
-<button class="ai-fab" id="ai-open" type="button" aria-label="שאל את העוזר של בונים הכל">
-  <svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>
-  <span>יש שאלה?</span>
+<button class="ai-fab ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם">
+  <svg class="i" aria-hidden="true"><use href="#i-bot"/></svg>
+  <span>שאל את ה־AI</span>
 </button>
 
 <div class="ai-panel" id="ai-panel" role="dialog" aria-modal="true" aria-labelledby="ai-title" hidden>

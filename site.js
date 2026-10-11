@@ -94,18 +94,6 @@ document.addEventListener('click', e => {
   gtag('event', a.hasAttribute('data-call') ? 'phone_click' : 'whatsapp_click', { page: location.pathname });
 });
 
-// The floating WhatsApp button appears only past the hero, so it never sits
-// next to the buttons that are already in the header and in the hero itself.
-const fab = document.querySelector('.fab');
-const hero = document.querySelector('.hero');
-if (fab && hero && 'IntersectionObserver' in window) {
-  new IntersectionObserver(
-    ([e]) => fab.classList.toggle('show', !e.isIntersecting),
-    { threshold: 0 }
-  ).observe(hero);
-} else if (fab) {
-  fab.classList.add('show');
-}
 
 // ---------- Work It demo ----------
 // Runs only on the page that holds it. Nothing is sent anywhere. The point of the
@@ -208,9 +196,10 @@ if (fab && hero && 'IntersectionObserver' in window) {
   const lead = $('ai-lead');
   let history = [], asked = 0, leadShown = false, busy = false;
 
-  const open = () => { panel.hidden = false; $('ai-open').hidden = true; setTimeout(() => input.focus(), 80); };
-  const close = () => { panel.hidden = true; $('ai-open').hidden = false; };
-  $('ai-open').addEventListener('click', open);
+  const fab = $('ai-open');
+  const open = () => { panel.hidden = false; if (fab) fab.hidden = true; setTimeout(() => input.focus(), 80); };
+  const close = () => { panel.hidden = true; if (fab) fab.hidden = false; };
+  for (const b of document.querySelectorAll('.ai-open')) b.addEventListener('click', open);
   $('ai-close').addEventListener('click', close);
   addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
 
