@@ -8,6 +8,7 @@ import { guides } from './src/guides.mjs';
 import { cases } from './src/cases.mjs';
 import { legal, UPDATED } from './src/legal.mjs';
 import { problems } from './src/problems.mjs';
+import { buildKnowledge } from './scripts/knowledge.mjs';
 
 const nav = { industries, guides, cases, legal };
 
@@ -467,6 +468,9 @@ document.getElementById('c-form').addEventListener('submit', e => {
 </body>
 </html>
 `);
+
+// ---------- what the assistant answers from ----------
+write('kb.json', JSON.stringify(buildKnowledge()));
 
 // ---------- sitemap + robots ----------
 const urls = ['', ...industries.map(i => i.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),

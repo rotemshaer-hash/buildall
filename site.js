@@ -196,3 +196,108 @@ if (fab && hero && 'IntersectionObserver' in window) {
     bubble('out', 'תודה! 🙏');
   });
 })();
+
+// ---------- the assistant ----------
+// Answers come from /api/chat, which reads the site's own content. If that is not
+// available the panel still works: it answers from the questions already on the page.
+(() => {
+  const panel = document.getElementById('ai-panel');
+  if (!panel) return;
+  const $ = id => document.getElementById(id);
+  const body = $('ai-body'), ask = $('ai-ask'), input = $('ai-input');
+  const lead = $('ai-lead');
+  let history = [], asked = 0, leadShown = false, busy = false;
+
+  const open = () => { panel.hidden = false; $('ai-open').hidden = true; setTimeout(() => input.focus(), 80); };
+  const close = () => { panel.hidden = true; $('ai-open').hidden = false; };
+  $('ai-open').addEventListener('click', open);
+  $('ai-close').addEventListener('click', close);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
+
+  const add = (who, text) => {
+    const d = document.createElement('div');
+    d.className = 'ai-msg ' + who;
+    d.textContent = text;
+    body.append(d);
+    body.scrollTop = body.scrollHeight;
+    return d;
+  };
+
+  // Without the assistant, the page answers from what it already says.
+  const faq = [...document.querySelectorAll('#faq-list details')].map(d => ({
+    q: d.querySelector('summary').textContent,
+    a: d.querySelector('p').textContent
+  }));
+  const localAnswer = q => {
+    const words = q.toLowerCase().split(/[^֐-׿a-z0-9]+/).filter(w => w.length > 2);
+    let best = null, score = 0;
+    for (const f of faq) {
+      const hay = (f.q + ' ' + f.a).toLowerCase();
+      const n = words.filter(w => hay.includes(w)).length;
+      if (n > score) { score = n; best = f; }
+    }
+    return score >= 2 && best
+      ? best.a
+      : 'אני לא בטוח שיש לי את התשובה הזו. רותם ישמח לענות בוואטסאפ — אפשר להשאיר פרטים כאן ונחזור אליך.';
+  };
+
+  const maybeLead = () => {
+    if (leadShown || asked < 2) return;
+    leadShown = true;
+    lead.hidden = false;
+    body.scrollTop = body.scrollHeight;
+  };
+
+  async function send(text) {
+    if (busy || !text.trim()) return;
+    busy = true;
+    document.querySelector('.ai-chips')?.remove();
+    add('me', text);
+    history.push({ role: 'user', content: text });
+    input.value = '';
+    const typing = add('bot typing', '···');
+
+    let reply;
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ messages: history })
+      });
+      const data = await res.json();
+      reply = data.reply || localAnswer(text);
+    } catch {
+      reply = localAnswer(text);
+    }
+    typing.remove();
+    add('bot', reply);
+    history.push({ role: 'assistant', content: reply });
+    asked++;
+    maybeLead();
+    busy = false;
+    if (typeof window.gtag === 'function') gtag('event', 'ai_question', { page: location.pathname });
+  }
+
+  ask.addEventListener('submit', e => { e.preventDefault(); send(input.value); });
+  body.addEventListener('click', e => {
+    if (e.target.matches('.ai-chips button')) send(e.target.textContent);
+  });
+
+  // The conversation goes with the lead, so Rotem opens it already knowing the subject.
+  lead.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = $('ai-name').value.trim(), phone = $('ai-phone').value.trim();
+    const topics = history.filter(m => m.role === 'user').map(m => m.content).slice(0, 3);
+    const text = [
+      (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
+      'שם: ' + name,
+      'טלפון: ' + phone,
+      topics.length ? 'שאלתי בצ׳אט: ' + topics.join(' · ') : ''
+    ].filter(Boolean).join('\n');
+    if (WA_NUMBER) window.open(waLink(text), '_blank', 'noopener');
+    lead.hidden = true;
+    add('bot', 'תודה! הפרטים מוכנים בוואטסאפ, רק צריך ללחוץ שליחה.');
+    if (typeof window.gtag === 'function') gtag('event', 'ai_lead', { page: location.pathname });
+  });
+  $('ai-skip').addEventListener('click', () => { lead.hidden = true; });
+})();
