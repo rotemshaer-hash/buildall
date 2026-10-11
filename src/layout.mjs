@@ -12,7 +12,7 @@ export const PHONE = { display: '054-202-0812', intl: '+972-54-202-0812', tel: '
 // GA_ID: the Google Analytics measurement ID, looks like 'G-XXXXXXXXXX'.
 export const GA_ID = '';
 // GSC_VERIFY: the content="..." value of the Search Console HTML-tag verification.
-export const GSC_VERIFY = '';
+export const GSC_VERIFY = '41VeVOyRt4SkL_H4KKYRCT9Z7gUJ_T5l3eAbktuZsnc';
 
 // שליחת הטופס במייל, דרך Web3Forms (חינם, עד 250 פניות בחודש).
 // הכתובת עצמה שמורה אצלם ולא מופיעה בקוד, כי המאגר ציבורי וכתובת גלויה אוספת ספאם.
