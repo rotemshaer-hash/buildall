@@ -147,6 +147,7 @@ export function header(root) {
       <a href="${root || './'}#problems">בעיות</a>
       <a href="${root || './'}#services">שירותים</a>
       <a href="${root || './'}#work">עבודות</a>
+      <a href="${root || './'}#film">סרטון</a>
       <a href="${root || './'}#process">איך עובדים</a>
     </nav>
     <div class="head-actions">
