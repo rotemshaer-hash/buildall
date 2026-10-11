@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<!-- A ten second film, 1080x1920, for WhatsApp status and reels.
+     Every scene is timed in CSS from page load, so the recording is identical each run.
+     Rendered by tools/promo.mjs. -->
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800;900&display=block" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1A1F; --teal:#0e7a72; --purple:#8b2fc9;
+  --tl:#5ee2d4; --pl:#d9a6ff; --wa:#178442;
+  --grad:linear-gradient(150deg,#0F1A1F 0%,#0e7a72 45%,#8b2fc9 100%);
+  --accent:linear-gradient(90deg,#0e7a72,#8b2fc9);
+}
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+body{font-family:Assistant,sans-serif;color:#fff;position:relative}
+h1,h2,b{font-family:Heebo,sans-serif}
+
+.stage{position:absolute;inset:0;display:grid;place-items:center;opacity:0;isolation:isolate}
+.stage > *{position:relative;z-index:2}
+.bg,.grid,.blob{z-index:0}
+.bg{position:absolute;inset:0;background:var(--grad)}
+.grid{position:absolute;inset:0;opacity:.14;
+  background-image:linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px);
+  background-size:70px 70px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+.b1{width:700px;height:700px;background:#14b8a6;top:-220px;right:-180px}
+.b2{width:620px;height:620px;background:#a855f7;bottom:-240px;left:-140px}
+
+/* ---- scene 1: the mess ---- */
+#s1{background:#101B21;animation:show 2.3s both}
+.s1-in{display:grid;gap:34px;width:860px;text-align:center}
+.s1-in h2{font-size:92px;font-weight:900;line-height:1.15}
+.s1-in h2 em{font-style:normal;color:#ff8a9b}
+.bubbles{display:grid;gap:18px}
+.bub{background:#1C2A32;border-radius:26px;padding:26px 32px;font-size:40px;text-align:right;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);opacity:0;animation:pop .45s both}
+.bub:nth-child(1){animation-delay:.35s}
+.bub:nth-child(2){animation-delay:.6s}
+.bub:nth-child(3){animation-delay:.85s;color:#ff8a9b;font-weight:700}
+
+/* ---- scene 2: one tap ---- */
+#s2{animation:show 2.3s 2.2s both}
+.card{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25);border-radius:40px;
+  padding:56px 48px;width:800px;backdrop-filter:blur(20px);display:grid;gap:30px}
+.lbl{font-size:34px;opacity:.78;text-align:right}
+.fld{background:rgba(255,255,255,.14);border-radius:22px;padding:30px 32px;font-size:46px;font-weight:700;text-align:right}
+.send{background:var(--wa);border-radius:22px;padding:34px;text-align:center;font:800 48px Heebo,sans-serif;
+  transform:scale(.9);animation:tap .5s 1.2s both}
+.s2-t{position:absolute;top:300px;width:100%;text-align:center;font:900 76px Heebo,sans-serif}
+
+/* ---- scene 3: the worker's phone ---- */
+#s3{animation:show 2.6s 4.4s both}
+.phone{width:620px;height:1060px;border-radius:72px;border:14px solid #060B0E;background:#F4F7F8;
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:0 50px 110px rgba(0,0,0,.6)}
+.ph-top{background:var(--grad);padding:54px 34px 30px;font:800 40px Heebo,sans-serif}
+.ph-body{flex:1;padding:36px;display:flex;flex-direction:column;gap:26px;color:#16232A}
+.chip{align-self:flex-start;background:#FFF2D6;color:#8A5A00;border-radius:99px;padding:12px 28px;font:700 30px Assistant,sans-serif;
+  animation:toDone .01s 1.75s both}
+.ph-body h3{font:800 54px Heebo,sans-serif;color:#16232A}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.meta div{background:#fff;border:2px solid #E3E9EB;border-radius:20px;padding:18px}
+.meta dt{font-size:24px;color:#55656D}
+.meta dd{font:700 32px Heebo,sans-serif;margin-top:4px}
+.shot{height:280px;border-radius:26px;border:3px dashed #CFD9DD;background:#fff;display:grid;place-items:center;
+  font-size:30px;color:#55656D;animation:photo .01s 1.75s both}
+.mark{margin-top:auto;background:var(--accent);border-radius:26px;padding:34px;text-align:center;
+  font:800 42px Heebo,sans-serif;color:#fff;animation:tap .5s 1.3s both}
+.s3-t{position:absolute;top:180px;width:100%;text-align:center;font:900 70px Heebo,sans-serif}
+
+/* ---- scene 4: the manager sees it ---- */
+#s4{animation:show 1.5s 7s both}
+.s4-in{display:grid;gap:26px;width:820px}
+.s4-in h2{font:900 80px Heebo,sans-serif;text-align:center;margin-bottom:12px}
+.row{background:rgba(255,255,255,.1);border-radius:24px;padding:30px 36px;display:flex;justify-content:space-between;
+  font-size:40px;opacity:0;animation:pop .4s both}
+.row:nth-child(2){animation-delay:.2s}
+.row:nth-child(3){animation-delay:.45s}
+.row:nth-child(4){animation-delay:.7s;background:rgba(20,184,166,.32);font-weight:800}
+.row time{opacity:.72}
+
+/* ---- scene 5: the brand ---- */
+#s5{animation:show 1.6s 8.45s both}
+.end{display:grid;justify-items:center;gap:34px;text-align:center}
+.mark-svg{width:200px;height:200px;animation:rise .7s 8.6s both}
+.end b{font:900 128px Heebo,sans-serif;line-height:1}
+.end b em{font-style:normal;background:linear-gradient(90deg,var(--tl),var(--pl));-webkit-background-clip:text;color:transparent}
+.end .sub{font-size:44px;opacity:.9}
+.end .url{margin-top:18px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.3);
+  border-radius:99px;padding:22px 52px;font:700 40px Assistant,sans-serif;direction:ltr}
+
+@keyframes show{0%{opacity:0}6%{opacity:1}92%{opacity:1}100%{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes tap{0%{transform:scale(.9)}55%{transform:scale(1.04)}100%{transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+@keyframes toDone{to{background:rgba(20,184,166,.2);color:#0b6b62}}
+@keyframes photo{to{border-style:solid;border-color:transparent;background:linear-gradient(135deg,#4a5a63,#8fa3ad 45%,#5c6f78);color:transparent}}
+</style>
+</head>
+<body>
+
+<!-- 0.0–2.3  the mess -->
+<section class="stage" id="s1">
+  <div class="s1-in">
+    <h2>מנהל צוות<br><em>בוואטסאפ?</em></h2>
+    <div class="bubbles">
+      <div class="bub">מי לקח את המשימה?</div>
+      <div class="bub">שלחתי לך אתמול…</div>
+      <div class="bub">לא ראיתי 🤷</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2.2–4.5  one tap -->
+<section class="stage" id="s2">
+  <div class="bg"></div><div class="grid"></div><i class="blob b1"></i><i class="blob b2"></i>
+  <div class="s2-t">שולח משימה אחת</div>
+  <div class="card">
+    <div><div class="lbl">מה צריך לעשות?</div><div class="fld">לספור מלאי במחסן</div></div>
+    <div><div class="lbl">מי מבצע?</div><div class="fld">דני · עד היום</div></div>
+    <div class="send">שלח משימה</div>
+  </div>
+</section>
+
+<!-- 4.4–7.0  the worker opens it -->
+<section class="stage" id="s3">
+  <div class="bg"></div><div class="grid"></div><i class="blob b1"></i>
+  <div class="s3-t">העובד לא מתקין כלום</div>
+  <div class="phone">
+    <div class="ph-top">פקודת עבודה</div>
+    <div class="ph-body">
+      <span class="chip">ממתינה לביצוע</span>
+      <h3>לספור מלאי במחסן</h3>
+      <dl class="meta">
+        <div><dt>עובד</dt><dd>דני</dd></div>
+        <div><dt>יעד</dt><dd>היום</dd></div>
+        <div><dt>נשלח</dt><dd>09:02</dd></div>
+      </dl>
+      <div class="shot">צרף תמונה כהוכחת ביצוע</div>
+      <div class="mark">סמן שבוצע</div>
+    </div>
+  </div>
+</section>
+
+<!-- 7.0–8.5  the manager sees everything -->
+<section class="stage" id="s4">
+  <div class="bg"></div><div class="grid"></div><i class="blob b2"></i>
+  <div class="s4-in">
+    <h2>ואתה רואה הכול</h2>
+    <div class="row"><span>נשלח לדני</span><time>09:02</time></div>
+    <div class="row"><span>נפתח</span><time>09:14</time></div>
+    <div class="row"><span>✓ בוצע · עם תמונה</span><time>14:32</time></div>
+  </div>
+</section>
+
+<!-- 8.45–10.0  the brand -->
+<section class="stage" id="s5">
+  <div class="bg"></div><div class="grid"></div><i class="blob b1"></i><i class="blob b2"></i>
+  <div class="end">
+    <svg class="mark-svg" viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2fd3c3"/><stop offset="1" stop-color="#c58bff"/></linearGradient></defs>
+      <g fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12 8 32l14 20"/><path d="M42 12l14 20-14 20"/>
+      </g>
+      <circle cx="32" cy="32" r="5" fill="url(#g)"/>
+    </svg>
+    <b>בונים <em>הכל</em></b>
+    <div class="sub">אתרים · אפליקציות · מערכות לעסקים קטנים</div>
+    <div class="url">buildall.pages.dev</div>
+  </div>
+</section>
+
+</body>
+</html>

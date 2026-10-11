@@ -29,5 +29,6 @@ node build.mjs
 | Google Analytics ו־Search Console | `GA_ID` ו־`GSC_VERIFY` ב־`src/layout.mjs` |
 | תמונת השיתוף (`og.jpg`) | `node tools/og.mjs` (צריך Playwright) |
 | אייקוני ההתקנה (`icons/`) | `node tools/icons.mjs` (צריך Playwright) |
+| סרטון הפרסומת (10 שניות) | התוכן ב־`tools/promo.html`, מריצים `node tools/promo.mjs` (צריך Playwright + ffmpeg מלא) |
 | המניפסט (התקנה לטלפון) | נבנה ב־`build.mjs`; המטמון ב־`sw.js` |
 | עיצוב | `style.css` |
