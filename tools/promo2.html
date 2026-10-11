@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<!-- Twenty seconds, 1080x1920. Two illustrated people, each with a phone:
+     the manager writes a work order, the worker receives it, does it, photographs it,
+     and the manager sees it. Slow enough to read. Rendered by tools/promo2.mjs. -->
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800;900&display=block" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1A1F; --teal:#0e7a72; --tl:#5ee2d4; --pl:#d9a6ff;
+  --grad:linear-gradient(150deg,#0F1A1F 0%,#0e7a72 45%,#8b2fc9 100%);
+  --accent:linear-gradient(90deg,#0e7a72,#8b2fc9);
+  --skinA:#F2C9A0; --skinB:#C98B5E;
+  --wa:#178442;
+}
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+body{font-family:Assistant,sans-serif;color:#fff;position:relative}
+h2,b{font-family:Heebo,sans-serif}
+
+/* ---------- the set: background, caption, screen, two people ---------- */
+.bg{position:absolute;inset:0;background:var(--grad);z-index:0}
+.grid{position:absolute;inset:0;z-index:0;opacity:.13;
+  background-image:linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px);
+  background-size:70px 70px}
+.blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.45;z-index:0}
+.b1{width:720px;height:720px;background:#14b8a6;top:-240px;right:-200px}
+.b2{width:640px;height:640px;background:#a855f7;bottom:-200px;left:-160px}
+
+.cap{position:absolute;top:120px;right:0;left:0;z-index:5;text-align:center;padding:0 70px}
+.cap span{display:block;font:900 72px Heebo,sans-serif;line-height:1.2;opacity:0}
+.cap small{display:block;font-size:40px;opacity:0;margin-top:14px;font-weight:600}
+
+/* the phone screen, shown big so it can actually be read */
+.screen{
+  position:absolute;top:400px;left:50%;transform:translateX(-50%);z-index:5;
+  width:640px;height:880px;border-radius:56px;border:12px solid #060B0E;
+  background:#F4F7F8;color:#16232A;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 46px 100px rgba(0,0,0,.55);opacity:0;
+}
+.sc-top{background:var(--grad);color:#fff;padding:40px 30px 26px;font:800 36px Heebo,sans-serif;display:flex;align-items:center;gap:14px}
+.sc-body{flex:1;padding:30px;display:flex;flex-direction:column;gap:22px}
+.fld-l{font-size:28px;color:#55656D}
+.fld{background:#fff;border:3px solid #E3E9EB;border-radius:20px;padding:22px 24px;font:700 36px Heebo,sans-serif;min-height:86px}
+.caret{display:inline-block;width:4px;height:38px;background:var(--teal);vertical-align:-6px;margin-right:3px}
+.sc-btn{margin-top:auto;border-radius:22px;padding:28px;text-align:center;font:800 38px Heebo,sans-serif;color:#fff;background:var(--wa)}
+.sc-btn.grad{background:var(--accent)}
+.chip{align-self:flex-start;border-radius:99px;padding:10px 24px;font:700 26px Assistant,sans-serif;background:#FFF2D6;color:#8A5A00}
+.sc-body h3{font:800 44px Heebo,sans-serif}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.meta div{background:#fff;border:2px solid #E3E9EB;border-radius:16px;padding:14px}
+.meta dt{font-size:20px;color:#55656D}
+.meta dd{font:700 26px Heebo,sans-serif;margin-top:3px}
+.shot{height:200px;border-radius:20px;border:3px dashed #CFD9DD;background:#fff;display:grid;place-items:center;font-size:26px;color:#55656D}
+.log{display:grid;gap:14px}
+.log div{display:flex;justify-content:space-between;background:#fff;border:2px solid #E3E9EB;border-radius:16px;padding:18px 20px;font-size:28px}
+.log div.ok{background:rgba(20,184,166,.14);border-color:rgba(20,184,166,.4);font-weight:700}
+.log time{color:#55656D}
+
+/* ---------- the two people ---------- */
+.cast{position:absolute;bottom:0;right:0;left:0;height:620px;z-index:4;display:flex;justify-content:space-around;align-items:flex-end}
+.who{position:relative;width:420px;text-align:center;transition:none}
+.who svg{width:360px;height:470px;display:block;margin:0 auto}
+.who .tag{display:inline-block;margin-top:6px;background:rgba(0,0,0,.34);border:2px solid rgba(255,255,255,.22);
+  border-radius:99px;padding:10px 28px;font:700 32px Heebo,sans-serif}
+.who{opacity:.45;filter:saturate(.6)}
+.who.on{opacity:1;filter:none}
+/* a small idle bob, so they read as alive and not as stickers */
+.body-g{animation:bob 2.8s ease-in-out infinite}
+.who:nth-child(2) .body-g{animation-delay:-1.4s}
+@keyframes bob{50%{transform:translateY(-9px)}}
+/* the arm lifts the phone when it is that person's turn */
+.arm-g{transform-origin:118px 262px;transform:rotate(0deg)}
+.who.lift .arm-g{transform:rotate(-13deg)}
+.ph-glow{opacity:0}
+.who.on .ph-glow{opacity:1}
+
+/* the message that travels from one phone to the other */
+.fly{position:absolute;z-index:6;opacity:0;right:300px;bottom:430px;
+  background:#fff;color:#16232A;border-radius:22px;padding:18px 26px;font:700 30px Heebo,sans-serif;
+  box-shadow:0 18px 44px rgba(0,0,0,.4);white-space:nowrap}
+.fly:after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:0 0 0 0 rgba(94,226,212,.6)}
+
+/* ---------- the end card ---------- */
+.end{position:absolute;inset:0;z-index:9;display:grid;place-items:center;background:var(--ink);opacity:0}
+.end .in{display:grid;justify-items:center;gap:34px;text-align:center;position:relative;z-index:2}
+.end svg.mark{width:210px;height:210px}
+.end b{font:900 132px Heebo,sans-serif;line-height:1}
+.end b em{font-style:normal;background:linear-gradient(90deg,var(--tl),var(--pl));-webkit-background-clip:text;color:transparent}
+.end .sub{font-size:44px;opacity:.9}
+.end .url{margin-top:16px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.3);
+  border-radius:99px;padding:22px 54px;font:700 40px Assistant,sans-serif;direction:ltr}
+</style>
+</head>
+<body>
+
+<div class="bg"></div><div class="grid"></div>
+<i class="blob b1"></i><i class="blob b2"></i>
+
+<div class="cap">
+  <span id="cap1">המנהל כותב פקודת עבודה</span>
+  <span id="cap2">העובד מקבל קישור</span>
+  <span id="cap3">בלי להתקין שום אפליקציה</span>
+  <span id="cap4">מבצע, מצלם ומסמן</span>
+  <span id="cap5">והמנהל רואה הכול</span>
+  <small id="sub1">מהטלפון, בשתי שורות</small>
+  <small id="sub2">לוחץ, ורואה בדיוק מה לעשות</small>
+  <small id="sub3">כל שלב, עם שעה ותמונה</small>
+</div>
+
+<!-- the manager writes -->
+<div class="screen" id="scWrite">
+  <div class="sc-top">משימה חדשה</div>
+  <div class="sc-body">
+    <div><div class="fld-l">מה צריך לעשות?</div><div class="fld" id="typeTask"></div></div>
+    <div><div class="fld-l">מי מבצע?</div><div class="fld" id="typeWho"></div></div>
+    <div class="sc-btn" id="sendBtn">שלח משימה</div>
+  </div>
+</div>
+
+<!-- the worker's work order -->
+<div class="screen" id="scTask">
+  <div class="sc-top">פקודת עבודה</div>
+  <div class="sc-body">
+    <span class="chip" id="taskChip">ממתינה לביצוע</span>
+    <h3>לספור מלאי במחסן</h3>
+    <div class="meta">
+      <div><dt>עובד</dt><dd>דני</dd></div>
+      <div><dt>יעד</dt><dd>היום</dd></div>
+      <div><dt>נשלח</dt><dd>09:02</dd></div>
+    </div>
+    <div class="shot" id="taskShot">צרף תמונה</div>
+    <div class="sc-btn grad" id="doneBtn">סמן שבוצע</div>
+  </div>
+</div>
+
+<!-- what the manager sees at the end -->
+<div class="screen" id="scLog">
+  <div class="sc-top">המשימות שלי</div>
+  <div class="sc-body">
+    <h3>לספור מלאי במחסן</h3>
+    <div class="log">
+      <div><span>נשלח לדני</span><time>09:02</time></div>
+      <div><span>נפתח</span><time>09:14</time></div>
+      <div class="ok"><span>✓ בוצע · עם תמונה</span><time>14:32</time></div>
+    </div>
+    <div class="shot" id="logShot" style="border-style:solid;border-color:transparent;background:linear-gradient(135deg,#4a5a63,#8fa3ad 45%,#5c6f78)"></div>
+  </div>
+</div>
+
+<div class="fly" id="fly">משימה חדשה ›</div>
+
+<!-- the two people -->
+<div class="cast">
+  <div class="who" id="mgr">
+    <svg viewBox="0 0 300 390" aria-hidden="true">
+      <defs>
+        <linearGradient id="shirtA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e8f85"/><stop offset="1" stop-color="#0e6b63"/></linearGradient>
+        <radialGradient id="glowA"><stop offset="0" stop-color="#5ee2d4" stop-opacity=".85"/><stop offset="1" stop-color="#5ee2d4" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g class="body-g">
+        <!-- torso -->
+        <path d="M150 168c48 0 86 30 92 72l12 96c2 16-10 30-26 30H72c-16 0-28-14-26-30l12-96c6-42 44-72 92-72z" fill="url(#shirtA)"/>
+        <!-- collar -->
+        <path d="M150 168l-22 34 22 22 22-22-22-34z" fill="#0b4f49"/>
+        <!-- neck + head -->
+        <rect x="134" y="136" width="32" height="42" rx="14" fill="var(--skinA)"/>
+        <circle cx="150" cy="104" r="54" fill="var(--skinA)"/>
+        <!-- hair -->
+        <path d="M96 100a54 54 0 0 1 108-6c0 10-10 4-22 0-16-6-44-8-62 2-12 7-24 14-24 4z" fill="#3A2A1C"/>
+        <!-- face -->
+        <circle cx="131" cy="104" r="5.5" fill="#2A1D14"/><circle cx="169" cy="104" r="5.5" fill="#2A1D14"/>
+        <path d="M136 126c8 7 20 7 28 0" stroke="#2A1D14" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <!-- far arm -->
+        <rect x="222" y="196" width="34" height="112" rx="17" fill="#17857b"/>
+        <!-- near arm holding the phone -->
+        <g class="arm-g">
+          <rect x="44" y="196" width="34" height="104" rx="17" fill="#1e8f85"/>
+          <circle cx="61" cy="300" r="20" fill="var(--skinA)"/>
+          <circle class="ph-glow" cx="70" cy="276" r="74" fill="url(#glowA)"/>
+          <rect x="34" y="226" width="72" height="116" rx="14" fill="#0b1418"/>
+          <rect x="40" y="232" width="60" height="104" rx="9" fill="#5ee2d4"/>
+          <rect x="47" y="246" width="46" height="7" rx="3.5" fill="#0b4f49" opacity=".55"/>
+          <rect x="47" y="261" width="34" height="7" rx="3.5" fill="#0b4f49" opacity=".4"/>
+          <rect x="47" y="310" width="46" height="16" rx="8" fill="#0e6b63"/>
+        </g>
+      </g>
+    </svg>
+    <span class="tag">המנהל</span>
+  </div>
+
+  <div class="who" id="wrk">
+    <svg viewBox="0 0 300 390" aria-hidden="true">
+      <defs>
+        <linearGradient id="shirtB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8b4fd0"/><stop offset="1" stop-color="#6a2fa8"/></linearGradient>
+        <radialGradient id="glowB"><stop offset="0" stop-color="#d9a6ff" stop-opacity=".9"/><stop offset="1" stop-color="#d9a6ff" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g class="body-g">
+        <path d="M150 168c48 0 86 30 92 72l12 96c2 16-10 30-26 30H72c-16 0-28-14-26-30l12-96c6-42 44-72 92-72z" fill="url(#shirtB)"/>
+        <!-- hi-vis strips, so he reads as the one out in the field -->
+        <path d="M78 300h144l3 24H75z" fill="#F5D547" opacity=".92"/>
+        <path d="M150 168l-22 34 22 22 22-22-22-34z" fill="#58268f"/>
+        <rect x="134" y="136" width="32" height="42" rx="14" fill="var(--skinB)"/>
+        <circle cx="150" cy="104" r="54" fill="var(--skinB)"/>
+        <!-- cap -->
+        <path d="M94 96a56 56 0 0 1 112 0z" fill="#2B2340"/>
+        <path d="M94 96h124c6 0 8 12 0 12H94z" fill="#1E1830"/>
+        <circle cx="131" cy="108" r="5.5" fill="#2A1D14"/><circle cx="169" cy="108" r="5.5" fill="#2A1D14"/>
+        <path d="M136 130c8 7 20 7 28 0" stroke="#2A1D14" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <rect x="44" y="196" width="34" height="112" rx="17" fill="#7a3fc0"/>
+        <g class="arm-g" style="transform-origin:182px 262px">
+          <rect x="222" y="196" width="34" height="104" rx="17" fill="#8b4fd0"/>
+          <circle cx="239" cy="300" r="20" fill="var(--skinB)"/>
+          <circle class="ph-glow" cx="230" cy="276" r="74" fill="url(#glowB)"/>
+          <rect x="194" y="226" width="72" height="116" rx="14" fill="#0b1418"/>
+          <rect x="200" y="232" width="60" height="104" rx="9" fill="#d9a6ff"/>
+          <rect x="207" y="246" width="46" height="7" rx="3.5" fill="#58268f" opacity=".55"/>
+          <rect x="207" y="261" width="34" height="7" rx="3.5" fill="#58268f" opacity=".4"/>
+          <rect x="207" y="310" width="46" height="16" rx="8" fill="#6a2fa8"/>
+        </g>
+      </g>
+    </svg>
+    <span class="tag">העובד</span>
+  </div>
+</div>
+
+<!-- the brand -->
+<div class="end" id="end">
+  <div class="bg"></div><div class="grid"></div><i class="blob b1"></i><i class="blob b2"></i>
+  <div class="in">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2fd3c3"/><stop offset="1" stop-color="#c58bff"/></linearGradient></defs>
+      <g fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 12 8 32l14 20"/><path d="M42 12l14 20-14 20"/>
+      </g>
+      <circle cx="32" cy="32" r="5" fill="url(#g)"/>
+    </svg>
+    <b>בונים <em>הכל</em></b>
+    <div class="sub">אתרים · אפליקציות · מערכות לעסקים קטנים</div>
+    <div class="url">buildall.pages.dev</div>
+  </div>
+</div>
+
+<script>
+// The film is driven from here rather than from CSS keyframes, so every beat has a
+// named time in seconds and the pace is easy to change. tools/promo2.mjs calls
+// window.seek(t) for each frame, which makes the render identical every run.
+const TASK = 'לספור מלאי במחסן';
+const WHO  = 'דני · עד היום';
+
+const $ = id => document.getElementById(id);
+const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+// fade in over `up`, hold, fade out over `down`
+const win = (t, from, to, up = .45, down = .45) =>
+  clamp01((t - from) / up) * clamp01((to - t) / down);
+const typed = (text, t, from, dur) =>
+  text.slice(0, Math.round(clamp01((t - from) / dur) * text.length));
+
+window.seek = function (t) {
+  // captions
+  $('cap1').style.opacity = win(t, 1.0, 6.2);
+  $('sub1').style.opacity = win(t, 1.3, 6.2);
+  $('cap2').style.opacity = win(t, 6.6, 9.4);
+  $('sub2').style.opacity = win(t, 6.9, 9.4);
+  $('cap3').style.opacity = win(t, 9.6, 12.0);
+  $('cap4').style.opacity = win(t, 12.2, 16.4);
+  $('sub3').style.opacity = 0;
+  $('cap5').style.opacity = win(t, 16.6, 19.0);
+  $('sub3').style.opacity = win(t, 16.9, 19.0);
+  // captions share one slot, so only the live one takes up space
+  for (const id of ['cap1','cap2','cap3','cap4','cap5','sub1','sub2','sub3']) {
+    const el = $(id);
+    el.style.position = el.style.opacity > 0.01 ? 'static' : 'absolute';
+    el.style.visibility = el.style.opacity > 0.01 ? 'visible' : 'hidden';
+  }
+
+  // which phone is live, and whose arm is raised
+  const mgrTurn = t < 6.4 || t > 16.4;
+  $('mgr').className = 'who' + (mgrTurn ? ' on lift' : '');
+  $('wrk').className = 'who' + (!mgrTurn && t > 6.4 ? ' on lift' : '');
+
+  // screen 1: the manager types and sends
+  $('scWrite').style.opacity = win(t, 1.2, 6.4, .5, .5);
+  $('typeTask').innerHTML = typed(TASK, t, 1.8, 1.6) + (t > 1.8 && t < 3.5 ? '<i class="caret"></i>' : '');
+  $('typeWho').innerHTML  = typed(WHO,  t, 3.7, 1.1) + (t > 3.7 && t < 5.0 ? '<i class="caret"></i>' : '');
+  const press = t > 5.3 && t < 5.8;
+  $('sendBtn').style.transform = press ? 'scale(.95)' : 'scale(1)';
+  $('sendBtn').style.filter = press ? 'brightness(1.25)' : 'none';
+
+  // the message travels across to the worker
+  const fp = clamp01((t - 5.9) / 1.0);
+  $('fly').style.opacity = String(win(t, 5.9, 7.1, .25, .3));
+  $('fly').style.transform = `translateX(${-fp * 470}px) translateY(${-Math.sin(fp * Math.PI) * 150}px) scale(${1 - fp * .15})`;
+
+  // screen 2: the work order the worker opens
+  $('scTask').style.opacity = win(t, 7.4, 16.4, .5, .5);
+  const done = t > 14.2;
+  $('taskChip').textContent = done ? 'בוצע' : 'ממתינה לביצוע';
+  $('taskChip').style.cssText = done
+    ? 'background:rgba(20,184,166,.18);color:#0b6b62'
+    : 'background:#FFF2D6;color:#8A5A00';
+  $('taskShot').textContent = done ? '' : 'צרף תמונה';
+  $('taskShot').style.cssText = done
+    ? 'border-style:solid;border-color:transparent;background:linear-gradient(135deg,#4a5a63,#8fa3ad 45%,#5c6f78)'
+    : '';
+  const press2 = t > 13.7 && t < 14.2;
+  $('doneBtn').style.transform = press2 ? 'scale(.95)' : 'scale(1)';
+  $('doneBtn').textContent = done ? '✓ דווח למנהל' : 'סמן שבוצע';
+
+  // screen 3: what the manager ends up with
+  $('scLog').style.opacity = win(t, 16.8, 19.2, .5, .5);
+
+  // the brand
+  $('end').style.opacity = win(t, 19.2, 20.2, .5, .4);
+};
+window.seek(0);
+</script>
+</body>
+</html>
