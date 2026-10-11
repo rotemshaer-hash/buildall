@@ -108,23 +108,28 @@ if (fab && hero && 'IntersectionObserver' in window) {
 }
 
 // ---------- Work It demo ----------
-// Runs only on the page that contains it. Nothing is sent anywhere; it plays out
-// the same sequence the real system does, so a visitor can see both sides at once.
+// Runs only on the page that holds it. Nothing is sent anywhere. The point of the
+// demo is the second screen: WhatsApp only carries the link, and the work order
+// itself is a screen in the system.
 (() => {
   const root = document.querySelector('[data-demo]');
   if (!root) return;
   const $ = id => document.getElementById(id);
   const chat = $('d-chat'), log = $('d-log'), act = $('d-act');
+  const waScreen = $('d-wa'), taskScreen = $('d-task-screen');
   const wait = ms => new Promise(r => setTimeout(r, ms));
   const now = () => new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' });
 
+  const show = screen => {
+    waScreen.classList.toggle('is-on', screen === 'wa');
+    taskScreen.classList.toggle('is-on', screen === 'task');
+  };
   const bubble = (side, html) => {
     const d = document.createElement('div');
     d.className = 'b ' + side;
     d.innerHTML = html + `<s>${now()}</s>`;
     chat.append(d);
     chat.scrollTop = chat.scrollHeight;
-    return d;
   };
   const note = (text, state) => {
     log.querySelector('.empty')?.remove();
@@ -139,29 +144,55 @@ if (fab && hero && 'IntersectionObserver' in window) {
     if (busy) return;
     busy = true;
     const task = ($('d-task').value || 'משימה').trim();
-    const who = $('d-who').value;
+    const who = $('d-who').value, due = $('d-due').value;
+
+    // fill the work order with what the manager just typed
     $('d-name').textContent = who;
+    $('d-tk-title').textContent = task;
+    $('d-tk-who').textContent = who;
+    $('d-tk-due').textContent = due;
+    $('d-tk-sent').textContent = now();
+    $('d-status').textContent = 'ממתינה לביצוע';
+    $('d-status').className = 'tk-status';
+    $('d-photo').className = 'tk-photo';
+    $('d-photo-empty').hidden = false;
+    $('d-done').hidden = false;
+    $('d-tk-ok').hidden = true;
+
     chat.innerHTML = '';
     log.innerHTML = '';
     act.hidden = true;
+    show('wa');
 
-    note('המשימה נשלחה ל' + who);
-    bubble('out', `<div class="lnk"><b>משימה חדשה: ${task}</b><i>לחץ לפתיחה ›</i></div>`);
-
+    note(`המשימה נשלחה ל${who} · יעד: ${due}`);
+    bubble('out', `<div class="lnk"><b>משימה חדשה: ${task}</b><i>לחץ לפתיחת פקודת העבודה ›</i></div>`);
     await wait(900);
     note('נמסר', 'ok');
-    await wait(700);
+    await wait(600);
     act.hidden = false;
     busy = false;
   });
 
   $('d-open').addEventListener('click', async () => {
     act.hidden = true;
-    note('נפתח על ידי ' + $('d-who').value, 'ok');
-    await wait(700);
-    bubble('in', '✓ בוצע · צירפתי תמונה 📷');
+    show('task');
+    note('העובד פתח את פקודת העבודה', 'ok');
+  });
+
+  $('d-back').addEventListener('click', () => show('wa'));
+
+  $('d-done').addEventListener('click', async () => {
+    $('d-done').hidden = true;
+    $('d-photo-empty').hidden = true;
+    $('d-photo').className = 'tk-photo has-photo';
+    $('d-status').textContent = 'בוצע';
+    $('d-status').className = 'tk-status is-done';
+    $('d-tk-ok').hidden = false;
     note('בוצע, עם תמונה ושעה', 'done');
-    await wait(600);
+    await wait(1100);
+    show('wa');
+    bubble('in', '✓ סימנתי שבוצע וצירפתי תמונה');
+    await wait(500);
     bubble('out', 'תודה! 🙏');
   });
 })();

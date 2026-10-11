@@ -311,7 +311,7 @@ const workItDemo = () => `<section class="demo-sec" id="demo">
     <div class="sec-head center">
       <span class="eyebrow">${icon('zap')} נסה בעצמך</span>
       <h2 class="h2">תן משימה, וראה את שני הצדדים</h2>
-      <p class="lead">זו הדגמה אמיתית שרצה כאן בדף. מימין מה שאתה רואה כמנהל, ומשמאל מה שהעובד מקבל בטלפון.</p>
+      <p class="lead">הדגמה חיה שרצה כאן בדף. מימין מה שאתה רואה כמנהל, ומשמאל מה שקורה בטלפון של העובד: ההודעה מגיעה בוואטסאפ, אבל <b>פקודת העבודה עצמה היא מסך במערכת</b>.</p>
     </div>
     <div class="demo" data-demo>
       <div class="demo-side">
@@ -320,9 +320,14 @@ const workItDemo = () => `<section class="demo-sec" id="demo">
           <label class="demo-f">מה צריך לעשות?
             <input id="d-task" value="לספור מלאי במחסן" maxlength="40">
           </label>
-          <label class="demo-f">מי מבצע?
-            <select id="d-who"><option>דני</option><option>מאיה</option><option>אבי</option></select>
-          </label>
+          <div class="demo-two">
+            <label class="demo-f">מי מבצע?
+              <select id="d-who"><option>דני</option><option>מאיה</option><option>אבי</option></select>
+            </label>
+            <label class="demo-f">עד מתי?
+              <select id="d-due"><option>היום</option><option>מחר</option><option>סוף השבוע</option></select>
+            </label>
+          </div>
           <button class="btn btn-wa" id="d-send" type="button"><svg><use href="#wa"/></svg>שלח משימה</button>
           <ul class="demo-log" id="d-log"><li class="empty">כאן יופיע מה שקורה עם המשימה</li></ul>
         </div>
@@ -330,17 +335,42 @@ const workItDemo = () => `<section class="demo-sec" id="demo">
       <div class="demo-side">
         <span class="demo-tag">${icon('phone')} הטלפון של העובד</span>
         <div class="dev demo-phone">
-          <div class="wa-h"><span class="av">ב</span><span id="d-name">דני</span></div>
-          <div class="wa-chat" id="d-chat">
-            <div class="b out empty-msg">שלח משימה כדי לראות מה מגיע אליו</div>
+          <!-- מסך 1: ההודעה שמגיעה בוואטסאפ, רק כדי למסור את הקישור -->
+          <div class="ph-screen is-on" id="d-wa">
+            <div class="wa-h"><span class="av">ב</span><span id="d-name">דני</span></div>
+            <div class="wa-chat" id="d-chat">
+              <div class="b out empty-msg">שלח משימה כדי לראות מה מגיע אליו</div>
+            </div>
+            <div class="demo-act" id="d-act" hidden>
+              <button type="button" id="d-open">פתח את פקודת העבודה</button>
+            </div>
           </div>
-          <div class="demo-act" id="d-act" hidden>
-            <button type="button" id="d-open">פתח משימה</button>
+
+          <!-- מסך 2: פקודת העבודה עצמה — זה המוצר -->
+          <div class="ph-screen" id="d-task-screen">
+            <div class="tk-h">
+              <span class="tk-back" id="d-back" role="button" tabindex="0">›</span>
+              <b>פקודת עבודה</b>
+            </div>
+            <div class="tk-body">
+              <span class="tk-status" id="d-status">ממתינה לביצוע</span>
+              <h4 id="d-tk-title">לספור מלאי במחסן</h4>
+              <dl class="tk-meta">
+                <div><dt>עובד</dt><dd id="d-tk-who">דני</dd></div>
+                <div><dt>יעד</dt><dd id="d-tk-due">היום</dd></div>
+                <div><dt>נשלח</dt><dd id="d-tk-sent">—</dd></div>
+              </dl>
+              <div class="tk-photo" id="d-photo">
+                <span id="d-photo-empty">צרף תמונה כהוכחת ביצוע</span>
+              </div>
+              <button class="tk-btn" type="button" id="d-done">סמן שבוצע וצרף תמונה</button>
+              <p class="tk-ok" id="d-tk-ok" hidden>✓ הדיווח נשלח למנהל</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <p class="demo-note">אין כאן וואטסאפ אמיתי ולא נשלחת הודעה. זו הדגמה של הזרימה.</p>
+    <p class="demo-note">הדגמה בלבד: לא נשלחת הודעת וואטסאפ אמיתית ולא נשמר שום מידע.</p>
   </div>
 </section>`;
 
