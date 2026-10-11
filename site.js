@@ -196,9 +196,8 @@ document.addEventListener('click', e => {
   const lead = $('ai-lead');
   let history = [], asked = 0, leadShown = false, busy = false;
 
-  const fab = $('ai-open');
-  const open = () => { panel.hidden = false; if (fab) fab.hidden = true; setTimeout(() => input.focus(), 80); };
-  const close = () => { panel.hidden = true; if (fab) fab.hidden = false; };
+  const open = () => { panel.hidden = false; setTimeout(() => input.focus(), 80); };
+  const close = () => { panel.hidden = true; };
   for (const b of document.querySelectorAll('.ai-open')) b.addEventListener('click', open);
   $('ai-close').addEventListener('click', close);
   addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });

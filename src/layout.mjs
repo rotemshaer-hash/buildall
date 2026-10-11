@@ -151,7 +151,7 @@ export function header(root) {
     </nav>
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
-      <button class="btn btn-ai ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
+      <button class="btn btn-ai ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
       <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
     </div>
   </div>
@@ -190,12 +190,6 @@ export function footer(root, nav) {
     <div>© <span id="y"></span> ${BRAND}. כל הזכויות שמורות.</div>
   </div>
 </footer>
-
-<!-- נציג השירות. נפתח רק בלחיצה, ולא טוען כלום עד אז. -->
-<button class="ai-fab ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם">
-  <svg class="i" aria-hidden="true"><use href="#i-bot"/></svg>
-  <span>שאל את ה־AI</span>
-</button>
 
 <div class="ai-panel" id="ai-panel" role="dialog" aria-modal="true" aria-labelledby="ai-title" hidden>
   <div class="ai-head">
