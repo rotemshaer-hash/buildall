@@ -283,6 +283,20 @@ export const business = {
   knowsAbout: ['פתרונות דיגיטליים לעסקים קטנים', 'בינה מלאכותית (AI)', 'בניית אתרים', 'דפי נחיתה', 'פיתוח אפליקציות', 'מערכות ניהול לעסקים', 'ניהול עובדים', 'ניהול מסמכים']
 };
 
+// The demo film on the home page. Google can show it as a video result, which is
+// a second way into the site besides the text.
+export const videoSchema = {
+  '@context': 'https://schema.org', '@type': 'VideoObject',
+  name: 'ככה נראית מערכת שבנינו: פקודת עבודה, הוכחת ביצוע וייצוא לאקסל',
+  description: 'המנהל כותב פקודת עבודה מהטלפון, העובד מקבל קישור בוואטסאפ בלי להתקין אפליקציה, מצלם הוכחה עם שעה ומיקום וחותם, והמנהל מקבל הכול מסודר ומייצא לאקסל.',
+  thumbnailUrl: [BASE + 'media/workit-poster.jpg'],
+  contentUrl: BASE + 'media/workit.mp4',
+  uploadDate: '2026-10-11',
+  duration: 'PT28S',
+  isFamilyFriendly: true,
+  publisher: { '@id': BASE + '#business' }
+};
+
 export const faqSchema = pairs => ({
   '@context': 'https://schema.org', '@type': 'FAQPage',
   mainEntity: pairs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } }))

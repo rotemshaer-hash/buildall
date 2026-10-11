@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, business, faqSchema } from './src/layout.mjs';
+import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
@@ -166,7 +166,7 @@ write('index.html', page({
   path: '', root: '',
   title: 'בונים הכל | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
-  schemas: [business, faqSchema(homeFaq)],
+  schemas: [business, videoSchema, faqSchema(homeFaq)],
   body: home
 }));
 

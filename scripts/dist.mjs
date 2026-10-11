@@ -7,7 +7,7 @@ const FILES = [
   'index.html', 'style.css', 'site.js', 'sw.js', 'manifest.webmanifest',
   '_worker.js', 'kb.json',
   'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo',
-  'accessibility', 'privacy', 'guides', 'work',
+  'accessibility', 'privacy', 'guides', 'work', 'media',
   'restaurants', 'beauty', 'retail', 'clinics', 'contractors', 'fitness'
 ];
 

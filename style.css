@@ -1082,3 +1082,20 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .ai-lead .btn{width:100%;font-size:16px;padding:12px}
 .ai-skip{background:none;border:0;color:var(--muted);font:600 14px Assistant,sans-serif;cursor:pointer;text-decoration:underline}
 @media (prefers-reduced-motion:reduce){.ai-panel,.ai-msg{animation:none}}
+
+/* ---- film: the demo video, next to the text and never in the way ---- */
+.film{background:var(--card)}
+.film-in{display:grid;grid-template-columns:1fr minmax(260px,320px);gap:var(--s5);align-items:center}
+.film-txt .lead{margin-top:10px}
+.film-note{margin-top:14px;background:linear-gradient(170deg,#fff,#F7FAFB);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:16px 18px;color:var(--muted);font-size:16px;line-height:1.6}
+.film-note b{color:var(--text)}
+.film-txt .btn{margin-top:18px}
+/* the poster is what loads; the file itself only downloads when he presses play */
+.film-vid video{width:100%;height:auto;aspect-ratio:9/16;display:block;border-radius:var(--r);
+  background:var(--ink);border:1px solid var(--line);box-shadow:0 18px 40px rgba(15,26,31,.18)}
+.film-cap{margin-top:10px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:860px){
+  .film-in{grid-template-columns:1fr}
+  .film-vid{max-width:300px;margin-inline:auto}
+}
