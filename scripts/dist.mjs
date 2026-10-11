@@ -7,6 +7,7 @@ const FILES = [
   'index.html', 'style.css', 'site.js', 'sw.js', 'manifest.webmanifest',
   '_worker.js', 'kb.json',
   'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo',
+  'googlef057313d56875ab6.html',   // Search Console ownership. Google says to keep it for good.
   'accessibility', 'privacy', 'guides', 'work', 'media',
   'restaurants', 'beauty', 'retail', 'clinics', 'contractors', 'fitness'
 ];
