@@ -12,6 +12,23 @@ if (WA_NUMBER) {
   });
 }
 
+// A square that says "ניהול עובדים" takes you to the form with that already written
+// in it, so the subject is not lost and nothing opens that was not asked for.
+document.addEventListener('click', e => {
+  const a = e.target.closest && e.target.closest('[data-subject]');
+  if (!a) return;
+  const msg = document.querySelector('#lead [name="msg"]');
+  if (!msg) return;
+  const subject = a.dataset.subject;
+  if (!msg.value.trim() || msg.dataset.auto === '1') {
+    msg.value = 'מעוניין ב: ' + subject;
+    msg.dataset.auto = '1';
+  }
+  const sel = document.querySelector('#lead [name="what"]');
+  if (sel) for (const o of sel.options) if (o.text.includes(subject)) { sel.value = o.value; break; }
+  setTimeout(() => document.querySelector('#lead [name="name"]')?.focus({ preventScroll: true }), 600);
+});
+
 const form = document.getElementById('lead');
 
 // The same filled form goes out two ways, so the fields are read in one place.
