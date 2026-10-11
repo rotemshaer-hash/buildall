@@ -164,10 +164,10 @@ export function navBar(root) {
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
   <ul>
     <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
-    <li><a href="${r}#film">סרטון הדגמה</a></li>
     <li><a href="${r}#services">שירותים</a></li>
     <li><a href="${r}#work">עבודות</a></li>
     <li><a href="${r}#industries">לפי תחום</a></li>
+    <li><a href="${r}#film">סרטון הדגמה</a></li>
     <li><a href="${r}#ai">AI</a></li>
     <li><a href="${r}#process">איך עובדים</a></li>
     <li><a href="#contact">יצירת קשר</a></li>
