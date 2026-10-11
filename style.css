@@ -114,6 +114,8 @@ section{padding:var(--s6) 0}
 }
 @media (hover:hover){.btn-ghost:hover{background:rgba(255,255,255,.2)}}
 .btn-line{background:var(--card);color:var(--text);border:1px solid var(--line-strong)}
+/* the one action in the hero, so it carries the brand rather than hiding in the glass */
+.btn-brand{background:var(--accent);color:#fff;border:0;box-shadow:0 12px 30px rgba(139,47,201,.35)}
 .btn-call{
   background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);
   font-size:15px;padding:10px 14px;
@@ -593,9 +595,10 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
   .btn-call{padding:9px 10px}
   .logo b{font-size:18px}
   .logo svg{width:27px;height:27px}
-  .logo small{display:none}
   .head-actions{gap:6px}
   .head-actions .btn{height:40px}
+  .btn-call{display:none}
+  .logo small{display:block}
   .head-cta{font-size:0;padding:9px 10px}
   .head-cta svg{width:21px;height:21px}
   .btn-ai{font-size:14px;padding:9px 12px;gap:6px}
@@ -827,9 +830,10 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   .btn-call{padding:9px 10px}
   .logo b{font-size:18px}
   .logo svg{width:27px;height:27px}
-  .logo small{display:none}
   .head-actions{gap:6px}
   .head-actions .btn{height:40px}
+  .btn-call{display:none}
+  .logo small{display:block}
   .head-cta{font-size:0;padding:9px 10px}
   .head-cta svg{width:21px;height:21px}
   .btn-ai{font-size:14px;padding:9px 12px;gap:6px}
