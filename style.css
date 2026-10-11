@@ -127,8 +127,9 @@ header{
   backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:var(--head-h)}
-.logo{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;flex:none}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:var(--head-h);flex-wrap:nowrap}
+/* the buttons keep their size and the name gives way, never the other way round */
+.logo{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;min-width:0;overflow:hidden}
 .logo svg{width:30px;height:30px;flex:none}
 .logo b{font-family:Heebo,sans-serif;font-size:20px;font-weight:800;line-height:1.05;white-space:nowrap;display:block}
 .logo b em{font-style:normal;background:linear-gradient(90deg,var(--teal-light),var(--purple-light));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -149,6 +150,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 @keyframes nudge-r{50%{transform:translateX(-3px)}}
 @keyframes nudge-l{50%{transform:translateX(3px)}}
 .head-actions{display:flex;gap:8px;align-items:center;flex:none}
+.head-actions .btn{white-space:nowrap;line-height:1;height:42px}
 /* the assistant is the one button in the header that is not a phone number */
 .btn-ai{background:var(--accent);color:#fff;border:0;white-space:nowrap;
   font-size:15px;padding:10px 15px;box-shadow:0 8px 22px rgba(139,47,201,.3)}
@@ -593,6 +595,7 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
   .logo svg{width:27px;height:27px}
   .logo small{display:none}
   .head-actions{gap:6px}
+  .head-actions .btn{height:40px}
   .head-cta{font-size:0;padding:9px 10px}
   .head-cta svg{width:21px;height:21px}
   .btn-ai{font-size:14px;padding:9px 12px;gap:6px}
@@ -826,6 +829,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   .logo svg{width:27px;height:27px}
   .logo small{display:none}
   .head-actions{gap:6px}
+  .head-actions .btn{height:40px}
   .head-cta{font-size:0;padding:9px 10px}
   .head-cta svg{width:21px;height:21px}
   .btn-ai{font-size:14px;padding:9px 12px;gap:6px}
