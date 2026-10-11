@@ -9,6 +9,10 @@ node build.mjs
 הפקודה כותבת את `index.html`, דף לכל תחום (`restaurants/`, `beauty/` וכו'), מדריכים (`guides/`), סיפורי פרויקטים (`work/`), `accessibility/`, `privacy/`, `sitemap.xml` ו־`robots.txt`.
 **את הקבצים האלה לא עורכים ישירות.** עורכים את המקור ובונים מחדש.
 
+**דחיפה ל־`main` מעלה את האתר לאוויר לבד** (GitHub Actions → Cloudflare Pages).
+הפעולה מריצה `node build.mjs`, ואז `node scripts/dist.mjs` שאוסף ל־`dist/` רק את מה
+שצריך להתפרסם. **קובץ חדש שאמור להתפרסם — להוסיף אותו לרשימה ב־`scripts/dist.mjs`.**
+
 | מה משנים | איפה |
 |---|---|
 | כתובת האתר (כשקונים את `buildall.co.il`) | `BASE` ב־`src/layout.mjs` |

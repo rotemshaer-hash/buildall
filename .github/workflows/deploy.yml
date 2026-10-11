@@ -1,0 +1,39 @@
+# Every push to main rebuilds the site and publishes it to Cloudflare Pages,
+# so nobody has to upload a zip by hand.
+#
+# Needs two repository secrets, set once:
+#   CLOUDFLARE_API_TOKEN  — a token with the "Cloudflare Pages: Edit" permission
+#   CLOUDFLARE_ACCOUNT_ID — the account id from the Cloudflare dashboard URL
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    # Notes and sources that never reach the public site.
+    paths-ignore:
+      - '**.md'
+      - '.github/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build the pages
+        run: node build.mjs
+
+      - name: Collect what goes live
+        run: node scripts/dist.mjs
+
+      - name: Publish
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=buildall --branch=main
