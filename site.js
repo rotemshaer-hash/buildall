@@ -83,18 +83,24 @@ mailBtn?.addEventListener('click', async () => {
   }
 });
 
-// Installing the site as an app. Chrome hands us the prompt and we keep it until
-// the button is pressed; Safari has no such event, so the iPhone gets the steps.
+// Installing the site as an app. Chrome only offers its own prompt once the
+// service worker controls the page, which is usually the second visit, so the
+// steps are always shown and the one tap button replaces them when it arrives.
 (() => {
   const box = document.getElementById('install');
   if (!box || matchMedia('(display-mode: standalone)').matches || navigator.standalone) return;
   const btn = document.getElementById('install-go');
-  const ios = document.getElementById('install-ios');
+  const how = document.getElementById('install-how');
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  if (ios) how.innerHTML = 'באייפון: כפתור השיתוף <b>⬆︎</b> בתחתית הדפדפן ← <b>הוספה למסך הבית</b>';
+  box.hidden = false;
+
   let deferred = null;
   addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
     deferred = e;
-    box.hidden = false;
+    btn.hidden = false;
+    how.hidden = true;
   });
   btn.addEventListener('click', async () => {
     if (!deferred) return;
@@ -102,13 +108,8 @@ mailBtn?.addEventListener('click', async () => {
     const { outcome } = await deferred.userChoice;
     deferred = null;
     if (outcome === 'accepted') box.hidden = true;
+    else { btn.hidden = true; how.hidden = false; }
   });
-  // iPhone: no event ever fires, so show the two steps instead of a dead button
-  if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
-    btn.hidden = true;
-    ios.hidden = false;
-    box.hidden = false;
-  }
   addEventListener('appinstalled', () => { box.hidden = true; });
 })();
 

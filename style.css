@@ -519,7 +519,8 @@ footer summary{font-size:15px;color:#fff}
 footer summary:after{color:var(--teal-light)}
 footer details p{color:rgba(255,255,255,.7);font-size:14px}
 /* shown only where the browser can actually install it */
-.install{margin:var(--s3) 0}
+.install{margin:var(--s3) 0;display:grid;gap:8px;justify-items:start}
+.install b{font-family:Heebo,sans-serif;font-size:16px}
 .install .btn{font-size:15px}
 .install p{color:rgba(255,255,255,.75);font-size:14px;line-height:1.7}
 .install p b{color:#fff}
