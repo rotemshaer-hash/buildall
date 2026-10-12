@@ -1,6 +1,6 @@
 // The minimum a browser needs before it will offer to install the site.
 // It serves the page from the network, and falls back to the last copy when offline.
-const CACHE = 'buildall-v1';
+const CACHE = 'buildall-v2';
 
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
