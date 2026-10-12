@@ -416,7 +416,11 @@ for (const c of cases) {
 <p>${c.problem}</p>
 <h2>מה בנינו</h2>
 <p>${c.solution}</p>
-<h2>שני הצדדים</h2>
+${c.gains ? `<h2>מה זה שינה</h2>
+<div class="gains">
+${c.gains.map(([was, now]) => `  <div class="gain"><p class="was">${was}</p><p class="now">${now}</p></div>`).join('\n')}
+</div>
+` : ''}<h2>שני הצדדים</h2>
 <div class="sides">
   <div class="side side-a"><span class="side-tag">${icon('users')} ${c.sides.workerT}</span><p>${c.sides.worker}</p></div>
   <div class="side side-b"><span class="side-tag">${icon('chart')} ${c.sides.mgrT}</span><p>${c.sides.mgr}</p></div>
