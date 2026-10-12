@@ -1042,6 +1042,12 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .svc-g:target{border-color:var(--teal);scroll-margin-top:calc(var(--head-h) + 70px)}
 @media (hover:hover){.svc-g:hover{border-color:rgba(14,122,114,.3)}}
 @media (prefers-reduced-motion:reduce){.svc-g > summary:after{transition:none}}
+/* אותה מגירה על הרקע הכהה של מקטע ה-AI */
+.ai-g{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
+.ai-g small{color:rgba(255,255,255,.75)}
+.ai-g .ic{background:rgba(0,0,0,.25);border-color:rgba(255,255,255,.2)}
+.ai-g > summary:after{border-color:rgba(255,255,255,.7)}
+.ai-g[open]{border-color:rgba(255,255,255,.4);box-shadow:none}
 
 .group-title:target{scroll-margin-top:calc(var(--head-h) + 60px)}
 
