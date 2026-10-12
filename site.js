@@ -29,6 +29,14 @@ document.addEventListener('click', e => {
   setTimeout(() => document.querySelector('#lead [name="name"]')?.focus({ preventScroll: true }), 600);
 });
 
+// A link to #manage from anywhere should land on an open group, not a closed one.
+const openTargetGroup = () => {
+  const el = location.hash && document.querySelector(location.hash);
+  if (el && el.tagName === 'DETAILS') el.open = true;
+};
+addEventListener('hashchange', openTargetGroup);
+openTargetGroup();
+
 const form = document.getElementById('lead');
 
 // The same filled form goes out two ways, so the fields are read in one place.
