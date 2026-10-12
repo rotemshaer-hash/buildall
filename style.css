@@ -462,7 +462,6 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   font:800 30px Heebo,sans-serif;opacity:1;
   background:var(--accent);-webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.process .card.hl{border:2px solid var(--teal);box-shadow:var(--sh)}
 
 /* ---------- התחייבות המחיר ---------- */
 .guarantee{
@@ -599,6 +598,10 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
   .sb-cta .btn{width:100%}
 }
 @media (max-width:480px){
+  section{padding:var(--s5) 0}
+  .sec-head{margin-bottom:var(--s4)}
+  .h2{font-size:27px;line-height:1.25}
+  .lead{font-size:17px}
   .btn-call span{display:none}
   .btn-call{padding:9px 10px}
   .logo b{font-size:18px}
@@ -834,6 +837,10 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   .sb-cta .btn{width:100%}
 }
 @media (max-width:480px){
+  section{padding:var(--s5) 0}
+  .sec-head{margin-bottom:var(--s4)}
+  .h2{font-size:27px;line-height:1.25}
+  .lead{font-size:17px}
   .btn-call span{display:none}
   .btn-call{padding:9px 10px}
   .logo b{font-size:18px}
