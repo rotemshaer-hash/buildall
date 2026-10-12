@@ -1043,6 +1043,10 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 @media (hover:hover){.svc-g:hover{border-color:rgba(14,122,114,.3)}}
 @media (prefers-reduced-motion:reduce){.svc-g > summary:after{transition:none}}
 /* אותה מגירה על הרקע הכהה של מקטע ה-AI */
+/* אותה מגירה גם במקטעים הבהירים */
+.sec-g > .why,.sec-g > .process,.sec-g > .ex-list{padding:0 14px 16px}
+.ex-g{margin:var(--s3) 0}
+.ex-g > .ex-list{margin:0}
 .ai-g{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
 .ai-g small{color:rgba(255,255,255,.75)}
 .ai-g .ic{background:rgba(0,0,0,.25);border-color:rgba(255,255,255,.2)}
