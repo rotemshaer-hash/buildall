@@ -9,7 +9,11 @@ node build.mjs
 הפקודה כותבת את `index.html`, דף לכל תחום (`restaurants/`, `beauty/` וכו'), מדריכים (`guides/`), סיפורי פרויקטים (`work/`), `accessibility/`, `privacy/`, `sitemap.xml` ו־`robots.txt`.
 **את הקבצים האלה לא עורכים ישירות.** עורכים את המקור ובונים מחדש.
 
-**דחיפה ל־`main` מעלה את האתר לאוויר לבד** (GitHub Actions → Cloudflare Pages).
+**הפריסה ידנית.** דחיפה ל־`main` לא מעלה את האתר: מריצים `node build.mjs`,
+אחר כך `node scripts/dist.mjs` (שמריץ גם את הביקורת ונכשל אם היא נכשלת), יוצרים זיפ
+מתוך `dist/` ומעלים אותו ב־Cloudflare Pages ← Deployments ← Create deployment.
+`.github/workflows/deploy.yml` יעשה את זה לבד ברגע ששני המפתחות
+`CLOUDFLARE_API_TOKEN` ו־`CLOUDFLARE_ACCOUNT_ID` יוגדרו ב־Settings ← Secrets ← Actions.
 הפעולה מריצה `node build.mjs`, ואז `node scripts/dist.mjs` שאוסף ל־`dist/` רק את מה
 שצריך להתפרסם. **קובץ חדש שאמור להתפרסם — להוסיף אותו לרשימה ב־`scripts/dist.mjs`.**
 
@@ -29,6 +33,6 @@ node build.mjs
 | Google Analytics ו־Search Console | `GA_ID` ו־`GSC_VERIFY` ב־`src/layout.mjs` |
 | תמונת השיתוף (`og.jpg`) | `node tools/og.mjs` (צריך Playwright) |
 | אייקוני ההתקנה (`icons/`) | `node tools/icons.mjs` (צריך Playwright) |
-| סרטון הפרסומת (10 שניות) | התוכן ב־`tools/promo.html`, מריצים `node tools/promo.mjs` (צריך Playwright + ffmpeg מלא) |
+| סרטון ההדגמה (28 שניות, זה שבאתר) | התוכן ב־`tools/promo3.html`, מריצים `node tools/promo3.mjs` (צריך Playwright + ffmpeg מלא). הפלט מועתק ל־`media/workit.mp4` |
 | המניפסט (התקנה לטלפון) | נבנה ב־`build.mjs`; המטמון ב־`sw.js` |
 | עיצוב | `style.css` |

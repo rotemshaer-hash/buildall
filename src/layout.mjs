@@ -236,7 +236,10 @@ export function footer(root, nav) {
 }
 
 // The contact form — the same on every page, so a visitor can ask from wherever they landed.
-export function contact(lead = 'ממלאים שלוש שורות, ובוחרים לשלוח בוואטסאפ או במייל.') {
+// While FORM_KEY is empty there is no mail button, so the text must not promise one.
+export function contact(lead = FORM_KEY
+  ? 'ממלאים שלוש שורות, ובוחרים לשלוח בוואטסאפ או במייל.'
+  : 'ממלאים שלוש שורות, וההודעה נפתחת מוכנה בוואטסאפ.') {
   return `<section class="contact" id="contact">
   <div class="wrap center">
     <div class="sec-head">

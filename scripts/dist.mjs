@@ -2,6 +2,7 @@
 // the plan and the build tools behind. Both the deploy workflow and the hand
 // made ZIP use this, so what goes live is always the same set of files.
 import { cpSync, rmSync, mkdirSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 
 const FILES = [
   'index.html', '404.html', 'style.css', 'site.js', 'sw.js', 'manifest.webmanifest',
@@ -24,3 +25,10 @@ if (missing.length) {
   process.exit(1);
 }
 console.log('dist ready:', FILES.length, 'entries');
+
+// The audit runs here, so nothing can be zipped without it passing.
+const { status } = spawnSync(process.execPath, ['scripts/audit.mjs'], { stdio: 'inherit' });
+if (status !== 0) {
+  console.error('\nהביקורת נכשלה — dist/ לא מוכן לפריסה.');
+  process.exit(status || 1);
+}

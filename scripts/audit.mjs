@@ -74,7 +74,8 @@ for (const page of pages) {
 }
 
 console.log('\nניסוחים שהוסכם להוריד:');
-const banned = ['שתי מערכות שבנינו', 'עסק של איש אחד', 'חלק קטן ממה שאנחנו בונים',
+const banned = ['שתי מערכות שבנינו', 'עסק של איש אחד', 'חלק קטן ממה שאנחנו בונים', 'וזו רק דוגמה',
+                'GitHub Pages', 'rotemshaer-hash.github.io',
                 'רותם · בונים הכל', 'card hl', 'שיחת ייעוץ חינם</a></li>'];
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
@@ -87,3 +88,5 @@ ok(chips[4] === 'סרטון הדגמה', `הסרטון חמישי בסרגל (כ
 console.log('  ' + chips.join(' · '));
 
 console.log(`\n${fails === 0 ? '✓ הכול תקין' : '✗ ' + fails + ' כשלים'} — ${checks} בדיקות`);
+// A check that prints a failure and exits 0 is a check nobody will ever notice.
+if (fails) process.exit(1);
