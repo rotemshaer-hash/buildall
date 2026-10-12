@@ -153,7 +153,7 @@ export function header(root) {
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
       <button class="btn btn-ai ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
-      <a class="btn btn-wa head-cta" data-wa href="#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
+      <a class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
     </div>
   </div>
 </header>`;
@@ -171,7 +171,7 @@ export function navBar(root) {
     <li><a href="${r}#film">סרטון הדגמה</a></li>
     <li><a href="${r}#ai">AI</a></li>
     <li><a href="${r}#process">איך עובדים</a></li>
-    <li><a href="#contact">יצירת קשר</a></li>
+    <li><a href="${r}#contact">יצירת קשר</a></li>
   </ul>
 </nav>`;
 }
