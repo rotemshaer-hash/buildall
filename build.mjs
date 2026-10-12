@@ -277,6 +277,37 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
   }));
 }
 
+// ---------- not found ----------
+// Cloudflare serves this for any address that does not exist. Without it the
+// visitor gets a bare server error page with none of our branding and no way on.
+write('404.html', page({
+  // absolute, because a 404 is served at whatever address the visitor mistyped
+  path: '404', root: '/',
+  title: 'הדף לא נמצא | ' + BRAND,
+  description: 'הכתובת שחיפשת לא קיימת באתר של בונים הכל. מכאן אפשר לחזור לדף הבית, לעבודות או ליצירת קשר.',
+  body: `<section class="hero hero-sm">
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <div class="wrap">
+    <span class="tag">404</span>
+    <h1>הדף הזה לא קיים</h1>
+    <p>אולי הכתובת השתנתה, ואולי נפלה אות בדרך. הנה מה שכן נמצא כאן:</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="ind-grid">
+      <a class="ind" href="/"><span class="ic">${icon('globe')}</span><b>דף הבית</b><span class="go">${icon('arrow')}</span></a>
+      <a class="ind" href="/#services"><span class="ic">${icon('box')}</span><b>מה אנחנו בונים</b><span class="go">${icon('arrow')}</span></a>
+      <a class="ind" href="/#work"><span class="ic">${icon('star')}</span><b>עבודות</b><span class="go">${icon('arrow')}</span></a>
+      <a class="ind" href="/guides/"><span class="ic">${icon('book')}</span><b>מדריכים</b><span class="go">${icon('arrow')}</span></a>
+      <a class="ind" href="/#film"><span class="ic">${icon('zap')}</span><b>סרטון הדגמה</b><span class="go">${icon('arrow')}</span></a>
+      <a class="ind" href="/#contact"><span class="ic">${icon('message')}</span><b>יצירת קשר</b><span class="go">${icon('arrow')}</span></a>
+    </div>
+  </div>
+</section>`
+}));
+
 // ---------- guides ----------
 const linkCards = (root, items, dir) => `<div class="ind-grid">
 ${items.map(o => `      <a class="ind" href="${root}${dir}${o.slug}/"><span class="ic">${icon(o.icon || 'arrow')}</span><b>${o.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
