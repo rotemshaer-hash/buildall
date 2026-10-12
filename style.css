@@ -6,14 +6,16 @@
 
 :root{
   /* צבעי המותג */
-  --ink:#0F1A1F;
-  --teal:#0e7a72;
-  --purple:#8b2fc9;
-  --teal-light:#5ee2d4;
-  --purple-light:#d9a6ff;
-  --grad:linear-gradient(150deg,#0F1A1F 0%,#0e7a72 45%,#8b2fc9 100%);
-  --accent:linear-gradient(90deg,var(--teal),var(--purple));
-  --accent-soft:linear-gradient(150deg,rgba(14,122,114,.1),rgba(139,47,201,.12));
+  --ink:#15181C;
+  --teal:#3F6212;
+  --purple:#2B3440;
+  --teal-light:#B6F02C;
+  --purple-light:#DCFCA0;
+  --grad:linear-gradient(150deg,#15181C 0%,#232A31 52%,#3A4551 100%);
+  /* הליים בוהק מדי לטקסט לבן, ולכן הוא כפתור עם טקסט כהה ולא רקע לטקסט */
+  --cta:#B6F02C; --cta-ink:#15181C;
+  --accent:linear-gradient(90deg,#2B3440,#4D7C0F);
+  --accent-soft:linear-gradient(150deg,rgba(63,98,18,.1),rgba(43,52,64,.1));
   --wa:#178442;
 
   /* משטחים וטקסט */
@@ -115,7 +117,7 @@ section{padding:var(--s6) 0}
 @media (hover:hover){.btn-ghost:hover{background:rgba(255,255,255,.2)}}
 .btn-line{background:var(--card);color:var(--text);border:1px solid var(--line-strong)}
 /* the one action in the hero, so it carries the brand rather than hiding in the glass */
-.btn-brand{background:var(--accent);color:#fff;border:0;box-shadow:0 12px 30px rgba(139,47,201,.35)}
+.btn-brand{background:var(--cta);color:var(--cta-ink);border:0;box-shadow:0 12px 30px rgba(182,240,44,.3)}
 .btn-call{
   background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);
   font-size:15px;padding:10px 14px;
@@ -154,9 +156,9 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .head-actions{display:flex;gap:8px;align-items:center;flex:none}
 .head-actions .btn{white-space:nowrap;line-height:1;height:42px}
 /* the assistant is the one button in the header that is not a phone number */
-.btn-ai{background:var(--accent);color:#fff;border:0;white-space:nowrap;
-  font-size:15px;padding:10px 15px;box-shadow:0 8px 22px rgba(139,47,201,.3)}
-.btn-ai .i{width:20px;height:20px;stroke:#fff;flex:none}
+.btn-ai{background:var(--cta);color:var(--cta-ink);border:0;white-space:nowrap;
+  font-size:15px;padding:10px 15px;box-shadow:0 8px 22px rgba(182,240,44,.25)}
+.btn-ai .i{width:20px;height:20px;stroke:var(--cta-ink);flex:none}
 .head-cta{font-size:15px;padding:10px 15px;white-space:nowrap}
 
 /* ---------- הירו ---------- */
@@ -174,9 +176,9 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);
 }
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
-.blob.b1{width:420px;height:420px;background:#14b8a6;top:-120px;right:-80px}
-.blob.b2{width:380px;height:380px;background:#a855f7;bottom:-140px;left:-60px;animation-delay:-6s}
-.blob.b3{width:260px;height:260px;background:#22d3ee;top:40%;left:35%;opacity:.28;animation-delay:-12s}
+.blob.b1{width:360px;height:360px;background:#9BE330;opacity:.26;top:-130px;right:-90px}
+.blob.b2{width:420px;height:420px;background:#55617A;opacity:.55;bottom:-150px;left:-70px;animation-delay:-6s}
+.blob.b3{width:240px;height:240px;background:#B6F02C;top:45%;left:30%;opacity:.12;animation-delay:-12s}
 @keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,30px) scale(1.12)}100%{transform:translate(-30px,-20px) scale(.95)}}
 
 .hero h1{font-size:clamp(42px,9vw,78px);font-weight:900;line-height:1.08;margin:0 0 var(--s3);max-width:900px}
@@ -433,7 +435,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .dr-in{height:22px;border-radius:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
 .dr-btn{margin-top:auto;border-radius:9px;padding:8px;text-align:center;font-weight:800;background:linear-gradient(90deg,#14B8A6,#06B6D4);color:var(--ink)}
 .dr-top{display:flex;align-items:center;gap:6px}
-.dr-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#14B8A6,#8b2fc9)}
+.dr-av{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#4D7C0F,#2B3440)}
 .dr-nm{height:7px;width:56px;border-radius:4px;background:rgba(255,255,255,.25)}
 .dr-ring{width:78px;height:78px;margin:6px auto 0;border-radius:50%;background:conic-gradient(#14B8A6 0 87%,rgba(255,255,255,.1) 0);display:grid;place-items:center;position:relative}
 .dr-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--ink)}
@@ -635,7 +637,7 @@ a.card,a.proj{text-decoration:none;display:block;cursor:pointer}
 a.card:after{
   content:"";position:absolute;inset-inline-start:16px;bottom:16px;
   width:18px;height:18px;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e7a72' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){a.card:hover:after{opacity:1;transform:none}}
 a.card.idea:after,.ai a.card:after{filter:brightness(0) invert(1)}
@@ -648,7 +650,7 @@ a.sb,a.step{text-decoration:none;display:block;cursor:pointer;position:relative}
 a.sb .go-i{
   position:absolute;inset-inline-start:18px;bottom:18px;width:18px;height:18px;
   opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e7a72' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){
   a.sb:hover{border-color:rgba(14,122,114,.3);box-shadow:var(--sh);transform:translateY(-3px)}
@@ -731,7 +733,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* הטלפון מחזיק שני מסכים: ההודעה, ופקודת העבודה */
-.demo-phone{width:255px;max-width:100%;height:385px;position:relative;background:#0F1A1F;font-size:12px}
+.demo-phone{width:255px;max-width:100%;height:385px;position:relative;background:#15181C;font-size:12px}
 .ph-screen{position:absolute;inset:0;display:none;flex-direction:column}
 .ph-screen.is-on{display:flex;animation:slide .3s ease both}
 @keyframes slide{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
@@ -874,7 +876,7 @@ a.card,a.proj{text-decoration:none;display:block;cursor:pointer}
 a.card:after{
   content:"";position:absolute;inset-inline-start:16px;bottom:16px;
   width:18px;height:18px;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e7a72' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){a.card:hover:after{opacity:1;transform:none}}
 a.card.idea:after,.ai a.card:after{filter:brightness(0) invert(1)}
@@ -887,7 +889,7 @@ a.sb,a.step{text-decoration:none;display:block;cursor:pointer;position:relative}
 a.sb .go-i{
   position:absolute;inset-inline-start:18px;bottom:18px;width:18px;height:18px;
   opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230e7a72' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){
   a.sb:hover{border-color:rgba(14,122,114,.3);box-shadow:var(--sh);transform:translateY(-3px)}
@@ -1049,7 +1051,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .ex-g > .ex-list{margin:0}
 .ai-g{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
 .ai-g small{color:rgba(255,255,255,.75)}
-.ai-g .ic{background:rgba(0,0,0,.25);border-color:rgba(255,255,255,.2)}
+.ai-g .ic{background:rgba(0,0,0,.3);border-color:rgba(182,240,44,.35)}
 .ai-g > summary:after{border-color:rgba(255,255,255,.7)}
 .ai-g[open]{border-color:rgba(255,255,255,.4);box-shadow:none}
 
