@@ -2,7 +2,7 @@
 // UPDATED is the date shown on both; change it whenever either text changes.
 import { PHONE } from './layout.mjs';
 
-export const UPDATED = 'אוקטובר 2026';
+export const UPDATED = '12 באוקטובר 2026';
 
 export const legal = [
   {
