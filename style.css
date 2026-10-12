@@ -518,6 +518,11 @@ footer details{background:transparent;border-color:rgba(255,255,255,.14);color:r
 footer summary{font-size:15px;color:#fff}
 footer summary:after{color:var(--teal-light)}
 footer details p{color:rgba(255,255,255,.7);font-size:14px}
+/* shown only where the browser can actually install it */
+.install{margin:var(--s3) 0}
+.install .btn{font-size:15px}
+.install p{color:rgba(255,255,255,.75);font-size:14px;line-height:1.7}
+.install p b{color:#fff}
 
 /* כפתור הוואטסאפ הצף הוסר: הוא היה עותק שלישי של כפתור שכבר יושב בראש הדף ובהירו. */
 @keyframes pulse{

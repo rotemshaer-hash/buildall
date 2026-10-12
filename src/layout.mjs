@@ -188,6 +188,10 @@ export function footer(root, nav) {
     </div>
     <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a>${EMAIL ? ` · <a href="mailto:${EMAIL}">${EMAIL}</a>` : ''}</div>
     <nav class="foot-links" aria-label="מידע">${nav.legal.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
+    <div class="install" id="install" hidden>
+      <button class="btn btn-line" type="button" id="install-go"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>התקן את האתר כאפליקציה</button>
+      <p id="install-ios" hidden>באייפון: כפתור השיתוף <b>⬆︎</b> בתחתית הדפדפן ← <b>הוספה למסך הבית</b></p>
+    </div>
     <div>© <span id="y"></span> ${BRAND}. כל הזכויות שמורות.</div>
   </div>
 </footer>

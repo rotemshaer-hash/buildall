@@ -83,6 +83,35 @@ mailBtn?.addEventListener('click', async () => {
   }
 });
 
+// Installing the site as an app. Chrome hands us the prompt and we keep it until
+// the button is pressed; Safari has no such event, so the iPhone gets the steps.
+(() => {
+  const box = document.getElementById('install');
+  if (!box || matchMedia('(display-mode: standalone)').matches || navigator.standalone) return;
+  const btn = document.getElementById('install-go');
+  const ios = document.getElementById('install-ios');
+  let deferred = null;
+  addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferred = e;
+    box.hidden = false;
+  });
+  btn.addEventListener('click', async () => {
+    if (!deferred) return;
+    deferred.prompt();
+    const { outcome } = await deferred.userChoice;
+    deferred = null;
+    if (outcome === 'accepted') box.hidden = true;
+  });
+  // iPhone: no event ever fires, so show the two steps instead of a dead button
+  if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+    btn.hidden = true;
+    ios.hidden = false;
+    box.hidden = false;
+  }
+  addEventListener('appinstalled', () => { box.hidden = true; });
+})();
+
 const y = document.getElementById('y');
 if (y) y.textContent = new Date().getFullYear();
 
