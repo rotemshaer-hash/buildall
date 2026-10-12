@@ -53,7 +53,7 @@ ok(home.includes('media/workit.mp4'), 'קובץ הסרטון מקושר');
 ok(home.includes('media/workit-poster.jpg'), 'תמונת הפתיחה של הסרטון מקושרת');
 ok(existsSync(join(ROOT, 'media/workit.mp4')), 'קובץ הסרטון נמצא בתיקייה שעולה לאוויר');
 ok(home.includes('VideoObject'), 'תיאור הווידאו לגוגל');
-ok(home.includes('אתר. אפליקציה. מערכת.'), 'הכותרת החדשה');
+ok(home.includes('אתר, אפליקציה, מערכת'), 'הכותרת החדשה');
 ok(existsSync(join(ROOT, '404.html')), 'דף 404 קיים');
 ok(readFileSync(join(ROOT,'404.html'),'utf8').includes('הדף הזה לא קיים'), 'דף 404 עם התוכן שלנו');
 for (const g of ['website-or-app','shift-scheduling','what-decides-price','app-without-store'])
