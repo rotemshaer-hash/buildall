@@ -291,7 +291,8 @@ export const videoSchema = {
   description: 'המנהל כותב פקודת עבודה מהטלפון, העובד מקבל קישור בוואטסאפ בלי להתקין אפליקציה, מצלם הוכחה עם שעה ומיקום וחותם, והמנהל מקבל הכול מסודר ומייצא לאקסל.',
   thumbnailUrl: [BASE + 'media/workit-poster.jpg'],
   contentUrl: BASE + 'media/workit.mp4',
-  uploadDate: '2026-10-11',
+  // Google rejects a bare date here: it wants a full ISO 8601 stamp with a time zone.
+  uploadDate: '2026-10-11T09:00:00+03:00',
   duration: 'PT28S',
   isFamilyFriendly: true,
   publisher: { '@id': BASE + '#business' }

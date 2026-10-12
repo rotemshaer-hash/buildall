@@ -329,7 +329,7 @@ for (const g of guides) {
     body: labelTables(g.body),
     extraSchemas: [{
       '@context': 'https://schema.org', '@type': 'Article', headline: g.h1, description: g.description,
-      datePublished: g.date, dateModified: g.date, inLanguage: 'he',
+      datePublished: `${g.date}T09:00:00+03:00`, dateModified: `${g.date}T09:00:00+03:00`, inLanguage: 'he',
       author: { '@id': BASE + '#business' }, publisher: { '@id': BASE + '#business' },
       image: BASE + 'og.jpg', mainEntityOfPage: BASE + `guides/${g.slug}/`
     }],
