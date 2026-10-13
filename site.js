@@ -53,6 +53,8 @@ const formText = f => [
   (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
   'שם: ' + f.get('name'),
   f.get('biz') ? 'עסק: ' + f.get('biz') : '',
+  f.get('email') ? 'מייל: ' + f.get('email') : '',
+  f.get('phone') ? 'טלפון: ' + f.get('phone') : '',
   'צריך: ' + f.get('what'),
   f.get('msg') ? 'הרעיון: ' + f.get('msg') : ''
 ].filter(Boolean).join('\n');
@@ -73,6 +75,14 @@ mailBtn?.addEventListener('click', async () => {
   if (!form.reportValidity()) return;
   const f = new FormData(form);
   if (f.get('_gotcha')) return;                       // a bot filled the hidden field
+  // By email there is no phone number to answer on, so a reply address is the one
+  // field this path cannot do without: a lead nobody can answer is a lost lead.
+  const mail = form.querySelector('[name="email"]');
+  if (!f.get('email')) {
+    say('צריך מייל כדי שנוכל לחזור אליך. אפשר גם לשלוח בוואטסאפ.', false);
+    mail?.focus();
+    return;
+  }
   mailBtn.disabled = true;
   say('שולח…');
   try {
@@ -83,8 +93,12 @@ mailBtn?.addEventListener('click', async () => {
         access_key: document.body.dataset.formkey,
         subject: 'פנייה חדשה מהאתר: ' + (f.get('biz') || f.get('name')),
         from_name: 'בונים הכל',
+        // web3forms turns this into the reply-to, so "reply" in the inbox reaches the lead.
+        email: f.get('email'),
+        replyto: f.get('email'),
         שם: f.get('name'),
         עסק: f.get('biz') || '—',
+        טלפון: f.get('phone') || '—',
         צריך: f.get('what'),
         הרעיון: f.get('msg') || '—',
         הגיע_מהדף: location.pathname

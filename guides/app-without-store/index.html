@@ -184,6 +184,8 @@
     <form id="lead">
       <label>שם<input name="name" autocomplete="name" required></label>
       <label>שם העסק<input name="biz" autocomplete="organization"></label>
+      <label>מייל לחזרה<input type="email" name="email" autocomplete="email" inputmode="email" placeholder="כדי שנוכל להשיב לך"></label>
+      <label>טלפון (לא חובה)<input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
       <label>מה צריך לבנות?
         <select name="what">
           <option>אתר לעסק</option>
@@ -201,6 +203,7 @@
       <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שלח במייל</button>
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
+      <p class="note">שליחה במייל דורשת כתובת מייל, כדי שנוכל לחזור אליך.</p>
     </form>
   </div>
 </section>
