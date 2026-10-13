@@ -412,7 +412,7 @@ for (const c of cases) {
   write(`work/${c.slug}/index.html`, article({
     root: '../../', trail: [['דף הבית', ''], ['עבודות', '#work'], [c.short, `work/${c.slug}/`]],
     title: c.title, description: c.description, h1: c.h1, lead: c.lead, eyebrow: c.size,
-    body: `<h2>האתגר</h2>
+    body: `${c.demo ? workItDemo() : ''}<h2>האתגר</h2>
 <p>${c.problem}</p>
 <h2>מה בנינו</h2>
 <p>${c.solution}</p>
@@ -430,7 +430,7 @@ ${c.gains.map(([was, now]) => `  <div class="gain"><p class="was">${was}</p><p c
 ${c.how.map(h => `  <li>${h}</li>`).join('\n')}
 </ol>
 <div class="callout"><b>מה זה אומר בשבילך</b><p>${c.shows}</p></div>`,
-    related: `${c.demo ? workItDemo() : ''}<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד עבודות</h2></div>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
+    related: `<section class="more"><div class="wrap"><div class="sec-head"><h2 class="h2">עוד עבודות</h2></div>${linkCards('../../', others.map(o => ({ ...o, icon: 'arrow' })), 'work/')}</div></section>`
   }));
 }
 
