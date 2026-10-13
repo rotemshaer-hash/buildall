@@ -701,6 +701,28 @@ ${readFileSync('src/demo-logo.html', 'utf8')}
 </html>
 `);
 
+// Ten palettes on the same components as the earlier sets. Temporary.
+write('demo/colors10/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>עשרה שילובי צבע | ${BRAND}</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${readFileSync('src/demo-colors10.html', 'utf8')}
+<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="${BASE}">חזרה לאתר</a></footer>
+</body>
+</html>
+`);
+
 // ---------- what the assistant answers from ----------
 write('kb.json', JSON.stringify(buildKnowledge()));
 

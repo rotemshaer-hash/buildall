@@ -1,0 +1,59 @@
+/* Ten palettes on the site's own components (from ../colors/style.css). Each is one
+   deep anchor colour plus one warm or bright partner, which is what makes a palette
+   read as modern rather than as a theme: two decisions, not seven.
+   Every pairing is checked to keep the button's text legible on its own fill. */
+
+/* 1 · indigo and peach */
+.m1{--bg:#F7F7FB;--ink:#1E1B38;--pri:#F2A071;--on-pri:#2A1A10;--sec:#4338CA;--soft:#E7E6FA;
+    --bar:#1E1B38;--bar-ink:#F7F7FB;--hero:linear-gradient(160deg,#1E1B38,#312E81 64%,#4338CA);
+    --hero-ink:#F4F3FF;--card:#fff;--line:#E6E5EF;--muted:#5C5878}
+
+/* 2 · charcoal and coral */
+.m2{--bg:#F7F7F6;--ink:#1C1F24;--pri:#D94A32;--on-pri:#fff;--sec:#B23A28;--soft:#FBE0DA;
+    --bar:#1C1F24;--bar-ink:#F7F7F6;--hero:linear-gradient(160deg,#1C1F24,#2D333B 62%,#424C57);
+    --hero-ink:#F6F7F8;--card:#fff;--line:#E6E6E4;--muted:#5E6369}
+
+/* 3 · night blue and mint */
+.m3{--bg:#F4F8F8;--ink:#0C1D33;--pri:#15B88A;--on-pri:#06241B;--sec:#0F6B52;--soft:#D6F3E9;
+    --bar:#0C1D33;--bar-ink:#F4F8F8;--hero:linear-gradient(160deg,#0C1D33,#133253 64%,#1B4A74);
+    --hero-ink:#EFF7FA;--card:#fff;--line:#DFE9E9;--muted:#55646F}
+
+/* 4 · graphite and electric yellow */
+.m4{--bg:#F6F6F5;--ink:#1A1A1A;--pri:#F5C518;--on-pri:#1A1A1A;--sec:#8A6A00;--soft:#FBEFC2;
+    --bar:#1A1A1A;--bar-ink:#F6F6F5;--hero:linear-gradient(160deg,#141414,#2A2A2A 62%,#3D3D3D);
+    --hero-ink:#F7F7F6;--card:#fff;--line:#E5E5E3;--muted:#5E5E5C}
+
+/* 5 · sage and peach */
+.m5{--bg:#F7F6F1;--ink:#232A24;--pri:#55755D;--on-pri:#fff;--sec:#B06A42;--soft:#F3DECC;
+    --bar:#232A24;--bar-ink:#F7F6F1;--hero:linear-gradient(160deg,#232A24,#3E5244 64%,#6B8F71);
+    --hero-ink:#F6F8F3;--card:#fff;--line:#E7E5DC;--muted:#5D6459}
+
+/* 6 · espresso and stone */
+.m6{--bg:#F8F5F1;--ink:#2A211B;--pri:#A8553A;--on-pri:#fff;--sec:#7A6A58;--soft:#EDE2D6;
+    --bar:#2A211B;--bar-ink:#F8F5F1;--hero:linear-gradient(160deg,#2A211B,#4A382C 64%,#6E5542);
+    --hero-ink:#F9F5F0;--card:#fff;--line:#E9E1D7;--muted:#6B6057}
+
+/* 7 · cobalt and white */
+.m7{--bg:#F6F8FC;--ink:#101828;--pri:#1D4ED8;--on-pri:#fff;--sec:#1D4ED8;--soft:#DDE7FD;
+    --bar:#101828;--bar-ink:#F6F8FC;--hero:linear-gradient(160deg,#101828,#1B2E5C 62%,#1D4ED8);
+    --hero-ink:#F3F7FF;--card:#fff;--line:#E2E7F0;--muted:#56637A}
+
+/* 8 · pine and sand */
+.m8{--bg:#F7F6F0;--ink:#16241C;--pri:#1C5B3A;--on-pri:#fff;--sec:#9A7524;--soft:#F0E5C8;
+    --bar:#16241C;--bar-ink:#F7F6F0;--hero:linear-gradient(160deg,#16241C,#1F4733 64%,#2C6B4A);
+    --hero-ink:#F4F8F4;--card:#fff;--line:#E7E4D7;--muted:#596156}
+
+/* 9 · plum and dusty rose */
+.m9{--bg:#F9F6F8;--ink:#2A1430;--pri:#E39AAE;--on-pri:#2A1420;--sec:#7E2C64;--soft:#F6E2EA;
+    --bar:#2A1430;--bar-ink:#F9F6F8;--hero:linear-gradient(160deg,#2A1430,#4C1D5B 64%,#71337C);
+    --hero-ink:#FAF4FA;--card:#fff;--line:#EDE3EA;--muted:#6A5A67}
+
+/* 10 · burgundy and cream */
+.m10{--bg:#FAF6F2;--ink:#2B1118;--pri:#7E2238;--on-pri:#fff;--sec:#A3702E;--soft:#F2E3D4;
+     --bar:#2B1118;--bar-ink:#FAF6F2;--hero:linear-gradient(160deg,#2B1118,#5C1A2C 64%,#8A2F45);
+     --hero-ink:#FBF4F2;--card:#fff;--line:#EDE2D8;--muted:#6B5A58}
+
+/* 0 · what the site wears today */
+.m0{--bg:#F6F8F1;--ink:#1B2117;--pri:#B6F02C;--on-pri:#15181C;--sec:#5E9113;--soft:#DCFCA0;
+    --bar:#15181C;--bar-ink:#fff;--hero:linear-gradient(168deg,#FFFFFF,#F6F9EF 58%,#EFF4E6);
+    --hero-ink:#1B2117;--card:#fff;--line:#E5EADD;--muted:#5B6354}
