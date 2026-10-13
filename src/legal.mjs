@@ -37,7 +37,7 @@ export const legal = [
 <h2>פנייה בנושא נגישות</h2>
 <p>נתקלת בבעיית נגישות, או שאתה צריך את המידע באתר בדרך אחרת? פנה לרכז הנגישות:</p>
 <ul class="contact-list">
-  <li><b>רכז הנגישות:</b> רותם</li>
+  <li><b>רכז הנגישות:</b> שירות הלקוחות של בונים הכל</li>
   <li><b>טלפון:</b> <a href="tel:${PHONE.tel}">${PHONE.display}</a></li>
   <li><b>וואטסאפ:</b> <a data-wa href="#contact">שליחת הודעה</a></li>
 </ul>

@@ -77,6 +77,10 @@ console.log('\nניסוחים שהוסכם להוריד:');
 const banned = ['שתי מערכות שבנינו', 'עסק של איש אחד', 'חלק קטן ממה שאנחנו בונים', 'וזו רק דוגמה',
                 'GitHub Pages', 'rotemshaer-hash.github.io',
                 'רותם · בונים הכל', 'card hl', 'שיחת ייעוץ חינם</a></li>'];
+// The owner's first name tells a visitor nothing and shrinks the business to one person.
+// It had crept back into the assistant, the accessibility page and the panel's own copy,
+// so the whole built site is checked rather than the places we happen to remember.
+banned.push('רותם');
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
   for (const b of banned) ok(!html.includes(b), `${page.replace(ROOT,'')}: עדיין מופיע "${b}"`);
