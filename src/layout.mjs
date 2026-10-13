@@ -169,6 +169,7 @@ export function navBar(root) {
     <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
     <li><a href="${r}#film">סרטון הדגמה</a></li>
     <li><a href="${r}#services">שירותים</a></li>
+    <li><a href="${r}#auto">אוטומציות</a></li>
     <li><a href="${r}#ai">AI</a></li>
     <li><a href="${r}#industries">לפי תחום</a></li>
     <li><a href="${r}#work">עבודות</a></li>

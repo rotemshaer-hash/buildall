@@ -53,7 +53,12 @@ ok(home.includes('media/workit.mp4'), 'קובץ הסרטון מקושר');
 ok(home.includes('media/workit-poster.jpg'), 'תמונת הפתיחה של הסרטון מקושרת');
 ok(existsSync(join(ROOT, 'media/workit.mp4')), 'קובץ הסרטון נמצא בתיקייה שעולה לאוויר');
 ok(home.includes('VideoObject'), 'תיאור הווידאו לגוגל');
-ok(home.includes('מערכת&nbsp;ניהול · אפליקציה · אתר'), 'הכותרת החדשה');
+// The headline is checked by what it names, not by one exact string: pinning the
+// sentence meant every rewording failed the build for no reason, while a category
+// quietly dropped from it would have passed.
+const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || ['',''])[1].replace(/&nbsp;/g, ' ');
+for (const word of ['מערכת ניהול', 'אפליקציה', 'אוטומציות', 'אתר'])
+  ok(h1.includes(word), `הכותרת הראשית מזכירה "${word}"`);
 ok(existsSync(join(ROOT, '404.html')), 'דף 404 קיים');
 ok(readFileSync(join(ROOT,'404.html'),'utf8').includes('הדף הזה לא קיים'), 'דף 404 עם התוכן שלנו');
 for (const g of ['website-or-app','shift-scheduling','what-decides-price','app-without-store'])
