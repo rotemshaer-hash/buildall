@@ -5,14 +5,16 @@
    client rather than our own site wearing a new headline. */
 
 :root{
-  --ink:#121410;
-  --deep:#1A2018;
-  --card:#222A20;
-  --line:#333D30;
-  --sand:#F3C9A4;
-  --leaf:#8FCB6B;
-  --text:#F2F0EB;
-  --muted:#A8AFA1;
+  --ink:#F7F3EB;        /* the page: warm paper, not black */
+  --deep:#FFFFFF;
+  --card:#FFFFFF;
+  --line:#E6DDCE;
+  --sand:#A85E2B;       /* the accent, dark enough to read as text on paper */
+  --sand-soft:#F3E2CF;
+  --leaf:#3C7A33;
+  --green:#2E5E3A;
+  --text:#1C1A17;
+  --muted:#6F665C;
   --r:20px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -31,7 +33,7 @@ svg{max-width:100%}
   display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;align-items:center;
   padding:9px 16px;text-align:center;position:relative;z-index:3;
 }
-.demo-ribbon a{color:var(--sand);font-weight:700}
+.demo-ribbon a{color:#F0C9A0;font-weight:700}
 
 main,header,section{max-width:520px;margin-inline:auto;padding-inline:18px}
 
@@ -39,18 +41,18 @@ main,header,section{max-width:520px;margin-inline:auto;padding-inline:18px}
 .b-top{padding-top:30px;padding-bottom:26px;text-align:center;position:relative;overflow:hidden}
 .b-glow{
   position:absolute;inset:-60px -40% auto -40%;height:360px;z-index:0;pointer-events:none;
-  background:radial-gradient(50% 60% at 50% 0,rgba(143,203,107,.22),transparent 72%);
+  background:radial-gradient(50% 60% at 50% 0,rgba(46,94,58,.14),transparent 72%);
 }
 .b-top > *:not(.b-glow){position:relative;z-index:1}
 .b-src{
   display:inline-flex;align-items:center;gap:8px;
-  background:rgba(243,201,164,.12);border:1px solid rgba(243,201,164,.34);color:var(--sand);
+  background:#fff;border:1px solid var(--line);color:var(--sand);box-shadow:0 2px 10px rgba(28,26,23,.06);
   border-radius:999px;padding:6px 15px;font-size:14px;font-weight:700;
 }
 .b-src::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sand)}
 .b-face{
   width:168px;height:168px;margin:22px auto 16px;border-radius:50%;overflow:hidden;
-  border:3px solid rgba(243,201,164,.5);box-shadow:0 20px 50px rgba(0,0,0,.5);
+  border:3px solid #fff;box-shadow:0 18px 44px rgba(28,26,23,.18);
 }
 .b-face svg{display:block;width:100%;height:100%}
 .b-top h1{font-size:clamp(30px,8vw,40px)}
@@ -62,14 +64,15 @@ main,header,section{max-width:520px;margin-inline:auto;padding-inline:18px}
 .b-open i{width:9px;height:9px;border-radius:50%;background:var(--muted);flex:none}
 .b-open.on{color:var(--leaf)}
 .b-open.on i{background:var(--leaf);box-shadow:0 0 0 0 rgba(143,203,107,.6);animation:pulse 2.4s ease-out infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(143,203,107,0)}100%{box-shadow:0 0 0 0 rgba(143,203,107,0)}}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(60,122,51,0)}100%{box-shadow:0 0 0 0 rgba(60,122,51,0)}}
 
 /* ---------- the stack of actions ---------- */
 .b-links{display:grid;gap:12px;padding-bottom:10px}
 .b-act{
   background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   text-decoration:none;color:inherit;display:block;overflow:hidden;
-  transition:border-color .2s,transform .15s;
+  box-shadow:0 2px 12px rgba(28,26,23,.05);
+  transition:border-color .2s,transform .15s,box-shadow .2s;
 }
 .b-act > summary,a.b-act{
   display:flex;align-items:center;gap:13px;padding:16px 18px;cursor:pointer;list-style:none;
@@ -77,7 +80,7 @@ main,header,section{max-width:520px;margin-inline:auto;padding-inline:18px}
 .b-act > summary::-webkit-details-marker{display:none}
 .b-ic{
   width:42px;height:42px;flex:none;border-radius:13px;display:grid;place-items:center;
-  background:rgba(243,201,164,.12);color:var(--sand);font-size:19px;
+  background:var(--sand-soft);color:var(--sand);font-size:19px;
 }
 .b-ic svg{width:21px;height:21px;fill:currentColor}
 .b-t{flex:1;min-width:0;display:grid;gap:1px;text-align:start}
@@ -86,10 +89,12 @@ main,header,section{max-width:520px;margin-inline:auto;padding-inline:18px}
 .b-arr{color:var(--muted);font-size:20px;font-weight:700;flex:none}
 details[open] > summary .b-arr{content:"–"}
 details[open] .b-arr{transform:rotate(45deg)}
-.b-act-main{background:linear-gradient(150deg,#2E4A33,#3D6240);border-color:#4B7550}
+.b-act-main{background:linear-gradient(150deg,#2E5E3A,#3F7A49);border-color:#2E5E3A;color:#fff;box-shadow:0 10px 26px rgba(46,94,58,.28)}
+.b-act-main .b-t small{color:#D6E7D8}
+.b-act-main .b-arr{color:#D6E7D8}
 .b-act-main .b-ic{background:rgba(255,255,255,.16);color:#fff}
-.b-wa .b-ic{background:rgba(37,211,102,.16);color:#3ED37A}
-@media (hover:hover){.b-act:hover{border-color:var(--sand);transform:translateY(-1px)}}
+.b-wa .b-ic{background:#DFF5E6;color:#128C4A}
+@media (hover:hover){.b-act:hover{border-color:var(--sand);transform:translateY(-1px);box-shadow:0 8px 22px rgba(28,26,23,.1)}}
 
 .b-body{padding:4px 18px 18px;border-top:1px solid var(--line);margin-top:2px}
 .b-note{font-size:14px;color:var(--muted);margin-top:4px}
@@ -99,11 +104,11 @@ details[open] .b-arr{transform:rotate(45deg)}
 #l-lead label{display:grid;gap:5px;font-weight:700;font-size:15px}
 #l-lead input,#l-lead select{
   font:inherit;font-weight:400;padding:12px 14px;border:1px solid var(--line);
-  border-radius:12px;background:var(--deep);color:var(--text);width:100%;
+  border-radius:12px;background:var(--ink);color:var(--text);width:100%;
 }
 #l-lead button{
   font:inherit;font-weight:800;font-size:17px;cursor:pointer;
-  background:var(--sand);color:#1C1A17;border:0;border-radius:999px;padding:14px 20px;
+  background:var(--green);color:#fff;border:0;border-radius:999px;padding:14px 20px;
 }
 
 /* the 20 second fit quiz */
@@ -111,18 +116,18 @@ details[open] .b-arr{transform:rotate(45deg)}
 .q-opts{display:grid;gap:8px;margin-top:12px}
 .q-opts button{
   font:inherit;font-weight:700;text-align:start;cursor:pointer;
-  background:var(--deep);color:var(--text);border:1px solid var(--line);
+  background:var(--ink);color:var(--text);border:1px solid var(--line);
   border-radius:12px;padding:12px 14px;
 }
 @media (hover:hover){.q-opts button:hover{border-color:var(--sand)}}
 .q-bar{height:4px;border-radius:4px;background:var(--line);margin-top:14px;overflow:hidden}
-.q-bar i{display:block;height:100%;width:0;background:var(--sand);transition:width .3s}
+.q-bar i{display:block;height:100%;width:0;background:var(--green);transition:width .3s}
 
 .b-steps{list-style:none;counter-reset:s;padding-top:12px;display:grid;gap:12px}
 .b-steps li{counter-increment:s;display:grid;gap:2px;padding-inline-start:34px;position:relative}
 .b-steps li::before{
   content:counter(s);position:absolute;inset-inline-start:0;top:2px;
-  width:24px;height:24px;border-radius:50%;background:rgba(243,201,164,.14);color:var(--sand);
+  width:24px;height:24px;border-radius:50%;background:var(--sand-soft);color:var(--sand);
   display:grid;place-items:center;font-weight:800;font-size:13px;
 }
 .b-steps span{color:var(--muted);font-size:15px}
@@ -140,14 +145,14 @@ details[open] .b-arr{transform:rotate(45deg)}
 .b-bars li{display:grid;gap:5px}
 .b-bars .k{display:flex;justify-content:space-between;font-size:14px;font-weight:700}
 .b-bars .k em{font-style:normal;color:var(--sand)}
-.b-bars .t{height:8px;border-radius:8px;background:var(--card);overflow:hidden}
-.b-bars .t i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--leaf),var(--sand));transition:width .45s}
-.b-mini{font-size:13px;color:#7D8578;margin-top:14px}
+.b-bars .t{height:8px;border-radius:8px;background:#E9E1D5;overflow:hidden}
+.b-bars .t i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--green),var(--sand));transition:width .45s}
+.b-mini{font-size:13px;color:#8A8276;margin-top:14px}
 
 /* ---------- foot ---------- */
-.l-foot{background:#0C0E0B;color:#CFD3C9;padding:24px 18px 34px;text-align:center}
-.l-foot a{color:var(--sand)}
-.l-dis{font-size:13.5px;color:#868E80;margin-top:8px;max-width:520px;margin-inline:auto}
+.l-foot{background:#1C1A17;color:#E8E2D8;padding:24px 18px 34px;text-align:center}
+.l-foot a{color:#F0C9A0}
+.l-dis{font-size:13.5px;color:#A79E92;margin-top:8px;max-width:520px;margin-inline:auto}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

@@ -526,7 +526,7 @@ write('demo/landing/index.html', `<!doctype html>
 <title>נועה ברק · פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
 <meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
 <link rel="canonical" href="${BASE}demo/landing/">
-<meta name="theme-color" content="#121410">
+<meta name="theme-color" content="#F7F3EB">
 <!-- An instructor who does not exist: keep it out of search so nobody books a class. -->
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="${favicon}">

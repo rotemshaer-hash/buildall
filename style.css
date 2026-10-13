@@ -1088,13 +1088,13 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .cf-go{margin:auto 10px 12px;background:#B4491F;color:#fff;border-radius:3px;text-align:center;padding:8px;font-weight:700;font-size:10px}
 
 /* מוקאפ דף הנחיתה בתיק */
-.m-land .dev{background:#121410;color:#F2F0EB;padding:0;gap:0;text-align:center}
-.ld-src{background:rgba(243,201,164,.14);color:#F3C9A4;font-size:8px;font-weight:700;padding:4px}
-.ld-face{width:40px;height:40px;border-radius:50%;margin:10px auto 6px;background:linear-gradient(180deg,#3E6E52,#23402F);border:1.5px solid rgba(243,201,164,.5)}
+.m-land .dev{background:#F7F3EB;color:#1C1A17;padding:0;gap:0;text-align:center}
+.ld-src{background:#fff;color:#A85E2B;font-size:8px;font-weight:700;padding:4px;border-bottom:1px solid #E6DDCE}
+.ld-face{width:40px;height:40px;border-radius:50%;margin:10px auto 6px;background:linear-gradient(180deg,#3E6E52,#23402F);border:2px solid #fff;box-shadow:0 3px 8px rgba(28,26,23,.18)}
 .ld-name{font:700 12px Frank Ruhl Libre,serif}
-.ld-role{font-size:8px;color:#A8AFA1;margin-bottom:8px}
-.ld-btn{margin:0 12px 6px;background:#222A20;border:1px solid #333D30;border-radius:8px;padding:6px;font-size:8.5px;font-weight:700}
-.ld-main{background:linear-gradient(150deg,#2E4A33,#3D6240);border-color:#4B7550}
+.ld-role{font-size:8px;color:#6F665C;margin-bottom:8px}
+.ld-btn{margin:0 12px 6px;background:#fff;border:1px solid #E6DDCE;border-radius:8px;padding:6px;font-size:8.5px;font-weight:700}
+.ld-main{background:linear-gradient(150deg,#2E5E3A,#3F7A49);border-color:#2E5E3A;color:#fff}
 
 /* סמלי הפלטפורמות שדף נחיתה מחובר אליהן */
 .brands{display:flex;gap:10px;align-items:center;margin-top:12px}
