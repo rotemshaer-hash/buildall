@@ -83,9 +83,15 @@ for (const page of pages) {
 }
 
 console.log('\nסרגל הניווט:');
-const chips = [...home.matchAll(/<li><a href="[^"]*#([a-z]+)">([^<]+)</g)].map(m => m[2]);
-ok(chips[4] === 'סרטון הדגמה', `הסרטון חמישי בסרגל (כרגע: ${chips[4]})`);
-console.log('  ' + chips.join(' · '));
+// The strip is a map of the scroll, so its order is checked against the page itself
+// rather than against a list written here — a hard-coded position only breaks the day
+// a section moves, which is exactly the day the check should have helped.
+const chips = [...home.matchAll(/<li><a href="[^"]*#([a-z-]+)">([^<]+)</g)].map(m => ({ id: m[1], name: m[2] }));
+const at = id => home.indexOf(`id="${id}"`, home.indexOf('</nav>'));
+for (const c of chips) ok(at(c.id) > -1, `לסקשן "${c.name}" יש עוגן בעמוד (#${c.id})`);
+const strayed = chips.find((c, i) => i > 0 && at(c.id) < at(chips[i - 1].id));
+ok(!strayed, strayed && `"${strayed.name}" בסרגל אחרי "${chips[chips.indexOf(strayed) - 1].name}", אבל בעמוד הוא לפניו`);
+console.log('  ' + chips.map(c => c.name).join(' · '));
 
 console.log(`\n${fails === 0 ? '✓ הכול תקין' : '✗ ' + fails + ' כשלים'} — ${checks} בדיקות`);
 // A check that prints a failure and exits 0 is a check nobody will ever notice.

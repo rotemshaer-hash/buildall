@@ -160,16 +160,18 @@ export function header(root) {
 }
 
 // A scrollable strip under the header, for phones where the header has no room for links.
+// The order is the page's own order, top to bottom: the strip is a map of the scroll,
+// so whoever jumps from it knows where he landed. Moving a section moves its chip.
 export function navBar(root) {
   const r = root || './';
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
   <ul>
     <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
-    <li><a href="${r}#services">שירותים</a></li>
-    <li><a href="${r}#work">עבודות</a></li>
-    <li><a href="${r}#industries">לפי תחום</a></li>
     <li><a href="${r}#film">סרטון הדגמה</a></li>
+    <li><a href="${r}#services">שירותים</a></li>
     <li><a href="${r}#ai">AI</a></li>
+    <li><a href="${r}#industries">לפי תחום</a></li>
+    <li><a href="${r}#work">עבודות</a></li>
     <li><a href="${r}#process">איך עובדים</a></li>
     <li><a href="${r}#contact">יצירת קשר</a></li>
   </ul>
