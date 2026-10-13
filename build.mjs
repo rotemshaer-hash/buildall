@@ -338,7 +338,8 @@ for (const g of guides) {
 }
 
 // The Work It demo: the visitor assigns a task and watches both screens react.
-const workItDemo = () => `<section class="demo-sec" id="demo">
+const workItDemo = () => `<a class="demo-fab" href="#demo">${icon('zap')}<span>נסה דוגמה חיה</span></a>
+<section class="demo-sec" id="demo">
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow">${icon('zap')} נסה בעצמך</span>

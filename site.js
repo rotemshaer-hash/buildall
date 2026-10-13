@@ -37,6 +37,15 @@ const openTargetGroup = () => {
 addEventListener('hashchange', openTargetGroup);
 openTargetGroup();
 
+// The floating demo pill steps aside while the demo itself is in view.
+(() => {
+  const fab = document.querySelector('.demo-fab');
+  const demo = document.getElementById('demo');
+  if (!fab || !demo || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(([e]) => fab.classList.toggle('hide', e.isIntersecting),
+    { threshold: 0.12 }).observe(demo);
+})();
+
 const form = document.getElementById('lead');
 
 // The same filled form goes out two ways, so the fields are read in one place.

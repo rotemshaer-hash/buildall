@@ -1184,3 +1184,28 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   .gain .was{grid-column:1;grid-row:1}
   .gain .now{grid-column:1;grid-row:3}
 }
+
+/* ---- התגית הצפה של ההדגמה החיה ----
+   היא קיימת רק בדפים שבהם יש הדגמה, פועמת בעדינות, ונעלמת ברגע
+   שההדגמה עצמה על המסך — אין טעם להזמין למקום שאתה כבר נמצא בו. */
+.demo-fab{
+  position:fixed;bottom:18px;left:18px;z-index:26;
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  background:var(--cta);color:var(--cta-ink);border-radius:var(--r-pill);
+  padding:13px 20px;font:800 16px Heebo,sans-serif;box-shadow:0 12px 30px rgba(0,0,0,.35);
+  animation:demo-beat 2.6s ease-out infinite;
+}
+.demo-fab .i{width:20px;height:20px;stroke:var(--cta-ink)}
+.demo-fab.hide{opacity:0;visibility:hidden;transform:translateY(12px)}
+.demo-fab{transition:opacity .3s,transform .3s,visibility .3s}
+@keyframes demo-beat{
+  0%{box-shadow:0 0 0 0 rgba(182,240,44,.55),0 12px 30px rgba(0,0,0,.35)}
+  70%{box-shadow:0 0 0 18px rgba(182,240,44,0),0 12px 30px rgba(0,0,0,.35)}
+  100%{box-shadow:0 0 0 0 rgba(182,240,44,0),0 12px 30px rgba(0,0,0,.35)}
+}
+@media (prefers-reduced-motion:reduce){.demo-fab{animation:none}}
+/* ובכרטיס שבדף הבית: הזמנה, לא שורת קישור */
+.proof-card .proof-go{display:inline-flex;align-items:center;gap:7px;margin-top:12px;
+  background:var(--cta);color:var(--cta-ink);border-radius:var(--r-pill);
+  padding:9px 16px;font:800 15px Heebo,sans-serif}
+.proof-card .proof-go .i{stroke:var(--cta-ink)}
