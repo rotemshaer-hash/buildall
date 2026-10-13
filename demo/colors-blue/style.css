@@ -1,0 +1,28 @@
+/* Five readings of one direction. The components come from ../colors/style.css; only
+   the variables below differ, so what is being compared is the colour and nothing else.
+   Blue is the constant — what changes is how much of it the page wears, and what warms it. */
+
+/* 1 · night blue, dark hero — the one that was picked from the first set */
+.b1{--bg:#F5F6F7;--ink:#13202B;--pri:#1E4D6B;--on-pri:#fff;--sec:#A8542F;--soft:#FBE3D5;
+    --bar:#13202B;--bar-ink:#F5F6F7;--hero:linear-gradient(160deg,#13202B,#1E4258 62%,#2E6A84);
+    --hero-ink:#F2F7FA;--card:#fff;--line:#E2E6E9;--muted:#5A6670}
+
+/* 2 · the same blue with no dark wall: the headline is blue on paper, the peach leads */
+.b2{--bg:#F7F8F9;--ink:#13202B;--pri:#E08A5F;--on-pri:#20160F;--sec:#1E4D6B;--soft:#E4EDF2;
+    --bar:#13202B;--bar-ink:#F5F6F7;--hero:linear-gradient(165deg,#FFFFFF,#EDF3F6);
+    --hero-ink:#13202B;--card:#fff;--line:#E2E6E9;--muted:#5A6670}
+
+/* 3 · royal blue, warmed by sand rather than peach */
+.b3{--bg:#F7F5F0;--ink:#16243F;--pri:#1F3F7A;--on-pri:#fff;--sec:#9A6B21;--soft:#F0E2C8;
+    --bar:#16243F;--bar-ink:#F7F5F0;--hero:linear-gradient(160deg,#16243F,#23417D 64%,#33589E);
+    --hero-ink:#F7F8FB;--card:#fff;--line:#E7E2D7;--muted:#5C6375}
+
+/* 4 · charcoal blue and copper: quiet, and the most expensive looking */
+.b4{--bg:#F4F5F6;--ink:#1A2430;--pri:#2B3A4A;--on-pri:#fff;--sec:#9C5F2E;--soft:#F2E2D2;
+    --bar:#1A2430;--bar-ink:#F4F5F6;--hero:linear-gradient(160deg,#1A2430,#2B3A4A 66%,#44576B);
+    --hero-ink:#F2F5F7;--card:#fff;--line:#E3E6E8;--muted:#5B6671}
+
+/* 5 · sea blue and soft peach: the lightest, the easiest to approach */
+.b5{--bg:#F6FAFB;--ink:#12303D;--pri:#246C8A;--on-pri:#fff;--sec:#B06A3C;--soft:#FBE7D8;
+    --bar:#12303D;--bar-ink:#F6FAFB;--hero:linear-gradient(160deg,#17465A,#246C8A 60%,#3E92AF);
+    --hero-ink:#F4FBFD;--card:#fff;--line:#DCE8EC;--muted:#53666F}

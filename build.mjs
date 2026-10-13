@@ -658,6 +658,28 @@ ${readFileSync('src/demo-colors.html', 'utf8')}
 </html>
 `);
 
+// Five readings of the blue direction, on the same components as the first set.
+write('demo/colors-blue/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>חמישה גוונים של כחול עמוק | ${BRAND}</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${readFileSync('src/demo-colors-blue.html', 'utf8')}
+<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="${BASE}demo/colors/">חזרה לארבעת הכיוונים</a></footer>
+</body>
+</html>
+`);
+
 // ---------- what the assistant answers from ----------
 write('kb.json', JSON.stringify(buildKnowledge()));
 
