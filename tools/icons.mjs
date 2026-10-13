@@ -6,7 +6,7 @@ import { logoPlain } from '../src/layout.mjs';
 
 // maskable: Android crops icons to a circle, so the mark sits smaller inside a full-bleed square.
 const svg = (round, scale) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
-  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#B6F02C"/><stop offset="1" stop-color="#EAFFC0"/></linearGradient></defs>
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#B6F02C"/><stop offset="1" stop-color="#B6F02C"/></linearGradient></defs>
   <rect width="64" height="64" rx="${round}" fill="#15181C"/>
   <g transform="translate(32 32) scale(${scale}) translate(-32 -32)">${logoPlain()}</g>
 </svg>`;
