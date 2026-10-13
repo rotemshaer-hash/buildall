@@ -1,4 +1,4 @@
-// "מה היית רוצה להפסיק לעשות ידנית?" — the visitor starts from a problem they recognise,
+// The visitor starts from something he recognises in his own day,
 // not from a product they have to name. Each one opens an answer and a relevant work.
 export const problems = [
   {
@@ -46,7 +46,7 @@ export const problems = [
     icon: 'box',
     t: 'הכול יושב בפתקים ובאקסל',
     why: 'מלאי במחברת, לקוחות באקסל, משמרות בוואטסאפ. כשצריך למצוא משהו, מחפשים בשלושה מקומות.',
-    fix: 'מרכזים את מה שהכי כואב במקום אחד שנפתח מהטלפון. מתחילים בכלי אחד, ומוסיפים רק מה שבאמת עוזר.',
+    fix: 'הכול במקום אחד שנפתח מהטלפון. מתחילים בכלי אחד, ומוסיפים לפי מה שהעסק צריך.',
     work: null
   }
 ];

@@ -115,13 +115,15 @@ ${contact()}`
   });
 };
 
-// "מה היית רוצה להפסיק לעשות ידנית?" — the visitor picks a problem and gets the answer in place.
+// The visitor picks what eats his time and gets the answer in place. The section speaks
+// about time coming back, not about pain: a business that builds systems does not
+// commiserate with its customer, it shows him what he gets back.
 const problemsSection = root => `<section class="problems" id="problems">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
-      <h2 class="h2">מה היית רוצה להפסיק לעשות ידנית?</h2>
-      <p class="lead">אל תדאג אם אתה לא יודע אם צריך אתר, מערכת או אפליקציה. תבחר את מה שמעיק עליך, ונראה לך מה אפשר לעשות עם זה.</p>
+      <h2 class="h2">מה אתה עושה היום ידנית — ולא צריך</h2>
+      <p class="lead">לא צריך לדעת אם זה אתר, מערכת או אפליקציה. תבחר את מה שגוזל לך הכי הרבה זמן, ונראה לך מה אפשר לעשות איתו.</p>
     </div>
     <div class="prob-grid">
 ${problems.map(p => `      <details class="prob" name="prob">
@@ -135,7 +137,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
           </div>
         </div>
       </details>`).join('\n')}
-      <a class="prob prob-other" data-wa data-msg="משהו אחר שמעיק עליי" href="#contact">
+      <a class="prob prob-other" data-wa data-msg="משהו אחר שגוזל לי זמן" href="#contact">
         <span class="ic">${icon('bulb')}</span><b>יש לי משהו אחר</b>
       </a>
     </div>
@@ -196,8 +198,8 @@ for (const i of industries) {
 <section class="why-sec">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">מכירים את זה?</span>
-      <h2 class="h2">מה מעיק על ${i.short}</h2>
+      <span class="eyebrow">מהשטח</span>
+      <h2 class="h2">${i.short} — מה גוזל את הזמן</h2>
     </div>
     <div class="pains">
 ${i.pains.map(p => `      <a class="pain" href="#s${p.fix}"><span>✕</span><p>${p.t}</p><span class="pain-go">לפתרון ←</span></a>`).join('\n')}
@@ -214,7 +216,7 @@ ${i.pains.map(p => `      <a class="pain" href="#s${p.fix}"><span>✕</span><p>$
     <div class="grid">
 ${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="${s.t}" href="#contact"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('\n')}
       <a class="card" data-wa data-msg="שילוב AI" href="#contact"><div class="ic">${icon('bot')}</div><h3>עם AI, אם תרצה</h3><p>צ׳אט שעונה ללקוחות, סיכומים ומסמכים שממלאים את עצמם. משלבים רק איפה שזה חוסך לך זמן.</p></a>
-      <a class="card idea" data-wa data-msg="רעיון משלי" href="#contact"><div class="ic">${icon('bulb')}</div><h3>צריך משהו אחר?</h3><p>כל תהליך בעסק שלך אפשר להפוך לכלי פשוט. ספר לנו מה מעיק.</p></a>
+      <a class="card idea" data-wa data-msg="רעיון משלי" href="#contact"><div class="ic">${icon('bulb')}</div><h3>צריך משהו אחר?</h3><p>כל תהליך בעסק שלך אפשר להפוך לכלי פשוט. ספר לנו מה אתה צריך.</p></a>
     </div>
   </div>
 </section>

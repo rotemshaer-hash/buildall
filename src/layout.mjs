@@ -208,7 +208,7 @@ export function footer(root, nav) {
     <button type="button" id="ai-close" aria-label="סגירה">✕</button>
   </div>
   <div class="ai-body" id="ai-body">
-    <div class="ai-msg bot">שלום! אני העוזר של בונים הכל. אפשר לשאול אותי על השירותים, על איך עובדים, או פשוט לספר מה מעיק בעסק ואנסה לכוון.</div>
+    <div class="ai-msg bot">שלום! אני העוזר של בונים הכל. אפשר לשאול אותי על השירותים, על איך עובדים, או פשוט לספר מה אתה רוצה לשפר בעסק, ואנסה לכוון.</div>
     <div class="ai-chips">
       <button type="button">מה אתם בונים?</button>
       <button type="button">כמה זה עולה?</button>
@@ -295,7 +295,7 @@ export const business = {
 // a second way into the site besides the text.
 export const videoSchema = {
   '@context': 'https://schema.org', '@type': 'VideoObject',
-  name: 'ככה נראית מערכת שבנינו: פקודת עבודה, הוכחת ביצוע וייצוא לאקסל',
+  name: 'מערכת אמיתית בחצי דקה: פקודת עבודה, הוכחת ביצוע וייצוא לאקסל',
   description: 'המנהל כותב פקודת עבודה מהטלפון, העובד מקבל קישור בוואטסאפ בלי להתקין אפליקציה, מצלם הוכחה עם שעה ומיקום וחותם, והמנהל מקבל הכול מסודר ומייצא לאקסל.',
   thumbnailUrl: [BASE + 'media/workit-poster.jpg'],
   contentUrl: BASE + 'media/workit.mp4',
