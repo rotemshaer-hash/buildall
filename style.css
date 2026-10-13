@@ -1225,3 +1225,81 @@ a.card:has(.card-go):after{content:none}
   background:var(--cta);color:var(--cta-ink);border-radius:var(--r-pill);
   padding:9px 16px;font:800 15px Heebo,sans-serif}
 .proof-card .proof-go .i{stroke:var(--cta-ink)}
+
+/* ================================================================
+   הבלוקים הכהים הופכים לבהירים
+   ----------------------------------------------------------------
+   הפתיחה כבר נייר, ובלוק כהה באמצע הדף נקרא כמו חור ולא כמו הדגשה.
+   הכתיבה כאן היא דריסה בסוף הקובץ ולא עריכה של כל כלל במקומו —
+   כל אחד מהבלוקים האלה בנוי על טקסט לבן ועל שכבות לבנות־שקופות,
+   ודריסה אחת במקום אחד הופכת את זה לדבר שאפשר גם להחזיר בדחיפה אחת.
+   מה שנשאר כהה בכוונה: הסרגל העליון, הפוטר, סרט השירותים הרץ,
+   והמסכים המדומים — שם הכהה הוא תוכן, לא רקע.
+   ================================================================ */
+:root{
+  --panel:#F3F7EC;
+  --panel-2:#FAFCF6;
+  --panel-line:#E1EAD2;
+}
+
+/* --- אזור ה-AI --- */
+.ai{background:linear-gradient(165deg,#FFFFFF,#F3F7EC 60%,#EAF2DC);color:var(--text)}
+.ai .lead{color:var(--muted)}
+.ai .eyebrow{color:var(--teal);background:#fff;border-color:var(--panel-line)}
+.ai .card{background:#fff;border-color:var(--panel-line);color:var(--text);box-shadow:0 2px 10px rgba(21,24,28,.05)}
+.ai .card p{color:var(--muted)}
+.ai .card .ic{background:var(--purple-light);border-color:var(--panel-line)}
+.ai .card:before{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(63,98,18,.07),transparent 60%)}
+.ai a.card:after{filter:none}
+
+/* --- אזור העבודות --- */
+.work{background:var(--panel);color:var(--text)}
+.work .lead{color:var(--muted)}
+.work .eyebrow{color:var(--teal);background:#fff;border-color:var(--panel-line)}
+.proj{background:#fff;border:1px solid var(--panel-line);box-shadow:0 2px 12px rgba(21,24,28,.05)}
+.proj p{color:var(--muted)}
+.proj .phone{-webkit-box-reflect:none}
+
+/* --- אזור ההדגמה החיה --- */
+.demo-sec{background:linear-gradient(165deg,#FAFCF6,#F0F5E6);color:var(--text)}
+.demo-sec .lead{color:var(--muted)}
+.demo-sec .lead b{color:var(--text)}
+.demo-tag{color:var(--teal)}
+.demo-card{background:#fff;border-color:var(--panel-line);box-shadow:0 2px 12px rgba(21,24,28,.05)}
+.demo-f{color:var(--muted)}
+.demo-f input,.demo-f select{background:var(--panel-2);border-color:var(--panel-line);color:var(--text)}
+.demo-log li{background:var(--panel);color:var(--text)}
+.demo-log li.empty{border-color:var(--panel-line);color:var(--muted)}
+
+/* --- קופסאות בודדות --- */
+.step{background:#fff;color:var(--text);border:1px solid var(--panel-line)}
+.card.idea{background:var(--purple-light);color:var(--text)}
+.card.idea p{color:#4A5B33}
+.card.idea .ic{background:#fff;border-color:var(--panel-line)}
+a.card.idea:after{filter:none}
+.sb-cta{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
+.guarantee{background:linear-gradient(160deg,#FFFFFF,#F3F7EC 62%,#E8F1D8);color:var(--text);
+  border:1px solid var(--panel-line);box-shadow:0 18px 44px rgba(21,24,28,.08)}
+.callout{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
+.callout p{color:var(--muted)}
+.proof-card{background:#fff;color:var(--text);border:1px solid var(--panel-line);box-shadow:0 2px 14px rgba(21,24,28,.06)}
+.side-b{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
+.side-b .side-tag .i{stroke:var(--teal)}
+/* ילדים שהיו תלויים ברקע הכהה: ליים כטקסט, שבבים כהים־שקופים ולבן־שקוף */
+.sb-cta b{color:var(--teal)}
+.proj .size{color:var(--teal)}
+.proof-tag{color:var(--teal);background:var(--purple-light);border-color:var(--panel-line)}
+.proof-card p{color:var(--muted)}
+.step .n{color:var(--muted);opacity:1}
+.step p{color:var(--muted);opacity:1}
+.step .t{background:var(--purple-light);color:var(--teal)}
+.guarantee p{color:var(--muted);opacity:1}
+.guarantee:after{opacity:.5}
+.install p{color:rgba(255,255,255,.75)}
+.more-link{color:var(--teal)}
+/* המגירה בתוך אזור ה-AI הייתה לבנה־שקופה על כהה */
+.ai-g{background:#fff;border-color:var(--panel-line)}
+.ai-g small{color:var(--muted)}
+.ai-g .ic{background:var(--purple-light);border-color:var(--panel-line)}
+.ai-g > summary:after{border-color:var(--teal)}
+.ai-g[open]{border-color:var(--teal);box-shadow:none}
