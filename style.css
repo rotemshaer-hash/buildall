@@ -15,6 +15,7 @@
   --hero-bg:linear-gradient(168deg,#FFFFFF 0%,#F6F9EF 58%,#EFF4E6 100%);
   /* הליים בוהק מדי לטקסט לבן, ולכן הוא כפתור עם טקסט כהה ולא רקע לטקסט */
   --cta:#B6F02C; --cta-ink:#15181C;
+  --brand-green:#5E9113;   /* שם המותג, קריא גם על הסרגל הכהה וגם על נייר */
   --accent:linear-gradient(90deg,#2B3440,#4D7C0F);
   --accent-soft:linear-gradient(150deg,rgba(63,98,18,.1),rgba(43,52,64,.1));
   --wa:#178442;
@@ -137,7 +138,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .logo{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;min-width:0;overflow:hidden}
 .logo svg{width:30px;height:30px;flex:none}
 .logo b{font-family:Heebo,sans-serif;font-size:20px;font-weight:800;line-height:1.05;white-space:nowrap;display:block}
-.logo b em{font-style:normal;background:linear-gradient(90deg,var(--teal-light),var(--purple-light));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo b em{font-style:normal;color:var(--brand-green)}
 .logo small{display:block;font-size:9.5px;opacity:.6;letter-spacing:2.2px;direction:ltr;text-align:right;line-height:1;margin-top:3px;white-space:nowrap}
 /* הסוגריים נפתחים והנקודה קופצת פנימה כשהדף נטען */
 .logo svg{overflow:visible}
@@ -186,9 +187,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 /* the coloured half holds its own line, so the full stop never lands alone */
 .hero h1 span{
   display:block;
-  background:linear-gradient(90deg,var(--teal),var(--purple),var(--teal));
-  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:shimmer 7s linear infinite;
+  color:var(--brand-green);
 }
 @keyframes shimmer{to{background-position:200% center}}
 .hero p{font-size:19px;color:var(--muted);max-width:600px;margin-bottom:var(--s4)}
@@ -1007,7 +1006,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 /* בנייד: סרגל ניווט מתחת להדר, נגלל הצידה */
 .nav-bar{position:sticky;top:var(--head-h);z-index:28;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1);overflow-x:auto;scrollbar-width:none;scroll-padding-inline-start:18px}
 .nav-bar::-webkit-scrollbar{display:none}
-.nav-bar ul{display:flex;gap:7px;list-style:none;padding:9px 18px 10px;margin:0;width:max-content;min-width:100%}
+.nav-bar ul{display:flex;gap:7px;list-style:none;padding-block:9px 10px;padding-inline:6px 18px;margin:0;width:max-content;min-width:100%}
 .nav-bar a{color:rgba(255,255,255,.9);text-decoration:none;font:700 14px Heebo,sans-serif;white-space:nowrap;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:var(--r-pill);padding:7px 15px;line-height:1.35}
 .nav-bar a:active{background:rgba(255,255,255,.18)}
 @media (min-width:900px){.nav-bar{display:none}}
