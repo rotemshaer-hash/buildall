@@ -35,9 +35,9 @@
   --r-sm:12px; --r:18px; --r-lg:24px; --r-pill:99px;
 
   /* צללים */
-  --sh-sm:0 2px 8px rgba(15,26,31,.05);
-  --sh:0 10px 28px rgba(15,26,31,.08);
-  --sh-lg:0 22px 50px rgba(15,26,31,.14);
+  --sh-sm:0 2px 8px rgba(12,29,51,.06);
+  --sh:0 10px 28px rgba(12,29,51,.09);
+  --sh-lg:0 22px 50px rgba(12,29,51,.16);
 
   /* מידות */
   --head-h:62px;
@@ -129,8 +129,7 @@ section{padding:var(--s6) 0}
 /* ---------- הדר ---------- */
 header{
   position:sticky;top:0;z-index:30;
-  background:rgba(15,26,31,.88);
-  backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
+  background:var(--ink);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:var(--head-h);flex-wrap:nowrap}
@@ -204,7 +203,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   background:rgba(255,255,255,.82);border:1px solid var(--line);
   border-radius:var(--r-pill);padding:9px 14px;color:var(--text);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  box-shadow:0 1px 4px rgba(21,24,28,.05);
+  box-shadow:0 1px 4px rgba(12,29,51,.05);
 }
 .pill:before{
   content:"";flex:none;width:17px;height:17px;border-radius:50%;
@@ -228,9 +227,9 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   position:absolute;inset:20px 0 30px 60px;background:#fff;border:1px solid var(--line);
   border-radius:16px;box-shadow:var(--sh-lg);overflow:hidden;color:var(--text);
 }
-.browser .top{height:30px;background:#E9EEF0;display:flex;align-items:center;gap:6px;padding:0 12px;direction:ltr}
-.browser .top i{width:9px;height:9px;border-radius:50%;background:#c9d3d7}
-.browser .top span{margin-left:10px;font-size:11px;color:#6b7b82;background:#fff;border-radius:6px;padding:2px 10px}
+.browser .top{height:30px;background:#E6EEF0;display:flex;align-items:center;gap:6px;padding:0 12px;direction:ltr}
+.browser .top i{width:9px;height:9px;border-radius:50%;background:#BFD0D6}
+.browser .top span{margin-left:10px;font-size:11px;color:#5E737E;background:#fff;border-radius:6px;padding:2px 10px}
 .dash{display:grid;grid-template-columns:90px 1fr;height:calc(100% - 30px)}
 .dash nav{background:var(--ink);padding:12px 8px;display:grid;gap:8px;align-content:start}
 .dash nav b{height:9px;border-radius:5px;background:rgba(255,255,255,.18)}
@@ -468,7 +467,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .guarantee{
   background:var(--grad);color:#fff;border-radius:var(--r-lg);
   padding:36px 26px;text-align:center;margin:0 18px;
-  position:relative;overflow:hidden;box-shadow:0 18px 44px rgba(27,33,23,.08);
+  position:relative;overflow:hidden;box-shadow:0 18px 44px rgba(12,29,51,.08);
 }
 .guarantee:after{
   content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;
@@ -1136,7 +1135,7 @@ a.card:has(.card-go):after{content:none}
   position:fixed;inset:auto 14px 14px 14px;z-index:40;
   max-width:400px;margin-inline:auto;height:min(560px,78vh);
   background:var(--card);border:1px solid var(--line);border-radius:20px;
-  box-shadow:0 26px 60px rgba(15,26,31,.32);
+  box-shadow:0 26px 60px rgba(12,29,51,.34);
   display:flex;flex-direction:column;overflow:hidden;
   animation:ai-in .25s ease both;
 }
@@ -1176,7 +1175,7 @@ a.card:has(.card-go):after{content:none}
 .film-txt .btn{margin-top:18px}
 /* the poster is what loads; the file itself only downloads when he presses play */
 .film-vid video{width:100%;height:auto;aspect-ratio:9/16;display:block;border-radius:var(--r);
-  background:var(--ink);border:1px solid var(--line);box-shadow:0 18px 40px rgba(15,26,31,.18)}
+  background:var(--ink);border:1px solid var(--line);box-shadow:0 18px 40px rgba(12,29,51,.2)}
 .film-cap{margin-top:10px;text-align:center;color:var(--muted);font-size:14px}
 @media (max-width:860px){
   .film-in{grid-template-columns:1fr}
@@ -1245,7 +1244,7 @@ a.card:has(.card-go):after{content:none}
 .ai{background:var(--panel);color:var(--text)}
 .ai .lead{color:var(--muted)}
 .ai .eyebrow{color:var(--teal);background:#fff;border-color:var(--panel-line)}
-.ai .card{background:#fff;border-color:var(--panel-line);color:var(--text);box-shadow:0 2px 10px rgba(21,24,28,.05)}
+.ai .card{background:#fff;border-color:var(--panel-line);color:var(--text);box-shadow:0 2px 10px rgba(12,29,51,.05)}
 .ai .card p{color:var(--muted)}
 .ai .card .ic{background:var(--purple-light);border-color:var(--panel-line)}
 .ai .card:before{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(15,107,82,.07),transparent 60%)}
@@ -1255,7 +1254,7 @@ a.card:has(.card-go):after{content:none}
 .work{background:var(--panel);color:var(--text)}
 .work .lead{color:var(--muted)}
 .work .eyebrow{color:var(--teal);background:#fff;border-color:var(--panel-line)}
-.proj{background:#fff;border:1px solid var(--panel-line);box-shadow:0 2px 12px rgba(21,24,28,.05)}
+.proj{background:#fff;border:1px solid var(--panel-line);box-shadow:0 2px 12px rgba(12,29,51,.05)}
 .proj p{color:var(--muted)}
 .proj .phone{-webkit-box-reflect:none}
 
@@ -1264,7 +1263,7 @@ a.card:has(.card-go):after{content:none}
 .demo-sec .lead{color:var(--muted)}
 .demo-sec .lead b{color:var(--text)}
 .demo-tag{color:var(--teal)}
-.demo-card{background:#fff;border-color:var(--panel-line);box-shadow:0 2px 12px rgba(21,24,28,.05)}
+.demo-card{background:#fff;border-color:var(--panel-line);box-shadow:0 2px 12px rgba(12,29,51,.05)}
 .demo-f{color:var(--muted)}
 .demo-f input,.demo-f select{background:var(--panel-2);border-color:var(--panel-line);color:var(--text)}
 .demo-log li{background:var(--panel);color:var(--text)}
@@ -1278,10 +1277,10 @@ a.card:has(.card-go):after{content:none}
 a.card.idea:after{filter:none}
 .sb-cta{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
 .guarantee{background:var(--panel);color:var(--text);
-  border:1px solid var(--panel-line);box-shadow:0 18px 44px rgba(21,24,28,.08)}
+  border:1px solid var(--panel-line);box-shadow:0 18px 44px rgba(12,29,51,.08)}
 .callout{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
 .callout p{color:var(--muted)}
-.proof-card{background:#fff;color:var(--text);border:1px solid var(--panel-line);box-shadow:0 2px 14px rgba(21,24,28,.06)}
+.proof-card{background:#fff;color:var(--text);border:1px solid var(--panel-line);box-shadow:0 2px 14px rgba(12,29,51,.06)}
 .side-b{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
 .side-b .side-tag .i{stroke:var(--teal)}
 /* ילדים שהיו תלויים ברקע הכהה: ליים כטקסט, שבבים כהים־שקופים ולבן־שקוף */
@@ -1320,11 +1319,14 @@ a.card.idea:after{filter:none}
 .hero p{color:rgba(255,255,255,.9)}
 /* על כהה המנטה הבהירה נקראת (6.1), ועל הסרגל הכהה היא אותה מנטה — אז השם
    נשאר באותו צבע בשני המקומות, וזה מה שרותם ביקש */
-.hero h1 span,.logo b em{color:#2FC79A}
-.pill{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);color:#fff;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
-.pill:before{background:rgba(255,255,255,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4L19 7'/%3E%3C/svg%3E") center/11px no-repeat}
-.hero .tag{background:rgba(0,0,0,.26);border-color:rgba(255,255,255,.18);color:#D6F3E9}
+/* בדוגמה שנבחרה הכותרת כולה בהירה והשם ליד הלוגו בהיר — הצבע החי שמור
+   לכפתור ולתגיות, וזה מה שגורם לדף להיראות נקי ולא צבעוני */
+.hero h1,.hero h1 span{color:#EFF7FA}
+.logo b em{color:#F4F8F8}
+.pill{background:var(--purple-light);border-color:transparent;color:var(--teal);
+  box-shadow:none}
+.pill:before{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F6B52' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4L19 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.hero .tag{background:var(--purple-light);border-color:transparent;color:var(--teal)}
 .blob.b1{background:#15B88A;opacity:.3}
 .blob.b2{background:#1B4A74;opacity:.55}
 .blob.b3{background:#2FC79A;opacity:.12}
