@@ -76,12 +76,28 @@ export const logoPlain = (color = 'url(#g)') =>
     .replace('<circle', `<circle fill="${color}"`);
 
 
+// Platform marks, shown so a business running ads recognises where its landing page
+// goes. They are filled rather than stroked like the rest of the set, since a brand
+// mark has to keep its own shape. Nothing beside them claims a partnership: showing
+// a platform you build for is fair, implying it endorses you is not.
+const BRANDS = {
+  instagram: ['אינסטגרם', '<rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.4"/>'],
+  facebook: ['פייסבוק', '<path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.8 3.7-3.8 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>'],
+  tiktok: ['טיקטוק', '<path d="M16.6 2h-3v13.2a2.8 2.8 0 1 1-2.3-2.8V9.3a5.9 5.9 0 1 0 5.3 5.9V8.8A6.9 6.9 0 0 0 21 10.1V7.1a4 4 0 0 1-4.4-5.1z"/>'],
+  google: ['גוגל', '<path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12V14h5.4a4.6 4.6 0 0 1-2 3v2.6h3.2c1.9-1.8 3-4.4 3-7.4z"/><path d="M12 22c2.7 0 4.9-.9 6.6-2.4l-3.2-2.6c-.9.6-2 1-3.4 1a5.9 5.9 0 0 1-5.5-4H3.2v2.6A10 10 0 0 0 12 22z"/><path d="M6.5 14a6 6 0 0 1 0-3.8V7.6H3.2a10 10 0 0 0 0 9z"/><path d="M12 6a5.4 5.4 0 0 1 3.8 1.5l2.8-2.8A10 10 0 0 0 3.2 7.6l3.3 2.6A5.9 5.9 0 0 1 12 6z"/>'],
+};
+
+// The row of marks, as one block wherever a landing page is offered.
+export const brandRow = `<span class="brands">${Object.entries(BRANDS)
+  .map(([k, [label]]) => `<svg class="br" role="img" aria-label="${label}"><use href="#b-${k}"/></svg>`).join('')}</span>`;
+
 export const sprite = `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#B6F02C"/><stop offset="1" stop-color="#B6F02C"/></linearGradient>
     <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#3F6212"/><stop offset="1" stop-color="#2B3440"/></linearGradient>
     <symbol id="wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
 ${Object.entries(ICONS).map(([k, v]) => `    <symbol id="i-${k}" viewBox="0 0 24 24">${v}</symbol>`).join('\n')}
+${Object.entries(BRANDS).map(([k, [, v]]) => `    <symbol id="b-${k}" viewBox="0 0 24 24" fill="currentColor">${v}</symbol>`).join('\n')}
   </defs>
 </svg>`;
 

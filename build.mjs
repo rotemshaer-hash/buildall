@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, business, videoSchema, faqSchema } from './src/layout.mjs';
+import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
@@ -26,7 +26,9 @@ const labelTables = html => html.replace(/<table>([\s\S]*?)<\/table>/g, (t, inne
   });
   return '<table>' + body + '</table>';
 });
-const withIcons = html => html.replace(/\{\{icon:([a-z]+)\}\}/g, (_, n) => icon(n));
+const withIcons = html => html
+  .replace(/\{\{icon:([a-z]+)\}\}/g, (_, n) => icon(n))
+  .replace(/\{\{brands\}\}/g, brandRow);
 
 // ---------- shared sections ----------
 const industriesSection = root => `<section class="industries" id="industries">
@@ -506,6 +508,67 @@ document.getElementById('c-form').addEventListener('submit', e => {
   n.textContent = 'תודה! בהדגמה הזו לא נשלחה בקשה. באתר אמיתי הבקשה הייתה מגיעה לבית הקפה.';
   n.className = 'c-note ok';
 });
+</script>
+</body>
+</html>
+`);
+
+// ---------- demo landing page ----------
+// Where a campaign on Instagram or Facebook should land. It carries its own look,
+// a banner saying plainly it is a demo, and the source tag the real thing writes to
+// the report — that tag is the point of the page, so it is shown working.
+write('demo/landing/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>תנועה · סטודיו פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
+<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, כפתור וואטסאפ, טופס קצר ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
+<link rel="canonical" href="${BASE}demo/landing/">
+<meta name="theme-color" content="#2F4739">
+<!-- A studio that does not exist: keep it out of search so nobody tries to book a class. -->
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="demo-ribbon">
+  <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
+  <a href="${BASE}">נבנה על ידי בונים הכל ←</a>
+</div>
+<main>
+${readFileSync('src/demo-landing.html', 'utf8')}
+</main>
+<footer class="l-foot">
+  <div class="l-wrap">
+    <p><b>תנועה · סטודיו פילאטיס</b> · אבן גבירול 00, תל אביב</p>
+    <p class="l-dis">זהו דף נחיתה להדגמה. הסטודיו, הכתובת והשעות אינם אמיתיים, ושום פנייה לא נשלחת. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
+  </div>
+</footer>
+<script>
+// A real landing page reads where the click came from and files it with the lead,
+// so the studio knows which campaign paid for itself. Shown here on the page itself.
+(() => {
+  const FROM = { ig: 'אינסטגרם', instagram: 'אינסטגרם', fb: 'פייסבוק', facebook: 'פייסבוק',
+                 tiktok: 'טיקטוק', tt: 'טיקטוק', google: 'גוגל', g: 'גוגל' };
+  const key = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
+  const tag = document.getElementById('l-src');
+  if (tag && FROM[key]) tag.textContent = 'הגעת מ' + FROM[key] + ' · נשמר בדוח';
+  const wa = document.getElementById('l-wa');
+  if (wa) wa.addEventListener('click', e => {
+    e.preventDefault();
+    alert('בהדגמה הזו וואטסאפ לא נפתח. בדף אמיתי זה פותח שיחה עם הסטודיו, עם ההודעה כבר כתובה.');
+  });
+  document.getElementById('l-lead').addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('l-note');
+    n.textContent = 'תודה! בהדגמה הזו לא נשלחה פנייה. בדף אמיתי היא הייתה מגיעה לסטודיו תוך שנייה, יחד עם המקור שממנו הגעת.';
+    n.className = 'l-note ok';
+  });
+})();
 </script>
 </body>
 </html>

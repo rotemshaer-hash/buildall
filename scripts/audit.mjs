@@ -27,14 +27,18 @@ for (const page of pages) {
   const hrefs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(m => m[1]);
   for (const h of hrefs) {
     if (/^(https?:|mailto:|tel:|data:|#?$)/.test(h)) continue;
+    // A query string is part of the link, not of the file name: ?utm_source=ig names
+    // the campaign, and resolving it against the disk looks for a file nobody wrote.
     const [path, hash] = h.split('#');
     if (!path || path === './') {            // same page anchor
       if (hash && !ids.has(hash)) ok(false, `${rel}: עוגן חסר #${hash}`);
       continue;
     }
-    const target = path.startsWith('/')
-      ? join(ROOT, path)
-      : resolve(dirname(page), path);
+    const file = path.split('?')[0];
+    if (!file) continue;
+    const target = file.startsWith('/')
+      ? join(ROOT, file)
+      : resolve(dirname(page), file);
     const candidates = [target, join(target, 'index.html')];
     const found = candidates.find(c => existsSync(c));
     ok(!!found, `${rel}: קובץ חסר ${h}`);

@@ -1,0 +1,113 @@
+/* A landing page for a pilates studio that does not exist, built to show what an
+   Instagram or Facebook campaign should land on. Deliberately NOT the Build All
+   palette — warm sand and ink — so it reads as work made for a client, not as our
+   own site wearing a different headline. */
+
+:root{
+  --ink:#1C1A17;
+  --sand:#F6F1EA;
+  --paper:#FFFFFF;
+  --rose:#C2563F;
+  --deep:#2F4739;
+  --line:#E7DFD4;
+  --muted:#6F665C;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Assistant,system-ui,sans-serif;
+  background:var(--sand);color:var(--ink);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:'Frank Ruhl Libre',Georgia,serif;line-height:1.15;font-weight:700}
+
+.l-wrap{max-width:1000px;margin-inline:auto;padding-inline:20px}
+
+/* the strip that says this is a demo, not a studio */
+.demo-ribbon{
+  background:var(--ink);color:#fff;font-size:14px;
+  display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;align-items:center;
+  padding:9px 16px;text-align:center;
+}
+.demo-ribbon a{color:#F0C9A0;font-weight:700}
+
+/* hero */
+.l-hero{
+  background:linear-gradient(170deg,#2F4739 0%,#3B5A47 58%,#51705B 100%);
+  color:#fff;padding:54px 0 62px;text-align:center;position:relative;overflow:hidden;
+}
+.l-hero::after{
+  content:"";position:absolute;inset:auto -10% -55% -10%;height:60%;
+  background:radial-gradient(60% 100% at 50% 0,rgba(255,255,255,.14),transparent 70%);
+}
+.l-src{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.26);border-radius:999px;
+  padding:6px 14px;font-size:14px;font-weight:700;margin-bottom:22px;
+}
+.l-hero h1{font-size:clamp(32px,7.4vw,52px)}
+.l-hero h1 em{font-style:normal;color:#F3C9A4}
+.l-sub{max-width:34rem;margin:16px auto 0;color:#E8EFE9;text-wrap:balance}
+.l-cta{
+  display:inline-block;margin-top:26px;background:#F3C9A4;color:#23342B;
+  text-decoration:none;font-weight:800;font-size:18px;
+  border-radius:999px;padding:16px 30px;box-shadow:0 14px 30px rgba(0,0,0,.26);
+}
+.l-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:22px;font-size:15px;color:#DCE7DE}
+.l-trust li::before{content:"✓ ";color:#F3C9A4;font-weight:800}
+
+/* why */
+.l-why{padding:56px 0}
+.l-why h2,.l-faq h2{font-size:clamp(26px,4.6vw,34px);margin-bottom:26px;text-align:center}
+.l-cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(248px,1fr))}
+.l-cards article{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.l-n{display:block;font-weight:800;color:var(--rose);letter-spacing:.08em;margin-bottom:8px}
+.l-cards h3{font-size:21px;margin-bottom:8px}
+.l-cards p{color:var(--muted)}
+
+/* form */
+.l-form-sec{background:var(--paper);border-block:1px solid var(--line);padding:56px 0}
+.l-split{display:grid;gap:30px;grid-template-columns:1fr}
+@media (min-width:860px){.l-split{grid-template-columns:1fr 1fr;align-items:start;gap:46px}}
+.l-form-sec h2{font-size:clamp(26px,4.6vw,34px)}
+.l-form-sec p{color:var(--muted);margin-top:10px}
+.l-wa{
+  display:inline-flex;align-items:center;gap:9px;margin-top:18px;
+  background:#1F8A4C;color:#fff;text-decoration:none;font-weight:800;
+  border-radius:999px;padding:13px 22px;
+}
+.l-wa svg{width:21px;height:21px;fill:#fff}
+.l-facts{margin-top:26px;display:grid;gap:12px}
+.l-facts div{display:flex;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+.l-facts dt{font-weight:800;min-width:4.5rem}
+.l-facts dd{color:var(--muted)}
+#l-lead{background:var(--sand);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px}
+#l-lead label{display:grid;gap:6px;font-weight:700}
+#l-lead input,#l-lead select{
+  font:inherit;font-weight:400;padding:12px 14px;border:1px solid var(--line);
+  border-radius:12px;background:var(--paper);color:var(--ink);width:100%;
+}
+#l-lead button{
+  font:inherit;font-weight:800;font-size:17px;cursor:pointer;
+  background:var(--rose);color:#fff;border:0;border-radius:999px;padding:14px 20px;
+}
+.l-note{font-size:14px;color:var(--muted);margin:0}
+.l-note.ok{color:var(--deep);font-weight:700}
+
+/* faq */
+.l-faq{padding:56px 0 64px}
+.l-faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.l-faq summary{font-weight:800;cursor:pointer}
+.l-faq summary::-webkit-details-marker{display:none}
+.l-faq summary::after{content:"+";float:left;color:var(--rose);font-weight:800}
+.l-faq details[open] summary::after{content:"–"}
+.l-faq details p{margin-top:10px;color:var(--muted)}
+
+/* foot */
+.l-foot{background:var(--ink);color:#EDE6DC;padding:26px 0 34px;text-align:center}
+.l-foot a{color:#F3C9A4}
+.l-dis{font-size:14px;color:#A9A094;margin-top:10px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

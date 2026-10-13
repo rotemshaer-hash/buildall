@@ -1,0 +1,80 @@
+<!-- The body of the demo landing page. The shell, the ribbon and the disclaimer are
+     written by build.mjs; this file is the page a studio would actually get. -->
+<section class="l-hero">
+  <div class="l-wrap">
+    <span class="l-src" id="l-src">הגעת מאינסטגרם · נשמר בדוח</span>
+    <h1>שיעור פילאטיס ראשון<br><em>על חשבוננו</em></h1>
+    <p class="l-sub">סטודיו קטן בתל אביב, קבוצות של עד שישה אנשים, ומדריכה שרואה כל אחד. מתאים גם למי שלא התאמן שנים.</p>
+    <a class="l-cta" href="#l-form">אני רוצה לקבוע שיעור ניסיון</a>
+    <ul class="l-trust">
+      <li>בלי התחייבות</li>
+      <li>בלי כרטיס אשראי</li>
+      <li>תשובה באותו יום</li>
+    </ul>
+  </div>
+</section>
+
+<section class="l-why">
+  <div class="l-wrap">
+    <h2>למה אצלנו</h2>
+    <div class="l-cards">
+      <article>
+        <span class="l-n">01</span>
+        <h3>עד שישה בשיעור</h3>
+        <p>מספיק קטן כדי שהמדריכה תתקן אותך בשם, ולא תסתכל על הקבוצה מרחוק.</p>
+      </article>
+      <article>
+        <span class="l-n">02</span>
+        <h3>מתחילים מאיפה שאתה</h3>
+        <p>לא התאמנת חמש שנים? יש גרסה לכל תרגיל, ואף אחד לא נשאר מאחור.</p>
+      </article>
+      <article>
+        <span class="l-n">03</span>
+        <h3>שעות של אנשים עובדים</h3>
+        <p>שיעורים ב‑06:30 בבוקר וב‑20:00 בערב, כדי שזה ייכנס ליום ולא ידחק אותו.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="l-form-sec" id="l-form">
+  <div class="l-wrap l-split">
+    <div>
+      <h2>נקבע לך שיעור ניסיון</h2>
+      <p>משאירים שם וטלפון, ומתאמים יום ושעה. אפשר גם ישר בוואטסאפ, מה שנוח לך.</p>
+      <a class="l-wa" href="#" id="l-wa">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4z"/></svg>
+        שיחה בוואטסאפ
+      </a>
+      <dl class="l-facts">
+        <div><dt>איפה</dt><dd>אבן גבירול 00, תל אביב</dd></div>
+        <div><dt>מתי</dt><dd>א׳–ה׳ 06:30–21:00 · ו׳ 07:00–13:00</dd></div>
+        <div><dt>חניה</dt><dd>חניון ציבורי במרחק דקה</dd></div>
+      </dl>
+    </div>
+    <form id="l-lead">
+      <label>שם<input name="name" autocomplete="name" required></label>
+      <label>טלפון<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <label>מתי נוח לך?
+        <select name="when">
+          <option>בוקר מוקדם</option>
+          <option>אחר הצהריים</option>
+          <option>ערב</option>
+          <option>גמיש</option>
+        </select>
+      </label>
+      <button type="submit">שלחו לי פרטים</button>
+      <p class="l-note" id="l-note">לא שולחים ספאם, ולא מוסרים את הפרטים לאף אחד.</p>
+    </form>
+  </div>
+</section>
+
+<section class="l-faq">
+  <div class="l-wrap">
+    <h2>שאלות שחוזרות</h2>
+    <details><summary>אף פעם לא עשיתי פילאטיס. זה בשבילי?</summary><p>כן. רוב מי שמגיע לשיעור הראשון לא עשה קודם. התרגילים מותאמים לרמה, וגם לכאבי גב או ברכיים.</p></details>
+    <details><summary>מה צריך להביא?</summary><p>בגדים נוחים וגרביים. מזרן וציוד יש בסטודיו.</p></details>
+    <details><summary>כמה זמן שיעור?</summary><p>חמישים דקות, וכדאי להגיע חמש דקות לפני.</p></details>
+    <details><summary>ואם לא אתחבר?</summary><p>שיעור הניסיון הוא בדיוק בשביל זה. אין התחייבות ואין מה לבטל.</p></details>
+  </div>
+</section>
