@@ -95,6 +95,14 @@ for (const page of pages) {
   for (const b of banned) ok(!html.includes(b), `${page.replace(ROOT,'')}: עדיין מופיע "${b}"`);
 }
 
+console.log('\nמגירות:');
+// Every drawer ships closed: one left open makes the list under it look like the page
+// rather than like one choice among several, and the ones below it get missed.
+for (const page of pages) {
+  const html = readFileSync(page, 'utf8');
+  ok(!/<details[^>]*\sopen[\s>]/.test(html), `${page.replace(ROOT, '')}: יש מגירה שנפתחת מעצמה`);
+}
+
 console.log('\nסרגל הניווט:');
 // The strip is a map of the scroll, so its order is checked against the page itself
 // rather than against a list written here — a hard-coded position only breaks the day
