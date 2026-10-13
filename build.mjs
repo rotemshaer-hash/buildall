@@ -152,6 +152,11 @@ ${body}
 </main>
 ${footer(root, nav)}`;
 
+// The floating invitation to the live demo. `hideAt` is the element that makes it
+// redundant: on the demo page the demo itself, on the home page the card that offers it.
+const demoFab = (href, hideAt) =>
+  `<a class="demo-fab" href="${href}" data-hide-at="${hideAt}">${icon('zap')}<span>נסה דוגמה חיה</span></a>`;
+
 // ---------- home ----------
 let home = readFileSync('src/home.html', 'utf8');
 const homeFaq = [...home.matchAll(/<details><summary>(.*?)<\/summary><p>(.*?)<\/p><\/details>/g)].map(m => [m[1], m[2]]);
@@ -167,7 +172,7 @@ write('index.html', page({
   title: 'בונים הכל | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, videoSchema, faqSchema(homeFaq)],
-  body: home
+  body: demoFab('work/work-it/#demo', '.proof-grid') + home
 }));
 
 // ---------- industry pages ----------
@@ -338,7 +343,7 @@ for (const g of guides) {
 }
 
 // The Work It demo: the visitor assigns a task and watches both screens react.
-const workItDemo = () => `<a class="demo-fab" href="#demo">${icon('zap')}<span>נסה דוגמה חיה</span></a>
+const workItDemo = () => `${demoFab('#demo', '#demo')}
 <section class="demo-sec" id="demo">
   <div class="wrap">
     <div class="sec-head center">

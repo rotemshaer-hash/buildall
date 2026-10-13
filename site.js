@@ -40,7 +40,7 @@ openTargetGroup();
 // The floating demo pill steps aside while the demo itself is in view.
 (() => {
   const fab = document.querySelector('.demo-fab');
-  const demo = document.getElementById('demo');
+  const demo = fab && document.querySelector(fab.dataset.hideAt || '#demo');
   if (!fab || !demo || !('IntersectionObserver' in window)) return;
   new IntersectionObserver(([e]) => fab.classList.toggle('hide', e.isIntersecting),
     { threshold: 0.12 }).observe(demo);
