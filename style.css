@@ -12,6 +12,7 @@
   --teal-light:#B6F02C;
   --purple-light:#DCFCA0;
   --grad:linear-gradient(150deg,#15181C 0%,#232A31 52%,#3A4551 100%);
+  --hero-bg:linear-gradient(168deg,#FFFFFF 0%,#F8FAF5 56%,#F0F5E8 100%);
   /* הליים בוהק מדי לטקסט לבן, ולכן הוא כפתור עם טקסט כהה ולא רקע לטקסט */
   --cta:#B6F02C; --cta-ink:#15181C;
   --accent:linear-gradient(90deg,#2B3440,#4D7C0F);
@@ -163,34 +164,34 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 
 /* ---------- הירו ---------- */
 .hero{
-  background:var(--grad);color:#fff;
+  background:var(--hero-bg);color:var(--text);
   padding:var(--s6) 0 var(--s5);
   position:relative;overflow:hidden;isolation:isolate;
 }
 .hero .wrap{position:relative;z-index:1}
 .hero:before{
-  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.16;
-  background-image:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(63,98,18,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(63,98,18,.1) 1px,transparent 1px);
   background-size:44px 44px;
   -webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);
   mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);
 }
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0;pointer-events:none;animation:drift 18s ease-in-out infinite alternate}
-.blob.b1{width:360px;height:360px;background:#9BE330;opacity:.26;top:-130px;right:-90px}
-.blob.b2{width:420px;height:420px;background:#55617A;opacity:.55;bottom:-150px;left:-70px;animation-delay:-6s}
-.blob.b3{width:240px;height:240px;background:#B6F02C;top:45%;left:30%;opacity:.12;animation-delay:-12s}
+.blob.b1{width:360px;height:360px;background:#B6F02C;opacity:.17;top:-130px;right:-90px}
+.blob.b2{width:420px;height:420px;background:#D9E9BE;opacity:.34;bottom:-150px;left:-70px;animation-delay:-6s}
+.blob.b3{width:240px;height:240px;background:#8FBF3A;top:45%;left:30%;opacity:.08;animation-delay:-12s}
 @keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,30px) scale(1.12)}100%{transform:translate(-30px,-20px) scale(.95)}}
 
 .hero h1{font-size:clamp(42px,9vw,78px);font-weight:900;line-height:1.08;margin:0 0 var(--s3);max-width:900px}
 /* the coloured half holds its own line, so the full stop never lands alone */
 .hero h1 span{
   display:block;
-  background:linear-gradient(90deg,var(--teal-light),var(--purple-light),var(--teal-light));
+  background:linear-gradient(90deg,var(--teal),var(--purple),var(--teal));
   background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
   animation:shimmer 7s linear infinite;
 }
 @keyframes shimmer{to{background-position:200% center}}
-.hero p{font-size:19px;opacity:.93;max-width:600px;margin-bottom:var(--s4)}
+.hero p{font-size:19px;color:var(--muted);max-width:600px;margin-bottom:var(--s4)}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
 /* ארבע נקודות בשתי שורות מסודרות, במקום גלולות בגדלים שונים שנשברות במדרגות */
 .pills{
@@ -201,19 +202,19 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .pill{
   display:flex;align-items:center;gap:8px;
   font-size:14.5px;font-weight:600;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
-  border-radius:var(--r-pill);padding:9px 14px;
+  background:rgba(255,255,255,.82);border:1px solid var(--line);
+  border-radius:var(--r-pill);padding:9px 14px;color:var(--text);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+  box-shadow:0 1px 4px rgba(21,24,28,.05);
 }
 .pill:before{
   content:"";flex:none;width:17px;height:17px;border-radius:50%;
-  background:rgba(255,255,255,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4L19 7'/%3E%3C/svg%3E") center/11px no-repeat;
+  background:var(--purple-light) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4L19 7'/%3E%3C/svg%3E") center/11px no-repeat;
 }
 @media (max-width:340px){.pills{grid-template-columns:1fr}}
 .hero .tag{
   display:inline-block;font-size:15px;font-weight:600;
-  background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.14);
+  background:#fff;border:1px solid var(--line);color:var(--teal);
   border-radius:var(--r-pill);padding:6px 14px;margin-bottom:var(--s3);
 }
 .hero-grid{display:block}
@@ -225,9 +226,8 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   .hero-vis{display:block;position:relative;height:380px}
 }
 .browser{
-  position:absolute;inset:20px 0 30px 60px;background:rgba(255,255,255,.97);
+  position:absolute;inset:20px 0 30px 60px;background:#fff;border:1px solid var(--line);
   border-radius:16px;box-shadow:var(--sh-lg);overflow:hidden;color:var(--text);
-  -webkit-box-reflect:below 10px linear-gradient(transparent 70%,rgba(255,255,255,.16));
 }
 .browser .top{height:30px;background:#E9EEF0;display:flex;align-items:center;gap:6px;padding:0 12px;direction:ltr}
 .browser .top i{width:9px;height:9px;border-radius:50%;background:#c9d3d7}
