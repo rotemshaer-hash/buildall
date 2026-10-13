@@ -1,0 +1,150 @@
+/* Three first screens. What separates them is not colour — it is type, air and
+   material, which is what actually reads as expensive:
+   א  night: deep ground, real grain, a serif at display size, one hairline, one accent
+   ב  gallery: almost nothing on the screen, type doing all the work
+   ג  editorial: asymmetry and scale contrast, like a magazine opener
+   All three use one accent and no more. Restraint is the whole trick. */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Assistant,system-ui,sans-serif;background:#111;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+section{position:relative;overflow:hidden}
+
+/* --- the page that frames the three --- */
+.x-top{max-width:560px;margin:0 auto;padding:30px 20px 18px;text-align:center;background:#111}
+.x-top h1{font:800 27px/1.2 Heebo,sans-serif}
+.x-top p{color:#9A9A95;margin-top:9px;font-size:16px}
+.x-note{font-size:14px!important;color:#6E6E69!important}
+.x-label{
+  max-width:560px;margin:0 auto;padding:26px 20px 14px;display:flex;align-items:center;gap:12px;background:#111;
+}
+.x-label span{
+  width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;
+  border:1px solid #3A3A36;color:#C9C9C4;font:800 15px Heebo,sans-serif;
+}
+.x-label b{display:block;font:800 18px Heebo,sans-serif}
+.x-label small{color:#8E8E89;font-size:14px}
+
+/* ======================= א · לילה ======================= */
+.s-night{
+  background:#070E18;color:#EAF2F0;
+  padding:62px 22px 66px;min-height:92vh;display:flex;align-items:center;
+}
+/* two soft lights, not a gradient bar: depth comes from light falling off, which a
+   flat gradient never does */
+.n-mesh{
+  position:absolute;inset:-25% -35%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(42% 38% at 76% 14%,rgba(21,184,138,.30),transparent 68%),
+    radial-gradient(48% 44% at 16% 82%,rgba(27,74,116,.55),transparent 70%);
+  filter:blur(8px);
+}
+/* real grain. It is the single cheapest thing that stops a dark screen looking flat */
+.n-grain{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+.n-in{position:relative;z-index:2;width:100%;max-width:560px;margin-inline:auto}
+.n-eyebrow{
+  display:block;font:600 12px Assistant,sans-serif;letter-spacing:.34em;
+  color:#6FD9B8;margin-bottom:28px;
+}
+.s-night h2{
+  font-family:'Frank Ruhl Libre',serif;font-weight:800;
+  font-size:clamp(40px,11.5vw,62px);line-height:1.06;letter-spacing:-.01em;
+}
+.s-night h2 em{font-style:normal;color:#2FC79A}
+.n-rule{display:block;width:54px;height:1px;background:linear-gradient(90deg,#2FC79A,transparent);margin:30px 0 22px}
+.s-night p{font-size:17.5px;line-height:1.75;color:#9FB3B5;max-width:34rem}
+.n-cta{
+  display:inline-flex;align-items:center;gap:14px;margin-top:34px;cursor:pointer;
+  border:1px solid rgba(111,217,184,.4);border-radius:999px;padding:11px 12px 11px 26px;
+  color:#EAF2F0;font:700 16px Heebo,sans-serif;transition:border-color .3s,background .3s;
+}
+.n-cta i{
+  width:38px;height:38px;flex:none;border-radius:50%;background:#2FC79A;color:#06241B;
+  display:grid;place-items:center;font-size:17px;font-style:normal;transition:transform .3s;
+}
+@media (hover:hover){.n-cta:hover{border-color:#2FC79A;background:rgba(47,199,154,.07)}.n-cta:hover i{transform:translateX(-4px)}}
+/* a sheet of glass, not a card: it is what makes the screen feel layered */
+.n-card{
+  margin-top:46px;border-radius:18px;padding:16px 18px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+}
+.n-card-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.n-card-h b{font:800 15px Heebo,sans-serif}
+.n-card-h span{font-size:12px;color:#7E9A9B;letter-spacing:.1em}
+.n-row{
+  display:flex;justify-content:space-between;gap:12px;font-size:14px;color:#C2D3D2;
+  padding:9px 0;border-top:1px solid rgba(255,255,255,.07);
+}
+.n-row em{font-style:normal;color:#6FD9B8;font-variant-numeric:tabular-nums}
+
+/* ======================= ב · גלריה ======================= */
+.s-gal{
+  background:#FAFAF7;color:#121210;
+  padding:76px 22px 86px;min-height:92vh;display:flex;align-items:center;
+}
+.g-in{position:relative;z-index:1;width:100%;max-width:560px;margin-inline:auto}
+.g-idx{
+  display:block;font:600 12px Assistant,sans-serif;letter-spacing:.3em;color:#9A9A92;
+  padding-bottom:16px;border-bottom:1px solid #E4E4DD;margin-bottom:40px;
+}
+.s-gal h2{
+  font-family:'Frank Ruhl Libre',serif;font-weight:800;
+  font-size:clamp(44px,13vw,76px);line-height:1.02;letter-spacing:-.02em;
+}
+.s-gal h2 em{font-style:normal;color:#0F6B52}
+.g-meta{margin-top:40px;padding-top:18px;border-top:1px solid #E4E4DD;display:grid;gap:4px}
+.g-meta p{font-size:16px;font-weight:700}
+.g-sub{font-weight:400!important;color:#6E6E66}
+.g-cta{
+  display:inline-flex;align-items:center;gap:10px;margin-top:34px;cursor:pointer;
+  background:#121210;color:#FAFAF7;border-radius:999px;padding:14px 26px;
+  font:700 16px Heebo,sans-serif;transition:gap .3s;
+}
+.g-cta i{font-style:normal}
+@media (hover:hover){.g-cta:hover{gap:16px}}
+/* the name as a watermark, only just there */
+.g-mark{
+  position:absolute;z-index:0;bottom:-6%;left:-6%;
+  font-family:'Frank Ruhl Libre',serif;font-weight:800;font-size:40vw;line-height:.8;
+  color:#121210;opacity:.035;pointer-events:none;font-style:normal;
+}
+
+/* ======================= ג · עריכתי ======================= */
+.s-ed{background:#F3F1EC;color:#15140F;min-height:92vh;display:flex;flex-direction:column}
+.e-top{background:#15140F;color:#F6F4EF;padding:54px 22px 46px;position:relative}
+.e-kicker{
+  display:block;font:600 12px Assistant,sans-serif;letter-spacing:.34em;color:#9AE8CB;margin-bottom:22px;
+}
+.s-ed h2{
+  font-family:'Frank Ruhl Libre',serif;font-weight:800;
+  font-size:clamp(46px,14vw,84px);line-height:.98;letter-spacing:-.02em;
+}
+.s-ed h2 span{color:#2FC79A}
+.e-bot{padding:34px 22px 52px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.e-list{display:grid;gap:0;margin-bottom:26px}
+.e-list div{
+  display:flex;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid #DED9CF;
+}
+.e-list div:first-child{border-top:1px solid #DED9CF}
+.e-list b{
+  font-family:'Frank Ruhl Libre',serif;font-size:15px;color:#0F6B52;font-weight:800;
+  min-width:1.6rem;font-variant-numeric:tabular-nums;
+}
+.e-list span{font:700 19px Heebo,sans-serif}
+.e-bot > p{color:#5F5B52;font-size:16.5px;line-height:1.7}
+.e-cta{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-top:26px;cursor:pointer;
+  background:#0F6B52;color:#F6F4EF;border-radius:4px;padding:14px 26px;font:700 16px Heebo,sans-serif;
+  transition:gap .3s;
+}
+.e-cta i{font-style:normal}
+@media (hover:hover){.e-cta:hover{gap:16px}}
+
+footer{background:#111;color:#9A9A95;padding:28px 20px 52px;text-align:center;font-size:15px}
+footer a{color:#fff;font-weight:700}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

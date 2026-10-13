@@ -723,6 +723,28 @@ ${readFileSync('src/demo-colors10.html', 'utf8')}
 </html>
 `);
 
+// Three design directions for the first screen. Temporary, like the palette pages.
+write('demo/premium/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>שלושה כיוונים ליוקרה | ${BRAND}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${readFileSync('src/demo-premium.html', 'utf8')}
+<footer>תגיד לי אות — א, ב או ג — ואבנה את כל האתר בשפה הזו. <a href="${BASE}">חזרה לאתר</a></footer>
+</body>
+</html>
+`);
+
 // ---------- what the assistant answers from ----------
 write('kb.json', JSON.stringify(buildKnowledge()));
 
