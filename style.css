@@ -599,6 +599,12 @@ footer details p{color:rgba(255,255,255,.7);font-size:14px}
   .sb-cta{padding:20px}
   .sb-cta .btn{width:100%}
 }
+/* בטלפון אין הדמיה בצד, אז הטקסט ממורכז ולא נצמד לקצה */
+@media (max-width:860px){
+  .hero h1,.hero p{text-align:center;margin-inline:auto;max-width:34ch;text-wrap:balance}
+  .hero .ctas{justify-content:center}
+  .hero .pills{margin-inline:auto}
+}
 @media (max-width:480px){
   section{padding:var(--s5) 0}
   .sec-head{margin-bottom:var(--s4)}
@@ -841,6 +847,12 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   .prose td:first-child{font-size:18px}
   .sb-cta{padding:20px}
   .sb-cta .btn{width:100%}
+}
+/* בטלפון אין הדמיה בצד, אז הטקסט ממורכז ולא נצמד לקצה */
+@media (max-width:860px){
+  .hero h1,.hero p{text-align:center;margin-inline:auto;max-width:34ch;text-wrap:balance}
+  .hero .ctas{justify-content:center}
+  .hero .pills{margin-inline:auto}
 }
 @media (max-width:480px){
   section{padding:var(--s5) 0}
