@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>תנועה · סטודיו פילאטיס | דף נחיתה לדוגמה של בונים הכל</title>
-<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, כפתור וואטסאפ, טופס קצר ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
+<title>נועה ברק · פילאטיס | דף נחיתה לדוגמה של בונים הכל</title>
+<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
 <link rel="canonical" href="https://buildall.pages.dev/demo/landing/">
-<meta name="theme-color" content="#2F4739">
-<!-- A studio that does not exist: keep it out of search so nobody tries to book a class. -->
+<meta name="theme-color" content="#121410">
+<!-- An instructor who does not exist: keep it out of search so nobody books a class. -->
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'1'%20x2%3D'1'%20y2%3D'0'%3E%3Cstop%20offset%3D'0'%20stop-color%3D'%23B6F02C'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%23B6F02C'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%2315181C'%2F%3E%20%3Cg%20fill%3D'none'%20stroke%3D'url(%23g)'%20stroke-width%3D'6'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%3E%20%3Cpath%20d%3D'M22%2012%208%2032l14%2020'%2F%3E%20%3Cpath%20d%3D'M42%2012l14%2020-14%2020'%2F%3E%20%3C%2Fg%3E%20%3Ccircle%20fill%3D'url(%23g)'%20cx%3D'32'%20cy%3D'32'%20r%3D'5'%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,115 +20,189 @@
   <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
   <a href="https://buildall.pages.dev/">נבנה על ידי בונים הכל ←</a>
 </div>
-<main>
-<!-- The body of the demo landing page. The shell, the ribbon and the disclaimer are
-     written by build.mjs; this file is the page a studio would actually get. -->
-<section class="l-hero">
-  <div class="l-wrap">
-    <span class="l-src" id="l-src">הגעת מאינסטגרם · נשמר בדוח</span>
-    <h1>שיעור פילאטיס ראשון<br><em>על חשבוננו</em></h1>
-    <p class="l-sub">סטודיו קטן בתל אביב, קבוצות של עד שישה אנשים, ומדריכה שרואה כל אחד. מתאים גם למי שלא התאמן שנים.</p>
-    <a class="l-cta" href="#l-form">אני רוצה לקבוע שיעור ניסיון</a>
-    <ul class="l-trust">
-      <li>בלי התחייבות</li>
-      <li>בלי כרטיס אשראי</li>
-      <li>תשובה באותו יום</li>
-    </ul>
-  </div>
-</section>
+<!-- The body of the demo landing page: the "link in bio" shape people know from
+     Instagram, with the parts a link list cannot do — it answers in place instead of
+     sending the visitor somewhere else. The shell and the disclaimer are in build.mjs. -->
+<header class="b-top">
+  <div class="b-glow" aria-hidden="true"></div>
+  <span class="b-src" id="l-src">הגעת מאינסטגרם</span>
 
-<section class="l-why">
-  <div class="l-wrap">
-    <h2>למה אצלנו</h2>
-    <div class="l-cards">
-      <article>
-        <span class="l-n">01</span>
-        <h3>עד שישה בשיעור</h3>
-        <p>מספיק קטן כדי שהמדריכה תתקן אותך בשם, ולא תסתכל על הקבוצה מרחוק.</p>
-      </article>
-      <article>
-        <span class="l-n">02</span>
-        <h3>מתחילים מאיפה שאתה</h3>
-        <p>לא התאמנת חמש שנים? יש גרסה לכל תרגיל, ואף אחד לא נשאר מאחור.</p>
-      </article>
-      <article>
-        <span class="l-n">03</span>
-        <h3>שעות של אנשים עובדים</h3>
-        <p>שיעורים ב‑06:30 בבוקר וב‑20:00 בערב, כדי שזה ייכנס ליום ולא ידחק אותו.</p>
-      </article>
+  <div class="b-face" aria-hidden="true">
+    <svg viewBox="0 0 160 160" role="img">
+      <defs>
+        <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3E6E52"/><stop offset="1" stop-color="#23402F"/>
+        </linearGradient>
+      </defs>
+      <circle cx="80" cy="80" r="80" fill="url(#fg)"/>
+      <rect x="71" y="84" width="18" height="30" rx="9" fill="#E0B088"/>
+      <ellipse cx="80" cy="66" rx="30" ry="32" fill="#2A1D14"/>
+      <circle cx="80" cy="70" r="23" fill="#F2C9A0"/>
+      <path d="M57 68a23 23 0 0 1 46 0c-5-7-13-11-23-11s-18 4-23 11z" fill="#2A1D14"/>
+      <path d="M36 160c0-25 20-44 44-44s44 19 44 44z" fill="#161A14"/>
+      <path d="M62 120c5 6 11 9 18 9s13-3 18-9c5 2 9 5 12 8-8 7-18 11-30 11s-22-4-30-11c3-3 7-6 12-8z" fill="#F3C9A4" opacity=".92"/>
+    </svg>  </div>
+
+  <h1>נועה ברק</h1>
+  <p class="b-role">פילאטיס ואימון אישי · תל אביב</p>
+  <p class="b-open" id="l-open"><i></i> בודק שעות…</p>
+</header>
+
+<main class="b-links">
+  <!-- Each button answers on the page. A link list sends you away and loses you. -->
+  <details class="b-act b-act-main" id="a-book">
+    <summary><span class="b-ic">◎</span><span class="b-t"><b>שיעור ניסיון ראשון</b><small>על חשבוני · בלי התחייבות</small></span><span class="b-arr">+</span></summary>
+    <div class="b-body">
+      <form id="l-lead">
+        <label>שם<input name="name" autocomplete="name" required></label>
+        <label>טלפון<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <label>מתי נוח לך?
+          <select name="when"><option>בוקר מוקדם</option><option>אחר הצהריים</option><option>ערב</option><option>גמיש</option></select>
+        </label>
+        <button type="submit">שלחו לי פרטים</button>
+        <p class="b-note" id="l-note">הטופס נפתח כאן, בלי לצאת מהדף. ככה פחות אנשים נושרים בדרך.</p>
+      </form>
     </div>
-  </div>
-</section>
+  </details>
 
-<section class="l-form-sec" id="l-form">
-  <div class="l-wrap l-split">
-    <div>
-      <h2>נקבע לך שיעור ניסיון</h2>
-      <p>משאירים שם וטלפון, ומתאמים יום ושעה. אפשר גם ישר בוואטסאפ, מה שנוח לך.</p>
-      <a class="l-wa" href="#" id="l-wa">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4z"/></svg>
-        שיחה בוואטסאפ
-      </a>
-      <dl class="l-facts">
-        <div><dt>איפה</dt><dd>אבן גבירול 00, תל אביב</dd></div>
-        <div><dt>מתי</dt><dd>א׳–ה׳ 06:30–21:00 · ו׳ 07:00–13:00</dd></div>
+  <a class="b-act b-wa" href="#" id="l-wa">
+    <span class="b-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4z"/></svg></span>
+    <span class="b-t"><b>שאלה בוואטסאפ</b><small>ההודעה כבר כתובה</small></span>
+    <span class="b-arr">←</span>
+  </a>
+
+  <details class="b-act" id="a-quiz">
+    <summary><span class="b-ic">◆</span><span class="b-t"><b>שאלון התאמה · 20 שניות</b><small>נראה אם זה מתאים לך לפני שתגיע</small></span><span class="b-arr">+</span></summary>
+    <div class="b-body">
+      <div id="q-box">
+        <p class="q-q" id="q-q">טוען…</p>
+        <div class="q-opts" id="q-opts"></div>
+        <div class="q-bar"><i id="q-bar"></i></div>
+      </div>
+      <p class="b-note" id="q-out" hidden></p>
+    </div>
+  </details>
+
+  <details class="b-act" id="a-class">
+    <summary><span class="b-ic">▶</span><span class="b-t"><b>איך נראה שיעור</b><small>חמישים דקות, עד שישה אנשים</small></span><span class="b-arr">+</span></summary>
+    <div class="b-body">
+      <ol class="b-steps">
+        <li><b>חימום · 8 דק׳</b><span>נשימה ושחרור, בלי קפיצה למים הקרים</span></li>
+        <li><b>ליבה · 25 דק׳</b><span>תרגילים על מזרן ועל רצועות, גרסה לכל רמה</span></li>
+        <li><b>כוח · 12 דק׳</b><span>רגליים, גב וכתפיים. אין מראות ואין תחרות</span></li>
+        <li><b>מתיחות · 5 דק׳</b><span>יוצאים משוחררים, לא מרוסקים</span></li>
+      </ol>
+    </div>
+  </details>
+
+  <details class="b-act" id="a-where">
+    <summary><span class="b-ic">⌖</span><span class="b-t"><b>איפה ומתי</b><small>אבן גבירול 00, תל אביב</small></span><span class="b-arr">+</span></summary>
+    <div class="b-body">
+      <dl class="b-facts">
+        <div><dt>שעות</dt><dd>א׳–ה׳ 06:30–21:00 · ו׳ 07:00–13:00</dd></div>
         <div><dt>חניה</dt><dd>חניון ציבורי במרחק דקה</dd></div>
+        <div><dt>להביא</dt><dd>בגדים נוחים וגרביים. השאר בסטודיו</dd></div>
       </dl>
     </div>
-    <form id="l-lead">
-      <label>שם<input name="name" autocomplete="name" required></label>
-      <label>טלפון<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
-      <label>מתי נוח לך?
-        <select name="when">
-          <option>בוקר מוקדם</option>
-          <option>אחר הצהריים</option>
-          <option>ערב</option>
-          <option>גמיש</option>
-        </select>
-      </label>
-      <button type="submit">שלחו לי פרטים</button>
-      <p class="l-note" id="l-note">לא שולחים ספאם, ולא מוסרים את הפרטים לאף אחד.</p>
-    </form>
-  </div>
-</section>
-
-<section class="l-faq">
-  <div class="l-wrap">
-    <h2>שאלות שחוזרות</h2>
-    <details><summary>אף פעם לא עשיתי פילאטיס. זה בשבילי?</summary><p>כן. רוב מי שמגיע לשיעור הראשון לא עשה קודם. התרגילים מותאמים לרמה, וגם לכאבי גב או ברכיים.</p></details>
-    <details><summary>מה צריך להביא?</summary><p>בגדים נוחים וגרביים. מזרן וציוד יש בסטודיו.</p></details>
-    <details><summary>כמה זמן שיעור?</summary><p>חמישים דקות, וכדאי להגיע חמש דקות לפני.</p></details>
-    <details><summary>ואם לא אתחבר?</summary><p>שיעור הניסיון הוא בדיוק בשביל זה. אין התחייבות ואין מה לבטל.</p></details>
-  </div>
-</section>
-
+  </details>
 </main>
+
+<!-- The part a link list cannot show: the page knows what people do on it. -->
+<section class="b-stats">
+  <h2>מה שקורה מאחורי הדף</h2>
+  <p class="b-sub">כל לחיצה נספרת ומגיעה לבעלת העסק, יחד עם המקור שממנו הגעת. זה מה שמבדיל דף נחיתה מרשימת קישורים.</p>
+  <ul id="l-stats" class="b-bars"></ul>
+  <p class="b-mini">בהדגמה הזו הספירה רצה אצלך בדפדפן בלבד.</p>
+</section>
+
 <footer class="l-foot">
-  <div class="l-wrap">
-    <p><b>תנועה · סטודיו פילאטיס</b> · אבן גבירול 00, תל אביב</p>
-    <p class="l-dis">זהו דף נחיתה להדגמה. הסטודיו, הכתובת והשעות אינם אמיתיים, ושום פנייה לא נשלחת. <a href="https://buildall.pages.dev/">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
-  </div>
+  <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
+  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="https://buildall.pages.dev/">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
 </footer>
 <script>
-// A real landing page reads where the click came from and files it with the lead,
-// so the studio knows which campaign paid for itself. Shown here on the page itself.
 (() => {
+  // 1. Where the click came from. A real page files this with the lead, so the
+  //    business knows which campaign paid for itself.
   const FROM = { ig: 'אינסטגרם', instagram: 'אינסטגרם', fb: 'פייסבוק', facebook: 'פייסבוק',
                  tiktok: 'טיקטוק', tt: 'טיקטוק', google: 'גוגל', g: 'גוגל' };
-  const key = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
+  const src = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
   const tag = document.getElementById('l-src');
-  if (tag && FROM[key]) tag.textContent = 'הגעת מ' + FROM[key] + ' · נשמר בדוח';
-  const wa = document.getElementById('l-wa');
-  if (wa) wa.addEventListener('click', e => {
-    e.preventDefault();
-    alert('בהדגמה הזו וואטסאפ לא נפתח. בדף אמיתי זה פותח שיחה עם הסטודיו, עם ההודעה כבר כתובה.');
+  if (tag && FROM[src]) tag.textContent = 'הגעת מ' + FROM[src];
+
+  // 2. Open or closed, read from the clock rather than written in the text — a line
+  //    that says "open now" when it is nine at night costs more than it gives.
+  const HOURS = [null, [390, 1260], [390, 1260], [390, 1260], [390, 1260], [390, 1260], [420, 780]];
+  const now = new Date(), span = HOURS[now.getDay()];
+  const mins = now.getHours() * 60 + now.getMinutes();
+  const hhmm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+  const open = document.getElementById('l-open');
+  if (span && mins >= span[0] && mins < span[1]) {
+    open.classList.add('on');
+    open.innerHTML = '<i></i> פתוח עכשיו · עד ' + hhmm(span[1]);
+  } else {
+    const next = HOURS.slice(now.getDay() + 1).concat(HOURS).find(Boolean);
+    open.innerHTML = '<i></i> סגור כרגע · נפתח ב-' + hhmm(next[0]);
+  }
+
+  // 3. Every tap is counted. In the real page it reaches the owner; here it stays in
+  //    this browser, and the panel says so.
+  const LABELS = { 'a-book': 'שיעור ניסיון', 'wa': 'וואטסאפ', 'a-quiz': 'שאלון התאמה',
+                   'a-class': 'איך נראה שיעור', 'a-where': 'איפה ומתי' };
+  const taps = {};
+  const bars = document.getElementById('l-stats');
+  const draw = () => {
+    const top = Math.max(1, ...Object.values(taps));
+    bars.innerHTML = Object.keys(LABELS).map(k => {
+      const n = taps[k] || 0;
+      return '<li><span class="k">' + LABELS[k] + ' <em>' + n + '</em></span>' +
+             '<span class="t"><i style="width:' + (n / top * 100) + '%"></i></span></li>';
+    }).join('');
+  };
+  const count = k => { taps[k] = (taps[k] || 0) + 1; draw(); };
+  draw();
+  for (const id of ['a-book', 'a-quiz', 'a-class', 'a-where']) {
+    document.getElementById(id).addEventListener('toggle', e => { if (e.target.open) count(id); });
+  }
+
+  // 4. WhatsApp, the form and the quiz: each says what the real page would do.
+  document.getElementById('l-wa').addEventListener('click', e => {
+    e.preventDefault(); count('wa');
+    alert('בהדגמה הזו וואטסאפ לא נפתח. בדף אמיתי זה פותח שיחה עם המאמנת, עם ההודעה כבר כתובה.');
   });
   document.getElementById('l-lead').addEventListener('submit', e => {
     e.preventDefault();
     const n = document.getElementById('l-note');
-    n.textContent = 'תודה! בהדגמה הזו לא נשלחה פנייה. בדף אמיתי היא הייתה מגיעה לסטודיו תוך שנייה, יחד עם המקור שממנו הגעת.';
-    n.className = 'l-note ok';
+    n.textContent = 'תודה! בהדגמה הזו לא נשלחה פנייה. בדף אמיתי היא הייתה מגיעה למאמנת תוך שנייה, יחד עם המקור שממנו הגעת.';
+    n.className = 'b-note ok';
   });
+
+  const Q = [
+    ['מתי התאמנת לאחרונה?', ['השבוע', 'לפני כמה חודשים', 'לא זוכר']],
+    ['יש משהו שכואב?', ['גב תחתון', 'ברכיים', 'שום דבר מיוחד']],
+    ['מה הכי מתאים לך?', ['בוקר מוקדם', 'אחר הצהריים', 'ערב']],
+  ];
+  let i = 0;
+  const q = document.getElementById('q-q'), opts = document.getElementById('q-opts'),
+        bar = document.getElementById('q-bar'), out = document.getElementById('q-out');
+  const ask = () => {
+    if (i === Q.length) {
+      document.getElementById('q-box').hidden = true;
+      out.hidden = false;
+      out.className = 'b-note ok';
+      out.textContent = 'מתאים לך. בדף אמיתי התשובות היו מגיעות למאמנת לפני שהגעת, והיא הייתה יודעת איתך מה לעשות בשיעור הראשון.';
+      return;
+    }
+    q.textContent = Q[i][0];
+    bar.style.width = (i / Q.length * 100) + '%';
+    opts.innerHTML = '';
+    for (const a of Q[i][1]) {
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.textContent = a;
+      btn.addEventListener('click', () => { i++; ask(); });
+      opts.append(btn);
+    }
+  };
+  ask();
 })();
 </script>
 </body>

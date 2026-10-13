@@ -514,19 +514,20 @@ document.getElementById('c-form').addEventListener('submit', e => {
 `);
 
 // ---------- demo landing page ----------
-// Where a campaign on Instagram or Facebook should land. It carries its own look,
-// a banner saying plainly it is a demo, and the source tag the real thing writes to
-// the report — that tag is the point of the page, so it is shown working.
+// Where a campaign on Instagram or Facebook should land: the "link in bio" shape
+// people already know, except every button answers here instead of sending the
+// visitor away. It carries its own look, a banner saying plainly it is a demo, and
+// the source tag the real thing files with the lead — shown working, not described.
 write('demo/landing/index.html', `<!doctype html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>תנועה · סטודיו פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
-<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, כפתור וואטסאפ, טופס קצר ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
+<title>נועה ברק · פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
+<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
 <link rel="canonical" href="${BASE}demo/landing/">
-<meta name="theme-color" content="#2F4739">
-<!-- A studio that does not exist: keep it out of search so nobody tries to book a class. -->
+<meta name="theme-color" content="#121410">
+<!-- An instructor who does not exist: keep it out of search so nobody books a class. -->
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="${favicon}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -539,35 +540,95 @@ write('demo/landing/index.html', `<!doctype html>
   <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
   <a href="${BASE}">נבנה על ידי בונים הכל ←</a>
 </div>
-<main>
 ${readFileSync('src/demo-landing.html', 'utf8')}
-</main>
 <footer class="l-foot">
-  <div class="l-wrap">
-    <p><b>תנועה · סטודיו פילאטיס</b> · אבן גבירול 00, תל אביב</p>
-    <p class="l-dis">זהו דף נחיתה להדגמה. הסטודיו, הכתובת והשעות אינם אמיתיים, ושום פנייה לא נשלחת. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
-  </div>
+  <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
+  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
 </footer>
 <script>
-// A real landing page reads where the click came from and files it with the lead,
-// so the studio knows which campaign paid for itself. Shown here on the page itself.
 (() => {
+  // 1. Where the click came from. A real page files this with the lead, so the
+  //    business knows which campaign paid for itself.
   const FROM = { ig: 'אינסטגרם', instagram: 'אינסטגרם', fb: 'פייסבוק', facebook: 'פייסבוק',
                  tiktok: 'טיקטוק', tt: 'טיקטוק', google: 'גוגל', g: 'גוגל' };
-  const key = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
+  const src = (new URLSearchParams(location.search).get('utm_source') || '').toLowerCase();
   const tag = document.getElementById('l-src');
-  if (tag && FROM[key]) tag.textContent = 'הגעת מ' + FROM[key] + ' · נשמר בדוח';
-  const wa = document.getElementById('l-wa');
-  if (wa) wa.addEventListener('click', e => {
-    e.preventDefault();
-    alert('בהדגמה הזו וואטסאפ לא נפתח. בדף אמיתי זה פותח שיחה עם הסטודיו, עם ההודעה כבר כתובה.');
+  if (tag && FROM[src]) tag.textContent = 'הגעת מ' + FROM[src];
+
+  // 2. Open or closed, read from the clock rather than written in the text — a line
+  //    that says "open now" when it is nine at night costs more than it gives.
+  const HOURS = [null, [390, 1260], [390, 1260], [390, 1260], [390, 1260], [390, 1260], [420, 780]];
+  const now = new Date(), span = HOURS[now.getDay()];
+  const mins = now.getHours() * 60 + now.getMinutes();
+  const hhmm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+  const open = document.getElementById('l-open');
+  if (span && mins >= span[0] && mins < span[1]) {
+    open.classList.add('on');
+    open.innerHTML = '<i></i> פתוח עכשיו · עד ' + hhmm(span[1]);
+  } else {
+    const next = HOURS.slice(now.getDay() + 1).concat(HOURS).find(Boolean);
+    open.innerHTML = '<i></i> סגור כרגע · נפתח ב-' + hhmm(next[0]);
+  }
+
+  // 3. Every tap is counted. In the real page it reaches the owner; here it stays in
+  //    this browser, and the panel says so.
+  const LABELS = { 'a-book': 'שיעור ניסיון', 'wa': 'וואטסאפ', 'a-quiz': 'שאלון התאמה',
+                   'a-class': 'איך נראה שיעור', 'a-where': 'איפה ומתי' };
+  const taps = {};
+  const bars = document.getElementById('l-stats');
+  const draw = () => {
+    const top = Math.max(1, ...Object.values(taps));
+    bars.innerHTML = Object.keys(LABELS).map(k => {
+      const n = taps[k] || 0;
+      return '<li><span class="k">' + LABELS[k] + ' <em>' + n + '</em></span>' +
+             '<span class="t"><i style="width:' + (n / top * 100) + '%"></i></span></li>';
+    }).join('');
+  };
+  const count = k => { taps[k] = (taps[k] || 0) + 1; draw(); };
+  draw();
+  for (const id of ['a-book', 'a-quiz', 'a-class', 'a-where']) {
+    document.getElementById(id).addEventListener('toggle', e => { if (e.target.open) count(id); });
+  }
+
+  // 4. WhatsApp, the form and the quiz: each says what the real page would do.
+  document.getElementById('l-wa').addEventListener('click', e => {
+    e.preventDefault(); count('wa');
+    alert('בהדגמה הזו וואטסאפ לא נפתח. בדף אמיתי זה פותח שיחה עם המאמנת, עם ההודעה כבר כתובה.');
   });
   document.getElementById('l-lead').addEventListener('submit', e => {
     e.preventDefault();
     const n = document.getElementById('l-note');
-    n.textContent = 'תודה! בהדגמה הזו לא נשלחה פנייה. בדף אמיתי היא הייתה מגיעה לסטודיו תוך שנייה, יחד עם המקור שממנו הגעת.';
-    n.className = 'l-note ok';
+    n.textContent = 'תודה! בהדגמה הזו לא נשלחה פנייה. בדף אמיתי היא הייתה מגיעה למאמנת תוך שנייה, יחד עם המקור שממנו הגעת.';
+    n.className = 'b-note ok';
   });
+
+  const Q = [
+    ['מתי התאמנת לאחרונה?', ['השבוע', 'לפני כמה חודשים', 'לא זוכר']],
+    ['יש משהו שכואב?', ['גב תחתון', 'ברכיים', 'שום דבר מיוחד']],
+    ['מה הכי מתאים לך?', ['בוקר מוקדם', 'אחר הצהריים', 'ערב']],
+  ];
+  let i = 0;
+  const q = document.getElementById('q-q'), opts = document.getElementById('q-opts'),
+        bar = document.getElementById('q-bar'), out = document.getElementById('q-out');
+  const ask = () => {
+    if (i === Q.length) {
+      document.getElementById('q-box').hidden = true;
+      out.hidden = false;
+      out.className = 'b-note ok';
+      out.textContent = 'מתאים לך. בדף אמיתי התשובות היו מגיעות למאמנת לפני שהגעת, והיא הייתה יודעת איתך מה לעשות בשיעור הראשון.';
+      return;
+    }
+    q.textContent = Q[i][0];
+    bar.style.width = (i / Q.length * 100) + '%';
+    opts.innerHTML = '';
+    for (const a of Q[i][1]) {
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.textContent = a;
+      btn.addEventListener('click', () => { i++; ask(); });
+      opts.append(btn);
+    }
+  };
+  ask();
 })();
 </script>
 </body>
