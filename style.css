@@ -1005,10 +1005,10 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 @media (min-width:900px){.head-nav{display:flex}}
 
 /* בנייד: סרגל ניווט מתחת להדר, נגלל הצידה */
-.nav-bar{position:sticky;top:var(--head-h);z-index:28;background:rgba(15,26,31,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.nav-bar{position:sticky;top:var(--head-h);z-index:28;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1);overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to left,#000 calc(100% - 26px),transparent);mask-image:linear-gradient(to left,#000 calc(100% - 26px),transparent)}
 .nav-bar::-webkit-scrollbar{display:none}
-.nav-bar ul{display:flex;gap:6px;list-style:none;padding:8px 18px;margin:0;width:max-content;min-width:100%}
-.nav-bar a{color:rgba(255,255,255,.85);text-decoration:none;font:700 14px Heebo,sans-serif;white-space:nowrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-pill);padding:7px 14px}
+.nav-bar ul{display:flex;gap:7px;list-style:none;padding:9px 18px 10px;margin:0;width:max-content;min-width:100%}
+.nav-bar a{color:rgba(255,255,255,.9);text-decoration:none;font:700 14px Heebo,sans-serif;white-space:nowrap;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:var(--r-pill);padding:7px 15px;line-height:1.35}
 .nav-bar a:active{background:rgba(255,255,255,.18)}
 @media (min-width:900px){.nav-bar{display:none}}
 

@@ -110,7 +110,7 @@ export const icon = name => {
   return `<svg class="i" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 };
 
-const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#B6F02C'/><stop offset='1' stop-color='#B6F02C'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#15181C'/>${logoPlain().replace(/"/g, "'")}</svg>`;
+const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#3F6212'/><stop offset='1' stop-color='#3F6212'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#F6F8F1'/>${logoPlain().replace(/"/g, "'")}</svg>`;
 export const favicon = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg.replace(/\s+/g, ' '));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
