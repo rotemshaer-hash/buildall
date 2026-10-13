@@ -12,7 +12,7 @@
   --teal-light:#B6F02C;
   --purple-light:#DCFCA0;
   --grad:linear-gradient(150deg,#15181C 0%,#232A31 52%,#3A4551 100%);
-  --hero-bg:linear-gradient(168deg,#FFFFFF 0%,#F8FAF5 56%,#F0F5E8 100%);
+  --hero-bg:linear-gradient(168deg,#FFFFFF 0%,#F6F9EF 58%,#EFF4E6 100%);
   /* הליים בוהק מדי לטקסט לבן, ולכן הוא כפתור עם טקסט כהה ולא רקע לטקסט */
   --cta:#B6F02C; --cta-ink:#15181C;
   --accent:linear-gradient(90deg,#2B3440,#4D7C0F);
@@ -20,12 +20,12 @@
   --wa:#178442;
 
   /* משטחים וטקסט */
-  --bg:#F4F7F8;
+  --bg:#F6F8F1;
   --card:#FFFFFF;
-  --text:#16232A;
-  --muted:#55656D;
-  --line:#E3E9EB;
-  --line-strong:#CFD9DD;
+  --text:#1B2117;
+  --muted:#5B6354;
+  --line:#E5EADD;
+  --line-strong:#D3DAC6;
 
   /* מרווחים */
   --s1:6px; --s2:10px; --s3:16px; --s4:24px; --s5:36px; --s6:56px; --s7:88px;
@@ -73,7 +73,7 @@ section{padding:var(--s6) 0}
   display:inline-flex;align-items:center;gap:7px;
   font-weight:700;font-size:13px;letter-spacing:.04em;
   color:var(--teal);background:var(--accent-soft);
-  border:1px solid rgba(14,122,114,.16);
+  border:1px solid rgba(63,98,18,.16);
   border-radius:var(--r-pill);padding:5px 13px;margin-bottom:var(--s3);
 }
 .eyebrow .i{width:16px;height:16px}
@@ -266,13 +266,13 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 }
 .card:before{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
-  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(14,122,114,.1),transparent 60%);
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(63,98,18,.1),transparent 60%);
 }
 .card:hover:before{opacity:1}
-@media (hover:hover){.card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:rgba(14,122,114,.3)}}
+@media (hover:hover){.card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:rgba(63,98,18,.3)}}
 .card .ic{
   width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:var(--s2);
-  background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);
+  background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);
 }
 .card h3{font-size:19px;margin-bottom:5px}
 .card p{color:var(--muted);font-size:16px}
@@ -286,10 +286,10 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 
 /* ---------- בשביל מי אנחנו ---------- */
 .small-biz{background:var(--card);position:relative;overflow:hidden}
-.small-biz:before{content:"";position:absolute;top:-180px;left:-120px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,114,.09),transparent 65%);pointer-events:none}
+.small-biz:before{content:"";position:absolute;top:-180px;left:-120px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(63,98,18,.09),transparent 65%);pointer-events:none}
 .sb-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));position:relative}
-.sb{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:linear-gradient(170deg,#fff,#F7FAFB)}
-.sb .n{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);margin-bottom:var(--s2)}
+.sb{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:linear-gradient(170deg,#fff,#F8FAF3)}
+.sb .n{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);margin-bottom:var(--s2)}
 .sb h3{font-size:19px;margin-bottom:5px}
 .sb p{color:var(--muted);font-size:16px}
 .sb-cta{
@@ -335,10 +335,10 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
   padding:14px 16px;text-decoration:none;
   transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
 }
-.ind .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);flex:none}
+.ind .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);flex:none}
 .ind b{font-family:Heebo,sans-serif;font-size:17px;flex:1}
 .ind .go .i{width:20px;height:20px;transition:transform .25s}
-@media (hover:hover){.ind:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:rgba(14,122,114,.3)}.ind:hover .go .i{transform:translateX(-4px)}}
+@media (hover:hover){.ind:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:rgba(63,98,18,.3)}.ind:hover .go .i{transform:translateX(-4px)}}
 
 /* ---------- הסולם ---------- */
 .ladder{background:var(--bg)}
@@ -355,15 +355,15 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 /* ---------- למה אנחנו ---------- */
 .why-sec{background:var(--card)}
 .why{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.why .card{display:flex;gap:14px;background:linear-gradient(170deg,#fff,#F7FAFB)}
+.why .card{display:flex;gap:14px;background:linear-gradient(170deg,#fff,#F8FAF3)}
 .why .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-family:Heebo,sans-serif;font-weight:800;display:grid;place-items:center}
 
 /* ---------- עבודות ---------- */
 .work{background:var(--ink);color:#fff;position:relative;overflow:hidden;isolation:isolate}
 .work .lead{color:rgba(255,255,255,.75)}
 .work .eyebrow{color:var(--teal-light);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16)}
-.work:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(139,47,201,.32),transparent 65%);top:-200px;left:-200px;z-index:-1}
-.work:after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,114,.32),transparent 65%);bottom:-250px;right:-150px;z-index:-1}
+.work:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(63,98,18,.1),transparent 65%);top:-200px;left:-200px;z-index:-1}
+.work:after{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(63,98,18,.12),transparent 65%);bottom:-250px;right:-150px;z-index:-1}
 .projects{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .proj{
   background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));
@@ -469,7 +469,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .guarantee{
   background:var(--grad);color:#fff;border-radius:var(--r-lg);
   padding:36px 26px;text-align:center;margin:0 18px;
-  position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(139,47,201,.22);
+  position:relative;overflow:hidden;box-shadow:0 18px 44px rgba(27,33,23,.08);
 }
 .guarantee:after{
   content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;
@@ -483,7 +483,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 /* ---------- שאלות נפוצות ---------- */
 .faq-sec{background:var(--bg)}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:10px;transition:border-color .2s}
-details[open]{border-color:rgba(14,122,114,.3)}
+details[open]{border-color:rgba(63,98,18,.3)}
 summary{font-family:Heebo,sans-serif;font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
 summary::-webkit-details-marker{display:none}
 summary:after{content:"+";font-size:24px;color:var(--teal);line-height:1;flex:none;transition:transform .2s}
@@ -659,7 +659,7 @@ a.sb .go-i{
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){
-  a.sb:hover{border-color:rgba(14,122,114,.3);box-shadow:var(--sh);transform:translateY(-3px)}
+  a.sb:hover{border-color:rgba(63,98,18,.3);box-shadow:var(--sh);transform:translateY(-3px)}
   a.sb:hover .go-i{opacity:1;transform:none}
 }
 a.sb{transition:transform .25s,box-shadow .25s,border-color .25s}
@@ -685,7 +685,7 @@ a.pain p{flex:1}
 a.example{display:block}
 .ex-go{display:inline-block;margin-top:14px;color:var(--teal);font-weight:700;font-size:16px}
 /* הפתרון שאליו הגיעו מסומן לרגע, כדי שיהיה ברור לאן קפצנו */
-.card:target{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,122,114,.16),var(--sh)}
+.card:target{border-color:var(--teal);box-shadow:0 0 0 3px rgba(63,98,18,.16),var(--sh)}
 
 /* ---------- נתחיל מהבעיה ---------- */
 .problems{background:var(--bg)}
@@ -693,9 +693,9 @@ a.example{display:block}
 .prob{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0;margin:0;transition:border-color .25s,box-shadow .25s}
 .prob summary{padding:18px;gap:14px;align-items:center}
 .prob summary:after{content:"+";font-size:26px;color:var(--teal);line-height:1}
-.prob[open]{border-color:rgba(14,122,114,.35);box-shadow:var(--sh)}
+.prob[open]{border-color:rgba(63,98,18,.35);box-shadow:var(--sh)}
 .prob[open] summary:after{content:"–"}
-.prob summary .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);flex:none}
+.prob summary .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);flex:none}
 .prob summary b{font-family:Heebo,sans-serif;font-size:18px;flex:1;font-weight:700}
 .prob-body{padding:0 18px 18px}
 .prob-why{color:var(--muted);font-size:16px;border-right:3px solid var(--line-strong);padding-right:12px;margin-bottom:12px}
@@ -705,8 +705,8 @@ a.example{display:block}
 .prob-cta .btn{font-size:16px;padding:12px 18px;width:100%}
 a.prob-other{display:flex;align-items:center;gap:14px;padding:18px;text-decoration:none;cursor:pointer}
 a.prob-other b{font-family:Heebo,sans-serif;font-size:18px}
-a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);flex:none}
-@media (hover:hover){.prob:hover{border-color:rgba(14,122,114,.3)}}
+a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);flex:none}
+@media (hover:hover){.prob:hover{border-color:rgba(63,98,18,.3)}}
 
 /* ---------- הדגמת Work It ---------- */
 .demo-sec{background:var(--ink);color:#fff;position:relative;overflow:hidden;isolation:isolate}
@@ -732,7 +732,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .demo-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .demo-f{display:grid;gap:6px;font-size:14px;font-weight:600;color:rgba(255,255,255,.88)}
 .demo-f input,.demo-f select{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:16px;padding:11px 12px;border-radius:11px;width:100%}
-.demo-f select option{color:#16232A}
+.demo-f select option{color:var(--text)}
 .demo-f input:focus,.demo-f select:focus{outline:2px solid var(--teal-light);border-color:transparent}
 .demo-log{list-style:none;display:grid;gap:6px;margin:0;padding:0;min-height:96px;align-content:start}
 .demo-log li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:rgba(255,255,255,.07);border-radius:9px;padding:8px 11px;animation:pop .3s ease both}
@@ -757,7 +757,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 .demo-act button{width:100%;background:var(--wa);color:#fff;border:0;border-radius:9px;padding:11px;font:700 13px Heebo,sans-serif;cursor:pointer}
 
 /* מסך פקודת העבודה — זה המוצר, ולכן הוא במותג שלנו ולא בירוק של וואטסאפ */
-#d-task-screen{background:#F4F7F8;color:#16232A}
+#d-task-screen{background:var(--bg);color:var(--text)}
 .tk-h{background:var(--grad);color:#fff;padding:15px 12px 11px;display:flex;align-items:center;gap:9px;font-family:Heebo,sans-serif}
 .tk-h b{font-size:13px}
 .tk-back{font-size:20px;line-height:1;cursor:pointer;opacity:.85;padding:0 2px}
@@ -908,7 +908,7 @@ a.sb .go-i{
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F6212' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 @media (hover:hover){
-  a.sb:hover{border-color:rgba(14,122,114,.3);box-shadow:var(--sh);transform:translateY(-3px)}
+  a.sb:hover{border-color:rgba(63,98,18,.3);box-shadow:var(--sh);transform:translateY(-3px)}
   a.sb:hover .go-i{opacity:1;transform:none}
 }
 a.sb{transition:transform .25s,box-shadow .25s,border-color .25s}
@@ -934,7 +934,7 @@ a.pain p{flex:1}
 a.example{display:block}
 .ex-go{display:inline-block;margin-top:14px;color:var(--teal);font-weight:700;font-size:16px}
 /* הפתרון שאליו הגיעו מסומן לרגע, כדי שיהיה ברור לאן קפצנו */
-.card:target{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,122,114,.16),var(--sh)}
+.card:target{border-color:var(--teal);box-shadow:0 0 0 3px rgba(63,98,18,.16),var(--sh)}
 
 /* ---------- נתחיל מהבעיה ---------- */
 .problems{background:var(--bg)}
@@ -942,9 +942,9 @@ a.example{display:block}
 .prob{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0;margin:0;transition:border-color .25s,box-shadow .25s}
 .prob summary{padding:18px;gap:14px;align-items:center}
 .prob summary:after{content:"+";font-size:26px;color:var(--teal);line-height:1}
-.prob[open]{border-color:rgba(14,122,114,.35);box-shadow:var(--sh)}
+.prob[open]{border-color:rgba(63,98,18,.35);box-shadow:var(--sh)}
 .prob[open] summary:after{content:"–"}
-.prob summary .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);flex:none}
+.prob summary .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);flex:none}
 .prob summary b{font-family:Heebo,sans-serif;font-size:18px;flex:1;font-weight:700}
 .prob-body{padding:0 18px 18px}
 .prob-why{color:var(--muted);font-size:16px;border-right:3px solid var(--line-strong);padding-right:12px;margin-bottom:12px}
@@ -954,8 +954,8 @@ a.example{display:block}
 .prob-cta .btn{font-size:16px;padding:12px 18px;width:100%}
 a.prob-other{display:flex;align-items:center;gap:14px;padding:18px;text-decoration:none;cursor:pointer}
 a.prob-other b{font-family:Heebo,sans-serif;font-size:18px}
-a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(14,122,114,.16);flex:none}
-@media (hover:hover){.prob:hover{border-color:rgba(14,122,114,.3)}}
+a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);border:1px solid rgba(63,98,18,.16);flex:none}
+@media (hover:hover){.prob:hover{border-color:rgba(63,98,18,.3)}}
 
 /* ---------- הדגמת Work It ---------- */
 .demo-sec{background:var(--ink);color:#fff;position:relative;overflow:hidden;isolation:isolate}
@@ -979,7 +979,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 }
 .demo-f{display:grid;gap:6px;font-size:14px;font-weight:600;color:rgba(255,255,255,.88)}
 .demo-f input,.demo-f select{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:16px;padding:11px 12px;border-radius:11px}
-.demo-f select option{color:#16232A}
+.demo-f select option{color:var(--text)}
 .demo-f input:focus,.demo-f select:focus{outline:2px solid var(--teal-light);border-color:transparent}
 .demo-log{list-style:none;display:grid;gap:6px;margin:0;padding:0;min-height:96px}
 .demo-log li{display:flex;justify-content:space-between;gap:10px;font-size:14px;background:rgba(255,255,255,.07);border-radius:9px;padding:8px 11px;animation:pop .3s ease both}
@@ -1021,7 +1021,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
   transition:transform .28s ease,box-shadow .28s ease;
 }
 .proof-card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent)}
-.proof-card:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(14,122,114,.3),transparent 66%);bottom:-150px;left:-110px;pointer-events:none}
+.proof-card:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(63,98,18,.3),transparent 66%);bottom:-150px;left:-110px;pointer-events:none}
 @media (hover:hover){.proof-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}}
 .proof-tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal-light);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);padding:4px 12px;margin-bottom:10px}
 .proof-card h3{font-size:25px;margin-bottom:8px;position:relative}
@@ -1047,7 +1047,7 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 }
 .svc-g > summary::-webkit-details-marker{display:none}
 .svc-g .ic{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
-  background:var(--accent-soft);border:1px solid rgba(14,122,114,.16)}
+  background:var(--accent-soft);border:1px solid rgba(63,98,18,.16)}
 .svc-g .t{display:grid;gap:2px}
 .svc-g b{font-family:Heebo,sans-serif;font-size:17px}
 .svc-g small{color:var(--muted);font-size:14.5px}
@@ -1059,10 +1059,10 @@ a.prob-other .ic{width:44px;height:44px;border-radius:12px;display:grid;place-it
 }
 .svc-g[open] > summary:after{transform:rotate(135deg)}
 .svc-link:after{transform:rotate(45deg)}
-.svc-g[open]{border-color:rgba(14,122,114,.35);box-shadow:var(--sh)}
+.svc-g[open]{border-color:rgba(63,98,18,.35);box-shadow:var(--sh)}
 .svc-g .grid{padding:0 14px 16px}
 .svc-g:target{border-color:var(--teal);scroll-margin-top:calc(var(--head-h) + 70px)}
-@media (hover:hover){.svc-g:hover{border-color:rgba(14,122,114,.3)}}
+@media (hover:hover){.svc-g:hover{border-color:rgba(63,98,18,.3)}}
 @media (prefers-reduced-motion:reduce){.svc-g > summary:after{transition:none}}
 /* אותה מגירה על הרקע הכהה של מקטע ה-AI */
 /* אותה מגירה גם במקטעים הבהירים */
@@ -1116,7 +1116,7 @@ a.card:has(.card-go):after{content:none}
 
 /* ---------- כבר יש לך משהו ---------- */
 .existing{background:var(--card)}
-.ex-box{background:var(--accent-soft);border:1px solid rgba(14,122,114,.18);border-radius:var(--r-lg);padding:30px 26px;display:grid;gap:var(--s4);align-items:center}
+.ex-box{background:var(--accent-soft);border:1px solid rgba(63,98,18,.18);border-radius:var(--r-lg);padding:30px 26px;display:grid;gap:var(--s4);align-items:center}
 @media (min-width:860px){.ex-box{grid-template-columns:1fr auto}}
 .ex-list{list-style:none;display:grid;gap:8px;margin:var(--s3) 0}
 .ex-list li{display:flex;gap:10px;font-size:16.5px}
@@ -1171,7 +1171,7 @@ a.card:has(.card-go):after{content:none}
 .film{background:var(--card)}
 .film-in{display:grid;grid-template-columns:1fr minmax(260px,320px);gap:var(--s5);align-items:center}
 .film-txt .lead{margin-top:10px}
-.film-note{margin-top:14px;background:linear-gradient(170deg,#fff,#F7FAFB);border:1px solid var(--line);
+.film-note{margin-top:14px;background:linear-gradient(170deg,#fff,#F8FAF3);border:1px solid var(--line);
   border-radius:var(--r-sm);padding:16px 18px;color:var(--muted);font-size:16px;line-height:1.6}
 .film-note b{color:var(--text)}
 .film-txt .btn{margin-top:18px}
@@ -1237,13 +1237,13 @@ a.card:has(.card-go):after{content:none}
    והמסכים המדומים — שם הכהה הוא תוכן, לא רקע.
    ================================================================ */
 :root{
-  --panel:#F3F7EC;
-  --panel-2:#FAFCF6;
-  --panel-line:#E1EAD2;
+  --panel:#EFF4E6;
+  --panel-2:#F8FAF3;
+  --panel-line:#E0E8D2;
 }
 
 /* --- אזור ה-AI --- */
-.ai{background:linear-gradient(165deg,#FFFFFF,#F3F7EC 60%,#EAF2DC);color:var(--text)}
+.ai{background:var(--panel);color:var(--text)}
 .ai .lead{color:var(--muted)}
 .ai .eyebrow{color:var(--teal);background:#fff;border-color:var(--panel-line)}
 .ai .card{background:#fff;border-color:var(--panel-line);color:var(--text);box-shadow:0 2px 10px rgba(21,24,28,.05)}
@@ -1261,7 +1261,7 @@ a.card:has(.card-go):after{content:none}
 .proj .phone{-webkit-box-reflect:none}
 
 /* --- אזור ההדגמה החיה --- */
-.demo-sec{background:linear-gradient(165deg,#FAFCF6,#F0F5E6);color:var(--text)}
+.demo-sec{background:var(--panel);color:var(--text)}
 .demo-sec .lead{color:var(--muted)}
 .demo-sec .lead b{color:var(--text)}
 .demo-tag{color:var(--teal)}
@@ -1278,7 +1278,7 @@ a.card:has(.card-go):after{content:none}
 .card.idea .ic{background:#fff;border-color:var(--panel-line)}
 a.card.idea:after{filter:none}
 .sb-cta{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
-.guarantee{background:linear-gradient(160deg,#FFFFFF,#F3F7EC 62%,#E8F1D8);color:var(--text);
+.guarantee{background:var(--panel);color:var(--text);
   border:1px solid var(--panel-line);box-shadow:0 18px 44px rgba(21,24,28,.08)}
 .callout{background:var(--panel);color:var(--text);border:1px solid var(--panel-line)}
 .callout p{color:var(--muted)}
@@ -1303,3 +1303,8 @@ a.card.idea:after{filter:none}
 .ai-g .ic{background:var(--purple-light);border-color:var(--panel-line)}
 .ai-g > summary:after{border-color:var(--teal)}
 .ai-g[open]{border-color:var(--teal);box-shadow:none}
+/* אייקונים וסימנים שהיו מצוירים לרקע כהה בתוך אזור ה-AI */
+.ai .eyebrow .i{stroke:var(--teal)}
+.ai .card .ic .i{stroke:var(--teal)}
+.ai-note{color:var(--muted);opacity:1}
+.ai-note:before{background:none;color:var(--teal);-webkit-text-fill-color:var(--teal)}
