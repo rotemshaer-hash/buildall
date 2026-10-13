@@ -122,7 +122,7 @@ const problemsSection = root => `<section class="problems" id="problems">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
-      <h2 class="h2">מה אתה עושה היום ידנית — ולא צריך</h2>
+      <h2 class="h2">מה אתה עושה היום ידנית</h2>
       <p class="lead">לא צריך לדעת אם זה אתר, מערכת או אפליקציה. תבחר את מה שגוזל לך הכי הרבה זמן, ונראה לך מה אפשר לעשות איתו.</p>
     </div>
     <div class="prob-grid">
