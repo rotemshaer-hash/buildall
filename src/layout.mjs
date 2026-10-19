@@ -97,8 +97,8 @@ export const sprite = `<svg width="0" height="0" style="position:absolute" aria-
     <linearGradient id="ig-g" x1="2" y1="22" x2="22" y2="2">
       <stop offset="0" stop-color="#F9CE34"/><stop offset=".45" stop-color="#EE2A7B"/><stop offset="1" stop-color="#6228D7"/>
     </linearGradient>
-    <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#15B88A"/><stop offset="1" stop-color="#15B88A"/></linearGradient>
-    <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#0F6B52"/><stop offset="1" stop-color="#133253"/></linearGradient>
+    <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#D4A017"/><stop offset="1" stop-color="#D4A017"/></linearGradient>
+    <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#8A6A10"/><stop offset="1" stop-color="#2B2013"/></linearGradient>
     <symbol id="wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
 ${Object.entries(ICONS).map(([k, v]) => `    <symbol id="i-${k}" viewBox="0 0 24 24">${v}</symbol>`).join('\n')}
 ${Object.entries(BRANDS).map(([k, [, v]]) => `    <symbol id="b-${k}" viewBox="0 0 24 24" fill="currentColor">${v}</symbol>`).join('\n')}
@@ -110,7 +110,7 @@ export const icon = name => {
   return `<svg class="i" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 };
 
-const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#0F6B52'/><stop offset='1' stop-color='#0F6B52'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#F4F8F8'/>${logoPlain().replace(/"/g, "'")}</svg>`;
+const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#8A6A10'/><stop offset='1' stop-color='#8A6A10'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#F7F4EC'/>${logoPlain().replace(/"/g, "'")}</svg>`;
 export const favicon = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg.replace(/\s+/g, ' '));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
@@ -125,7 +125,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${url}">
-<meta name="theme-color" content="#0C1D33">
+<meta name="theme-color" content="#15100A">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -149,7 +149,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <meta name="apple-mobile-web-app-title" content="${BRAND}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@700;800&family=Frank+Ruhl+Libre:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}style.css">
 ${schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n')}
 </head>`;

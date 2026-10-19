@@ -458,7 +458,7 @@ write('manifest.webmanifest', JSON.stringify({
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.',
   start_url: BASE, scope: BASE, id: BASE,
   display: 'standalone', orientation: 'portrait', lang: 'he', dir: 'rtl',
-  background_color: '#F4F8F8', theme_color: '#0C1D33',
+  background_color: '#F7F4EC', theme_color: '#15100A',
   categories: ['business', 'productivity'],
   icons: [
     { src: BASE + 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },

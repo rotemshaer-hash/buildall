@@ -7,9 +7,9 @@ const html = `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Heebo:wght@800&display=block" rel="stylesheet">
 <style>
 *{margin:0;box-sizing:border-box}
-html{overflow:hidden;background:#0C1D33}
+html{overflow:hidden;background:#15100A}
 body{width:1200px;height:630px;overflow:hidden;font-family:Heebo,sans-serif;color:#fff;
-  background:linear-gradient(160deg,#0C1D33 0%,#133253 64%,#1B4A74 100%);position:relative}
+  background:linear-gradient(160deg,#0E0B07 0%,#1D160D 58%,#3A2A12 100%);position:relative}
 .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
 .b1{width:480px;height:480px;background:#9BE330;top:-160px;right:-80px}
 .b2{width:420px;height:420px;background:#4B5563;bottom:-180px;left:-60px}
@@ -18,10 +18,10 @@ body{width:1200px;height:630px;overflow:hidden;font-family:Heebo,sans-serif;colo
 .brand{display:flex;align-items:center;gap:22px}
 .brand svg{width:110px;height:110px}
 .brand b{font-size:84px;line-height:1}
-.brand b em{font-style:normal;background:linear-gradient(90deg,#15B88A,#D6F3E9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand b em{font-style:normal;background:linear-gradient(90deg,#D4A017,#F3E7CC);-webkit-background-clip:text;background-clip:text;color:transparent}
 .brand small{display:block;font:600 22px Assistant,sans-serif;letter-spacing:6px;opacity:.75;direction:ltr;text-align:right;margin-top:6px}
 h1{font-size:54px;line-height:1.25;margin-top:52px;max-width:960px}
-h1 em{font-style:normal;background:linear-gradient(90deg,#15B88A,#D6F3E9);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 em{font-style:normal;background:linear-gradient(90deg,#D4A017,#F3E7CC);-webkit-background-clip:text;background-clip:text;color:transparent}
 .pills{display:flex;gap:14px;margin-top:auto}
 .pills span{font:600 26px Assistant,sans-serif;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:10px 26px}
 </style></head><body>
