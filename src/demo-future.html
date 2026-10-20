@@ -64,9 +64,9 @@
     const r = cv.getBoundingClientRect();
     W = cv.width = r.width * devicePixelRatio; H = cv.height = r.height * devicePixelRatio;
     const n = Math.round((r.width * r.height) / 26000);
-    pts = Array.from({ length: Math.max(14, n) }, () => ({
+    pts = Array.from({ length: Math.max(12, Math.round(n * .75)) }, () => ({
       x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - .5) * .25 * devicePixelRatio, vy: (Math.random() - .5) * .25 * devicePixelRatio,
+      vx: (Math.random() - .5) * .14 * devicePixelRatio, vy: (Math.random() - .5) * .14 * devicePixelRatio,
     }));
   };
   new ResizeObserver(resize).observe(cv);
@@ -81,14 +81,14 @@
     for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
       const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y), max = 150 * devicePixelRatio;
       if (d < max) {
-        ctx.strokeStyle = `rgba(${GOLD},${(1 - d / max) * .35})`;
-        ctx.lineWidth = devicePixelRatio;
+        ctx.strokeStyle = `rgba(${GOLD},${(1 - d / max) * .22})`;
+        ctx.lineWidth = devicePixelRatio * .8;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
       }
     }
     for (const p of pts) {
-      ctx.fillStyle = `rgba(${GOLD},.9)`;
-      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6 * devicePixelRatio, 0, 7); ctx.fill();
+      ctx.fillStyle = `rgba(${GOLD},.75)`;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 2.1 * devicePixelRatio, 0, 7); ctx.fill();
     }
     requestAnimationFrame(tick);
   };
