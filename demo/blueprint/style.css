@@ -1,0 +1,76 @@
+/* Blueprint: the page as a technical drawing of itself. A measure grid instead of a
+   mood gradient, dimension labels instead of decoration, one gold "pencil" accent used
+   the way a draftsman marks a print. The idea is the design, not the palette. */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Assistant,system-ui,sans-serif;background:#F6F4EE;color:#1C1A15;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+.bp-top{max-width:560px;margin:0 auto;padding:30px 20px 10px;text-align:center}
+.bp-tag{display:inline-flex;align-items:center;gap:8px;font:700 12px Heebo,sans-serif;letter-spacing:.14em;color:#8A6A10}
+.bp-tag i{font-style:normal;border:1px solid #D8CEB4;border-radius:4px;padding:2px 6px;font-size:10px}
+.bp-top h1{font:800 27px Heebo,sans-serif;margin-top:10px}
+.bp-top p{color:#6B6355;margin-top:9px;font-size:16px}
+
+.bp-hero{position:relative;overflow:hidden;background:#FBFAF6;min-height:92vh;display:flex;align-items:center;padding:60px 22px 70px}
+/* the measure grid: thin lines, a technical drawing's paper, not a mood texture */
+.bp-grid{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(28,26,21,.065) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(28,26,21,.065) 1px,transparent 1px);
+  background-size:28px 28px;
+  -webkit-mask-image:linear-gradient(to bottom,black,black 70%,transparent);
+  mask-image:linear-gradient(to bottom,black,black 70%,transparent);
+}
+.bp-corner{position:absolute;z-index:1;width:34px;height:34px;color:#8A6A10;font:700 11px Heebo,sans-serif}
+.bp-corner b{position:absolute}
+.bp-c1{top:18px;left:18px;border-top:1px solid currentColor;border-left:1px solid currentColor}
+.bp-c1 b{top:4px;left:4px}
+.bp-c2{bottom:18px;right:18px;border-bottom:1px solid currentColor;border-right:1px solid currentColor}
+.bp-c2 b{bottom:4px;right:4px}
+
+.bp-in{position:relative;z-index:2;width:100%;max-width:560px;margin-inline:auto}
+.bp-dim{display:flex;align-items:center;gap:8px;margin-bottom:26px;color:#9A9284;font:700 11px Heebo,sans-serif;letter-spacing:.1em}
+.bp-dim i{flex:1;height:1px;background:currentColor;position:relative}
+.bp-dim i::before,.bp-dim i::after{content:"";position:absolute;top:-3px;width:1px;height:7px;background:currentColor}
+.bp-dim i::before{right:0}.bp-dim i::after{left:0}
+.bp-eyebrow{display:block;font:600 13px Assistant,sans-serif;color:#1C1A15;margin-bottom:18px}
+.bp-eyebrow i{font-style:normal;color:#9A9284}
+
+.bp-hero h2{
+  font-family:'Frank Ruhl Libre',serif;font-weight:800;position:relative;
+  font-size:clamp(38px,10.5vw,58px);line-height:1.1;letter-spacing:-.01em;
+}
+.bp-hero h2 span{color:#8A6A10}
+/* a pencil mark closing the headline, like a draftsman's corner tick */
+.bp-mark{display:inline-block;width:16px;height:16px;margin-inline-start:6px;vertical-align:middle;
+  border-right:2px solid #D4A017;border-bottom:2px solid #D4A017;transform:rotate(-45deg) translateY(-4px)}
+
+.bp-measure{display:flex;align-items:center;gap:10px;margin:22px 0;color:#8A6A10;font:700 12px Heebo,sans-serif}
+.bp-measure i{flex:none;width:34px;height:1px;background:currentColor;position:relative}
+.bp-measure i::before{content:"";position:absolute;top:-3px;right:0;width:1px;height:7px;background:currentColor}
+
+.bp-hero p{font-size:17px;line-height:1.7;color:#55504A;max-width:32rem}
+
+.bp-cta{
+  display:inline-flex;align-items:center;gap:12px;margin-top:30px;cursor:pointer;
+  background:#1C1A15;color:#F6F4EE;border-radius:4px;padding:13px 10px 13px 20px;
+  font:700 16px Heebo,sans-serif;transition:gap .25s;
+}
+.bp-pencil{width:30px;height:30px;flex:none;border-radius:50%;background:#D4A017;display:grid;place-items:center}
+.bp-pencil::before{content:"✎";font-size:14px}
+.bp-cta b{font-weight:700}
+@media (hover:hover){.bp-cta:hover{gap:16px}}
+
+/* the system drawn as a diagram, not photographed as a screenshot */
+.bp-card{
+  margin-top:42px;background:#fff;border:1px solid #E6DEC9;border-radius:4px;
+  padding:16px 18px 14px;box-shadow:0 20px 50px rgba(28,26,21,.08);color:#8A6A10;
+}
+.bp-card-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;color:#1C1A15}
+.bp-card-h b{font:800 14px Heebo,sans-serif}
+.bp-card-h span{font-size:11px;color:#9A9284;letter-spacing:.06em}
+.bp-draw{width:100%;height:auto;stroke-linecap:round}
+.bp-card-f{display:flex;justify-content:space-between;margin-top:10px;font-size:10.5px;color:#9A9284;letter-spacing:.04em}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

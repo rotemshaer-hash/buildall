@@ -745,6 +745,28 @@ ${readFileSync('src/demo-premium.html', 'utf8')}
 </html>
 `);
 
+// A fourth direction: blueprint. Temporary, like the other design pages.
+write('demo/blueprint/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>השרטוט | ${BRAND}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F6F4EE">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${readFileSync('src/demo-blueprint.html', 'utf8')}
+<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#6B6355;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#1C1A15;font-weight:700" href="${BASE}">חזרה לאתר</a></footer>
+</body>
+</html>
+`);
+
 // ---------- what the assistant answers from ----------
 write('kb.json', JSON.stringify(buildKnowledge()));
 
