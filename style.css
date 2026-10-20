@@ -1408,3 +1408,27 @@ footer details p{color:#65738f!important}
 @media(max-width:899px){.hero{padding:55px 0 95px!important}.hero h1{font-size:clamp(32px,8vw,48px)!important;max-width:17ch!important;margin-inline:auto!important}.hero p{max-width:36ch!important}.hero .ctas{gap:10px}.hero .ctas .btn{width:100%;max-width:420px}.hero:after{bottom:-35px;height:160px}.nav-bar{box-shadow:0 6px 14px rgba(56,78,137,.04)}.nav-bar a{white-space:nowrap}}
 @media(max-width:420px){.hero{padding-top:42px!important}.hero h1{font-size:clamp(29px,8.1vw,36px)!important}.hero p{font-size:17px!important}.logo b{font-size:16px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* POETEXA PREMIUM — second-pass polish, desktop + mobile */
+.hero:after{background:url("assets/poetexa-wave.svg") center bottom/100% 100% no-repeat!important;filter:none!important;transform:none!important;bottom:0!important;left:0!important;width:100%!important;height:clamp(130px,23vw,350px)!important;opacity:.92}
+.hero .wrap{padding-bottom:clamp(50px,8vw,100px)}
+.hero .pills{display:flex;flex-wrap:wrap;gap:10px}
+.hero .pill{border:1px solid #dbe4ff;box-shadow:0 5px 16px rgba(71,97,170,.06)}
+.hero-vis .browser{border-radius:24px;overflow:hidden}
+.hero-vis .phone{border-radius:25px}
+.hero .dash{background:#f7f9ff}
+.hero .kpi,.hero .trow{background:#fff;color:#1b315c;border-color:#e7ebf7}
+.hero .chart i{background:linear-gradient(0deg,#3978f8,#a26dff)}
+.head-actions .btn-ai{background:linear-gradient(120deg,#4169fa,#8b5cf6)!important;color:#fff!important;border:0!important}
+.head-actions .btn-call{background:#f3f6ff!important;color:#354c96!important;border:1px solid #dce4ff!important}
+.proof-card,.ind,.card{border-radius:24px!important;transition:transform .25s ease,box-shadow .25s ease}
+.proof-tag{background:#eef2ff!important;color:#5358cb!important}
+.proof-go,.go{color:#5b61ef!important}
+.marquee{background:#f0f4ff!important;color:#3c4e81!important;border-color:#e3eafa!important}
+.marquee .track{color:#465d96!important}
+input,textarea,select{border-color:#d9e2f6!important;background:#fff!important;color:#1c2b53!important}
+input:focus,textarea:focus,select:focus{border-color:#6d69f5!important;box-shadow:0 0 0 4px rgba(103,106,245,.12)}
+@media(min-width:900px){.hero .wrap{padding-bottom:80px}.hero .browser{box-shadow:0 30px 75px rgba(72,89,178,.17)!important}}
+@media(max-width:899px){.hero .wrap{padding-bottom:58px}.hero:after{height:145px!important}.hero-vis{display:none!important}.hero h1{letter-spacing:-.025em!important}.head-actions{gap:6px}.nav-bar ul{scrollbar-width:none}}
+@media(max-width:390px){header .wrap{gap:5px}.hero .wrap{padding-inline:18px}.hero:after{height:110px!important}}
