@@ -767,6 +767,28 @@ ${readFileSync('src/demo-blueprint.html', 'utf8')}
 </html>
 `);
 
+// A fifth direction: futuristic, carried by motion. Temporary.
+write('demo/future/index.html', `<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>עתידני | ${BRAND}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E0B07">
+<link rel="icon" href="${favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+${readFileSync('src/demo-future.html', 'utf8')}
+<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#9A9284;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#F7F2E4;font-weight:700" href="${BASE}">חזרה לאתר</a></footer>
+</body>
+</html>
+`);
+
 // ---------- what the assistant answers from ----------
 write('kb.json', JSON.stringify(buildKnowledge()));
 

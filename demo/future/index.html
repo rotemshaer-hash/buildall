@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>עתידני | בונים הכל</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E0B07">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'g'%20x1%3D'0'%20y1%3D'1'%20x2%3D'1'%20y2%3D'0'%3E%3Cstop%20offset%3D'0'%20stop-color%3D'%238A6A10'%2F%3E%3Cstop%20offset%3D'1'%20stop-color%3D'%238A6A10'%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D'64'%20height%3D'64'%20rx%3D'14'%20fill%3D'%23F7F4EC'%2F%3E%20%3Cg%20fill%3D'none'%20stroke%3D'url(%23g)'%20stroke-width%3D'6'%20stroke-linecap%3D'round'%20stroke-linejoin%3D'round'%3E%20%3Cpath%20d%3D'M22%2012%208%2032l14%2020'%2F%3E%20%3Cpath%20d%3D'M42%2012l14%2020-14%2020'%2F%3E%20%3C%2Fg%3E%20%3Ccircle%20fill%3D'url(%23g)'%20cx%3D'32'%20cy%3D'32'%20r%3D'5'%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Futuristic direction: motion carries the idea instead of static type or texture —
+     a live network of moving nodes (the automations the business sells, literally
+     wired together), numbers that count up, a scanning light on the button, and a
+     card that tilts with the finger. Same brand colours, animation is the whole idea. -->
+<header class="fu-top">
+  <span class="fu-tag"><i>00</i> כיוון חמישי</span>
+  <h1>עתידני</h1>
+  <p>כאן הרעיון הוא התנועה עצמה, לא גופן או טקסטורה. תן לדף רגע לנשום.</p>
+</header>
+
+<section class="fu-hero">
+  <canvas id="fu-net" class="fu-net" aria-hidden="true"></canvas>
+  <i class="fu-vignette" aria-hidden="true"></i>
+
+  <div class="fu-in">
+    <span class="fu-eyebrow"><i class="fu-dot" aria-hidden="true"></i>בונים הכל · חי עכשיו</span>
+    <h2>מערכות <span>שמתחברות</span><br>לבד, בשבילך</h2>
+    <p>כל אוטומציה שאתה מפעיל היא עוד צומת ברשת. העסק שלך לא מתנהל בפתקים — הוא מתנהל ברשת אחת שרואה הכול.</p>
+
+    <a class="fu-cta">
+      <span>נתחיל בשיחה</span>
+      <i class="fu-sweep" aria-hidden="true"></i>
+      <b>←</b>
+    </a>
+
+    <div class="fu-stats" aria-hidden="true">
+      <div><strong data-to="247">0</strong><span>משימות שרצו לבד השבוע</span></div>
+      <div><strong data-to="12">0</strong><span>מערכות מחוברות</span></div>
+      <div><strong data-to="4" data-suffix="שע׳">0</strong><span>נחסכות ליום</span></div>
+    </div>
+
+    <div class="fu-card">
+      <div class="fu-card-h"><b>מצב המערכת</b><span class="fu-live"><i></i>חי</span></div>
+      <div class="fu-row"><span>סידור עבודה</span><em class="fu-ok">סונכרן</em></div>
+      <div class="fu-row"><span>פקודת עבודה #8421</span><em class="fu-ok">בוצע</em></div>
+      <div class="fu-row"><span>דוח שבועי</span><em class="fu-run">מופק…</em></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // count-up numbers
+  document.querySelectorAll('[data-to]').forEach(el => {
+    const to = +el.dataset.to, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = to + suf; return; }
+    const t0 = performance.now(), dur = 1400;
+    const step = t => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * e) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+  if (reduce) return;
+
+  // the network: nodes drift, lines connect what's close, same gold the rest of the
+  // site uses for its one live colour
+  const cv = document.getElementById('fu-net'), ctx = cv.getContext('2d');
+  let W, H, pts;
+  const GOLD = '212,160,23';
+  const resize = () => {
+    const r = cv.getBoundingClientRect();
+    W = cv.width = r.width * devicePixelRatio; H = cv.height = r.height * devicePixelRatio;
+    const n = Math.round((r.width * r.height) / 26000);
+    pts = Array.from({ length: Math.max(14, n) }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .25 * devicePixelRatio, vy: (Math.random() - .5) * .25 * devicePixelRatio,
+    }));
+  };
+  new ResizeObserver(resize).observe(cv);
+  resize();
+  const tick = () => {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y), max = 150 * devicePixelRatio;
+      if (d < max) {
+        ctx.strokeStyle = `rgba(${GOLD},${(1 - d / max) * .35})`;
+        ctx.lineWidth = devicePixelRatio;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+    }
+    for (const p of pts) {
+      ctx.fillStyle = `rgba(${GOLD},.9)`;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6 * devicePixelRatio, 0, 7); ctx.fill();
+    }
+    requestAnimationFrame(tick);
+  };
+  tick();
+
+  // the card tilts toward the finger / pointer — a futuristic cliché done gently
+  const card = document.querySelector('.fu-card');
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    const rx = ((e.clientY - r.top) / r.height - .5) * -8;
+    const ry = ((e.clientX - r.left) / r.width - .5) * 8;
+    card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+})();
+</script>
+
+<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#9A9284;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#F7F2E4;font-weight:700" href="https://buildall.pages.dev/">חזרה לאתר</a></footer>
+</body>
+</html>

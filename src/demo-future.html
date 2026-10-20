@@ -1,0 +1,107 @@
+<!-- Futuristic direction: motion carries the idea instead of static type or texture —
+     a live network of moving nodes (the automations the business sells, literally
+     wired together), numbers that count up, a scanning light on the button, and a
+     card that tilts with the finger. Same brand colours, animation is the whole idea. -->
+<header class="fu-top">
+  <span class="fu-tag"><i>00</i> כיוון חמישי</span>
+  <h1>עתידני</h1>
+  <p>כאן הרעיון הוא התנועה עצמה, לא גופן או טקסטורה. תן לדף רגע לנשום.</p>
+</header>
+
+<section class="fu-hero">
+  <canvas id="fu-net" class="fu-net" aria-hidden="true"></canvas>
+  <i class="fu-vignette" aria-hidden="true"></i>
+
+  <div class="fu-in">
+    <span class="fu-eyebrow"><i class="fu-dot" aria-hidden="true"></i>בונים הכל · חי עכשיו</span>
+    <h2>מערכות <span>שמתחברות</span><br>לבד, בשבילך</h2>
+    <p>כל אוטומציה שאתה מפעיל היא עוד צומת ברשת. העסק שלך לא מתנהל בפתקים — הוא מתנהל ברשת אחת שרואה הכול.</p>
+
+    <a class="fu-cta">
+      <span>נתחיל בשיחה</span>
+      <i class="fu-sweep" aria-hidden="true"></i>
+      <b>←</b>
+    </a>
+
+    <div class="fu-stats" aria-hidden="true">
+      <div><strong data-to="247">0</strong><span>משימות שרצו לבד השבוע</span></div>
+      <div><strong data-to="12">0</strong><span>מערכות מחוברות</span></div>
+      <div><strong data-to="4" data-suffix="שע׳">0</strong><span>נחסכות ליום</span></div>
+    </div>
+
+    <div class="fu-card">
+      <div class="fu-card-h"><b>מצב המערכת</b><span class="fu-live"><i></i>חי</span></div>
+      <div class="fu-row"><span>סידור עבודה</span><em class="fu-ok">סונכרן</em></div>
+      <div class="fu-row"><span>פקודת עבודה #8421</span><em class="fu-ok">בוצע</em></div>
+      <div class="fu-row"><span>דוח שבועי</span><em class="fu-run">מופק…</em></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // count-up numbers
+  document.querySelectorAll('[data-to]').forEach(el => {
+    const to = +el.dataset.to, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = to + suf; return; }
+    const t0 = performance.now(), dur = 1400;
+    const step = t => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * e) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+  if (reduce) return;
+
+  // the network: nodes drift, lines connect what's close, same gold the rest of the
+  // site uses for its one live colour
+  const cv = document.getElementById('fu-net'), ctx = cv.getContext('2d');
+  let W, H, pts;
+  const GOLD = '212,160,23';
+  const resize = () => {
+    const r = cv.getBoundingClientRect();
+    W = cv.width = r.width * devicePixelRatio; H = cv.height = r.height * devicePixelRatio;
+    const n = Math.round((r.width * r.height) / 26000);
+    pts = Array.from({ length: Math.max(14, n) }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .25 * devicePixelRatio, vy: (Math.random() - .5) * .25 * devicePixelRatio,
+    }));
+  };
+  new ResizeObserver(resize).observe(cv);
+  resize();
+  const tick = () => {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y), max = 150 * devicePixelRatio;
+      if (d < max) {
+        ctx.strokeStyle = `rgba(${GOLD},${(1 - d / max) * .35})`;
+        ctx.lineWidth = devicePixelRatio;
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+    }
+    for (const p of pts) {
+      ctx.fillStyle = `rgba(${GOLD},.9)`;
+      ctx.beginPath(); ctx.arc(p.x, p.y, 1.6 * devicePixelRatio, 0, 7); ctx.fill();
+    }
+    requestAnimationFrame(tick);
+  };
+  tick();
+
+  // the card tilts toward the finger / pointer — a futuristic cliché done gently
+  const card = document.querySelector('.fu-card');
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    const rx = ((e.clientY - r.top) / r.height - .5) * -8;
+    const ry = ((e.clientX - r.left) / r.width - .5) * 8;
+    card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+})();
+</script>
