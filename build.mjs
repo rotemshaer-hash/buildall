@@ -36,7 +36,7 @@ const industriesSection = root => `<section class="industries" id="industries">
     <div class="sec-head">
       <span class="eyebrow">פתרונות לפי תחום</span>
       <h2 class="h2">מה בונים לעסק כמו שלך</h2>
-      <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו בונים הכל.</p>
+      <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו POETEXA.</p>
     </div>
     <div class="ind-grid">
 ${industries.map(i => `      <a class="ind" href="${root}${i.slug}/"><span class="ic">${icon(i.icon)}</span><b>${i.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
@@ -172,7 +172,7 @@ home = withIcons(home)
 
 write('index.html', page({
   path: '', root: '',
-  title: 'בונים הכל | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
+  title: 'POETEXA | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, videoSchema, faqSchema(homeFaq)],
   body: demoFab('work/work-it/#demo', '.proof-grid') + home
@@ -262,8 +262,8 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
 
   write(`${i.slug}/index.html`, page({
     path: i.slug + '/', root, title: i.title, description: i.description,
-    greeting: `היי, הגעתי מהאתר של בונים הכל (${i.short}) ואשמח לשיחת ייעוץ חינם 🙂`,
-    from: `היי, הגעתי מהאתר של בונים הכל (${i.short})`,
+    greeting: `היי, הגעתי מהאתר של POETEXA (${i.short}) ואשמח לשיחת ייעוץ חינם 🙂`,
+    from: `היי, הגעתי מהאתר של POETEXA (${i.short})`,
     schemas: [
       {
         '@context': 'https://schema.org', '@type': 'Service',
@@ -292,7 +292,7 @@ write('404.html', page({
   // absolute, because a 404 is served at whatever address the visitor mistyped
   path: '404', root: '/',
   title: 'הדף לא נמצא | ' + BRAND,
-  description: 'הכתובת שחיפשת לא קיימת באתר של בונים הכל. מכאן אפשר לחזור לדף הבית, לעבודות או ליצירת קשר.',
+  description: 'הכתובת שחיפשת לא קיימת באתר של POETEXA. מכאן אפשר לחזור לדף הבית, לעבודות או ליצירת קשר.',
   body: `<section class="hero hero-sm">
   <i class="blob b1"></i><i class="blob b2"></i>
   <div class="wrap">
@@ -323,7 +323,7 @@ ${items.map(o => `      <a class="ind" href="${root}${dir}${o.slug}/"><span clas
 
 write('guides/index.html', article({
   root: '../', trail: [['דף הבית', ''], ['מדריכים', 'guides/']],
-  title: 'מדריכים לבעלי עסקים: אתרים, אפליקציות וניהול | בונים הכל',
+  title: 'מדריכים לבעלי עסקים: אתרים, אפליקציות וניהול | POETEXA',
   description: 'מדריכים קצרים וברורים לבעלי עסקים: כמה עולה אתר, אתר או אפליקציה, ואיך לנהל משמרות בלי בלגן.',
   h1: 'מדריכים לבעלי עסקים', lead: 'תשובות ברורות לשאלות שכל בעל עסק שואל, לפני שהוא מוציא שקל.',
   body: `    ${linkCards('', guides, '')}`, wide: true
@@ -476,7 +476,7 @@ write('demo/cafe/index.html', `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>לחם ושקד · בית קפה ומאפייה | פרויקט הדגמה של ${BRAND}</title>
-<meta name="description" content="פרויקט הדגמה: אתר לבית קפה שכונתי, עם תפריט, שעות פתיחה והזמנת שולחן. נבנה על ידי בונים הכל כדי להראות איך נראה אתר לעסק קטן.">
+<meta name="description" content="פרויקט הדגמה: אתר לבית קפה שכונתי, עם תפריט, שעות פתיחה והזמנת שולחן. נבנה על ידי POETEXA כדי להראות איך נראה אתר לעסק קטן.">
 <link rel="canonical" href="${BASE}demo/cafe/">
 <meta name="theme-color" content="#2A1D14">
 <!-- A demo business: keep it out of search so nobody mistakes it for a real café. -->
@@ -490,7 +490,7 @@ write('demo/cafe/index.html', `<!doctype html>
 <body>
 <div class="demo-ribbon">
   <span><b>פרויקט הדגמה</b> · עסק לדוגמה שאינו קיים</span>
-  <a href="${BASE}">נבנה על ידי בונים הכל ←</a>
+  <a href="${BASE}">נבנה על ידי POETEXA ←</a>
 </div>
 <main>
 ${readFileSync('src/demo-cafe.html', 'utf8')}
@@ -498,7 +498,7 @@ ${readFileSync('src/demo-cafe.html', 'utf8')}
 <footer class="c-foot">
   <div class="c-wrap">
     <p><b>לחם ושקד</b> · הלוחמים 14, חולון · 03-000-0000</p>
-    <p class="c-dis">זהו פרויקט הדגמה. העסק, הכתובת והטלפון אינם אמיתיים. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות איך נראה אתר לעסק קטן.</p>
+    <p class="c-dis">זהו פרויקט הדגמה. העסק, הכתובת והטלפון אינם אמיתיים. <a href="${BASE}">POETEXA</a> בנתה אותו כדי להראות איך נראה אתר לעסק קטן.</p>
   </div>
 </footer>
 <script>
@@ -524,7 +524,7 @@ write('demo/landing/index.html', `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>נועה ברק · פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
-<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי בונים הכל.">
+<meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי POETEXA.">
 <link rel="canonical" href="${BASE}demo/landing/">
 <meta name="theme-color" content="#F7F3EB">
 <!-- An instructor who does not exist: keep it out of search so nobody books a class. -->
@@ -538,12 +538,12 @@ write('demo/landing/index.html', `<!doctype html>
 <body>
 <div class="demo-ribbon">
   <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
-  <a href="${BASE}">נבנה על ידי בונים הכל ←</a>
+  <a href="${BASE}">נבנה על ידי POETEXA ←</a>
 </div>
 ${readFileSync('src/demo-landing.html', 'utf8')}
 <footer class="l-foot">
   <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
-  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="${BASE}">בונים הכל</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
+  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="${BASE}">POETEXA</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
 </footer>
 <script>
 (() => {
