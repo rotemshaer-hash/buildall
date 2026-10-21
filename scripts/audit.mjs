@@ -61,8 +61,12 @@ ok(home.includes('VideoObject'), 'תיאור הווידאו לגוגל');
 // sentence meant every rewording failed the build for no reason, while a category
 // quietly dropped from it would have passed.
 const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || ['',''])[1].replace(/&nbsp;/g, ' ');
-for (const word of ['מערכת ניהול', 'אפליקציה', 'אוטומציות', 'אתר'])
-  ok(h1.includes(word), `הכותרת הראשית מזכירה "${word}"`);
+// In the new studio layout the H1 is a brand promise; the service categories
+// are required in the visible lead copy immediately below it.
+const heroSection = (home.match(/<section class="hero[^"]*"[^>]*>([\\s\\S]*?)<\\/section>/) || ['',''])[1];
+ok(h1.includes('העסק שלך'), 'הכותרת הראשית מציגה את הבטחת המותג');
+for (const word of ['מערכות ניהול', 'אפליקציות', 'אוטומציות', 'אתרים'])
+  ok(heroSection.includes(word), `הפתיח מזכיר "${word}"`);
 ok(existsSync(join(ROOT, '404.html')), 'דף 404 קיים');
 ok(readFileSync(join(ROOT,'404.html'),'utf8').includes('הדף הזה לא קיים'), 'דף 404 עם התוכן שלנו');
 for (const g of ['website-or-app','shift-scheduling','what-decides-price','app-without-store'])
