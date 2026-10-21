@@ -2,12 +2,12 @@
 const WA_NUMBER = '972542020812';
 
 const waLink = text => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
-const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של בונים הכל ואשמח לשיחת ייעוץ חינם 🙂';
+const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של POETEXA ואשמח לשיחת ייעוץ חינם 🙂';
 if (WA_NUMBER) {
   document.querySelectorAll('[data-wa]').forEach(a => {
     // data-msg lets a card ask about its own subject; without it the general greeting is sent.
     const subject = a.dataset.msg;
-    a.href = waLink(subject ? `${document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל'}, ואשמח לשמוע על: ${subject} 🙂` : GREETING);
+    a.href = waLink(subject ? `${document.body.dataset.from || 'היי, הגעתי מהאתר של POETEXA'}, ואשמח לשמוע על: ${subject} 🙂` : GREETING);
     a.target = '_blank'; a.rel = 'noopener';
   });
 }
@@ -50,7 +50,7 @@ const form = document.getElementById('lead');
 
 // The same filled form goes out two ways, so the fields are read in one place.
 const formText = f => [
-  (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
+  (document.body.dataset.from || 'היי, הגעתי מהאתר של POETEXA') + ' 🙂',
   'שם: ' + f.get('name'),
   f.get('biz') ? 'עסק: ' + f.get('biz') : '',
   f.get('email') ? 'מייל: ' + f.get('email') : '',
@@ -92,7 +92,7 @@ mailBtn?.addEventListener('click', async () => {
       body: JSON.stringify({
         access_key: document.body.dataset.formkey,
         subject: 'פנייה חדשה מהאתר: ' + (f.get('biz') || f.get('name')),
-        from_name: 'בונים הכל',
+        from_name: 'POETEXA',
         // web3forms turns this into the reply-to, so "reply" in the inbox reaches the lead.
         email: f.get('email'),
         replyto: f.get('email'),
@@ -355,7 +355,7 @@ document.addEventListener('click', e => {
     const name = $('ai-name').value.trim(), phone = $('ai-phone').value.trim();
     const topics = history.filter(m => m.role === 'user').map(m => m.content).slice(0, 3);
     const text = [
-      (document.body.dataset.from || 'היי, הגעתי מהאתר של בונים הכל') + ' 🙂',
+      (document.body.dataset.from || 'היי, הגעתי מהאתר של POETEXA') + ' 🙂',
       'שם: ' + name,
       'טלפון: ' + phone,
       topics.length ? 'שאלתי בצ׳אט: ' + topics.join(' · ') : ''
