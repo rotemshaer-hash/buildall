@@ -63,7 +63,7 @@ ok(home.includes('VideoObject'), 'תיאור הווידאו לגוגל');
 const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || ['',''])[1].replace(/&nbsp;/g, ' ');
 // In the new studio layout the H1 is a brand promise; the service categories
 // are required in the visible lead copy immediately below it.
-const heroSection = (home.match(/<section class="hero[^"]*"[^>]*>([\\s\\S]*?)<\\/section>/) || ['',''])[1];
+const heroSection = home.slice(home.indexOf('<!-- HERO: POETEXA'), home.indexOf('<div class="poetexa-quick'));
 ok(h1.includes('העסק שלך'), 'הכותרת הראשית מציגה את הבטחת המותג');
 for (const word of ['מערכות ניהול', 'אפליקציות', 'אוטומציות', 'אתרים'])
   ok(heroSection.includes(word), `הפתיח מזכיר "${word}"`);
