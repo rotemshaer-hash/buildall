@@ -4,8 +4,8 @@
 // The site's address. When buildall.co.il is bought, change this one line and rebuild.
 export const BASE = 'https://buildall.pages.dev/';
 
-export const BRAND = 'בונים הכל';
-export const FULL_NAME = 'בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות';
+export const BRAND = 'POETEXA';
+export const FULL_NAME = 'POETEXA — סטודיו לעיצוב אתרים, אפליקציות ופתרונות AI';
 export const PHONE = { display: '054-202-0812', intl: '+972-54-202-0812', tel: '+972542020812' };
 
 // Tracking. Both stay empty until Rotem creates them; while empty nothing is loaded.
@@ -98,7 +98,7 @@ export const sprite = `<svg width="0" height="0" style="position:absolute" aria-
       <stop offset="0" stop-color="#F9CE34"/><stop offset=".45" stop-color="#EE2A7B"/><stop offset="1" stop-color="#6228D7"/>
     </linearGradient>
     <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#D4A017"/><stop offset="1" stop-color="#D4A017"/></linearGradient>
-    <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#8A6A10"/><stop offset="1" stop-color="#2B2013"/></linearGradient>
+    <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#785CF3"/><stop offset="1" stop-color="#286FFF"/></linearGradient>
     <symbol id="wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
 ${Object.entries(ICONS).map(([k, v]) => `    <symbol id="i-${k}" viewBox="0 0 24 24">${v}</symbol>`).join('\n')}
 ${Object.entries(BRANDS).map(([k, [, v]]) => `    <symbol id="b-${k}" viewBox="0 0 24 24" fill="currentColor">${v}</symbol>`).join('\n')}
@@ -110,7 +110,7 @@ export const icon = name => {
   return `<svg class="i" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 };
 
-const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#8A6A10'/><stop offset='1' stop-color='#8A6A10'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#F7F4EC'/>${logoPlain().replace(/"/g, "'")}</svg>`;
+const faviconSvg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='1' x2='1' y2='0'><stop offset='0' stop-color='#785CF3'/><stop offset='1' stop-color='#785CF3'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='#F6F8FF'/>${logoPlain().replace(/"/g, "'")}</svg>`;
 export const favicon = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg.replace(/\s+/g, ' '));
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
@@ -125,7 +125,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${url}">
-<meta name="theme-color" content="#15100A">
+<meta name="theme-color" content="#172B55">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -136,7 +136,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <meta property="og:image" content="${BASE}og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="בונים הכל – בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים">
+<meta property="og:image:alt" content="POETEXA – בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${BASE}og.jpg">${GSC_VERIFY ? `
 <meta name="google-site-verification" content="${GSC_VERIFY}">` : ''}${GA_ID ? `
@@ -161,7 +161,7 @@ export function header(root) {
   <div class="wrap">
     <a class="logo" href="${root || './'}" aria-label="${BRAND} – לדף הבית">
       <svg viewBox="0 0 64 64" aria-hidden="true" stroke="url(#lg)" fill="url(#lg)">${LOGO_SHAPES}</svg>
-      <span><b>בונים <em>הכל</em></b><small>BUILD ALL</small></span>
+      <span><b class="poetexa-wordmark">POETEXA</b><small>DIGITAL DESIGN STUDIO</small></span>
     </a>
     <nav class="head-nav" aria-label="ניווט ראשי">
       <a href="${root || './'}#problems">בעיות</a>
@@ -212,7 +212,7 @@ export function footer(root, nav) {
     <div><a href="tel:${PHONE.tel}" data-call>${PHONE.display}</a>${EMAIL ? ` · <a href="mailto:${EMAIL}">${EMAIL}</a>` : ''}</div>
     <nav class="foot-links" aria-label="מידע">${nav.legal.map(i => `<a href="${root}${i.slug}/">${i.short}</a>`).join('')}</nav>
     <div class="install" id="install" hidden>
-      <b>רוצה את בונים הכל כאפליקציה בטלפון?</b>
+      <b>רוצה את POETEXA כאפליקציה בטלפון?</b>
       <button class="btn btn-line" type="button" id="install-go" hidden><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>התקן בלחיצה אחת</button>
       <p id="install-how">בכרום: תפריט <b>⋮</b> בפינה ← <b>הוספה למסך הבית</b></p>
     </div>
@@ -223,13 +223,13 @@ export function footer(root, nav) {
 <div class="ai-panel" id="ai-panel" role="dialog" aria-modal="true" aria-labelledby="ai-title" hidden>
   <div class="ai-head">
     <div>
-      <b id="ai-title">העוזר של בונים הכל</b>
+      <b id="ai-title">העוזר של POETEXA</b>
       <small>עונה על שאלות באתר · לא תמיד מושלם</small>
     </div>
     <button type="button" id="ai-close" aria-label="סגירה">✕</button>
   </div>
   <div class="ai-body" id="ai-body">
-    <div class="ai-msg bot">שלום! אני העוזר של בונים הכל. אפשר לשאול אותי על השירותים, על איך עובדים, או פשוט לספר מה אתה רוצה לשפר בעסק, ואנסה לכוון.</div>
+    <div class="ai-msg bot">שלום! אני העוזר של POETEXA. אפשר לשאול אותי על השירותים, על איך עובדים, או פשוט לספר מה אתה רוצה לשפר בעסק, ואנסה לכוון.</div>
     <div class="ai-chips">
       <button type="button">מה אתם בונים?</button>
       <button type="button">כמה זה עולה?</button>
