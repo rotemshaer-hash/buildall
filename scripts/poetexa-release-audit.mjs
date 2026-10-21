@@ -16,7 +16,7 @@ for(const page of pages){const s=readFileSync(page,'utf8');const ids=[...s.match
  }
 }
 for(const css of files.filter(p=>p.endsWith('.css'))){for(const m of readFileSync(css,'utf8').matchAll(/url\(["']?([^\)"']+)["']?\)/g)){const h=m[1];if(/^(data:|https?:|#|%23)/.test(h))continue;check(existsSync(resolve(dirname(css),h)),relative(root,css)+': missing '+h);}}
-check(createHash('sha256').update(readFileSync(join(root,'media/workit.mp4'))).digest('hex')==='63a4f5a1118ee7389005ecc43c1f45a916d2c82c504197828af9200a3d88b615','Original film changed');
+check(createHash('sha256').update(readFileSync(join(root,'media/workit.mp4'))).digest('hex')==='a21d3557c4a8131cc9db770624d76aa93b36e17e4428c8f8c72a8ddd2c185784','POETEXA recoloured film changed');
 check(files.length<1000,'Cloudflare dashboard upload file limit');
 for(const f of files)check(statSync(f).size<=25*1024*1024,'Cloudflare per-file limit: '+relative(root,f));
 console.log(JSON.stringify({htmlPages:pages.length,checks,files:files.length,errors},null,2));process.exitCode=errors.length?1:0;
