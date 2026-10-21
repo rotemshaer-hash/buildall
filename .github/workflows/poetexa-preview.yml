@@ -1,0 +1,40 @@
+name: POETEXA Branch Preview
+on:
+  push:
+    branches:
+      - design/poetexa-premium-preview
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build all site pages
+        run: node build.mjs
+      - name: Prepare publish folder
+        run: node scripts/dist.mjs
+      - name: Verify preview files
+        run: |
+          test -s dist/index.html
+          test -s dist/style.css
+          test -s dist/assets/poetexa-wave.svg
+      - name: Upload complete preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: poetexa-complete-site-preview
+          path: dist/
+          retention-days: 14
+      - name: Deploy Cloudflare preview branch only
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=buildall --branch=design-poetexa-premium-preview
