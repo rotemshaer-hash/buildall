@@ -1565,3 +1565,50 @@ header{box-shadow:0 8px 32px #2453ac12!important}
   .film-vid{width:min(100%,350px)!important;max-width:350px!important;margin-inline:auto!important}
   .why-sec .h2,.poetexa-benefits .h2{overflow-wrap:normal;word-break:normal}
 }
+
+
+/* POETEXA FINAL REVIEW — precise alignment and touch layout */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:135px}
+body{overflow-x:clip}
+.wrap{width:min(100% - 32px,1200px);margin-inline:auto}
+img,svg,video{max-width:100%}
+.btn,.poetexa-green-cta,.demo-fab{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:46px}
+.btn svg,.demo-fab svg{flex-shrink:0}
+.poetexa-hero .ctas{align-items:center}
+.poetexa-hero .ctas .btn{min-height:54px}
+.poetexa-benefits .sec-head,.poetexa-benefits .sec-head .lead{text-align:center}
+.poetexa-benefit-grid{align-items:stretch}
+.poetexa-benefit{height:100%}
+.sb-cta .btn{margin-inline:auto}
+.film-vid video{background:#101b36!important}
+.proof-card,.poetexa-benefit,.poetexa-quick-card{isolation:isolate}
+.faq-sec summary{line-height:1.6}
+@media(max-width:760px){
+  html{scroll-padding-top:165px}
+  .wrap{width:calc(100% - 30px)}
+  .poetexa-hero .ctas{display:flex!important;flex-wrap:wrap;justify-content:center!important;gap:10px!important}
+  .poetexa-hero .ctas .btn{flex:1 1 155px;max-width:230px;width:auto!important;margin:0!important}
+  .poetexa-hero .poetexa-copy{text-align:center!important}
+  .poetexa-hero .poetexa-kicker{margin-inline:auto}
+  .poetexa-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .poetexa-benefit{min-width:0;min-height:165px}
+  .poetexa-quick-card{min-width:0}
+  .sb-cta{flex-direction:column;align-items:center!important;text-align:center!important}
+  .sb-cta p{text-align:center!important;margin-inline:auto!important}
+  .sb-cta .btn{margin-inline:auto!important;width:min(100%,340px)!important}
+  .film-in{min-width:0}
+  .film-txt{text-align:center}
+  .film-txt .btn{margin-inline:auto}
+  .film-vid{max-width:min(100%,350px)!important}
+  .demo-fab{position:static!important;inset:auto!important;float:none!important;transform:none!important;margin:20px auto!important;min-height:48px}
+  .demo-fab.hide{display:none!important}
+  .faq-sec,.sig,.poetexa-benefits{overflow-wrap:break-word}
+  .sig-box{max-width:100%}
+  .sig-box blockquote{font-size:clamp(22px,5.7vw,34px)!important;line-height:1.45!important}
+}
+@media(max-width:390px){
+  .poetexa-hero .ctas .btn{flex-basis:138px;font-size:13px!important;padding:12px 10px!important}
+  .poetexa-benefit{padding:16px 8px}
+  .poetexa-benefit h3{font-size:16px!important}
+}
