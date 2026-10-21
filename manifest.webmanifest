@@ -1,6 +1,6 @@
 {
-  "name": "בונים הכל - בניית אתרים, דפי נחיתה ואפליקציות",
-  "short_name": "בונים הכל",
+  "name": "POETEXA - בניית אתרים, דפי נחיתה ואפליקציות",
+  "short_name": "POETEXA",
   "description": "בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.",
   "start_url": "https://buildall.pages.dev/",
   "scope": "https://buildall.pages.dev/",
@@ -9,8 +9,8 @@
   "orientation": "portrait",
   "lang": "he",
   "dir": "rtl",
-  "background_color": "#F7F4EC",
-  "theme_color": "#15100A",
+  "background_color": "#F6F8FF",
+  "theme_color": "#172B55",
   "categories": [
     "business",
     "productivity"
