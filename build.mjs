@@ -175,7 +175,7 @@ write('index.html', page({
   title: 'POETEXA | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, videoSchema, faqSchema(homeFaq)],
-  body: demoFab('work/work-it/#demo', '.proof-grid') + home
+  body: home.replace('<!-- PROOF -->', demoFab('work/work-it/#demo', '.proof-grid') + '<!-- PROOF -->')
 }));
 
 // ---------- industry pages ----------
@@ -456,14 +456,14 @@ for (const l of legal) {
 write('manifest.webmanifest', JSON.stringify({
   name: FULL_NAME, short_name: BRAND,
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI.',
-  start_url: BASE, scope: BASE, id: BASE,
+  start_url: './', scope: './', id: './',
   display: 'standalone', orientation: 'portrait', lang: 'he', dir: 'rtl',
-  background_color: '#F7F4EC', theme_color: '#15100A',
+  background_color: '#f5f7fc', theme_color: '#15274d',
   categories: ['business', 'productivity'],
   icons: [
-    { src: BASE + 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
-    { src: BASE + 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
-    { src: BASE + 'icons/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+    { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+    { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+    { src: 'icons/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
   ]
 }, null, 2) + '\n');
 
@@ -490,7 +490,7 @@ write('demo/cafe/index.html', `<!doctype html>
 <body>
 <div class="demo-ribbon">
   <span><b>פרויקט הדגמה</b> · עסק לדוגמה שאינו קיים</span>
-  <a href="${BASE}">נבנה על ידי POETEXA ←</a>
+  <a href="../../">נבנה על ידי POETEXA ←</a>
 </div>
 <main>
 ${readFileSync('src/demo-cafe.html', 'utf8')}
@@ -498,7 +498,7 @@ ${readFileSync('src/demo-cafe.html', 'utf8')}
 <footer class="c-foot">
   <div class="c-wrap">
     <p><b>לחם ושקד</b> · הלוחמים 14, חולון · 03-000-0000</p>
-    <p class="c-dis">זהו פרויקט הדגמה. העסק, הכתובת והטלפון אינם אמיתיים. <a href="${BASE}">POETEXA</a> בנתה אותו כדי להראות איך נראה אתר לעסק קטן.</p>
+    <p class="c-dis">זהו פרויקט הדגמה. העסק, הכתובת והטלפון אינם אמיתיים. <a href="../../">POETEXA</a> בנתה אותו כדי להראות איך נראה אתר לעסק קטן.</p>
   </div>
 </footer>
 <script>
@@ -538,12 +538,12 @@ write('demo/landing/index.html', `<!doctype html>
 <body>
 <div class="demo-ribbon">
   <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
-  <a href="${BASE}">נבנה על ידי POETEXA ←</a>
+  <a href="../../">נבנה על ידי POETEXA ←</a>
 </div>
 ${readFileSync('src/demo-landing.html', 'utf8')}
 <footer class="l-foot">
   <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
-  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="${BASE}">POETEXA</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
+  <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="../../">POETEXA</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
 </footer>
 <script>
 (() => {
@@ -653,7 +653,7 @@ write('demo/colors/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-colors.html', 'utf8')}
-<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="${BASE}">חזרה לאתר</a></footer>
+<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);
@@ -696,7 +696,7 @@ write('demo/logo/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-logo.html', 'utf8')}
-<footer>תגיד לי מספר, ואני מחליף אותו בכל מקום. <a href="${BASE}">חזרה לאתר</a></footer>
+<footer>תגיד לי מספר, ואני מחליף אותו בכל מקום. <a href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);
@@ -718,7 +718,7 @@ write('demo/colors10/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-colors10.html', 'utf8')}
-<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="${BASE}">חזרה לאתר</a></footer>
+<footer>תגיד לי מספר, ואני צובע את כל האתר בו. <a href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);
@@ -740,7 +740,7 @@ write('demo/premium/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-premium.html', 'utf8')}
-<footer>תגיד לי אות — א, ב או ג — ואבנה את כל האתר בשפה הזו. <a href="${BASE}">חזרה לאתר</a></footer>
+<footer>תגיד לי אות — א, ב או ג — ואבנה את כל האתר בשפה הזו. <a href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);
@@ -762,7 +762,7 @@ write('demo/blueprint/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-blueprint.html', 'utf8')}
-<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#6B6355;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#1C1A15;font-weight:700" href="${BASE}">חזרה לאתר</a></footer>
+<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#6B6355;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#1C1A15;font-weight:700" href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);
@@ -784,7 +784,7 @@ write('demo/future/index.html', `<!doctype html>
 </head>
 <body>
 ${readFileSync('src/demo-future.html', 'utf8')}
-<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#9A9284;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#F7F2E4;font-weight:700" href="${BASE}">חזרה לאתר</a></footer>
+<footer style="max-width:560px;margin:0 auto;padding:24px 20px 50px;text-align:center;color:#9A9284;font-size:15px">תגיד לי אם זה הכיוון, ואני בונה את כל האתר כך. <a style="color:#F7F2E4;font-weight:700" href="../../">חזרה לאתר</a></footer>
 </body>
 </html>
 `);

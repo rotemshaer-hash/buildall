@@ -97,7 +97,7 @@ export const sprite = `<svg width="0" height="0" style="position:absolute" aria-
     <linearGradient id="ig-g" x1="2" y1="22" x2="22" y2="2">
       <stop offset="0" stop-color="#F9CE34"/><stop offset=".45" stop-color="#EE2A7B"/><stop offset="1" stop-color="#6228D7"/>
     </linearGradient>
-    <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#D4A017"/><stop offset="1" stop-color="#D4A017"/></linearGradient>
+    <linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3258c5"/><stop offset="1" stop-color="#3258c5"/></linearGradient>
     <linearGradient id="ig" gradientUnits="userSpaceOnUse" x1="2" y1="22" x2="22" y2="2"><stop offset="0" stop-color="#785CF3"/><stop offset="1" stop-color="#286FFF"/></linearGradient>
     <symbol id="wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4zm6-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2l-1 1.3c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol>
 ${Object.entries(ICONS).map(([k, v]) => `    <symbol id="i-${k}" viewBox="0 0 24 24">${v}</symbol>`).join('\n')}
@@ -143,7 +143,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');</script>` : ''}
 <link rel="icon" href="${favicon}">
-<link rel="apple-touch-icon" href="${BASE}icons/icon-192.png">
+<link rel="apple-touch-icon" href="${root}icons/icon-192.png">
 <link rel="manifest" href="${root}manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="${BRAND}">
@@ -157,6 +157,7 @@ ${schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s)}</scr
 
 export function header(root) {
   return `${sprite}
+<a class="skip-link" href="#top">דילוג לתוכן</a>
 <header>
   <div class="wrap">
     <a class="logo" href="${root || './'}" aria-label="${BRAND} – לדף הבית">
@@ -173,7 +174,7 @@ export function header(root) {
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
       <button class="btn btn-ai ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
-      <a class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
+      <a aria-label="שיחה בוואטסאפ" class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
     </div>
   </div>
 </header>`;
@@ -185,6 +186,7 @@ export function header(root) {
 export function navBar(root) {
   const r = root || './';
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
+  <details class="mobile-menu"><summary>ניווט באתר <span aria-hidden="true">☰</span></summary>
   <ul>
     <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
     <li><a href="${r}#film">סרטון הדגמה</a></li>
@@ -196,6 +198,7 @@ export function navBar(root) {
     <li><a href="${r}#process">איך עובדים</a></li>
     <li><a href="${r}#contact">יצירת קשר</a></li>
   </ul>
+  </details>
 </nav>`;
 }
 
@@ -238,21 +241,21 @@ export function footer(root, nav) {
     </div>
   </div>
   <form class="ai-ask" id="ai-ask">
-    <input id="ai-input" placeholder="כתוב שאלה…" autocomplete="off" maxlength="300">
+    <input aria-label="שאלה לעוזר" id="ai-input" placeholder="כתוב שאלה…" autocomplete="off" maxlength="300">
     <button type="submit" aria-label="שליחה">↑</button>
   </form>
   <form class="ai-lead" id="ai-lead" hidden>
     <b>רוצה שנציג שירות יחזור אליך?</b>
     <div class="ai-lead-f">
-      <input id="ai-name" placeholder="שם" autocomplete="name" required>
-      <input id="ai-phone" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
+      <input aria-label="שם" id="ai-name" placeholder="שם" autocomplete="name" required>
+      <input aria-label="טלפון" id="ai-phone" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
     </div>
     <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח בוואטסאפ</button>
     <button type="button" class="ai-skip" id="ai-skip">לא עכשיו</button>
   </form>
 </div>
 <script src="${root}site.js" defer></script>
-<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('${BASE}sw.js').catch(()=>{}));</script>
+<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('${root}sw.js').catch(()=>{}));</script>
 </body>
 </html>
 `;
@@ -292,7 +295,7 @@ export function contact(lead = FORM_KEY
       <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שלח במייל</button>` : ''}
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
-      <p class="note">שליחה במייל דורשת כתובת מייל, כדי שנוכל לחזור אליך.</p>
+      ${FORM_KEY ? '<p class="note">שליחה במייל דורשת כתובת מייל, כדי שנוכל לחזור אליך.</p>' : ''}
     </form>
   </div>
 </section>`;

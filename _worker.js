@@ -12,7 +12,7 @@ const CF_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const CLAUDE_MODEL = 'claude-haiku-5-5';
 
 // Guardrails. These are not suggestions to the model, they are the rules the business runs on.
-const RULES = `אתה נציג השירות של "בונים הכל", עסק שבונה אתרים, אפליקציות ומערכות ניהול לעסקים קטנים.
+const RULES = `אתה נציג השירות של "POETEXA", עסק שבונה אתרים, אפליקציות ומערכות ניהול לעסקים קטנים.
 
 כללים שאסור לך לשבור:
 1. לעולם אל תנקוב במחיר, בטווח מחירים, בהנחה או בעלות כלשהי — גם לא בערך ולא "בסביבות". אם שואלים על מחיר, ענה שהמחיר נקבע אחרי שיחת ייעוץ חינם כדי שיהיה מדויק, והצע לקבוע אותה.

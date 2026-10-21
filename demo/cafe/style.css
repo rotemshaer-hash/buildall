@@ -133,3 +133,13 @@ a{color:inherit}
 .c-foot b{color:var(--cream)}
 .c-dis{margin-top:10px;font-size:13.5px;color:rgba(251,246,239,.6)}
 .c-dis a{color:rgba(251,246,239,.85)}
+/* Keep the full menu and native date fields inside small and tablet viewports. */
+.c-two,.c-menu,.c-row{min-width:0}
+.c-two>* , .c-group,.c-form label{min-width:0}
+.c-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.c-form input,.c-form select{min-width:0;max-width:100%}
+.c-group li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding-bottom:9px;border-bottom:1px dotted var(--line);align-items:start}
+.c-group li span,.c-group li em{white-space:normal;min-width:0}
+.c-group li i{display:none}
+@media(min-width:760px){.c-menu{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:359px){.c-row{grid-template-columns:1fr}.c-ctas .c-btn{flex:1;text-align:center;padding-inline:18px}}

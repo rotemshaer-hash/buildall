@@ -25,7 +25,15 @@ document.addEventListener('click', e => {
     msg.dataset.auto = '1';
   }
   const sel = document.querySelector('#lead [name="what"]');
-  if (sel) for (const o of sel.options) if (o.text.includes(subject)) { sel.value = o.value; break; }
+  if (sel) {
+    const category = a.closest('#manage') ? 'מערכת ניהול' : a.closest('#app') ? 'אפליקציה'
+      : subject.includes('דף נחיתה') ? 'דף נחיתה' : a.closest('#web') ? 'אתר לעסק'
+      : a.closest('#auto, #ai') ? 'כלי או פתרון אחר'
+      : /עובדים|משמרות|מלאי|דוחות|משימות|מסמכים|לקוחות/.test(subject) ? 'מערכת ניהול'
+      : /אפליקציה/.test(subject) ? 'אפליקציה' : /אתר/.test(subject) ? 'אתר לעסק' : 'כלי או פתרון אחר';
+    const option = [...sel.options].find(o => o.text.startsWith(category));
+    if (option) sel.value = option.value;
+  }
   setTimeout(() => document.querySelector('#lead [name="name"]')?.focus({ preventScroll: true }), 600);
 });
 
@@ -147,24 +155,6 @@ mailBtn?.addEventListener('click', async () => {
 const y = document.getElementById('y');
 if (y) y.textContent = new Date().getFullYear();
 
-// Content is visible without JS; the reveal is only added when the browser can run it.
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('main section .h2, .card, .step, .proj, .guarantee, details, .ind, .pain, .example').forEach(el => {
-    el.classList.add('reveal'); io.observe(el);
-  });
-}
-
-document.addEventListener('pointermove', e => {
-  const c = e.target.closest && e.target.closest('.card');
-  if (!c) return;
-  const r = c.getBoundingClientRect();
-  c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-  c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-});
-
 // Counts WhatsApp and phone clicks, per page, once Google Analytics is connected (GA_ID in src/layout.mjs).
 document.addEventListener('click', e => {
   const a = e.target.closest && e.target.closest('[data-wa], [data-call], #lead button');
@@ -275,7 +265,14 @@ document.addEventListener('click', e => {
   let history = [], asked = 0, leadShown = false, busy = false;
 
   const open = () => { panel.hidden = false; setTimeout(() => input.focus(), 80); };
-  const close = () => { panel.hidden = true; };
+  const close = () => { panel.hidden = true; $('ai-open')?.focus(); };
+  panel.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const items = [...panel.querySelectorAll('button,input,a[href]')].filter(el => !el.closest('[hidden]') && !el.disabled);
+    const first = items[0], last = items.at(-1);
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
   for (const b of document.querySelectorAll('.ai-open')) b.addEventListener('click', open);
   $('ai-close').addEventListener('click', close);
   addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
@@ -367,3 +364,11 @@ document.addEventListener('click', e => {
   });
   $('ai-skip').addEventListener('click', () => { lead.hidden = true; });
 })();
+
+// Keep every navigation choice visible, and close the mobile menu after a choice.
+document.querySelectorAll('.nav-bar a').forEach(link => link.addEventListener('click', () => {
+  const menu = link.closest('details');
+  if (menu) menu.open = false;
+}));
+
+document.querySelector('#lead [name="msg"]')?.addEventListener('input', e => { delete e.target.dataset.auto; });
