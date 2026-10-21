@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-label="תצוגת מחשב וטלפון עם אתר POETEXA">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#247fff"/><stop offset=".55" stop-color="#6558f4"/><stop offset="1" stop-color="#ac55f8"/></linearGradient><linearGradient id="dark" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0d1c47"/><stop offset="1" stop-color="#3b2789"/></linearGradient><linearGradient id="glass" x1="0" x2="1"><stop stop-color="#f3f8ff"/><stop offset="1" stop-color="#d9e7ff"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#243c91" flood-opacity=".25"/></filter></defs>
+<ellipse cx="375" cy="475" rx="330" ry="38" fill="#4a70d5" opacity=".12"/>
+<path d="M12 380C155 245 222 435 372 292S611 230 748 100" fill="none" stroke="url(#g)" stroke-width="75" opacity=".16"/>
+<g filter="url(#shadow)" transform="translate(42 36) rotate(-4 295 215)">
+<rect x="60" y="20" width="530" height="345" rx="18" fill="#15264e"/><rect x="71" y="31" width="508" height="322" rx="10" fill="url(#dark)"/>
+<path d="M71 31h508v322H71z" fill="url(#dark)"/>
+<path d="M70 290C184 194 275 340 386 230S510 211 580 105V354H70Z" fill="url(#g)" opacity=".68"/>
+<path d="M70 335C180 240 265 380 396 273S507 255 580 160" fill="none" stroke="#85d9ff" stroke-width="42" opacity=".58"/>
+<path d="M70 324C205 260 260 377 390 290S490 278 580 210" fill="none" stroke="#e7bbff" stroke-width="26" opacity=".6"/>
+<text x="101" y="73" font-size="19" font-weight="800" font-family="Arial,sans-serif" fill="white">P  POETEXA</text>
+<text x="110" y="144" font-size="39" font-weight="800" font-family="Arial,sans-serif" fill="white">Ideas.</text><text x="110" y="188" font-size="39" font-weight="800" font-family="Arial,sans-serif" fill="white">Websites.</text><text x="110" y="232" font-size="39" font-weight="800" font-family="Arial,sans-serif" fill="white">Automation.</text>
+<rect x="110" y="253" width="140" height="30" rx="15" fill="#f7f9ff"/><text x="180" y="273" font-size="13" text-anchor="middle" font-family="Arial" fill="#3b55c7">Explore our work →</text>
+<path d="M48 368h554l70 43q7 8-12 11H-12q-16-3-8-12z" fill="url(#glass)" stroke="#bdc9df" stroke-width="3"/><path d="M185 369h280l18 17H165z" fill="#c8d6ec"/><path d="M-18 410h680q-12 14-45 14H32q-36 0-50-14" fill="#a6b8d7"/>
+</g>
+<g filter="url(#shadow)" transform="translate(520 165) rotate(7 92 160)">
+<rect x="0" y="0" width="185" height="328" rx="29" fill="#101d40" stroke="#b5c7e9" stroke-width="4"/>
+<rect x="8" y="8" width="169" height="312" rx="22" fill="url(#dark)"/>
+<path d="M8 206C75 142 98 244 177 103v217H8Z" fill="url(#g)" opacity=".9"/>
+<path d="M8 266C69 191 113 282 177 176" fill="none" stroke="#7cd5ff" stroke-width="29" opacity=".65"/>
+<rect x="58" y="11" width="68" height="12" rx="6" fill="#111c3e"/>
+<text x="22" y="56" font-family="Arial" font-size="14" font-weight="800" fill="#fff">P  POETEXA</text>
+<text x="23" y="102" font-family="Arial" font-size="20" font-weight="700" fill="#fff">Create.</text><text x="23" y="130" font-family="Arial" font-size="20" font-weight="700" fill="#fff">Build.</text><text x="23" y="158" font-family="Arial" font-size="20" font-weight="700" fill="#fff">Inspire.</text>
+<rect x="25" y="279" width="132" height="25" rx="12" fill="#fff" opacity=".93"/>
+</g></svg>
