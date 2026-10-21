@@ -1543,3 +1543,25 @@ header{box-shadow:0 8px 32px #2453ac12!important}
   .film-vid{margin-inline:auto}
 }
 @media(max-width:420px){.poetexa-hero .ctas{display:grid;grid-template-columns:1fr 1fr}.poetexa-hero .ctas .btn{font-size:13px!important;padding:13px 8px!important}.poetexa-benefits .h2{font-size:clamp(29px,8vw,38px)!important}}
+
+
+/* POETEXA V5: screenshot-specific mobile fixes — never mask content */
+.sb-cta,.sb-cta:before{background:linear-gradient(125deg,#eaf8ff 0%,#eff0ff 55%,#e8fff5 100%)!important;border-color:#d8e7f8!important}
+.sb-cta{border:1px solid #d8e7f8!important;box-shadow:0 14px 42px #3054a018!important}
+.sb-cta:before{height:4px;background:linear-gradient(90deg,#08c98e,#367bfa,#8758f7)!important}
+.sb-cta p{color:#263d67!important}
+.sb-cta b{color:#326df4!important}
+.sb-cta .btn-wa{background:linear-gradient(105deg,#05c982,#03b7a3)!important;box-shadow:0 12px 27px #04bd9d35!important}
+.demo-fab{background:linear-gradient(110deg,#2d76fa,#7b58f4)!important;color:white!important;box-shadow:0 8px 20px #274d9a32!important;animation:none!important}
+.demo-fab .i{stroke:white!important}
+.film-vid{background:linear-gradient(135deg,#e9f4ff,#e9e7ff)!important;border:1px solid #d9e7fa!important;padding:8px!important;border-radius:28px!important}
+.film-vid video{width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:9/16;object-fit:contain;border:0!important;border-radius:18px!important;display:block}
+@media(max-width:760px){
+  .demo-fab{position:static!important;display:flex!important;width:fit-content;max-width:calc(100% - 32px);margin:20px auto!important;justify-content:center;padding:12px 20px!important;font-size:15px!important;transform:none!important}
+  .demo-fab.hide{display:none!important}
+  .sb-cta{padding:23px 18px!important;gap:16px!important}
+  .sb-cta p{font-size:17px!important;line-height:1.75!important}
+  .sb-cta .btn-wa{width:100%!important;justify-content:center!important}
+  .film-vid{width:min(100%,350px)!important;max-width:350px!important;margin-inline:auto!important}
+  .why-sec .h2,.poetexa-benefits .h2{overflow-wrap:normal;word-break:normal}
+}
