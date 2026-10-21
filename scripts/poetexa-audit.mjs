@@ -7,7 +7,7 @@ walk('dist');
 let failed=0;
 const report=(ok,message)=>{if(!ok){console.error('FAIL '+message);failed++;}};
 const css=readFileSync('dist/style.css','utf8');
-const layoutPages=files.filter(f=>f.endsWith('.html')&&!f.includes('/demo/'));
+const layoutPages=files.filter(f=>f.endsWith('.html')&&!f.includes('/demo/')&&!f.includes('googlef0'));
 for(const p of layoutPages){const s=readFileSync(p,'utf8');report(s.includes('POETEXA'),p+' missing brand');report(!s.includes('בונים הכל'),p+' legacy brand');report(s.includes('style.css'),p+' missing stylesheet');}
 for(const hex of ['#8A6A10','#D4A017','#D8CEB4','#E8E1D0','#1C1406','#F7F4EC','#15100A'])report(!css.toUpperCase().includes(hex), 'legacy palette '+hex);
 const manifest=readFileSync('dist/manifest.webmanifest','utf8');
