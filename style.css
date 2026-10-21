@@ -1432,3 +1432,22 @@ input:focus,textarea:focus,select:focus{border-color:#6d69f5!important;box-shado
 @media(min-width:900px){.hero .wrap{padding-bottom:80px}.hero .browser{box-shadow:0 30px 75px rgba(72,89,178,.17)!important}}
 @media(max-width:899px){.hero .wrap{padding-bottom:58px}.hero:after{height:145px!important}.hero-vis{display:none!important}.hero h1{letter-spacing:-.025em!important}.head-actions{gap:6px}.nav-bar ul{scrollbar-width:none}}
 @media(max-width:390px){header .wrap{gap:5px}.hero .wrap{padding-inline:18px}.hero:after{height:110px!important}}
+
+
+/* QA pass: remove remaining dark/gold surfaces and protect responsive controls */
+.hero:before{background-image:linear-gradient(rgba(81,116,240,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(81,116,240,.055) 1px,transparent 1px)!important}
+.nav-bar a{background:#f5f7ff!important;border:1px solid #e2e8fa!important;color:#334d86!important}
+.nav-bar a:focus-visible,.head-nav a:focus-visible{outline:3px solid #6c64ee;outline-offset:3px}
+.logo b em{color:#6a5cf5!important}
+.head-actions .btn-ai .i{stroke:#fff!important}
+.hero .browser .top i{background:#9ab2f5}
+.hero .dash nav b:first-child{background:linear-gradient(90deg,#3d84ff,#9868f5)}
+.hero .dash nav b{background:rgba(255,255,255,.25)}
+.hero .phone .bar{background:#354d9b;color:#fff}
+.hero .phone .row.ok{color:#286b87}
+.hero .phone .row.go{background:#586ef0;color:#fff}
+:where(.btn,.pill,.card,.proof-card,.ind){-webkit-tap-highlight-color:transparent}
+:where(.btn,.head-actions button,.head-actions a){min-height:42px}
+@media(min-width:900px){.hero .hero-grid{min-width:0}.hero .hero-grid>div{min-width:0}}
+@media(max-width:899px){.hero .pills{justify-content:center}.hero h1{overflow-wrap:break-word!important}.hero .hero-grid{min-width:0}.head-actions .btn-ai,.head-actions .btn-call,.head-actions .head-cta{min-width:0}}
+@media(max-width:600px){.wrap{padding-inline:16px}.hero .pills{gap:7px}.hero .pill{font-size:12px}.hero .ctas .btn{max-width:none}}
