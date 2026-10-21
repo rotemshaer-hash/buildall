@@ -1480,3 +1480,66 @@ body{background:#fff!important}
 details>summary{color:#24385f}
 .proj,.mock,.dev,.film-note,.callout,.demo-sec{border-color:#e2eafa}
 @media(max-width:500px){.logo .poetexa-wordmark{font-size:17px!important}.logo small{font-size:7px!important;letter-spacing:.4px!important}}
+
+
+/* POETEXA VISUAL SYSTEM V4 — four approved reference panels */
+:root{--po-blue:#316df6;--po-violet:#8055f8;--po-mint:#06c98d;--po-green:#00c979;--po-deep:#0c214c;--po-light:#f5f9ff}
+body{font-family:Heebo,Assistant,Arial,sans-serif!important;letter-spacing:-.01em}
+h1,h2,h3,.h2,.logo b{font-family:Heebo,Assistant,Arial,sans-serif!important;letter-spacing:-.045em}
+h2.h2{font-weight:900!important;line-height:1.18!important}
+.poetexa-gradient-text{background:linear-gradient(100deg,#1b76ff 10%,#7856fa 55%,#08bca0);background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent}
+header{box-shadow:0 8px 32px #2453ac12!important}
+.head-actions .btn-wa,header .btn-wa{background:linear-gradient(145deg,#04d57e,#02a975)!important;box-shadow:0 9px 25px #04c88738!important;border:0!important}
+.head-actions .btn-ai{background:linear-gradient(110deg,#2879ff,#8053fb)!important}
+.poetexa-hero{background:radial-gradient(ellipse at 13% 85%,#e0f6ff 0%,transparent 48%),radial-gradient(ellipse at 90% 20%,#e8e6ff 0%,transparent 48%),#fdfefe!important}
+.poetexa-hero h1{font-weight:950!important;color:#0c214c!important}
+.poetexa-hero h1 span{background:linear-gradient(105deg,#217aff 12%,#8450f8 90%);-webkit-background-clip:text;background-clip:text}
+.poetexa-hero-cta{background:linear-gradient(105deg,#00c977 0%,#09bfab 25%,#3478ff 60%,#8054f8 100%)!important;box-shadow:0 15px 35px #356ce33c!important}
+.poetexa-hero .poetexa-kicker{background:#e9f4ff!important;color:#4762b6!important}
+.poetexa-quick-card{border:1px solid #e4eaf9!important;box-shadow:0 18px 42px #274a9b1c!important}
+.poetexa-quick-icon{background:linear-gradient(135deg,#d9faff,#e8e4ff)!important;color:#3468f3!important}
+.poetexa-benefits{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 25%,#ddfff1 0%,transparent 40%),radial-gradient(circle at 90% 70%,#e0efff 0%,transparent 43%),#f7faff!important;padding-block:clamp(60px,8vw,110px)!important}
+.poetexa-benefits .sec-head{margin-inline:auto;text-align:center;max-width:730px}
+.poetexa-benefits .lead{max-width:650px;margin-inline:auto}
+.poetexa-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:35px 0 26px}
+.poetexa-benefit{background:linear-gradient(145deg,#fff,#f7fbff);border:1px solid #e2eaf9;border-radius:24px;padding:29px 14px;min-height:190px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;text-align:center;text-decoration:none;box-shadow:0 12px 35px #2454a512;transition:transform .25s,box-shadow .25s}
+.poetexa-benefit:hover{transform:translateY(-6px);box-shadow:0 22px 46px #2454a526}
+.poetexa-benefit-icon{width:65px;height:65px;display:grid;place-items:center;font-size:37px;line-height:1;color:#456afa;background:linear-gradient(140deg,#e5f4ff,#ece4ff);border-radius:21px}
+.poetexa-benefit:nth-child(3) .poetexa-benefit-icon{color:#7652f6}
+.poetexa-benefit:nth-child(4) .poetexa-benefit-icon{color:#00bd93;background:#e0fff4}
+.poetexa-benefit h3{font-size:21px!important;color:#112653!important;font-weight:850!important;margin:0}
+.poetexa-benefit p{font-size:15px!important;color:#66789b!important;margin:0!important}
+.poetexa-green-cta{margin:10px auto 0;max-width:680px;display:flex;align-items:center;justify-content:center;gap:22px;padding:20px 25px;background:linear-gradient(110deg,#03d579,#00bca4)!important;border-radius:22px;text-decoration:none;color:white!important;box-shadow:0 17px 36px #04bf9d38}
+.poetexa-green-cta svg{width:38px;height:38px;fill:white}
+.poetexa-green-cta span:nth-child(2){display:flex;flex-direction:column;gap:3px;text-align:right}
+.poetexa-green-cta strong{font-size:23px;font-weight:900;color:#fff!important}
+.poetexa-green-cta small{font-size:14px;color:#eafff6!important}
+.poetexa-green-cta>span:last-child{font-size:28px}
+.sb-cta{background:linear-gradient(145deg,#f5f9ff,#eef8ff)!important;border:1px solid #dce8fa!important;box-shadow:0 15px 40px #2b59a514!important}
+.sb-cta p,.sb-cta b{color:#223960!important}
+.sb-cta .btn-wa{background:linear-gradient(110deg,#02cb78,#00b99c)!important;color:#fff!important}
+.film{background:linear-gradient(145deg,#f5f8ff,#f1f7ff)!important}
+.film-vid{border-radius:28px!important;overflow:hidden;box-shadow:0 24px 65px #102c6535!important}
+.film-vid video{border:8px solid #1b2d59!important;border-radius:25px!important}
+.film-note{background:#f0f6ff!important;color:#425879!important}
+.proof-card:before{background:linear-gradient(90deg,#08c79e,#3977ff,#8559fa)!important}
+.services .svc-g,.services .card{border-color:#e1e9fa!important}
+.services .svc-g>summary .ic{background:linear-gradient(135deg,#e5f6ff,#ece7ff)!important;color:#4568f1!important}
+.contact .btn-wa,.contact [data-wa]{background:linear-gradient(105deg,#02cb78,#00b8a0)!important;color:#fff!important}
+:where(.btn,.poetexa-green-cta,.poetexa-benefit,.poetexa-quick-card):focus-visible{outline:3px solid #00bca4!important;outline-offset:3px}
+@media(max-width:850px){.poetexa-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+  .poetexa-hero .wrap{padding-bottom:85px!important}
+  .poetexa-benefits{padding-block:58px!important}
+  .poetexa-benefit-grid{gap:11px;margin-top:25px}
+  .poetexa-benefit{padding:21px 10px;min-height:158px;border-radius:21px}
+  .poetexa-benefit-icon{width:51px;height:51px;font-size:31px;border-radius:17px}
+  .poetexa-benefit h3{font-size:17px!important}
+  .poetexa-benefit p{font-size:13px!important}
+  .poetexa-green-cta{gap:14px;padding:16px 14px;border-radius:20px}
+  .poetexa-green-cta strong{font-size:20px}
+  .poetexa-green-cta svg{width:32px;height:32px}
+  .poetexa-green-cta small{font-size:12px}
+  .film-vid{margin-inline:auto}
+}
+@media(max-width:420px){.poetexa-hero .ctas{display:grid;grid-template-columns:1fr 1fr}.poetexa-hero .ctas .btn{font-size:13px!important;padding:13px 8px!important}.poetexa-benefits .h2{font-size:clamp(29px,8vw,38px)!important}}
