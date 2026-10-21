@@ -123,7 +123,8 @@ ${contact()}`
 const problemsSection = root => `<section class="problems" id="problems">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2"><span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span></h2>
+      <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
+      <h2 class="h2">מה גוזל לך זמן בעסק?</h2>
       <p class="lead">לא צריך לדעת אם זה אתר, מערכת או אפליקציה. תבחר את מה שגוזל לך הכי הרבה זמן, ונראה לך מה אפשר לעשות איתו.</p>
     </div>
     <div class="prob-grid">
@@ -149,7 +150,6 @@ const page = ({ path, root, title, description, schemas, body, greeting, from })
   head({ title, description, path, schemas, root }) + `
 <body${greeting ? ` data-greeting="${greeting}"` : ''}${from ? ` data-from="${from}"` : ''}${FORM_KEY ? ` data-formkey="${FORM_KEY}"` : ''}>
 ${header(root)}
-${navBar(root)}
 <main id="top">
 ${body}
 </main>

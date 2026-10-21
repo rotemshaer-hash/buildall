@@ -365,10 +365,34 @@ document.addEventListener('click', e => {
   $('ai-skip').addEventListener('click', () => { lead.hidden = true; });
 })();
 
-// Keep every navigation choice visible, and close the mobile menu after a choice.
-document.querySelectorAll('.nav-bar a').forEach(link => link.addEventListener('click', () => {
-  const menu = link.closest('details');
-  if (menu) menu.open = false;
-}));
+// Close the compact navigation after a choice, outside tap, or Escape.
+(() => {
+  const menu = document.querySelector('.mobile-menu');
+  if (!menu) return;
+  const summary = menu.querySelector('summary');
+  const close = (focus = false) => { menu.open = false; if (focus) summary.focus(); };
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => close()));
+  menu.querySelector('.menu-backdrop')?.addEventListener('click', () => close(true));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.open) close(true); });
+})();
+
+// The file preview supplies a Blob URL; hosted pages retain the original MP4 URL.
+(() => {
+  const player = document.querySelector('[data-film-player]');
+  if (!player) return;
+  const video = player.querySelector('video'), play = player.querySelector('.film-play');
+  const status = player.querySelector('.film-status');
+  play.hidden = false;
+  play.addEventListener('click', async () => {
+    play.disabled = true;
+    status.textContent = '';
+    try { await video.play(); }
+    catch { play.hidden = false; status.textContent = 'הניגון לא התחיל. אפשר לשמור את הסרטון ולפתוח אותו בנגן של הטלפון.'; }
+    finally { play.disabled = false; }
+  });
+  video.addEventListener('playing', () => { play.hidden = true; status.textContent = ''; });
+  video.addEventListener('ended', () => { play.hidden = false; });
+  video.addEventListener('error', () => { play.hidden = false; status.textContent = 'אפשר לשמור את הסרטון ולפתוח אותו בנגן של הטלפון.'; });
+})();
 
 document.querySelector('#lead [name="msg"]')?.addEventListener('input', e => { delete e.target.dataset.auto; });

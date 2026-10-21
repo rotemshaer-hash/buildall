@@ -175,31 +175,35 @@ export function header(root) {
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
       <button class="btn btn-ai ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
       <a aria-label="שיחה בוואטסאפ" class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
+      ${navBar(root)}
     </div>
   </div>
 </header>`;
 }
 
-// A scrollable strip under the header, for phones where the header has no room for links.
-// The order is the page's own order, top to bottom: the strip is a map of the scroll,
-// so whoever jumps from it knows where he landed. Moving a section moves its chip.
+// One compact navigation control inside the header; the panel is a complete site map.
 export function navBar(root) {
   const r = root || './';
+  const items = [
+    ['problems','wrench','נתחיל מהבעיה'], ['film','camera','סרטון הדגמה'],
+    ['services','globe','שירותים'], ['auto','zap','אוטומציות'], ['ai','bot','AI'],
+    ['industries','store','לפי תחום'], ['work','star','עבודות'],
+    ['process','check','איך עובדים'], ['contact','message','יצירת קשר']
+  ];
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
-  <details class="mobile-menu"><summary>ניווט באתר <span aria-hidden="true">☰</span></summary>
-  <ul>
-    <li><a href="${r}#problems">נתחיל מהבעיה</a></li>
-    <li><a href="${r}#film">סרטון הדגמה</a></li>
-    <li><a href="${r}#services">שירותים</a></li>
-    <li><a href="${r}#auto">אוטומציות</a></li>
-    <li><a href="${r}#ai">AI</a></li>
-    <li><a href="${r}#industries">לפי תחום</a></li>
-    <li><a href="${r}#work">עבודות</a></li>
-    <li><a href="${r}#process">איך עובדים</a></li>
-    <li><a href="${r}#contact">יצירת קשר</a></li>
-  </ul>
-  </details>
-</nav>`;
+    <details class="mobile-menu">
+      <summary aria-label="פתיחה וסגירה של תפריט האתר" title="תפריט">
+        <span class="menu-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <svg class="menu-close" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </summary>
+      <button class="menu-backdrop" type="button" aria-label="סגירת התפריט" tabindex="-1"></button>
+      <div class="menu-panel">
+        <div class="menu-intro"><span>POETEXA / EXPLORE</span><b>מה בונים היום?</b></div>
+        <ul>${items.map(([id, name, label]) => `<li><a href="${r}#${id}"><span class="menu-icon">${icon(name)}</span><span>${label}</span></a></li>`).join('')}</ul>
+        <a class="menu-contact" href="${r}#contact">בוא נדבר על הרעיון שלך <span aria-hidden="true">←</span></a>
+      </div>
+    </details>
+  </nav>`;
 }
 
 export function footer(root, nav) {

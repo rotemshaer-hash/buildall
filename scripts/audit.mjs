@@ -111,7 +111,11 @@ console.log('\nסרגל הניווט:');
 // The strip is a map of the scroll, so its order is checked against the page itself
 // rather than against a list written here — a hard-coded position only breaks the day
 // a section moves, which is exactly the day the check should have helped.
-const chips = [...home.matchAll(/<li><a href="[^"]*#([a-z-]+)">([^<]+)</g)].map(m => ({ id: m[1], name: m[2] }));
+const chips = [...home.matchAll(/<li><a href="[^"]*#([a-z-]+)">([\s\S]*?)<\/a><\/li>/g)].map(m => ({ id: m[1], name: m[2].replace(/<[^>]+>/g, '').trim() }));
+ok(chips.length === 9, 'תפריט מלא עם תשעה יעדים');
+ok(!home.includes('class="marquee"'), 'פס השירותים החתוך הוסר');
+ok(!home.includes('ניווט באתר'), 'אין שורת ניווט נפרדת וכפולה');
+ok(home.includes('class="film-play"'), 'כפתור ניגון מפורש לסרטון');
 const at = id => home.indexOf(`id="${id}"`, home.indexOf('</nav>'));
 for (const c of chips) ok(at(c.id) > -1, `לסקשן "${c.name}" יש עוגן בעמוד (#${c.id})`);
 const strayed = chips.find((c, i) => i > 0 && at(c.id) < at(chips[i - 1].id));
