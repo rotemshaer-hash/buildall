@@ -1424,3 +1424,39 @@ footer b,footer a,footer summary{color:#24375f!important}
 @media(max-width:600px){.wrap{padding-inline:16px}.hero .pills{gap:8px}.hero .pill{font-size:12px}.hero .wrap{padding-inline:18px}}
 @media(max-width:420px){.hero h1{font-size:clamp(29px,8vw,37px)!important}.hero p{font-size:17px!important}.logo b{font-size:16px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* POETEXA 2026: custom homepage composition — not a reskin of the old hero */
+.poetexa-hero{padding:0!important;min-height:630px!important;background:radial-gradient(ellipse at 75% 20%,#e3efff 0%,transparent 42%),radial-gradient(ellipse at 10% 82%,#e8ddff 0%,transparent 40%),#fff!important;overflow:hidden;position:relative}
+.poetexa-hero .hero-grid{display:grid!important;grid-template-columns:44% 56%!important;align-items:center!important;gap:0!important;min-height:630px}
+.poetexa-hero .wrap{padding-top:40px!important;padding-bottom:115px!important}
+.poetexa-hero .poetexa-copy{position:relative;z-index:3}
+.poetexa-hero .poetexa-kicker{display:inline-flex;align-items:center;background:#eaf0ff;border:1px solid #dce5ff;color:#5268c9;border-radius:100px;padding:7px 17px;font-size:14px;font-weight:800;margin-bottom:22px}
+.poetexa-hero h1{font-size:clamp(52px,5.6vw,82px)!important;line-height:1.14!important;letter-spacing:-.06em!important;margin:0 0 20px!important;max-width:none!important;color:#11244d!important}
+.poetexa-hero h1 span{background:linear-gradient(110deg,#2679ff,#8f51f4);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.poetexa-hero p{font-size:clamp(18px,1.6vw,22px)!important;line-height:1.7!important;color:#5d6b89!important;max-width:530px!important;margin:0 0 27px!important}
+.poetexa-hero .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start!important}
+.poetexa-hero .ctas .btn{border-radius:99px!important;padding:14px 24px!important;min-height:52px}
+.poetexa-hero .btn-brand{background:linear-gradient(110deg,#267bff,#7e4ff1)!important}
+.poetexa-hero .btn-line{background:#fff!important;color:#3851a0!important;border:1px solid #dce4f7!important}
+.poetexa-trust{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:30px;color:#647396;font-size:13px;font-weight:700}
+.poetexa-trust span:before{content:"✓";color:#5868f4;margin-left:6px}
+.poetexa-visual{position:relative;z-index:2;min-width:0;margin-inline:-30px -55px}
+.poetexa-visual img{display:block;width:100%;height:auto;max-width:none;filter:drop-shadow(0 15px 18px #2e5ba312)}
+.poetexa-hero:after{display:none!important}
+.poetexa-ribbon{position:absolute;inset:auto 0 -45px;height:250px;pointer-events:none;background:url("assets/poetexa-wave.svg") center bottom/100% 100% no-repeat;opacity:.72}
+.poetexa-quick{position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;margin-top:-70px!important;margin-bottom:72px!important}
+.poetexa-quick-card{display:flex;align-items:center;flex-direction:column;gap:10px;text-align:center;background:#fff;color:#142955!important;border:1px solid #e7edfa;border-radius:18px;padding:27px 14px 24px;min-height:174px;text-decoration:none;box-shadow:0 14px 35px #3158a01a;transition:transform .2s,box-shadow .2s}
+.poetexa-quick-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px #3158a02b}
+.poetexa-quick-icon{display:grid;place-items:center;width:55px;height:55px;border-radius:18px;background:linear-gradient(135deg,#e8f5ff,#efe7ff);color:#5362ec;font-size:30px;font-weight:800}
+.poetexa-quick-card b{font-family:Heebo,Assistant,sans-serif;font-size:19px}
+.poetexa-quick-card small{color:#697994;font-size:14px;line-height:1.5}
+.proof{padding-top:65px!important}
+.proof .sec-head{text-align:center;margin-inline:auto}
+.proof .lead{margin-inline:auto}
+.proof-card{min-height:225px}
+.work .proj{border-radius:22px!important;overflow:hidden;box-shadow:0 15px 35px #081d4722}
+.work .mock{min-height:190px}
+@media(max-width:1000px){.poetexa-hero .hero-grid{grid-template-columns:47% 53%!important}.poetexa-hero h1{font-size:clamp(43px,5.8vw,66px)!important}.poetexa-visual{margin-inline:-20px -30px}}
+@media(max-width:760px){.poetexa-hero{min-height:0!important}.poetexa-hero .hero-grid{display:flex!important;flex-direction:column!important;min-height:0!important;gap:0!important;text-align:center}.poetexa-hero .wrap{padding:46px 18px 100px!important}.poetexa-hero .poetexa-copy{width:100%}.poetexa-hero h1{font-size:clamp(43px,10vw,62px)!important;line-height:1.13!important;max-width:none!important;margin:0 auto 16px!important}.poetexa-hero p{font-size:17px!important;max-width:36ch!important;margin:0 auto 22px!important}.poetexa-hero .ctas{justify-content:center!important}.poetexa-hero .ctas .btn{width:auto!important;max-width:none!important;font-size:15px!important}.poetexa-trust{justify-content:center;margin-top:20px;font-size:12px}.poetexa-visual{width:min(100%,560px);margin:0 auto -25px!important}.poetexa-ribbon{height:150px}.poetexa-quick{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:-62px!important;gap:10px;margin-bottom:40px!important}.poetexa-quick-card{min-height:145px;padding:18px 10px}.poetexa-quick-icon{width:44px;height:44px;font-size:24px}.poetexa-quick-card b{font-size:16px}.poetexa-quick-card small{font-size:12px}}
+@media(max-width:380px){.poetexa-hero .ctas{gap:8px}.poetexa-hero .ctas .btn{font-size:13px!important;padding:11px 15px!important}.poetexa-hero h1{font-size:41px!important}.poetexa-quick-card{min-height:150px}}
