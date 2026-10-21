@@ -25,6 +25,8 @@ jobs:
           test -s dist/index.html
           test -s dist/style.css
           test -s dist/assets/poetexa-wave.svg
+      - name: Audit all pages and brand colors
+        run: node scripts/poetexa-audit.mjs
       - name: Capture desktop and mobile screenshots
         run: |
           mkdir -p screenshots
