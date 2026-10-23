@@ -2,7 +2,7 @@
 // Change it here and `node build.mjs` writes it into every page.
 
 // The site's address. When a real domain is bought, change this one line and rebuild.
-export const BASE = 'https://poetexa.pages.dev/';
+export const BASE = 'https://buildall.pages.dev/';
 
 export const BRAND = 'POETEXA';
 export const FULL_NAME = 'POETEXA — סטודיו לעיצוב אתרים, אפליקציות ופתרונות AI';
