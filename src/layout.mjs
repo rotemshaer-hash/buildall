@@ -1,8 +1,8 @@
 // Everything every page shares: the address, the icons, the logo, the head, header and footer.
 // Change it here and `node build.mjs` writes it into every page.
 
-// The site's address. When buildall.co.il is bought, change this one line and rebuild.
-export const BASE = 'https://buildall.pages.dev/';
+// The site's address. When a real domain is bought, change this one line and rebuild.
+export const BASE = 'https://poetexa.pages.dev/';
 
 export const BRAND = 'POETEXA';
 export const FULL_NAME = 'POETEXA — סטודיו לעיצוב אתרים, אפליקציות ופתרונות AI';
