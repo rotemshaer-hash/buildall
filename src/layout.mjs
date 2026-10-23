@@ -18,7 +18,7 @@ export const GSC_VERIFY = '41VeVOyRt4SkL_H4KKYRCT9Z7gUJ_T5l3eAbktuZsnc';
 // הכתובת עצמה שמורה אצלם ולא מופיעה בקוד, כי המאגר ציבורי וכתובת גלויה אוספת ספאם.
 // להשיג מפתח: web3forms.com -> מקלידים את המייל העסקי -> המפתח מגיע למייל.
 // כל עוד הוא ריק, כפתור המייל לא מוצג והטופס עובד בוואטסאפ בלבד.
-export const FORM_KEY = 'eed1fcb6-96a4-420a-abf0-59ea69954cf4';
+export const FORM_KEY = 'f42beb26-188e-4cb0-a2f9-bfc75aa1d734';
 // הכתובת להצגה באתר ובפוטר. ריק = לא מוצגת.
 export const EMAIL = 'poetexa.studio@gmail.com';
 

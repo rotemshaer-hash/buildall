@@ -7,7 +7,7 @@ import { spawnSync } from 'node:child_process';
 const FILES = [
   'index.html', '404.html', 'style.css', 'site.js', 'sw.js', 'manifest.webmanifest',
   '_worker.js', 'kb.json',
-  'assets', 'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo',
+  'assets', 'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo/cafe', 'demo/landing',
   'googlef057313d56875ab6.html',   // Search Console ownership. Google says to keep it for good.
   'accessibility', 'privacy', 'guides', 'work', 'media',
   'restaurants', 'beauty', 'retail', 'clinics', 'contractors', 'fitness'
