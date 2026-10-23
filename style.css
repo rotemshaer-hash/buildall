@@ -382,10 +382,10 @@ footer{padding-block:56px;background:#eef2fb;color:var(--muted);font-size:16px;b
 
 /* Mobile navigation: a single jewel-shaped control inside the shared header. */
 .mobile-menu{margin:0;padding:0;border:0;background:none;border-radius:0}
-.mobile-menu>summary{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border:1px solid transparent;border-radius:15px;background:var(--accent);box-shadow:0 8px 22px #3258c51f;color:#fff;position:relative;z-index:3}
+.mobile-menu>summary{display:flex;align-items:center;justify-content:center;width:44px;height:44px;min-height:44px;padding:0;border:1px solid transparent;border-radius:15px;background:var(--accent);box-shadow:0 8px 22px #3258c51f;color:#fff;position:relative;z-index:3}
 .mobile-menu>summary:after{display:none}
-.menu-glyph{display:grid;grid-template-columns:repeat(2,7px);gap:4px;transform:rotate(-8deg)}
-.menu-glyph i{width:7px;height:7px;border-radius:2px;background:currentColor}.menu-glyph i:last-child{background:currentColor;opacity:.6;transform:rotate(30deg)}
+.menu-glyph{display:grid;gap:4px;justify-items:center}
+.menu-glyph i{width:19px;height:2px;border-radius:2px;background:currentColor}
 .menu-close{display:none;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
 .mobile-menu[open]>summary{background:var(--ink);border-color:transparent;color:#fff}.mobile-menu[open] .menu-glyph{display:none}.mobile-menu[open] .menu-close{display:block}
 .menu-backdrop{position:fixed;inset:var(--head-h) 0 0;z-index:1;background:#15274d36;backdrop-filter:blur(3px);border:0;border-radius:0;width:100%;height:calc(100dvh - var(--head-h))}
