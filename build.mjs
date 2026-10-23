@@ -117,15 +117,15 @@ ${contact()}`
   });
 };
 
-// The visitor picks what eats his time and gets the answer in place. The section speaks
-// about time coming back, not about pain: a business that builds systems does not
-// commiserate with its customer, it shows him what he gets back.
+// The visitor picks what's actually slowing him down and gets the answer in place.
+// Covers lost leads, poor discoverability and onboarding too, not only repetitive
+// work — so the heading can't narrow it to "time" alone.
 const problemsSection = root => `<section class="problems" id="problems">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
-      <h2 class="h2">מה גוזל לך זמן בעסק?</h2>
-      <p class="lead">לא צריך לדעת אם זה אתר, מערכת או אפליקציה. תבחר את מה שגוזל לך הכי הרבה זמן, ונראה לך מה אפשר לעשות איתו.</p>
+      <h2 class="h2">מה הכי מעכב אותך בעסק?</h2>
+      <p class="lead">לא צריך לדעת אם הפתרון הוא אתר, מערכת או אפליקציה. תבחר את מה שהכי מעיק עליך, ונראה לך מה אפשר לעשות איתו.</p>
     </div>
     <div class="prob-grid">
 ${problems.map(p => `      <details class="prob" name="prob">
@@ -139,7 +139,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
           </div>
         </div>
       </details>`).join('\n')}
-      <a class="prob prob-other" data-wa data-msg="משהו אחר שגוזל לי זמן" href="#contact">
+      <a class="prob prob-other" data-wa data-msg="משהו אחר שמעכב אותי" href="#contact">
         <span class="ic">${icon('bulb')}</span><b>יש לי משהו אחר</b>
       </a>
     </div>
@@ -155,8 +155,10 @@ ${body}
 </main>
 ${footer(root, nav)}`;
 
-// The floating invitation to the live demo. `hideAt` is the element that makes it
-// redundant: on the demo page the demo itself, on the home page the card that offers it.
+// The invitation to the live demo, used on the demo page itself; `hideAt` is the
+// demo element that makes it redundant once it's in view. Dropped from the home
+// page: it sat right before the section that immediately hid it again, so it
+// showed for a flash and vanished on the first scroll.
 const demoFab = (href, hideAt) =>
   `<a class="demo-fab" href="${href}" data-hide-at="${hideAt}">${icon('zap')}<span>נסה דוגמה חיה</span></a>`;
 
@@ -175,7 +177,7 @@ write('index.html', page({
   title: 'POETEXA | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
   description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
   schemas: [business, videoSchema, faqSchema(homeFaq)],
-  body: home.replace('<!-- PROOF -->', demoFab('work/work-it/#demo', '.proof-grid') + '<!-- PROOF -->')
+  body: home
 }));
 
 // ---------- industry pages ----------
@@ -200,7 +202,7 @@ for (const i of industries) {
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">מהשטח</span>
-      <h2 class="h2">${i.short} — מה גוזל את הזמן</h2>
+      <h2 class="h2">${i.short} — מה הכי מעכב</h2>
     </div>
     <div class="pains">
 ${i.pains.map(p => `      <a class="pain" href="#s${p.fix}"><span>✕</span><p>${p.t}</p><span class="pain-go">לפתרון ←</span></a>`).join('\n')}
