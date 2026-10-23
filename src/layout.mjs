@@ -20,7 +20,7 @@ export const GSC_VERIFY = '41VeVOyRt4SkL_H4KKYRCT9Z7gUJ_T5l3eAbktuZsnc';
 // כל עוד הוא ריק, כפתור המייל לא מוצג והטופס עובד בוואטסאפ בלבד.
 export const FORM_KEY = 'eed1fcb6-96a4-420a-abf0-59ea69954cf4';
 // הכתובת להצגה באתר ובפוטר. ריק = לא מוצגת.
-export const EMAIL = 'buildall.office@gmail.com';
+export const EMAIL = 'poetexa.studio@gmail.com';
 
 // Line icons, 24×24, drawn with the brand gradient. Used as <svg class="i"><use href="#i-NAME"/></svg>.
 const ICONS = {
@@ -310,7 +310,6 @@ export const business = {
   '@type': 'ProfessionalService',
   '@id': BASE + '#business',
   name: FULL_NAME,
-  alternateName: 'Build All',
   url: BASE,
   telephone: PHONE.intl,
   slogan: 'הטכנולוגיה שעסקים גדולים משלמים עליה הון, במחיר של עסק קטן.',
