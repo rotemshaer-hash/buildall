@@ -247,7 +247,11 @@ section{padding-block:clamp(64px,7vw,104px)}
 .group-title:after{content:"";height:1px;flex:1;background:var(--line)}
 .btn,.poetexa-green-cta,.demo-fab{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:50px;padding:13px 23px;border:1px solid transparent;border-radius:14px;text-decoration:none;font-size:16px;font-weight:700;line-height:1.65;white-space:normal;transition:background .2s,box-shadow .2s}
 .btn svg{width:21px;height:21px;flex:none;fill:currentColor}.btn .i{fill:none;stroke:currentColor;color:inherit}
-.btn-brand,.btn-ai{background:var(--accent);color:#fff;box-shadow:0 8px 22px #3258c51f}
+.btn-brand,.btn-ai{position:relative;overflow:hidden;background:var(--accent);color:#fff;box-shadow:0 8px 22px #3258c51f}
+.btn-brand::after,.btn-ai::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 48%,transparent 66%);
+  transform:translateX(-120%);animation:btn-sheen 4.5s ease-in-out infinite}
+@keyframes btn-sheen{0%,45%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 22px #087c581c}
 .btn-line,.btn-ghost,.btn-call{color:var(--teal);background:#fff;border-color:var(--line-strong)}
 .btn:hover{box-shadow:var(--sh)}.btn:disabled{cursor:wait;opacity:.65}
@@ -257,7 +261,10 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex:none;white-space:nowrap;line-height:1.3}
 .logo svg{width:40px;height:40px;padding:5px;border-radius:12px;background:var(--accent);stroke:#fff;fill:#fff}
 .logo .lk{stroke:#fff}.logo .lk-d{fill:#fff}
-.logo b{display:block;font:800 23px/1.4 Heebo,Arial,sans-serif;letter-spacing:.01em;direction:ltr;unicode-bidi:isolate}
+.logo b{display:block;font:800 23px/1.4 Heebo,Arial,sans-serif;letter-spacing:.01em;direction:ltr;unicode-bidi:isolate;
+  background:linear-gradient(100deg,var(--ink) 35%,#aebdf2 48%,#fff 50%,#aebdf2 52%,var(--ink) 65%);background-size:250% auto;background-position:150% 0;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:logo-shine 5s ease-in-out infinite}
+@keyframes logo-shine{0%,25%{background-position:150% 0}65%,100%{background-position:-50% 0}}
 .logo small{display:block;font:600 9px/1.8 Arial,sans-serif;letter-spacing:1.4px;color:var(--muted)}
 .head-nav{display:flex;gap:22px;align-items:center;font-size:15px;font-weight:700}
 .head-nav a{text-decoration:none;padding-block:10px;white-space:nowrap}.head-nav a:hover{color:var(--teal)}
