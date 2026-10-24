@@ -308,7 +308,9 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .pb-med b,.pb-wide b{display:block;font:800 14px/1.5 Heebo,Arial,sans-serif}
 .pb-med small,.pb-wide small{color:var(--muted);font-size:12.5px}
 .pb-wide{grid-column:1/-1;background:#fff;border:1px solid var(--line);min-height:88px;flex-direction:row;align-items:center;gap:16px;transform:none;box-shadow:var(--sh-sm)}
-@media(prefers-reduced-motion:reduce){.pb-card{transform:none}}
+.pb-tilt{transform:perspective(900px) rotateX(14deg) rotateY(-11deg) scale(.96);opacity:.6;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.pb-tilt.pb-in{transform:rotateX(4deg) rotateY(-3deg);opacity:1}
+@media(prefers-reduced-motion:reduce){.pb-card{transform:none}.pb-tilt{opacity:1}}
 
 .poetexa-pill-cta{margin-top:26px;display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 22px;box-shadow:0 16px 30px -16px #15274d2a;text-decoration:none;color:var(--ink)}
 .poetexa-pill-cta span{font:800 15px Heebo,Arial,sans-serif}

@@ -398,10 +398,26 @@ document.addEventListener('click', e => {
 
 document.querySelector('#lead [name="msg"]')?.addEventListener('input', e => { delete e.target.dataset.auto; });
 
-// Subtle pointer tilt on the bento cards that carry real depth — a touch/mouse
-// nudge, not a hover trick, and off entirely under reduced motion.
+// Depth on the bento cards: a mouse gets a pointer-tilt, but a tap on a phone
+// never fires the continuous pointermove that needs — on the device this site
+// is mostly viewed on, that effect was invisible. Every device instead gets a
+// one-time settle: the card starts tilted further and eases into its resting
+// angle the first time it scrolls into view. Off entirely under reduced motion.
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('.pb-tilt').forEach(card => {
+  const tilts = document.querySelectorAll('.pb-tilt');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        e.target.classList.add('pb-in');
+        obs.unobserve(e.target);
+      }
+    }, { threshold: .35 });
+    tilts.forEach(card => io.observe(card));
+  } else {
+    tilts.forEach(card => card.classList.add('pb-in'));
+  }
+  tilts.forEach(card => {
     card.addEventListener('pointermove', e => {
       const r = card.getBoundingClientRect();
       const rx = ((e.clientY - r.top) / r.height - .5) * -8;
