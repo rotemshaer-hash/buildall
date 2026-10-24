@@ -324,12 +324,23 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .card .ic,.sb .n{margin-bottom:18px}.go-i{display:none}
 .card.idea,.side-b{background:var(--ink);color:white}.card.idea p,.side-b p{color:#e0e7f5}.card.idea .ic{background:#ffffff1f;color:white}
 .problems,.services,.small-biz,.guides-strip,.faq-sec,.ladder,.sig{background:var(--bg)}
-.proof-grid,.prob-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.prob-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .proof-card{display:flex;flex-direction:column;align-items:start;gap:14px;padding:30px;border:1px solid var(--line);border-radius:var(--r);text-decoration:none;box-shadow:var(--sh);height:100%;background:#fff}
 .proof-card h3{font-size:25px}.proof-card p{font-size:18px;color:var(--muted)}
 .proof-tag{font-size:13px;color:var(--teal);background:var(--accent-soft);padding:4px 12px;border-radius:99px}
 .proof-go{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-size:16px;font-weight:700;margin-top:auto}
 .proof-note{text-align:center;margin-top:24px;font-weight:700;color:var(--teal)}
+/* proof section as bento: Work It leads with weight that matches it being the
+   one live, triable demo on the page; the second case supports it, not competes. */
+.proof-bento{display:grid;gap:18px;transform-style:preserve-3d}
+.pb-proof-big{align-items:start;gap:14px;padding:30px;min-height:auto;background:var(--grad);color:#fff}
+.pb-proof-big .pb-tag{display:inline-block;font:700 13px Assistant,Arial,sans-serif;letter-spacing:normal;color:#dbe4ff;background:#ffffff22;padding:4px 12px;border-radius:99px}
+.pb-proof-big b{font:800 25px/1.3 Heebo,Arial,sans-serif;margin-top:4px}
+.pb-proof-big small{font-size:18px;color:#dbe4ff;max-width:none;margin-top:0}
+.pb-proof-big .proof-go{color:#fff;margin-top:auto}
+.pb-proof-med{align-items:start;gap:14px;padding:30px;background:#fff;border:1px solid var(--line);min-height:auto;box-shadow:var(--sh)}
+.pb-proof-med h3{font-size:22px}.pb-proof-med p{font-size:17px;color:var(--muted)}
+@media(min-width:720px){.proof-bento{grid-template-columns:3fr 2fr}}
 .film{background:#eef3fc}.film-in{display:grid;grid-template-columns:minmax(0,1fr) 300px;align-items:center;gap:80px;max-width:1040px;margin:auto}
 .film-txt .h2{margin-block:0 20px}.film-txt .lead{font-size:20px}.film-note{padding:22px;margin-block:24px;background:#fff;border:1px solid var(--line);border-radius:18px;color:var(--muted);font-size:17px}
 .film-note b{color:var(--text)}.film-vid{min-width:0;width:100%;padding:8px;background:var(--ink);border-radius:28px;box-shadow:var(--sh-lg)}
@@ -360,6 +371,10 @@ a.prob-other{display:flex;align-items:center;gap:16px;padding:20px 24px;text-dec
 .poetexa-benefits{background:radial-gradient(ellipse at 10% 30%,#e9f9f5,transparent 55%),#f4f6ff}
 .poetexa-benefit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-bottom:32px}
 .poetexa-benefit{padding-block:32px}.poetexa-benefit h3{font-size:21px}.poetexa-benefit p{font-size:16px;color:var(--muted)}
+/* one card in the grid carries real weight instead of four identical tiles */
+.poetexa-benefit-lead{grid-column:1/-1;background:var(--grad);border-color:transparent;box-shadow:0 20px 40px -18px #15274d3a}
+.poetexa-benefit-lead .poetexa-benefit-icon{background:#ffffff22;color:#fff}
+.poetexa-benefit-lead h3{color:#fff}.poetexa-benefit-lead p{color:#dbe4ff}
 .poetexa-green-cta{display:flex;max-width:560px;margin-inline:auto;background:var(--wa);color:#fff;padding:20px 28px;border-radius:20px;gap:22px}
 .poetexa-green-cta svg{width:32px;height:32px;fill:currentColor;flex:none}.poetexa-green-cta span:nth-child(2){display:grid;text-align:start}.poetexa-green-cta strong{font-size:22px}.poetexa-green-cta small{font-size:15px;color:#e5fff4}
 .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
