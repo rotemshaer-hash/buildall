@@ -397,3 +397,17 @@ document.addEventListener('click', e => {
 })();
 
 document.querySelector('#lead [name="msg"]')?.addEventListener('input', e => { delete e.target.dataset.auto; });
+
+// Subtle pointer tilt on the bento cards that carry real depth — a touch/mouse
+// nudge, not a hover trick, and off entirely under reduced motion.
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.pb-tilt').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      const rx = ((e.clientY - r.top) / r.height - .5) * -8;
+      const ry = ((e.clientX - r.left) / r.width - .5) * 8;
+      card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  });
+}
