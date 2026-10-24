@@ -141,7 +141,7 @@
 </ul>
 
 <h2>הצ׳אט עם העוזר החכם</h2>
-<p>בלחיצה על "שאל AI" נפתח צ׳אט שעונה על שאלות באתר. מה שאתה כותב בו נשלח לשרת שלנו ומשם למודל שפה של Cloudflare, שמנסח את התשובה. השיחה אינה נשמרת אצלנו אחרי שסגרת את החלון, ולא משמשת לאימון של אף מודל. כתובת ה־IP שלך נספרת זמנית בזיכרון כדי להגביל מספר שאלות לדקה, ונמחקת מעצמה. בסוף השיחה אפשר להשאיר שם וטלפון — ורק אם תבחר לעשות זאת, הם נשלחים אלינו כדי שנחזור אליך. <b>אל תכתוב בצ׳אט פרטים רגישים</b>: מספרי כרטיס אשראי, סיסמאות או מידע רפואי.</p>
+<p>בלחיצה על "שאל AI" נפתח צ׳אט שעונה על שאלות באתר. מה שנכתב בו נשלח לשרת שלנו ומשם למודל שפה של Cloudflare, שמנסח את התשובה. השיחה אינה נשמרת אצלנו אחרי סגירת החלון, ולא משמשת לאימון של אף מודל. כתובת ה־IP שלך נספרת זמנית בזיכרון כדי להגביל מספר שאלות לדקה, ונמחקת מעצמה. בסוף השיחה אפשר להשאיר שם וטלפון — ורק במקרה כזה הם נשלחים אלינו כדי שנחזור אליך. <b>אין לכתוב בצ׳אט פרטים רגישים</b>: מספרי כרטיס אשראי, סיסמאות או מידע רפואי.</p>
 
 <h2>מה אנחנו עושים עם המידע</h2>
 <p>פרטים ששלחת לנו (שם, שם העסק, מה אתה צריך) משמשים רק כדי לחזור אליך, להבין את הצורך ולתת שירות. אנחנו לא מוכרים את המידע ולא מעבירים אותו לאף אחד לצורכי שיווק.</p>
@@ -192,7 +192,7 @@
       <!-- מלכודת ספאם: שדה שרק בוט ממלא. הוא מוסתר מהעין ומקוראי מסך. -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
       <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>
-      <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שלח במייל</button>
+      <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שליחה במייל</button>
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
       <p class="note">שליחה במייל דורשת כתובת מייל, כדי שנוכל לחזור אליך.</p>
@@ -237,7 +237,7 @@
     </div>
   </div>
   <form class="ai-ask" id="ai-ask">
-    <input aria-label="שאלה לעוזר" id="ai-input" placeholder="כתוב שאלה…" autocomplete="off" maxlength="300">
+    <input aria-label="שאלה לעוזר" id="ai-input" placeholder="כתיבת שאלה…" autocomplete="off" maxlength="300">
     <button type="submit" aria-label="שליחה">↑</button>
   </form>
   <form class="ai-lead" id="ai-lead" hidden>
@@ -246,7 +246,7 @@
       <input aria-label="שם" id="ai-name" placeholder="שם" autocomplete="name" required>
       <input aria-label="טלפון" id="ai-phone" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
     </div>
-    <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שלח בוואטסאפ</button>
+    <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שליחה בוואטסאפ</button>
     <button type="button" class="ai-skip" id="ai-skip">לא עכשיו</button>
   </form>
 </div>

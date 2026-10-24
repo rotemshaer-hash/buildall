@@ -74,19 +74,19 @@
 .prose h2:first-child{margin-top:0}
 .prose p,.prose li{font-size:18px;line-height:1.75}
 .prose p{margin-bottom:14px}
-.prose ul,.prose ol{padding-right:22px;margin-bottom:16px;display:grid;gap:8px}
+.prose ul,.prose ol{padding-inline-start:22px;margin-bottom:16px;display:grid;gap:8px}
 .prose a{color:var(--teal);font-weight:600}
 .table-wrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
 .prose table{width:100%;border-collapse:collapse;font-size:16px;min-width:520px}
 .prose th,.prose td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);vertical-align:top}
-.prose th{background:var(--accent-soft);font-family:Heebo,sans-serif}
+.prose th{background:var(--accent-soft);font-family:Heebo,Arial,sans-serif}
 .prose tr:last-child td{border-bottom:0}
 .steps-list{counter-reset:st;list-style:none;padding:0!important}
 .steps-list li{counter-increment:st;position:relative;padding:12px 56px 12px 14px;background:var(--card);border:1px solid var(--line);border-radius:14px}
 .steps-list li:before{content:counter(st);position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font:800 15px/30px Heebo,sans-serif;text-align:center}
 .callout{margin-top:var(--s4);background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:24px;position:relative;overflow:hidden}
 .callout:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent)}
-.callout b{font-family:Heebo,sans-serif;font-size:20px;display:block;margin-bottom:6px}
+.callout b{font-family:Heebo,Arial,sans-serif;font-size:20px;display:block;margin-bottom:6px}
 .callout p{color:rgba(255,255,255,.85);margin:0}
 .contact-list{list-style:none;padding:0!important}
 .updated{color:var(--muted);font-size:15px!important;margin-top:var(--s4)}
@@ -141,7 +141,7 @@
 
 /* מסך פקודת העבודה — זה המוצר, ולכן הוא במותג שלנו ולא בירוק של וואטסאפ */
 #d-task-screen{background:var(--bg);color:var(--text)}
-.tk-h{background:var(--grad);color:#fff;padding:15px 12px 11px;display:flex;align-items:center;gap:9px;font-family:Heebo,sans-serif}
+.tk-h{background:var(--grad);color:#fff;padding:15px 12px 11px;display:flex;align-items:center;gap:9px;font-family:Heebo,Arial,sans-serif}
 .tk-h b{font-size:13px}
 .tk-back{font-size:20px;line-height:1;cursor:pointer;opacity:.85;padding:0 2px}
 .tk-body{flex:1;padding:13px;display:flex;flex-direction:column;gap:10px;overflow-y:auto}
@@ -222,7 +222,7 @@ a.card:has(.card-go):after{content:none}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:var(--anchor-gap)}
 body{font:400 18px/1.75 Assistant,Arial,sans-serif;color:var(--text);background:var(--card);-webkit-font-smoothing:antialiased}
 h1,h2,h3,summary,.btn{font-family:Heebo,Arial,sans-serif}
-h1,h2,h3{line-height:1.35;letter-spacing:-.025em;text-wrap:balance}
+h1,h2,h3{line-height:1.35;text-wrap:balance}
 a{color:inherit;text-underline-offset:4px}
 button,input,select,textarea{font:inherit}
 button,a,input,select,textarea,summary{-webkit-tap-highlight-color:transparent}

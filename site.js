@@ -280,6 +280,7 @@ document.addEventListener('click', e => {
   const add = (who, text) => {
     const d = document.createElement('div');
     d.className = 'ai-msg ' + who;
+    d.dir = 'auto'; // a visitor or the model may type in Hebrew or English; let the first strong character decide per bubble
     d.textContent = text;
     body.append(d);
     body.scrollTop = body.scrollHeight;

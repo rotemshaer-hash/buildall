@@ -125,7 +125,7 @@ const problemsSection = root => `<section class="problems" id="problems">
     <div class="sec-head">
       <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
       <h2 class="h2">מה הכי מעכב אותך בעסק?</h2>
-      <p class="lead">לא צריך לדעת אם הפתרון הוא אתר, מערכת או אפליקציה. תבחר את מה שהכי מעיק עליך, ונראה לך מה אפשר לעשות איתו.</p>
+      <p class="lead">לא צריך לדעת אם הפתרון הוא אתר, מערכת או אפליקציה. אפשר לבחור את מה שהכי מעיק עליך, ונראה לך מה אפשר לעשות איתו.</p>
     </div>
     <div class="prob-grid">
 ${problems.map(p => `      <details class="prob" name="prob">
