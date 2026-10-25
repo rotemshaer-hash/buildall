@@ -293,7 +293,7 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .poetexa-copy{min-width:0}.poetexa-hero h1{font-size:clamp(46px,5vw,70px);line-height:1.3;font-weight:800;margin-bottom:22px}
 .poetexa-gradient-text{color:#6642c8}
 .poetexa-hero h1 span{color:#c9b6ff}
-.poetexa-hero p{max-width:520px;font-size:21px;color:var(--muted);margin-bottom:28px}
+.poetexa-hero p{max-width:520px;font-size:21px;margin-bottom:28px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}.poetexa-hero .ctas .btn{flex:1;min-width:180px}
 .poetexa-trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-size:14px;color:var(--muted)}
 .poetexa-trust span:before{content:"✓";color:var(--wa);margin-inline-end:6px;font-weight:700}
