@@ -149,7 +149,7 @@ export function head({ title, description, path, schemas = [], root }) {
 <meta name="apple-mobile-web-app-title" content="${BRAND}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@700;800&family=Frank+Ruhl+Libre:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Rubik:wght@700;800;900&family=Frank+Ruhl+Libre:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${root}style.css">
 ${schemas.map(s => `<script type="application/ld+json">${JSON.stringify(s)}</script>`).join('\n')}
 </head>`;
