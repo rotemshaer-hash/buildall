@@ -272,13 +272,16 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .nav-bar{display:none}
 .skip-link{position:fixed;inset:8px 16px auto auto;z-index:100;background:var(--ink);color:white;padding:10px 20px;transform:translateY(-160%);border-radius:8px}.skip-link:focus{transform:none}
 .hero{position:relative;background:radial-gradient(ellipse at 15% 65%,#e4e7ff,transparent 55%),radial-gradient(ellipse at 90% 15%,#e7f4ff,transparent 60%),#f9fbff}
-.poetexa-hero{background:var(--grad);color:#fff;clip-path:polygon(0 0,100% 0,100% 94%,0 100%);padding-block:64px 108px}
+.poetexa-hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;clip-path:polygon(0 0,100% 0,100% 94%,0 100%);padding-block:64px 108px}
 .poetexa-hero .poetexa-kicker{background:#ffffff1a;border-color:#ffffff33;color:#cdd6f5}
 .poetexa-hero h1{color:#fff}
 .poetexa-hero p{color:#c3cbee}
 .poetexa-hero .poetexa-trust{color:#9fabd9}
 .poetexa-hero .poetexa-trust span:before{color:#7effc0}
 .poetexa-hero .poetexa-pill-cta{background:#fff;color:var(--ink)}
+.poetexa-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.poetexa-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(170deg,#15274db3,#2b3d7399 55%,#7550d499);pointer-events:none}
+@media(prefers-reduced-motion:reduce){.poetexa-hero-video{display:none}}
 .hero-sm{padding-block:64px 72px;text-align:center}
 .hero-sm h1{max-width:900px;margin:0 auto 24px;font-size:clamp(32px,4.3vw,56px);line-height:1.4}
 .hero-sm p{max-width:720px;margin:0 auto 24px;font-size:20px;color:var(--muted)}
@@ -286,7 +289,7 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .hero-ic{display:inline-grid;place-items:center;width:56px;height:56px;background:white;border:1px solid var(--line);border-radius:16px;margin-bottom:20px}
 .crumbs{font-size:15px;color:var(--muted);margin-bottom:24px}.crumbs span{margin-inline:8px}.crumbs a{color:var(--teal)}
 .poetexa-hero{padding-block:52px 78px;isolation:isolate}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:36px;align-items:center;position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:36px;align-items:center;position:relative;z-index:2}
 .poetexa-copy{min-width:0}.poetexa-hero h1{font-size:clamp(46px,5vw,70px);line-height:1.3;font-weight:800;margin-bottom:22px}
 .poetexa-gradient-text{color:#6642c8}
 .poetexa-hero h1 span{color:#c9b6ff}
