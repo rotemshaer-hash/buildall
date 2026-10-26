@@ -226,7 +226,7 @@ ${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="
 
 <section class="services">
   <div class="wrap">
-    <a class="example" data-wa data-msg="${i.short}" href="#contact">
+    <a class="example" data-wa data-msg="${i.short.replace(/"/g, '&quot;')}" href="#contact">
       <span class="eyebrow">איך זה נראה ביום־יום</span>
       <p>${i.example}</p>
       <span class="ex-go">נדבר על העסק שלך ←</span>

@@ -112,12 +112,14 @@ mailBtn?.addEventListener('click', async () => {
         הגיע_מהדף: location.pathname
       })
     });
-    if (!res.ok) throw new Error(res.status);
+    const data = await res.json().catch(() => null);
+    if (!res.ok || !data?.success) throw new Error(data?.message || String(res.status));
     say('ההודעה נשלחה. נחזור אליך בהקדם 🙂', true);
     form.reset();
     if (typeof window.gtag === 'function') gtag('event', 'email_submit', { page: location.pathname });
   } catch {
     say('השליחה נכשלה. אפשר לשלוח בוואטסאפ, או להתקשר.', false);
+  } finally {
     mailBtn.disabled = false;
   }
 });
@@ -263,9 +265,20 @@ document.addEventListener('click', e => {
   const body = $('ai-body'), ask = $('ai-ask'), input = $('ai-input');
   const lead = $('ai-lead');
   let history = [], asked = 0, leadShown = false, busy = false;
+  const initialBody = body.innerHTML; // the welcome message + chips, to restore on close
 
   const open = () => { panel.hidden = false; setTimeout(() => input.focus(), 80); };
-  const close = () => { panel.hidden = true; $('ai-open')?.focus(); };
+  // The privacy policy says the conversation isn't kept after the window
+  // closes, so closing has to actually clear it here too, not just hide it.
+  const close = () => {
+    panel.hidden = true;
+    $('ai-open')?.focus();
+    body.innerHTML = initialBody;
+    history = [];
+    asked = 0;
+    leadShown = false;
+    lead.hidden = true;
+  };
   panel.addEventListener('keydown', e => {
     if (e.key !== 'Tab') return;
     const items = [...panel.querySelectorAll('button,input,a[href]')].filter(el => !el.closest('[hidden]') && !el.disabled);

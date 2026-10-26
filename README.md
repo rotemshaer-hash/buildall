@@ -1,4 +1,4 @@
-# בונים הכל – האתר
+# POETEXA – האתר
 
 האתר נבנה מ־`src/` בפקודה אחת:
 
@@ -9,13 +9,12 @@ node build.mjs
 הפקודה כותבת את `index.html`, דף לכל תחום (`restaurants/`, `beauty/` וכו'), מדריכים (`guides/`), סיפורי פרויקטים (`work/`), `accessibility/`, `privacy/`, `sitemap.xml` ו־`robots.txt`.
 **את הקבצים האלה לא עורכים ישירות.** עורכים את המקור ובונים מחדש.
 
-**הפריסה ידנית.** דחיפה ל־`main` לא מעלה את האתר: מריצים `node build.mjs`,
-אחר כך `node scripts/dist.mjs` (שמריץ גם את הביקורת ונכשל אם היא נכשלת), יוצרים זיפ
-מתוך `dist/` ומעלים אותו ב־Cloudflare Pages ← Deployments ← Create deployment.
-`.github/workflows/deploy.yml` יעשה את זה לבד ברגע ששני המפתחות
-`CLOUDFLARE_API_TOKEN` ו־`CLOUDFLARE_ACCOUNT_ID` יוגדרו ב־Settings ← Secrets ← Actions.
-הפעולה מריצה `node build.mjs`, ואז `node scripts/dist.mjs` שאוסף ל־`dist/` רק את מה
-שצריך להתפרסם. **קובץ חדש שאמור להתפרסם — להוסיף אותו לרשימה ב־`scripts/dist.mjs`.**
+**הפריסה אוטומטית.** דחיפה ל־`main` מריצה את `.github/workflows/deploy.yml`:
+`node build.mjs`, ואז `node scripts/dist.mjs` (שאוסף ל־`dist/` רק את מה שצריך
+להתפרסם ומריץ את הביקורת — נכשל אם היא נכשלת), ואז פריסה ל־Cloudflare Pages
+(פרויקט `poetexa`) דרך `wrangler-action`. **קובץ חדש שאמור להתפרסם — להוסיף
+אותו לרשימה ב־`scripts/dist.mjs`**, אחרת הוא לא יגיע לאתר. דחיפה שנוגעת רק
+ב־`.md` לא מפעילה פריסה (`paths-ignore`).
 
 | מה משנים | איפה |
 |---|---|

@@ -13,10 +13,13 @@ const strip = h => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 export function buildKnowledge() {
   const home = readFileSync('src/home.html', 'utf8');
 
-  // the service cards, with the group each one sits under
+  // the service cards, with the group each one sits under. Scoped to the
+  // services section itself, so a <summary> group label from an unrelated
+  // accordion elsewhere on the page can never get attributed to a card.
   const services = [];
+  const servicesSection = home.match(/<section class="services" id="services">[\s\S]*?\n<\/section>/)?.[0] || '';
   let group = '';
-  for (const m of home.matchAll(/<h3 class="group-title"[^>]*>([^<]+)<\/h3>|<a class="card"[^>]*data-msg="([^"]+)"[^>]*>.*?<h3>([^<]+)<\/h3><p>(.*?)<\/p>/gs)) {
+  for (const m of servicesSection.matchAll(/<summary>.*?<b>([^<]+)<\/b>|<a class="card"[^>]*data-subject="([^"]+)"[^>]*>.*?<h3>([^<]+)<\/h3><p>(.*?)<\/p>/gs)) {
     if (m[1]) { group = m[1]; continue; }
     if (m[3]) services.push({ group, name: m[3], what: strip(m[4]) });
   }
@@ -27,7 +30,7 @@ export function buildKnowledge() {
 
   return {
     business: {
-      name: 'בונים הכל',
+      name: 'POETEXA',
       what: 'בונים לעסקים קטנים כל פתרון דיגיטלי: אתרים, דפי נחיתה, אפליקציות, מערכות ניהול, כלים קטנים ושילוב AI.',
       audience: 'עסקים קטנים שלא רוצים להשקיע הון גדול אבל רוצים להתקדם טכנולוגית.',
       slogan: 'הטכנולוגיה שעסקים גדולים משלמים עליה הון, במחיר של עסק קטן.',

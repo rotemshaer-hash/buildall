@@ -35,7 +35,12 @@ const CORS = {
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: CORS });
 
 // A visitor gets a limited number of questions per minute, so one person cannot
-// burn the whole daily allowance for everyone.
+// burn the whole daily allowance for everyone. This counter lives in the
+// isolate's own memory, not a shared store (no KV/Durable Object is bound),
+// so it throttles per-isolate, not a single global count across every edge
+// location. Good enough to stop one browser tab hammering the endpoint;
+// not a guarantee against a distributed abuser. A true shared quota needs a
+// Cloudflare KV namespace or Durable Object bound to this Pages project.
 const seen = new Map();
 function tooMany(ip) {
   const now = Date.now();
@@ -44,6 +49,14 @@ function tooMany(ip) {
   seen.set(ip, hits);
   if (seen.size > 500) for (const [k, v] of seen) if (!v.some(t => now - t < 60000)) seen.delete(k);
   return hits.length > 8;
+}
+
+// A second line of defense under rule 1: the model is told never to state a
+// price, but instructions alone don't guarantee compliance, so the reply
+// itself is checked before it reaches the visitor.
+const PRICE_SAFE_REPLY = 'אני לא יכול לנקוב במחיר כאן — המחיר נקבע אחרי שיחת ייעוץ חינם כדי שיהיה מדויק לעסק שלך. רוצה לקבוע אחת?';
+function mentionsPrice(text) {
+  return /(₪|ש"?ח|שקל|ש״ח)/.test(text) || /\d{2,}\s*-\s*\d{2,}/.test(text);
 }
 
 async function askCloudflare(env, messages) {
@@ -114,6 +127,7 @@ export default {
         else return json({ fallback: true, reason: 'not-configured' });
 
         if (!reply) return json({ fallback: true, reason: 'empty' });
+        if (mentionsPrice(reply)) reply = PRICE_SAFE_REPLY;
         return json({ reply });
       } catch (e) {
         // Out of free allowance, or the model is down: the page falls back to its own answers.

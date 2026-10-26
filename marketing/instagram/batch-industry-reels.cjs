@@ -1,6 +1,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { execSync } = require('child_process');
 
 // Usage: node batch-industry-reels.cjs <base-url> <out-dir>
@@ -26,7 +27,7 @@ const CATS = [
 ];
 
 async function recordOne(browser, cat, idx) {
-  const rawDir = fs.mkdtempSync('/tmp/claude-0/raw-');
+  const rawDir = fs.mkdtempSync(path.join(os.tmpdir(), 'reel-raw-'));
   const context = await browser.newContext({
     viewport: { width: 540, height: 960 },
     recordVideo: { dir: rawDir, size: { width: 540, height: 960 } },
@@ -76,7 +77,7 @@ async function recordOne(browser, cat, idx) {
   // per-category audio bed, slightly different base pitch for variety
   const base = 98 + idx * 6;
   const finalMp4 = path.join(OUT_DIR, `${cat.slug}.mp4`);
-  execSync(`bash ${path.join(__dirname, 'add-ambient-bed.sh')} "${silentMp4}" "${finalMp4}"`, { stdio: 'ignore' });
+  execSync(`bash ${path.join(__dirname, 'add-ambient-bed.sh')} "${silentMp4}" "${finalMp4}" ${base}`, { stdio: 'ignore' });
   console.log('done:', cat.slug);
   return finalMp4;
 }
