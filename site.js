@@ -264,20 +264,26 @@ document.addEventListener('click', e => {
   const $ = id => document.getElementById(id);
   const body = $('ai-body'), ask = $('ai-ask'), input = $('ai-input');
   const lead = $('ai-lead');
-  let history = [], asked = 0, leadShown = false, busy = false;
+  let history = [], asked = 0, leadShown = false, busy = false, controller = null;
   const initialBody = body.innerHTML; // the welcome message + chips, to restore on close
 
   const open = () => { panel.hidden = false; setTimeout(() => input.focus(), 80); };
   // The privacy policy says the conversation isn't kept after the window
-  // closes, so closing has to actually clear it here too, not just hide it.
+  // closes, so closing has to actually clear it here too, not just hide it:
+  // cancel any question in flight too, so its answer can't land in the next
+  // conversation, and clear the name/phone the lead form was holding.
   const close = () => {
     panel.hidden = true;
     $('ai-open')?.focus();
+    controller?.abort();
+    busy = false;
     body.innerHTML = initialBody;
     history = [];
     asked = 0;
     leadShown = false;
     lead.hidden = true;
+    $('ai-name').value = '';
+    $('ai-phone').value = '';
   };
   panel.addEventListener('keydown', e => {
     if (e.key !== 'Tab') return;
@@ -328,6 +334,7 @@ document.addEventListener('click', e => {
   async function send(text) {
     if (busy || !text.trim()) return;
     busy = true;
+    controller = new AbortController();
     document.querySelector('.ai-chips')?.remove();
     add('me', text);
     history.push({ role: 'user', content: text });
@@ -339,11 +346,13 @@ document.addEventListener('click', e => {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ messages: history })
+        body: JSON.stringify({ messages: history }),
+        signal: controller.signal
       });
       const data = await res.json();
       reply = data.reply || localAnswer(text);
-    } catch {
+    } catch (e) {
+      if (e.name === 'AbortError') return; // the panel was closed; close() already reset everything
       reply = localAnswer(text);
     }
     typing.remove();

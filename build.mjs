@@ -12,6 +12,11 @@ import { buildKnowledge } from './scripts/knowledge.mjs';
 
 const nav = { industries, guides, cases, legal };
 
+// Shared escaping for any dynamic value going into an HTML attribute
+// (double-quote delimited everywhere in this file). A literal " in content
+// like נדל"ן otherwise closes the attribute early and breaks the markup.
+const attr = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+
 const write = (path, html) => {
   mkdirSync(path.split('/').slice(0, -1).join('/') || '.', { recursive: true });
   writeFileSync(path, html);
@@ -134,7 +139,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
           <p class="prob-why">${p.why}</p>
           <p class="prob-fix"><b>מה אפשר לעשות:</b> ${p.fix}</p>
           <div class="prob-cta">
-            <a class="btn btn-wa" data-wa data-msg="${p.t}" href="#contact"><svg><use href="#wa"/></svg>בדיוק זה אצלי</a>
+            <a class="btn btn-wa" data-wa data-msg="${attr(p.t)}" href="#contact"><svg><use href="#wa"/></svg>בדיוק זה אצלי</a>
             ${p.work ? `<a class="btn btn-line" href="${root}work/${p.work}/">ראה את ${p.workName} ←</a>` : ''}
           </div>
         </div>
@@ -148,7 +153,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
 
 const page = ({ path, root, title, description, schemas, body, greeting, from }) =>
   head({ title, description, path, schemas, root }) + `
-<body${greeting ? ` data-greeting="${greeting}"` : ''}${from ? ` data-from="${from}"` : ''}${FORM_KEY ? ` data-formkey="${FORM_KEY}"` : ''}>
+<body${greeting ? ` data-greeting="${attr(greeting)}"` : ''}${from ? ` data-from="${attr(from)}"` : ''}${FORM_KEY ? ` data-formkey="${attr(FORM_KEY)}"` : ''}>
 ${header(root)}
 <main id="top">
 ${body}
@@ -217,7 +222,7 @@ ${i.pains.map(p => `      <a class="pain" href="#s${p.fix}"><span>✕</span><p>$
       <h2 class="h2">הפתרונות ל${i.short}</h2>
     </div>
     <div class="grid">
-${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="${s.t}" href="#contact"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('\n')}
+${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="${attr(s.t)}" href="#contact"><div class="ic">${icon(s.icon)}</div><h3>${s.t}</h3><p>${s.d}</p></a>`).join('\n')}
       <a class="card" data-wa data-msg="שילוב AI" href="#contact"><div class="ic">${icon('bot')}</div><h3>עם AI, אם תרצה</h3><p>צ׳אט שעונה ללקוחות, סיכומים ומסמכים שממלאים את עצמם. משלבים רק איפה שזה חוסך לך זמן.</p></a>
       <a class="card idea" data-wa data-msg="רעיון משלי" href="#contact"><div class="ic">${icon('bulb')}</div><h3>צריך משהו אחר?</h3><p>כל תהליך בעסק שלך אפשר להפוך לכלי פשוט. ספר לנו מה אתה צריך.</p></a>
     </div>
@@ -226,7 +231,7 @@ ${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="
 
 <section class="services">
   <div class="wrap">
-    <a class="example" data-wa data-msg="${i.short.replace(/"/g, '&quot;')}" href="#contact">
+    <a class="example" data-wa data-msg="${attr(i.short)}" href="#contact">
       <span class="eyebrow">איך זה נראה ביום־יום</span>
       <p>${i.example}</p>
       <span class="ex-go">נדבר על העסק שלך ←</span>
