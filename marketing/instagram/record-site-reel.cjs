@@ -9,7 +9,7 @@
 //   node marketing/instagram/record-site-reel.cjs <base-url> <out.mp4>
 // e.g. node marketing/instagram/record-site-reel.cjs http://localhost:8801/index.html /tmp/reel.mp4
 const { chromium } = require('playwright');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -63,7 +63,11 @@ const STEPS = [
 
   const raw = fs.readdirSync(rawDir).find(f => f.endsWith('.webm'));
   const rawPath = path.join(rawDir, raw);
-  execSync(`ffmpeg -y -i "${rawPath}" -vf "scale=1080:1920:flags=lanczos" -c:v libx264 -pix_fmt yuv420p -crf 20 -r 30 "${outPath}"`, { stdio: 'inherit' });
+  // Paths go through execFileSync's own argument array, not a shell string,
+  // so a path containing a quote or a shell metacharacter can never be
+  // interpreted as part of the command.
+  execFileSync('ffmpeg', ['-y', '-i', rawPath, '-vf', 'scale=1080:1920:flags=lanczos',
+    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-r', '30', outPath], { stdio: 'inherit' });
   fs.rmSync(rawDir, { recursive: true, force: true });
   console.log('wrote', outPath);
 })();

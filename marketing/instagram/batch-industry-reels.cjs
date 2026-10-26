@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 
 // Usage: node batch-industry-reels.cjs <base-url> <out-dir>
 // e.g. node batch-industry-reels.cjs http://localhost:8801/ /tmp/industry-reels
@@ -71,13 +71,17 @@ async function recordOne(browser, cat, idx) {
   const raw = fs.readdirSync(rawDir).find(f => f.endsWith('.webm'));
   const rawPath = path.join(rawDir, raw);
   const silentMp4 = path.join(OUT_DIR, `${cat.slug}-silent.mp4`);
-  execSync(`ffmpeg -y -i "${rawPath}" -vf "scale=1080:1920:flags=lanczos" -c:v libx264 -pix_fmt yuv420p -crf 20 -r 30 "${silentMp4}"`, { stdio: 'ignore' });
+  // Paths go through execFileSync's own argument array, not a shell string,
+  // so a path containing a quote or shell metacharacter can't be interpreted
+  // as part of the command.
+  execFileSync('ffmpeg', ['-y', '-i', rawPath, '-vf', 'scale=1080:1920:flags=lanczos',
+    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-r', '30', silentMp4], { stdio: 'ignore' });
   fs.rmSync(rawDir, { recursive: true, force: true });
 
   // per-category audio bed, slightly different base pitch for variety
   const base = 98 + idx * 6;
   const finalMp4 = path.join(OUT_DIR, `${cat.slug}.mp4`);
-  execSync(`bash ${path.join(__dirname, 'add-ambient-bed.sh')} "${silentMp4}" "${finalMp4}" ${base}`, { stdio: 'ignore' });
+  execFileSync('bash', [path.join(__dirname, 'add-ambient-bed.sh'), silentMp4, finalMp4, String(base)], { stdio: 'ignore' });
   console.log('done:', cat.slug);
   return finalMp4;
 }

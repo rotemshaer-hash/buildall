@@ -219,6 +219,11 @@ document.addEventListener('click', e => {
     waScreen.classList.toggle('is-on', screen === 'wa');
     taskScreen.classList.toggle('is-on', screen === 'task');
   };
+  // d-task is free text the manager types (up to 40 chars) and lands inside
+  // an innerHTML template below — unescaped, a title like "<img src=x
+  // onerror=...>" would run as real markup in the visitor's own browser
+  // instead of showing as the literal text they typed.
+  const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const bubble = (side, html) => {
     const d = document.createElement('div');
     d.className = 'b ' + side;
@@ -260,7 +265,7 @@ document.addEventListener('click', e => {
     show('wa');
 
     note(`המשימה נשלחה ל${who} · יעד: ${due}`);
-    bubble('out', `<div class="lnk"><b>משימה חדשה: ${task}</b><i>לחץ לפתיחת פקודת העבודה ›</i></div>`);
+    bubble('out', `<div class="lnk"><b>משימה חדשה: ${escapeHtml(task)}</b><i>לחץ לפתיחת פקודת העבודה ›</i></div>`);
     await wait(900);
     note('נמסר', 'ok');
     await wait(600);
