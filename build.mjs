@@ -1,6 +1,6 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
@@ -206,6 +206,21 @@ write('index.html', page({
 }));
 
 // ---------- industry pages ----------
+// industries.mjs is the single source of truth for which slugs should exist,
+// but nothing ever removed a directory for a slug that got renamed or
+// dropped from it - build.mjs only ever writes, never deletes, so the old
+// directory (and whatever stale content it holds) stayed in the repo and
+// kept deploying forever. A tracked manifest of "slugs this build wrote last
+// time" lets this run diff against the current list and clean up anything
+// that's no longer there.
+const MANIFEST_PATH = '.industry-slugs.json';
+const currentSlugs = industries.map(i => i.slug);
+const previousSlugs = existsSync(MANIFEST_PATH) ? JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')) : [];
+for (const slug of previousSlugs) {
+  if (!currentSlugs.includes(slug) && existsSync(slug)) rmSync(slug, { recursive: true, force: true });
+}
+writeFileSync(MANIFEST_PATH, JSON.stringify(currentSlugs));
+
 for (const i of industries) {
   const root = '../';
   const others = industries.filter(o => o !== i);

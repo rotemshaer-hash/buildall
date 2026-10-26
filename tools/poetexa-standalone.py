@@ -105,6 +105,8 @@ function mount(target,hash='',push=true){
  const code=scripts.map(s=>s.textContent);scripts.forEach(s=>s.remove());
  document.documentElement.lang='he';document.documentElement.dir='rtl';
  document.head.innerHTML=parsed.head.innerHTML;
+ for(const name of[...document.body.attributes].map(a=>a.name))document.body.removeAttribute(name);
+ for(const a of parsed.body.attributes)document.body.setAttribute(a.name,a.value);
  document.body.innerHTML=parsed.body.innerHTML;
  document.addEventListener=function(type,listener,options){nativeDocumentAdd.call(document,type,listener,options);cleanup.push(()=>document.removeEventListener(type,listener,options));};
  window.addEventListener=function(type,listener,options){nativeWindowAdd.call(window,type,listener,options);cleanup.push(()=>window.removeEventListener(type,listener,options));};

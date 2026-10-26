@@ -1,5 +1,8 @@
-// The one place the WhatsApp number lives. International format, digits only (972...).
-const WA_NUMBER = '972542020812';
+// The phone number itself has exactly one source: the PHONE constant in
+// src/layout.mjs, which renders the header's tel: link - this reads it back
+// from that link instead of keeping its own separately-typed copy, so the
+// WhatsApp number can never drift out of sync with the call button.
+const WA_NUMBER = (document.querySelector('[data-call]')?.getAttribute('href') || '').replace(/\D/g, '');
 
 const waLink = text => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של POETEXA ואשמח לשיחת ייעוץ חינם 🙂';
