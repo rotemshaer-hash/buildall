@@ -330,7 +330,7 @@ header .wrap{height:var(--head-h);display:flex;align-items:center;justify-conten
 .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .card,.sb,.side,.pain,.example{display:block;min-width:0;padding:26px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);text-decoration:none;box-shadow:var(--sh-sm)}
 .card h3,.sb h3{font-size:20px;margin-bottom:10px}.card p,.sb p{font-size:17px;line-height:1.8;color:var(--muted)}
-.card .ic,.sb .n,.ind .ic,.prob .ic,.svc-g .ic{display:grid;place-items:center;width:46px;height:46px;flex:none;border-radius:14px;background:var(--accent-soft);color:var(--teal)}
+.card .ic,.sb .n,.ind .ic,.prob .ic,.svc-g .ic{display:grid;place-items:center;width:46px;height:46px;flex:none;border-radius:14px;background:var(--accent);color:#fff;box-shadow:0 10px 18px -8px #2458cb66}
 .svc-feature{margin-bottom:24px;border:1px solid var(--line-strong);box-shadow:var(--sh)}.svc-feature .ic{background:var(--accent);color:#fff}
 .card .ic,.sb .n{margin-bottom:18px}.go-i{display:none}
 .card.idea,.side-b{background:var(--ink);color:white}.card.idea p,.side-b p{color:#e0e7f5}.card.idea .ic{background:#ffffff1f;color:white}
