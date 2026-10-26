@@ -406,7 +406,7 @@ const workItDemo = () => `${demoFab('#demo', '#demo')}
           <!-- מסך 1: ההודעה שמגיעה בוואטסאפ, רק כדי למסור את הקישור -->
           <div class="ph-screen is-on" id="d-wa">
             <div class="wa-h"><span class="av">ב</span><span id="d-name">דני</span></div>
-            <div class="wa-chat" id="d-chat">
+            <div class="wa-chat" id="d-chat" tabindex="-1">
               <div class="b out empty-msg">שלח משימה כדי לראות מה מגיע אליו</div>
             </div>
             <div class="demo-act" id="d-act" hidden>
@@ -417,8 +417,8 @@ const workItDemo = () => `${demoFab('#demo', '#demo')}
           <!-- מסך 2: פקודת העבודה עצמה — זה המוצר -->
           <div class="ph-screen" id="d-task-screen">
             <div class="tk-h">
-              <span class="tk-back" id="d-back" role="button" tabindex="0">›</span>
-              <b>פקודת עבודה</b>
+              <button type="button" class="tk-back" id="d-back" aria-label="חזרה למסך הקודם">›</button>
+              <b id="d-task-title" tabindex="-1">פקודת עבודה</b>
             </div>
             <div class="tk-body">
               <span class="tk-status" id="d-status">ממתינה לביצוע</span>

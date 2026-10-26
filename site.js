@@ -215,9 +215,15 @@ document.addEventListener('click', e => {
   const wait = ms => new Promise(r => setTimeout(r, ms));
   const now = () => new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' });
 
+  // Toggling classes alone leaves focus wherever it was - often on a button
+  // that just became hidden (e.g. d-open, inside the now-hidden d-act), which
+  // drops keyboard/screen-reader focus to <body> with no indication the
+  // screen changed. Each transition moves focus to a stable landmark on the
+  // screen it's entering instead.
   const show = screen => {
     waScreen.classList.toggle('is-on', screen === 'wa');
     taskScreen.classList.toggle('is-on', screen === 'task');
+    (screen === 'task' ? $('d-task-title') : chat).focus({ preventScroll: true });
   };
   // d-task is free text the manager types (up to 40 chars) and lands inside
   // an innerHTML template below — unescaped, a title like "<img src=x
@@ -309,13 +315,19 @@ document.addEventListener('click', e => {
   let history = [], asked = 0, leadShown = false, busy = false, controller = null;
   const initialBody = body.innerHTML; // the welcome message + chips, to restore on close
 
-  const open = () => { panel.hidden = false; setTimeout(() => input.focus(), 80); };
+  // A moving hero video behind an open modal dialog is a distraction (and a
+  // WCAG 2.2.2 concern) for anyone using the chat - pause it while the panel
+  // is open and resume on close, instead of leaving it running regardless of
+  // what else is on screen.
+  const heroVideo = document.querySelector('.poetexa-hero-video');
+  const open = () => { panel.hidden = false; heroVideo?.pause(); setTimeout(() => input.focus(), 80); };
   // The privacy policy says the conversation isn't kept after the window
   // closes, so closing has to actually clear it here too, not just hide it:
   // cancel any question in flight too, so its answer can't land in the next
   // conversation, and clear the name/phone the lead form was holding.
   const close = () => {
     panel.hidden = true;
+    heroVideo?.play().catch(() => {});
     $('ai-open')?.focus();
     controller?.abort();
     busy = false;
@@ -343,6 +355,10 @@ document.addEventListener('click', e => {
     d.className = 'ai-msg ' + who;
     d.dir = 'auto'; // a visitor or the model may type in Hebrew or English; let the first strong character decide per bubble
     d.textContent = text;
+    // The waiting bubble's visual "···" would otherwise be announced
+    // literally by a screen reader; ai-body's aria-live reads this label
+    // instead, so a screen reader user hears that an answer is on its way.
+    if (who.includes('typing')) d.setAttribute('aria-label', 'מחפש תשובה…');
     body.append(d);
     body.scrollTop = body.scrollHeight;
     return d;

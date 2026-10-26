@@ -165,7 +165,7 @@
           <!-- מסך 1: ההודעה שמגיעה בוואטסאפ, רק כדי למסור את הקישור -->
           <div class="ph-screen is-on" id="d-wa">
             <div class="wa-h"><span class="av">ב</span><span id="d-name">דני</span></div>
-            <div class="wa-chat" id="d-chat">
+            <div class="wa-chat" id="d-chat" tabindex="-1">
               <div class="b out empty-msg">שלח משימה כדי לראות מה מגיע אליו</div>
             </div>
             <div class="demo-act" id="d-act" hidden>
@@ -176,8 +176,8 @@
           <!-- מסך 2: פקודת העבודה עצמה — זה המוצר -->
           <div class="ph-screen" id="d-task-screen">
             <div class="tk-h">
-              <span class="tk-back" id="d-back" role="button" tabindex="0">›</span>
-              <b>פקודת עבודה</b>
+              <button type="button" class="tk-back" id="d-back" aria-label="חזרה למסך הקודם">›</button>
+              <b id="d-task-title" tabindex="-1">פקודת עבודה</b>
             </div>
             <div class="tk-body">
               <span class="tk-status" id="d-status">ממתינה לביצוע</span>
@@ -293,7 +293,7 @@
     </div>
     <button type="button" id="ai-close" aria-label="סגירה">✕</button>
   </div>
-  <div class="ai-body" id="ai-body">
+  <div class="ai-body" id="ai-body" aria-live="polite">
     <div class="ai-msg bot">שלום! אני העוזר של POETEXA. אפשר לשאול אותי על השירותים, על איך עובדים, או פשוט לספר מה אתה רוצה לשפר בעסק, ואנסה לכוון.</div>
     <div class="ai-chips">
       <button type="button">מה אתם בונים?</button>
