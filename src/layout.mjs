@@ -185,9 +185,10 @@ export function header(root) {
 export function navBar(root) {
   const r = root || './';
   const items = [
-    ['problems','wrench','נתחיל מהבעיה'], ['film','camera','סרטון הדגמה'],
+    ['industries','store','לפי תחום'], ['problems','wrench','נתחיל מהבעיה'],
+    ['film','camera','סרטון הדגמה'],
     ['services','globe','שירותים'], ['auto','zap','אוטומציות'], ['ai','bot','AI'],
-    ['industries','store','לפי תחום'], ['work','star','עבודות'],
+    ['work','star','עבודות'],
     ['process','check','איך עובדים'], ['contact','message','יצירת קשר']
   ];
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
