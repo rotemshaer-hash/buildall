@@ -38,8 +38,13 @@ document.addEventListener('click', e => {
 });
 
 // A link to #manage from anywhere should land on an open group, not a closed one.
+// location.hash is whatever text follows "#" in the URL, so it isn't
+// guaranteed to be a valid CSS selector (e.g. a bare "#", one starting with a
+// digit, or containing a stray space) — querySelector throws on those, and an
+// uncaught throw here would stop every later script in this file from running.
 const openTargetGroup = () => {
-  const el = location.hash && document.querySelector(location.hash);
+  let el;
+  try { el = location.hash && document.querySelector(location.hash); } catch { return; }
   if (el && el.tagName === 'DETAILS') el.open = true;
 };
 addEventListener('hashchange', openTargetGroup);
@@ -93,9 +98,14 @@ mailBtn?.addEventListener('click', async () => {
   }
   mailBtn.disabled = true;
   say('שולח…');
+  // A hung request (bad connection, a stalled API) must not leave the button
+  // disabled and the form stuck on "שולח…" forever — give it a ceiling and
+  // fall through to the same recovery path as a real network failure.
+  const timeout = AbortSignal.timeout(15000);
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
+      signal: timeout,
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         access_key: document.body.dataset.formkey,
@@ -311,12 +321,23 @@ document.addEventListener('click', e => {
     q: d.querySelector('summary').textContent,
     a: d.querySelector('p').textContent
   }));
+  // Canned answers for the suggestion chips themselves (src/layout.mjs's
+  // .ai-chips), so the one question a visitor is most likely to tap gets an
+  // exact answer instead of whatever the FAQ matcher happens to score highest.
+  const chipAnswers = {
+    'מה אתם בונים?': 'אתרים, דפי נחיתה, אפליקציות, ומערכות לניהול עובדים, משמרות, משימות, מסמכים, לקוחות ומלאי — ואם יש לך רעיון שלא ברשימה, נבנה גם אותו.',
+    'כמה זה עולה?': 'תלוי בגודל: כלי קטן או דף נחיתה עולים הרבה פחות מאפליקציה מלאה. אחרי שיחה קצרה מקבלים מחיר סגור מראש, בלי הפתעות.',
+    'אני רודף אחרי עובדים': 'בכלים לניהול צוות העובד לא מתקין כלום — מקבל קישור בוואטסאפ ולוחץ עליו. רוצה שנבדוק מה מתאים לעסק שלך?',
+    'יש לי כבר אתר': 'אפשר לשלב AI או מערכת ניהול באתר קיים בלי לבנות הכול מחדש, ואפשר גם לשפר את מה שיש. מה הכי מעכב אותך בו?'
+  };
+  const splitWords = s => s.toLowerCase().split(/[^֐-׿a-z0-9]+/).filter(w => w.length > 2);
   const localAnswer = q => {
-    const words = q.toLowerCase().split(/[^֐-׿a-z0-9]+/).filter(w => w.length > 2);
+    if (chipAnswers[q]) return chipAnswers[q];
+    const words = new Set(splitWords(q));
     let best = null, score = 0;
     for (const f of faq) {
-      const hay = (f.q + ' ' + f.a).toLowerCase();
-      const n = words.filter(w => hay.includes(w)).length;
+      const hayWords = new Set(splitWords(f.q + ' ' + f.a));
+      const n = [...words].filter(w => hayWords.has(w)).length;
       if (n > score) { score = n; best = f; }
     }
     return score >= 2 && best
@@ -347,12 +368,18 @@ document.addEventListener('click', e => {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ messages: history }),
-        signal: controller.signal
+        // Two different reasons to abort need two different outcomes: closing
+        // the panel should answer nothing (close() already reset the state),
+        // but a stalled request must still recover — fall back to the local
+        // answer and release busy — instead of leaving the chat stuck on
+        // "···" forever. controller.signal alone can't tell them apart once
+        // combined, so a timeout checks controller.signal.aborted itself.
+        signal: AbortSignal.any([controller.signal, AbortSignal.timeout(20000)])
       });
       const data = await res.json();
       reply = data.reply || localAnswer(text);
     } catch (e) {
-      if (e.name === 'AbortError') return; // the panel was closed; close() already reset everything
+      if (e.name === 'AbortError' && controller.signal.aborted) return; // the panel was closed
       reply = localAnswer(text);
     }
     typing.remove();

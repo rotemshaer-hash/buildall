@@ -95,8 +95,17 @@ export default {
       const ip = request.headers.get('cf-connecting-ip') || 'anon';
       if (tooMany(ip)) return json({ fallback: true, reason: 'rate' });
 
+      // A huge body costs CPU/memory to parse before any of the checks below
+      // ever run, so it's rejected by its declared size first.
+      const len = Number(request.headers.get('content-length') || 0);
+      if (len > 20000) return json({ error: 'body' }, 413);
+
       let body;
       try { body = await request.json(); } catch { return json({ error: 'body' }, 400); }
+      // request.json() happily returns null/a string/a number for valid JSON
+      // that isn't an object — body.messages below would throw on null and
+      // crash the whole request instead of answering with a clean 400.
+      if (typeof body !== 'object' || body === null) return json({ error: 'body' }, 400);
 
       const history = Array.isArray(body.messages) ? body.messages.slice(-8) : [];
       if (!history.length) return json({ error: 'empty' }, 400);
@@ -107,9 +116,14 @@ export default {
 
       // The assistant answers from the site's own content, fetched from the site itself,
       // so it is always the published version and never a stale copy.
+      // Parsed and re-stringified, not just fetched as text, so a build that
+      // ever ships a truncated or malformed kb.json fails safe (falls back
+      // to the page's own answers) instead of handing the model broken JSON
+      // as its only source of truth about the business.
       let kb;
       try {
-        kb = await (await env.ASSETS.fetch(new URL('/kb.json', url))).text();
+        const text = await (await env.ASSETS.fetch(new URL('/kb.json', url))).text();
+        kb = JSON.stringify(JSON.parse(text));
       } catch {
         return json({ fallback: true, reason: 'kb' });
       }
