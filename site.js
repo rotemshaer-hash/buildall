@@ -86,15 +86,28 @@ const say = (text, ok) => {
   if (el) { el.textContent = text; el.className = 'form-msg' + (ok === true ? ' ok' : ok === false ? ' bad' : ''); }
 };
 
+// HTML's own "required" accepts a value of pure whitespace, so a name of
+// "   " passed native validation straight through to both submit paths.
+// Phone here is optional, so it's only checked for shape (a reasonable
+// international number) when something was actually typed. Shared by both
+// the WhatsApp and the email submit paths, which both rely on it.
+const nameField = form?.querySelector('[name="name"]'), phoneField = form?.querySelector('[name="phone"]');
+const validateContactForm = () => {
+  nameField.setCustomValidity(nameField.value.trim() ? '' : 'יש להזין שם');
+  const phoneDigits = phoneField.value.trim().replace(/\D/g, '');
+  phoneField.setCustomValidity(!phoneField.value.trim() || phoneDigits.length >= 7 ? '' : 'יש להזין מספר טלפון תקין');
+  return form.reportValidity();
+};
 form?.addEventListener('submit', e => {
   e.preventDefault();
+  if (!validateContactForm()) return;
   if (WA_NUMBER) window.open(waLink(formText(new FormData(e.target))), '_blank', 'noopener');
 });
 
 // Sending by email needs a key from web3forms.com; without one the button is not rendered.
 const mailBtn = document.getElementById('send-mail');
 mailBtn?.addEventListener('click', async () => {
-  if (!form.reportValidity()) return;
+  if (!validateContactForm()) return;
   const f = new FormData(form);
   if (f.get('_gotcha')) return;                       // a bot filled the hidden field
   // By email there is no phone number to answer on, so a reply address is the one
@@ -177,8 +190,13 @@ const y = document.getElementById('y');
 if (y) y.textContent = new Date().getFullYear();
 
 // Counts WhatsApp and phone clicks, per page, once Google Analytics is connected (GA_ID in src/layout.mjs).
+// Matched only on data-wa/data-call specifically — the old "#lead button"
+// catch-all also matched the email-send button (which has neither
+// attribute), so clicking "שליחה במייל" was wrongly counted as a
+// whatsapp_click. The email button already fires its own email_submit event
+// on an actual successful send, which this must not also double as.
 document.addEventListener('click', e => {
-  const a = e.target.closest && e.target.closest('[data-wa], [data-call], #lead button');
+  const a = e.target.closest && e.target.closest('[data-wa], [data-call]');
   if (!a || typeof window.gtag !== 'function') return;
   gtag('event', a.hasAttribute('data-call') ? 'phone_click' : 'whatsapp_click', { page: location.pathname });
 });
@@ -408,7 +426,14 @@ document.addEventListener('click', e => {
   // The conversation goes with the lead, so Rotem opens it already knowing the subject.
   lead.addEventListener('submit', e => {
     e.preventDefault();
-    const name = $('ai-name').value.trim(), phone = $('ai-phone').value.trim();
+    const nameEl = $('ai-name'), phoneEl = $('ai-phone');
+    const name = nameEl.value.trim(), phone = phoneEl.value.trim();
+    // required alone accepts whitespace-only input; check the trimmed value
+    // and a sane digit count (loose enough to accept an international
+    // number) instead of trusting the raw field.
+    nameEl.setCustomValidity(name ? '' : 'יש להזין שם');
+    phoneEl.setCustomValidity(phone.replace(/\D/g, '').length >= 7 ? '' : 'יש להזין מספר טלפון תקין');
+    if (!lead.reportValidity()) return;
     const topics = history.filter(m => m.role === 'user').map(m => m.content).slice(0, 3);
     const text = [
       (document.body.dataset.from || 'היי, הגעתי מהאתר של POETEXA') + ' 🙂',

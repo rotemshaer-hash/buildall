@@ -209,7 +209,7 @@
       <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
       <!-- מלכודת ספאם: שדה שרק בוט ממלא. הוא מוסתר מהעין ומקוראי מסך. -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-      <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>
+      <button class="btn btn-wa" type="submit" data-wa><svg><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>
       <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שליחה במייל</button>
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
@@ -262,7 +262,7 @@
     <b>רוצה שנציג שירות יחזור אליך?</b>
     <div class="ai-lead-f">
       <input aria-label="שם" id="ai-name" placeholder="שם" autocomplete="name" required>
-      <input aria-label="טלפון" id="ai-phone" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
+      <input aria-label="טלפון" id="ai-phone" type="tel" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
     </div>
     <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שליחה בוואטסאפ</button>
     <button type="button" class="ai-skip" id="ai-skip">לא עכשיו</button>
