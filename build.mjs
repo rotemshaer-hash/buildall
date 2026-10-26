@@ -17,6 +17,26 @@ const nav = { industries, guides, cases, legal };
 // like נדל"ן otherwise closes the attribute early and breaks the markup.
 const attr = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 
+// Single source of truth for the Pilates demo's opening hours, indexed like
+// Date#getDay() (0 = Sunday ... 6 = Saturday) — both the open/closed logic
+// baked into the demo's own client script and the hours line printed on the
+// page are generated from this same array, so they can't drift apart again.
+const DEMO_HOURS = [[390, 1260], [390, 1260], [390, 1260], [390, 1260], [390, 1260], [420, 780], null];
+const DEMO_DAY_LETTERS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
+const demoHhmm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
+const demoHoursLabel = hours => {
+  const groups = [];
+  for (let i = 0; i < 7;) {
+    if (!hours[i]) { i++; continue; }
+    let j = i;
+    while (j + 1 < 7 && hours[j + 1] && hours[j + 1][0] === hours[i][0] && hours[j + 1][1] === hours[i][1]) j++;
+    const day = i === j ? `${DEMO_DAY_LETTERS[i]}׳` : `${DEMO_DAY_LETTERS[i]}׳–${DEMO_DAY_LETTERS[j]}׳`;
+    groups.push(`${day} ${demoHhmm(hours[i][0])}–${demoHhmm(hours[i][1])}`);
+    i = j + 1;
+  }
+  return groups.join(' · ');
+};
+
 const write = (path, html) => {
   mkdirSync(path.split('/').slice(0, -1).join('/') || '.', { recursive: true });
   writeFileSync(path, html);
@@ -547,7 +567,7 @@ write('demo/landing/index.html', `<!doctype html>
   <span><b>דף נחיתה לדוגמה</b> · עסק שאינו קיים</span>
   <a href="../../">נבנה על ידי POETEXA ←</a>
 </div>
-${readFileSync('src/demo-landing.html', 'utf8')}
+${readFileSync('src/demo-landing.html', 'utf8').replace('א׳–ה׳ 06:30–21:00 · ו׳ 07:00–13:00', demoHoursLabel(DEMO_HOURS))}
 <footer class="l-foot">
   <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
   <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="../../">POETEXA</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
@@ -564,16 +584,24 @@ ${readFileSync('src/demo-landing.html', 'utf8')}
 
   // 2. Open or closed, read from the clock rather than written in the text — a line
   //    that says "open now" when it is nine at night costs more than it gives.
-  const HOURS = [null, [390, 1260], [390, 1260], [390, 1260], [390, 1260], [390, 1260], [420, 780]];
-  const now = new Date(), span = HOURS[now.getDay()];
-  const mins = now.getHours() * 60 + now.getMinutes();
+  //    Same HOURS array the build script used for the printed hours line
+  //    (Date#getDay() order: 0 = Sunday ... 6 = Saturday), and read in Israel
+  //    time specifically — a visitor's own device clock/timezone must not
+  //    decide whether a Tel Aviv studio looks open.
+  const HOURS = ${JSON.stringify(DEMO_HOURS)};
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Jerusalem', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false
+  }).formatToParts(new Date()).map(p => [p.type, p.value]));
+  const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday);
+  const mins = Number(parts.hour) * 60 + Number(parts.minute);
+  const span = HOURS[day];
   const hhmm = m => String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0');
   const open = document.getElementById('l-open');
   if (span && mins >= span[0] && mins < span[1]) {
     open.classList.add('on');
     open.innerHTML = '<i></i> פתוח עכשיו · עד ' + hhmm(span[1]);
   } else {
-    const next = HOURS.slice(now.getDay() + 1).concat(HOURS).find(Boolean);
+    const next = HOURS.slice(day + 1).concat(HOURS).find(Boolean);
     open.innerHTML = '<i></i> סגור כרגע · נפתח ב-' + hhmm(next[0]);
   }
 

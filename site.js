@@ -42,13 +42,22 @@ document.addEventListener('click', e => {
 // guaranteed to be a valid CSS selector (e.g. a bare "#", one starting with a
 // digit, or containing a stray space) — querySelector throws on those, and an
 // uncaught throw here would stop every later script in this file from running.
-const openTargetGroup = () => {
+const openTargetGroup = hash => {
   let el;
-  try { el = location.hash && document.querySelector(location.hash); } catch { return; }
+  try { el = hash && document.querySelector(hash); } catch { return; }
   if (el && el.tagName === 'DETAILS') el.open = true;
 };
-addEventListener('hashchange', openTargetGroup);
-openTargetGroup();
+addEventListener('hashchange', () => openTargetGroup(location.hash));
+openTargetGroup(location.hash);
+// hashchange only fires when the URL's hash actually changes — closing a
+// group with its own summary and then clicking the same #auto link again
+// leaves the hash unchanged, so no event fires and the group stayed closed.
+// A direct click handler re-opens the target regardless of whether the
+// hash itself moved.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if (a) openTargetGroup(a.getAttribute('href'));
+});
 
 // The floating demo pill steps aside while the demo itself is in view.
 (() => {
