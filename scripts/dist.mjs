@@ -10,7 +10,8 @@ const FILES = [
   'assets', 'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo/cafe', 'demo/landing',
   'googlef057313d56875ab6.html',   // Search Console ownership. Google says to keep it for good.
   'accessibility', 'privacy', 'guides', 'work', 'media',
-  'restaurants', 'beauty', 'retail', 'clinics', 'contractors', 'fitness'
+  'restaurants', 'beauty', 'retail', 'clinics', 'contractors', 'fitness',
+  'lawyers', 'accountants', 'realestate', 'garages'
 ];
 
 rmSync('dist', { recursive: true, force: true });
