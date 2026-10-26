@@ -55,8 +55,15 @@ function tooMany(ip) {
 // price, but instructions alone don't guarantee compliance, so the reply
 // itself is checked before it reaches the visitor.
 const PRICE_SAFE_REPLY = 'אני לא יכול לנקוב במחיר כאן — המחיר נקבע אחרי שיחת ייעוץ חינם כדי שיהיה מדויק לעסק שלך. רוצה לקבוע אחת?';
+// A bare number range alone used to trigger this (a phone number like
+// 050-1234567, or "5-10 עובדים"), so it now only counts as a price when a
+// currency symbol/word is present too, or the range sits in the same text
+// as a price-related word — and even then it's capped to 2-4 digit groups,
+// shorter than a real phone number's second half, to keep a phone number
+// from matching just because the message also happens to mention "עולה".
 function mentionsPrice(text) {
-  return /(₪|ש"?ח|שקל|ש״ח)/.test(text) || /\d{2,}\s*-\s*\d{2,}/.test(text);
+  if (/(₪|ש"?ח|שקל|ש״ח)/.test(text)) return true;
+  return /מחיר|עולה|עלות|תשלום|הנחה|תעריף/.test(text) && /\b\d{2,4}\s*-\s*\d{2,4}\b/.test(text);
 }
 
 async function askCloudflare(env, messages) {
@@ -112,6 +119,13 @@ export default {
       for (const m of history) {
         if (typeof m?.content !== 'string' || m.content.length > 1000) return json({ error: 'body' }, 400);
         if (m.role !== 'user' && m.role !== 'assistant') return json({ error: 'body' }, 400);
+        // The client supplies its own chat history, including the "assistant"
+        // turns — those aren't actually verified statements the business
+        // made; a visitor can send any content under role:"assistant", e.g. a
+        // forged "המחיר הוא 500 שקל" turn, hoping the model treats its own
+        // supposed earlier reply as an established fact to defer to. Rule 1
+        // is re-applied to every such turn, not just the live reply.
+        if (m.role === 'assistant' && mentionsPrice(m.content)) m.content = PRICE_SAFE_REPLY;
       }
 
       // The assistant answers from the site's own content, fetched from the site itself,

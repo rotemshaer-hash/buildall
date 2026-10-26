@@ -63,7 +63,15 @@ ok(home.includes('VideoObject'), 'תיאור הווידאו לגוגל');
 const h1 = (home.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || ['',''])[1].replace(/&nbsp;/g, ' ');
 // In the new studio layout the H1 is a brand promise; the service categories
 // are required in the visible lead copy immediately below it.
-const heroSection = home.slice(home.indexOf('<!-- HERO: POETEXA'), home.indexOf('<div class="poetexa-quick'));
+// The end marker here has drifted before: a rename of the bento wrap class
+// left the old marker unmatched, so indexOf returned -1 and slice(start, -1)
+// silently took almost the entire page as "the hero" instead of failing
+// loudly. Assert the marker is actually found, so the next rename breaks the
+// build instead of quietly widening what counts as the hero.
+const heroEndMarker = '<div class="wrap poetexa-bento-wrap">';
+const heroEnd = home.indexOf(heroEndMarker);
+ok(heroEnd !== -1, `סימן הסיום של הפתיח (${heroEndMarker}) קיים בדף`);
+const heroSection = home.slice(home.indexOf('<!-- HERO: POETEXA'), heroEnd === -1 ? undefined : heroEnd);
 ok(h1.includes('העסק שלך'), 'הכותרת הראשית מציגה את הבטחת המותג');
 for (const word of ['מערכות ניהול', 'אפליקציות', 'אוטומציות', 'אתרים'])
   ok(heroSection.includes(word), `הפתיח מזכיר "${word}"`);
