@@ -185,8 +185,8 @@ export function header(root) {
 export function navBar(root) {
   const r = root || './';
   const items = [
-    ['industries','store','לפי תחום'], ['problems','wrench','נתחיל מהבעיה'],
-    ['film','camera','סרטון הדגמה'],
+    ['film','camera','סרטון הדגמה'], ['problems','wrench','נתחיל מהבעיה'],
+    ['industries','store','לפי תחום'],
     ['services','globe','שירותים'], ['auto','zap','אוטומציות'], ['ai','bot','AI'],
     ['work','star','עבודות'],
     ['process','check','איך עובדים'], ['contact','message','יצירת קשר']

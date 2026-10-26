@@ -39,7 +39,7 @@ const industriesSection = root => `<section class="industries" id="industries">
       <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו POETEXA.</p>
     </div>
     <div class="ind-grid">
-${industries.map(i => `      <a class="ind" href="${root}${i.slug}/"><span class="ic">${icon(i.icon)}</span><b>${i.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
+${industries.map(i => `      <a class="ind" href="${root}${i.slug}/"><span class="ic">${icon(i.icon)}</span><b>${i.short}</b><span class="go">לפתרונות ${icon('arrow')}</span></a>`).join('\n')}
     </div>
   </div>
 </section>`;
