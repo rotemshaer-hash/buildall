@@ -561,13 +561,49 @@ const workItDemo = () => `${demoFab('#demo', '#demo')}
   </div>
 </section>`;
 
+// The smart-inbox demo: a sample inquiry comes in, gets classified, joins the
+// handling queue and raises an alert — all automated — then stops and waits
+// for a human to approve before anything would go out.
+const autoInboxDemo = () => `${demoFab('#demo', '#demo')}
+<section class="demo-sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">${icon('bot')} נסה בעצמך</span>
+      <h2 class="h2">קבל פנייה לדוגמה, וראה מה קורה</h2>
+      <p class="lead">הדגמה חיה שרצה כאן בדף, עם נתוני דוגמה מסומנים — שום הודעה אמיתית לא נשלחת. לוחצים, וצופים איפה האוטומציה פועלת לבד ואיפה אתה מאשר.</p>
+    </div>
+    <div class="inbox-demo" data-inbox-demo>
+      <button class="btn btn-wa" id="ib-new" type="button"><svg><use href="#wa"/></svg>קבל פנייה לדוגמה</button>
+      <div class="ib-flow">
+        <div class="ib-step">
+          <span class="ib-step-tag">${icon('message')} הפנייה נכנסת</span>
+          <div class="ib-msg" id="ib-msg-text">—</div>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — מיון לפי נושא</span>
+          <div class="ib-status" id="ib-classify-status">ממתין לפנייה…</div>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — הוספה לרשימה והתראה</span>
+          <ul class="ib-queue" id="ib-queue"><li class="empty">הרשימה ריקה</li></ul>
+        </div>
+        <div class="ib-step ib-human">
+          <span class="ib-step-tag">✋ כאן אתה מאשר</span>
+          <div id="ib-approve-area"><p class="ib-hint">אין עדיין פנייה לאשר.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">הדגמה בלבד: נתוני דוגמה מסומנים, ושום הודעה אמיתית לא נשלחת ולא נשמרת.</p>
+  </div>
+</section>`;
+
 // ---------- project stories ----------
 for (const c of cases) {
   const others = cases.filter(o => o !== c);
   write(`work/${c.slug}/index.html`, article({
     root: '../../', trail: [['דף הבית', ''], ['עבודות', '#work'], [c.short, `work/${c.slug}/`]],
     title: c.title, description: c.description, h1: c.h1, lead: c.lead, eyebrow: c.size,
-    body: `${c.demo ? workItDemo() : ''}<h2>האתגר</h2>
+    body: `${c.demo === 'work-it' ? workItDemo() : c.demo === 'inbox' ? autoInboxDemo() : ''}<h2>האתגר</h2>
 <p>${c.problem}</p>
 <h2>מה בנינו</h2>
 <p>${c.solution}</p>

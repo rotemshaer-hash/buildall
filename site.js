@@ -333,6 +333,64 @@ document.addEventListener('click', e => {
   });
 })();
 
+// ---------- smart-inbox demo ----------
+// A sample inquiry comes in, gets classified and queued automatically, then
+// stops: nothing is ever sent without the explicit approve click below.
+(() => {
+  const root = document.querySelector('[data-inbox-demo]');
+  if (!root) return;
+  const $ = id => document.getElementById(id);
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Clearly fictional sample inquiries — nothing here is a real conversation.
+  const SAMPLES = [
+    { text: 'היי, אפשר לקבוע תור לשבוע הבא?', tag: 'קביעת תור', reply: 'בשמחה! אשלח לך קישור לבחירת מועד פנוי.' },
+    { text: 'מה המחיר בערך לאתר קטן?', tag: 'בקשת הצעת מחיר', reply: 'המחיר נקבע אחרי שיחת ייעוץ חינם כדי שיהיה מדויק. נקבע אחת?' },
+    { text: 'האתר שלי לא נטען, אפשר עזרה?', tag: 'תמיכה טכנית', reply: 'מצטערים על זה! אפשר לשלוח צילום מסך של השגיאה?' },
+    { text: 'מעוניין לשמוע עוד על השירותים שלכם', tag: 'כללי', reply: 'כמובן! על מה הכי מעניין אותך לשמוע — אתר, אפליקציה, או אוטומציה?' }
+  ];
+  let idx = 0, busy = false;
+
+  $('ib-new').addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    $('ib-new').disabled = true;
+    const sample = SAMPLES[idx % SAMPLES.length];
+    idx++;
+
+    $('ib-msg-text').textContent = sample.text;
+    $('ib-classify-status').textContent = 'מסווג…';
+    $('ib-approve-area').innerHTML = '<p class="ib-hint">אין עדיין פנייה לאשר.</p>';
+    await wait(900);
+
+    $('ib-classify-status').textContent = `זוהה נושא: ${sample.tag}`;
+    await wait(700);
+
+    document.querySelector('#ib-queue .empty')?.remove();
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="ib-tag">${escapeHtml(sample.tag)}</span><span>${escapeHtml(sample.text)}</span>`;
+    $('ib-queue').append(li);
+    await wait(500);
+
+    $('ib-approve-area').innerHTML = `<p class="ib-hint">🔔 פנייה חדשה בנושא <b>${escapeHtml(sample.tag)}</b>. תשובה מוצעת:</p>
+      <p class="ib-reply">${escapeHtml(sample.reply)}</p>
+      <div class="ib-approve-btns">
+        <button type="button" class="btn btn-wa" id="ib-approve">אשר ושלח (לדוגמה)</button>
+        <button type="button" class="btn btn-ghost" id="ib-reject">אכתוב תשובה אחרת</button>
+      </div>`;
+    $('ib-approve').addEventListener('click', () => {
+      $('ib-approve-area').innerHTML = '<p class="ib-ok">✓ אושר — בהדגמה הזו שום דבר לא נשלח באמת.</p>';
+    });
+    $('ib-reject').addEventListener('click', () => {
+      $('ib-approve-area').innerHTML = '<p class="ib-ok">✓ סומן לכתיבת תשובה ידנית — בהדגמה הזו שום דבר לא נשלח באמת.</p>';
+    });
+
+    busy = false;
+    $('ib-new').disabled = false;
+  });
+})();
+
 // ---------- the assistant ----------
 // Answers come from /api/chat, which reads the site's own content. If that is not
 // available the panel still works: it answers from the questions already on the page.
