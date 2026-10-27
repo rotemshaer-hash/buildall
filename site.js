@@ -294,6 +294,8 @@ document.addEventListener('click', e => {
     $('d-photo-empty').hidden = false;
     $('d-done').hidden = false;
     $('d-tk-ok').hidden = true;
+    $('d-export').hidden = true;
+    $('d-xls-result').hidden = true;
 
     chat.innerHTML = '';
     log.innerHTML = '';
@@ -330,6 +332,14 @@ document.addEventListener('click', e => {
     bubble('in', '✓ סימנתי שבוצע וצירפתי תמונה');
     await wait(500);
     bubble('out', 'תודה! 🙏');
+    // The real tool rolls every task's photos and timestamps into one
+    // export, same as described in its own "how it works" list — shown
+    // here too, not just written, once there's actually a done task to export.
+    $('d-export').hidden = false;
+  });
+
+  $('d-xlsx').addEventListener('click', () => {
+    $('d-xls-result').hidden = false;
   });
 })();
 

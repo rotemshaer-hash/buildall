@@ -517,6 +517,14 @@ const workItDemo = () => `${demoFab('#demo', '#demo')}
           </div>
           <button class="btn btn-wa" id="d-send" type="button"><svg><use href="#wa"/></svg>שלח משימה</button>
           <ul class="demo-log" id="d-log"><li class="empty">כאן יופיע מה שקורה עם המשימה</li></ul>
+          <div class="demo-export" id="d-export" hidden>
+            <button class="btn btn-line" type="button" id="d-xlsx"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>ייצוא דוח אקסל</button>
+            <div class="xls-result" id="d-xls-result" hidden>
+              <div class="xls-h">דוח_עבודה.xlsx</div>
+              <div class="xls-g"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <p class="xls-ok">✓ כל המשימות, התמונות והשעות בקובץ אחד</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="demo-side">

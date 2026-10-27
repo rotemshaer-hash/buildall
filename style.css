@@ -127,6 +127,13 @@
 .demo-log li.done{background:rgba(20,184,166,.28);font-weight:700}
 .demo-log li.empty{opacity:.55;justify-content:center;background:transparent;border:1px dashed rgba(255,255,255,.18)}
 .demo-log time{opacity:.7;font-size:12px;flex:none}
+.demo-export{margin-top:4px}
+.xls-result{margin-top:10px;background:#fff;border-radius:10px;overflow:hidden;max-width:220px;box-shadow:0 10px 24px rgba(0,0,0,.3);animation:pop .3s ease both}
+.xls-h{background:#1d6f42;color:#fff;font:700 12px Assistant,sans-serif;padding:7px 9px;direction:ltr}
+.xls-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d7e4dc;padding:1px}
+.xls-g i{height:16px;background:#fff}
+.xls-g i:nth-child(-n+3){background:#e7f4ec}
+.xls-ok{padding:8px 9px;font-size:12px;font-weight:700;color:#1d6f42;margin:0}
 @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* הטלפון מחזיק שני מסכים: ההודעה, ופקודת העבודה */
