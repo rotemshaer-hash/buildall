@@ -605,13 +605,87 @@ const autoInboxDemo = () => `${demoFab('#demo', '#demo')}
   </div>
 </section>`;
 
+// The contractor quick-quote demo: a sample job description comes in, the
+// system drafts a scope of work (no price — that stays with the contractor),
+// and stops for an explicit approval before anything goes to the client.
+const quickQuoteDemo = () => `${demoFab('#demo', '#demo')}
+<section class="demo-sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">${icon('zap')} נסה בעצמך</span>
+      <h2 class="h2">קבל פנייה לדוגמה, וראה מה קורה</h2>
+      <p class="lead">הדגמה חיה שרצה כאן בדף, עם נתוני דוגמה מסומנים — שום הודעה אמיתית לא נשלחת. שימו לב: האוטומציה בונה את היקף העבודה, אבל לעולם לא נוגעת במחיר.</p>
+    </div>
+    <div class="inbox-demo" data-quote-demo>
+      <button class="btn btn-wa" id="qq-new" type="button"><svg><use href="#wa"/></svg>קבל פנייה לדוגמה מלקוח</button>
+      <div class="ib-flow">
+        <div class="ib-step">
+          <span class="ib-step-tag">${icon('message')} הלקוח מתאר עבודה</span>
+          <div class="ib-msg" id="qq-msg-text">—</div>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — שאלות הבהרה</span>
+          <ul class="ib-queue" id="qq-qa"><li class="empty">ממתין לפנייה…</li></ul>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — טיוטת היקף עבודה (בלי מחיר)</span>
+          <ul class="ib-queue" id="qq-scope"><li class="empty">עוד אין טיוטה</li></ul>
+        </div>
+        <div class="ib-step ib-human">
+          <span class="ib-step-tag">✋ כאן אתה קובע מחיר ומאשר</span>
+          <div id="qq-approve-area"><p class="ib-hint">אין עדיין טיוטה לאשר.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">הדגמה בלבד: נתוני דוגמה מסומנים, ושום הודעה אמיתית לא נשלחת ולא נשמרת.</p>
+  </div>
+</section>`;
+
+// The restaurant phone-order demo: a sample call comes in, the AI carries a
+// short scripted conversation, captures structured order details from it,
+// and sends a confirmation with a link — fully automated for a simple order,
+// unlike the approval-gated demos above (there's no price decision here).
+const phoneOrderDemo = () => `${demoFab('#demo', '#demo')}
+<section class="demo-sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">${icon('bot')} נסה בעצמך</span>
+      <h2 class="h2">קבל שיחה לדוגמה, וראה מה קורה</h2>
+      <p class="lead">הדגמה חיה שרצה כאן בדף, עם שיחה מומצאת — שום שיחה אמיתית לא מתבצעת. ה-AI "מנהל" את השיחה ותופס ממנה את פרטי ההזמנה, בזמן אמת.</p>
+    </div>
+    <div class="inbox-demo" data-phone-demo>
+      <button class="btn btn-wa" id="po-new" type="button"><svg><use href="#wa"/></svg>קבל שיחה לדוגמה</button>
+      <div class="ib-flow">
+        <div class="ib-step">
+          <span class="ib-step-tag">📞 שיחה נכנסת</span>
+          <div class="ib-status" id="po-call-status">ממתין לשיחה…</div>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — AI מנהל את השיחה</span>
+          <ul class="ib-queue" id="po-transcript"><li class="empty">עוד אין תמלול</li></ul>
+        </div>
+        <div class="ib-step ib-auto">
+          <span class="ib-step-tag">⚡ אוטומציה — אישור ללקוח + קישור</span>
+          <div id="po-confirm-area"><p class="ib-hint">עוד אין אישור לשלוח.</p></div>
+        </div>
+        <div class="ib-step ib-human">
+          <span class="ib-step-tag">✋ ההזמנה אצלכם בתור</span>
+          <ul class="ib-queue" id="po-queue"><li class="empty">התור ריק</li></ul>
+        </div>
+      </div>
+    </div>
+    <p class="demo-note">הדגמה בלבד: שיחה מומצאת, ושום הודעה אמיתית לא נשלחת ולא נשמרת.</p>
+  </div>
+</section>`;
+
 // ---------- project stories ----------
 for (const c of cases) {
   const others = cases.filter(o => o !== c);
   write(`work/${c.slug}/index.html`, article({
     root: '../../', trail: [['דף הבית', ''], ['עבודות', '#work'], [c.short, `work/${c.slug}/`]],
     title: c.title, description: c.description, h1: c.h1, lead: c.lead, eyebrow: c.size,
-    body: `${c.demo === 'work-it' ? workItDemo() : c.demo === 'inbox' ? autoInboxDemo() : ''}<h2>האתגר</h2>
+    body: `${c.demo === 'work-it' ? workItDemo() : c.demo === 'inbox' ? autoInboxDemo()
+      : c.demo === 'quote' ? quickQuoteDemo() : c.demo === 'phone-order' ? phoneOrderDemo() : ''}<h2>האתגר</h2>
 <p>${c.problem}</p>
 <h2>מה בנינו</h2>
 <p>${c.solution}</p>

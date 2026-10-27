@@ -401,6 +401,163 @@ document.addEventListener('click', e => {
   });
 })();
 
+// ---------- contractor quick-quote demo ----------
+// A sample job description comes in, the automation drafts a scope of work
+// (never a price), and stops for an explicit approval + price decision before
+// anything would go to the client.
+(() => {
+  const root = document.querySelector('[data-quote-demo]');
+  if (!root) return;
+  const $ = id => document.getElementById(id);
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // Clearly fictional sample jobs — nothing here is a real client or quote.
+  const SAMPLES = [
+    {
+      text: 'צריך לשפץ חדר אמבטיה, בערך 6 מ"ר.',
+      qa: [['מה המצב הקיים?', 'אריחים ישנים, צריך להחליף הכול'], ['יש העדפת תאריך להתחלה?', 'כן, בעוד כחודש']],
+      scope: ['פירוק אריחים, אסלה וכיור ישנים', 'עבודות אינסטלציה וחשמל נדרשות', 'ריצוף וחיפוי קירות חדשים', 'התקנת כיור, אסלה ומקלחון']
+    },
+    {
+      text: 'רוצה להחליף ארונות מטבח, מטבח בינוני.',
+      qa: [['יש מידות קיימות או סקיצה?', 'יש מידות, אשלח בנפרד'], ['צריך גם משטח עבודה חדש?', 'כן, גם משטח']],
+      scope: ['פירוק ארונות קיימים', 'ייצור והתקנת ארונות חדשים', 'התקנת משטח עבודה', 'חיבור מחדש של כיור וברז']
+    },
+    {
+      text: 'צביעת דירה של 4 חדרים, יש לו"ז קצר.',
+      qa: [['יש צבע ספציפי שנבחר?', 'לא עדיין, צריך המלצה'], ['יש זמן קצר ללו"ז?', 'כן, תוך שבוע']],
+      scope: ['הגנה על רצפות ורהיטים', 'שפכטל ותיקון סדקים', 'צביעת כל החדרים בשתי שכבות', 'ניקיון סופי']
+    }
+  ];
+  let idx = 0, busy = false;
+
+  $('qq-new').addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    $('qq-new').disabled = true;
+    const sample = SAMPLES[idx % SAMPLES.length];
+    idx++;
+
+    $('qq-msg-text').textContent = sample.text;
+    $('qq-qa').innerHTML = '<li class="empty">שואל שאלות הבהרה…</li>';
+    $('qq-scope').innerHTML = '<li class="empty">עוד אין טיוטה</li>';
+    $('qq-approve-area').innerHTML = '<p class="ib-hint">אין עדיין טיוטה לאשר.</p>';
+    await wait(800);
+
+    $('qq-qa').innerHTML = '';
+    for (const [q, a] of sample.qa) {
+      const li = document.createElement('li');
+      li.innerHTML = `<span class="ib-tag">ש</span><span><b>${escapeHtml(q)}</b><br>${escapeHtml(a)}</span>`;
+      $('qq-qa').append(li);
+      await wait(500);
+    }
+    await wait(400);
+
+    $('qq-scope').innerHTML = '';
+    for (const item of sample.scope) {
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${escapeHtml(item)}</span>`;
+      $('qq-scope').append(li);
+      await wait(250);
+    }
+    await wait(400);
+
+    $('qq-approve-area').innerHTML = `<p class="ib-hint">🔔 טיוטת היקף עבודה מוכנה. קבע מחיר ואשר שליחה:</p>
+      <div class="ib-approve-btns">
+        <button type="button" class="btn btn-wa" id="qq-approve">קבעתי מחיר — שלח ללקוח</button>
+        <button type="button" class="btn btn-ghost" id="qq-edit">ערוך טיוטה</button>
+      </div>`;
+    $('qq-approve').addEventListener('click', () => {
+      $('qq-approve-area').innerHTML = '<p class="ib-ok">✓ נשלח ללקוח קישור לטיוטה עם המחיר שקבעת — בהדגמה הזו שום דבר לא נשלח באמת.</p>';
+    });
+    $('qq-edit').addEventListener('click', () => {
+      $('qq-approve-area').innerHTML = '<p class="ib-ok">✓ סומן לעריכה ידנית לפני שליחה — בהדגמה הזו שום דבר לא נשלח באמת.</p>';
+    });
+
+    busy = false;
+    $('qq-new').disabled = false;
+  });
+})();
+
+// ---------- restaurant phone-order demo ----------
+// A sample call comes in and the AI carries a short scripted conversation,
+// capturing structured order details from it in real time — then sends a
+// confirmation on its own. Unlike the demos above, there's no price or
+// judgment call here, so nothing waits on a human approval click.
+(() => {
+  const root = document.querySelector('[data-phone-demo]');
+  if (!root) return;
+  const $ = id => document.getElementById(id);
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const escapeHtml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  // A clearly fictional restaurant and calls — nothing here is a real client.
+  const SAMPLES = [
+    {
+      lines: [
+        ['AI', 'מסעדת הפינה, ערב טוב, איך אפשר לעזור?'],
+        ['לקוח', 'היי, אפשר להזמין משלוח?'],
+        ['AI', 'בטח! מה תרצה להזמין?'],
+        ['לקוח', 'שתי מנות פסטה רוזה ולחם שום'],
+        ['AI', 'מעולה. לאיזו כתובת?'],
+        ['לקוח', 'הרצל 12, תל אביב'],
+        ['AI', 'ולאיזו שעה?'],
+        ['לקוח', 'בעוד חצי שעה יהיה מעולה']
+      ],
+      order: { item: '2 פסטה רוזה + לחם שום', address: 'הרצל 12, תל אביב', time: 'בעוד חצי שעה' }
+    },
+    {
+      lines: [
+        ['AI', 'מסעדת הפינה, ערב טוב, איך אפשר לעזור?'],
+        ['לקוח', 'אני רוצה לשריין שולחן'],
+        ['AI', 'בשמחה! לכמה אנשים ולאיזו שעה?'],
+        ['לקוח', 'ל-4 אנשים, הערב ב-20:00'],
+        ['AI', 'על שם מי להזמין?'],
+        ['לקוח', 'על שם דנה']
+      ],
+      order: { item: 'הזמנת שולחן ל-4, 20:00', address: '—', time: 'הערב' }
+    }
+  ];
+  let idx = 0, busy = false;
+
+  $('po-new').addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    $('po-new').disabled = true;
+    const sample = SAMPLES[idx % SAMPLES.length];
+    idx++;
+
+    $('po-call-status').textContent = 'שיחה נכנסת…';
+    $('po-transcript').innerHTML = '';
+    $('po-confirm-area').innerHTML = '<p class="ib-hint">עוד אין אישור לשלוח.</p>';
+    document.querySelector('#po-queue .empty')?.remove();
+    await wait(700);
+    $('po-call-status').textContent = '📞 שיחה פעילה';
+
+    for (const [who, text] of sample.lines) {
+      const li = document.createElement('li');
+      li.innerHTML = `<span class="ib-tag">${who === 'AI' ? 'AI' : 'לקוח'}</span><span>${escapeHtml(text)}</span>`;
+      $('po-transcript').append(li);
+      await wait(450);
+    }
+    await wait(400);
+    $('po-call-status').textContent = '✓ השיחה הסתיימה';
+
+    const summary = `${sample.order.item}${sample.order.address !== '—' ? ' · ' + sample.order.address : ''} · ${sample.order.time}`;
+    $('po-confirm-area').innerHTML = `<p class="ib-hint">🔔 הודעת אישור נשלחה ללקוח:</p>
+      <p class="ib-reply">ההזמנה שלך התקבלה! ${escapeHtml(summary)}. מעקב אחרי ההזמנה: קישור לדוגמה 🙂</p>`;
+    await wait(500);
+
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="ib-tag">חדש</span><span>${escapeHtml(summary)}</span>`;
+    $('po-queue').append(li);
+
+    busy = false;
+    $('po-new').disabled = false;
+  });
+})();
+
 // ---------- the assistant ----------
 // Answers come from /api/chat, which reads the site's own content. If that is not
 // available the panel still works: it answers from the questions already on the page.

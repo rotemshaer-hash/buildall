@@ -176,7 +176,7 @@
 .tk-ok{text-align:center;font-size:11.5px;font-weight:700;color:var(--teal);margin:0}
 .demo-note{text-align:center;color:rgba(255,255,255,.6);font-size:14px;margin-top:var(--s4)}
 .inbox-demo{max-width:560px;margin-inline:auto;display:grid;gap:18px;justify-items:center}
-.inbox-demo #ib-new{margin-bottom:4px}
+.inbox-demo #ib-new,.inbox-demo #qq-new,.inbox-demo #po-new{margin-bottom:4px}
 .ib-flow{display:grid;gap:14px;width:100%}
 .ib-step{background:#ffffff14;border:1px solid #ffffff26;border-radius:var(--r-lg);padding:16px}
 .ib-step.ib-auto{border-color:#9be33044}
