@@ -279,6 +279,14 @@ export function contact(lead = FORM_KEY
       <h2 class="h2">ספר לנו מה אתה צריך</h2>
       <p class="lead">${lead}</p>
     </div>
+    <div class="goal-picker">
+      <p>לא בטוח מה הכי יעזור? תגיד לנו מה המטרה:</p>
+      <div class="goal-btns">
+        <button type="button" data-goal="automations">לחסוך עבודה ידנית</button>
+        <button type="button" data-goal="ai">לסדר פניות שנכנסות</button>
+        <button type="button" data-goal="landing">להביא פניות מקמפיין</button>
+      </div>
+    </div>
     <form id="lead">
       <label>שם<input name="name" autocomplete="name" required></label>
       <label>שם העסק<input name="biz" autocomplete="organization"></label>
@@ -290,6 +298,7 @@ export function contact(lead = FORM_KEY
           <option>דף נחיתה</option>
           <option>אפליקציה</option>
           <option>מערכת ניהול (עובדים, משמרות, מסמכים, לקוחות)</option>
+          <option>AI</option>
           <option>כלי או פתרון אחר</option>
           <option>עוד לא בטוח, רוצה להתייעץ</option>
         </select>

@@ -31,13 +31,40 @@ document.addEventListener('click', e => {
   if (sel) {
     const category = a.closest('#manage') ? 'מערכת ניהול' : a.closest('#app') ? 'אפליקציה'
       : subject.includes('דף נחיתה') ? 'דף נחיתה' : a.closest('#web') ? 'אתר לעסק'
-      : a.closest('#auto, #ai') ? 'כלי או פתרון אחר'
+      : a.closest('#ai') ? 'AI' : a.closest('#auto') ? 'מערכת ניהול'
       : /עובדים|משמרות|מלאי|דוחות|משימות|מסמכים|לקוחות/.test(subject) ? 'מערכת ניהול'
       : /אפליקציה/.test(subject) ? 'אפליקציה' : /אתר/.test(subject) ? 'אתר לעסק' : 'כלי או פתרון אחר';
     const option = [...sel.options].find(o => o.text.startsWith(category));
     if (option) sel.value = option.value;
   }
   setTimeout(() => document.querySelector('#lead [name="name"]')?.focus({ preventScroll: true }), 600);
+});
+
+// A neutral "what's the goal" picker above the contact form, so a visitor
+// who doesn't already know which tech product to ask for can start from the
+// business problem instead — the choice maps to an exact "what" option and
+// an opening sentence, not a best-guess regex like [data-subject] above.
+const GOALS = {
+  automations: { what: 'מערכת ניהול (עובדים, משמרות, מסמכים, לקוחות)', msg: 'אני רוצה לחסוך עבודה ידנית וחוזרת בעסק.' },
+  ai: { what: 'AI', msg: 'אני רוצה שפניות נכנסות יסתדרו לבד, בלי שאני עונה לכל אחת.' },
+  landing: { what: 'דף נחיתה', msg: 'אני מריץ קמפיין ורוצה דף שמרכז את הפניות ממנו.' }
+};
+document.addEventListener('click', e => {
+  const btn = e.target.closest && e.target.closest('[data-goal]');
+  if (!btn) return;
+  const goal = GOALS[btn.dataset.goal];
+  if (!goal) return;
+  const sel = document.querySelector('#lead [name="what"]');
+  const msg = document.querySelector('#lead [name="msg"]');
+  if (sel) {
+    const option = [...sel.options].find(o => o.text === goal.what);
+    if (option) sel.value = option.value;
+  }
+  if (msg && (!msg.value.trim() || msg.dataset.auto === '1')) {
+    msg.value = goal.msg;
+    msg.dataset.auto = '1';
+  }
+  setTimeout(() => document.querySelector('#lead [name="name"]')?.focus({ preventScroll: true }), 300);
 });
 
 // A link to #manage from anywhere should land on an open group, not a closed one.
