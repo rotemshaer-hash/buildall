@@ -269,7 +269,7 @@ ${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="
 <section class="services">
   <div class="wrap">
     <a class="example" data-wa data-msg="${attr(i.short)}" href="#contact">
-      <span class="eyebrow">איך זה נראה ביום־יום</span>
+      <span class="eyebrow">דוגמה להמחשה — לא לקוח אמיתי</span>
       <p>${i.example}</p>
       <span class="ex-go">נדבר על העסק שלך ←</span>
     </a>
@@ -361,7 +361,7 @@ for (const s of services) {
 <section class="services">
   <div class="wrap">
     <a class="example" data-wa data-msg="${attr(s.short)}" href="#contact">
-      <span class="eyebrow">איך זה נראה ביום־יום</span>
+      <span class="eyebrow">דוגמה להמחשה — לא לקוח אמיתי</span>
       <p>${s.example}</p>
       <span class="ex-go">נדבר על העסק שלך ←</span>
     </a>
