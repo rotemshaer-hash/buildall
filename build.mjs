@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
+import { services } from './src/services.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
 import { cases } from './src/cases.mjs';
@@ -10,7 +11,7 @@ import { legal, UPDATED } from './src/legal.mjs';
 import { problems } from './src/problems.mjs';
 import { buildKnowledge } from './scripts/knowledge.mjs';
 
-const nav = { industries, guides, cases, legal };
+const nav = { industries, services, guides, cases, legal };
 
 // Shared escaping for any dynamic value going into an HTML attribute
 // (double-quote delimited everywhere in this file). A literal " in content
@@ -205,16 +206,17 @@ write('index.html', page({
   body: home
 }));
 
-// ---------- industry pages ----------
-// industries.mjs is the single source of truth for which slugs should exist,
-// but nothing ever removed a directory for a slug that got renamed or
-// dropped from it - build.mjs only ever writes, never deletes, so the old
-// directory (and whatever stale content it holds) stayed in the repo and
-// kept deploying forever. A tracked manifest of "slugs this build wrote last
-// time" lets this run diff against the current list and clean up anything
-// that's no longer there.
+// ---------- industry + service pages ----------
+// industries.mjs/services.mjs are the single source of truth for which slugs
+// should exist, but nothing ever removed a directory for a slug that got
+// renamed or dropped from one of them - build.mjs only ever writes, never
+// deletes, so the old directory (and whatever stale content it holds)
+// stayed in the repo and kept deploying forever. A tracked manifest of
+// "slugs this build wrote last time" (both kinds, same mechanism) lets this
+// run diff against the current lists and clean up anything that's no longer
+// there.
 const MANIFEST_PATH = '.industry-slugs.json';
-const currentSlugs = industries.map(i => i.slug);
+const currentSlugs = [...industries.map(i => i.slug), ...services.map(s => s.slug)];
 const previousSlugs = existsSync(MANIFEST_PATH) ? JSON.parse(readFileSync(MANIFEST_PATH, 'utf8')) : [];
 for (const slug of previousSlugs) {
   if (!currentSlugs.includes(slug) && existsSync(slug)) rmSync(slug, { recursive: true, force: true });
@@ -322,6 +324,108 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
         ]
       },
       faqSchema(i.faq)
+    ],
+    body
+  }));
+}
+
+// ---------- service pages (AI / automations / landing pages) ----------
+// Same intent as the industry pages above, but split by what we build
+// instead of who it's for, so a campaign ad for "AI" or "אוטומציות ניהול"
+// can link straight to the page that explains exactly that.
+for (const s of services) {
+  const root = '../';
+  const body = `<section class="hero hero-sm">
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="מיקום בדף"><a href="${root}">דף הבית</a> <span>›</span> ${s.short}</nav>
+    <span class="hero-ic">${icon(s.icon)}</span>
+    <h1>${s.h1}</h1>
+    <p>${s.lead}</p>
+    <div class="ctas">
+      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ חינם</a>
+    </div>
+  </div>
+</section>
+
+<section class="why-sec">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">למי זה מתאים</span>
+      <h2 class="h2">${s.short} — מתי זה שימושי</h2>
+    </div>
+    <p>${s.audience}</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <a class="example" data-wa data-msg="${attr(s.short)}" href="#contact">
+      <span class="eyebrow">איך זה נראה ביום־יום</span>
+      <p>${s.example}</p>
+      <span class="ex-go">נדבר על העסק שלך ←</span>
+    </a>
+  </div>
+</section>
+
+<section class="why-sec">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">חיבורים נדרשים</span>
+      <h2 class="h2">איך זה מתחבר למה שיש לך</h2>
+    </div>
+    <ul>
+${s.integrations.map(t => `      <li>${t}</li>`).join('\n')}
+    </ul>
+  </div>
+</section>
+
+<section class="why-sec">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">חשוב לדעת</span>
+      <h2 class="h2">מגבלות</h2>
+    </div>
+    <ul>
+${s.limits.map(t => `      <li>${t}</li>`).join('\n')}
+    </ul>
+  </div>
+</section>
+
+<section class="faq-sec" id="faq">
+  <div class="wrap prose">
+    <div class="sec-head">
+      <span class="eyebrow">שאלות נפוצות</span>
+      <h2 class="h2">מה שואלים אותנו על ${s.short}</h2>
+    </div>
+    <div id="faq-list">
+${s.faq.map(([q, a]) => `    <details><summary>${q}</summary><p>${a}</p></details>`).join('\n')}
+    </div>
+  </div>
+</section>
+
+${contact('ספר לנו על העסק, ונחזור אליך.')}`;
+
+  write(`${s.slug}/index.html`, page({
+    path: s.slug + '/', root, title: s.title, description: s.description,
+    greeting: `היי, הגעתי מהאתר של POETEXA (${s.short}) ואשמח לשיחת ייעוץ חינם 🙂`,
+    from: `היי, הגעתי מהאתר של POETEXA (${s.short})`,
+    schemas: [
+      {
+        '@context': 'https://schema.org', '@type': 'Service',
+        name: s.h1, serviceType: s.short, description: s.description,
+        provider: { '@id': BASE + '#business' },
+        areaServed: { '@type': 'Country', name: 'ישראל' },
+        url: BASE + s.slug + '/'
+      },
+      {
+        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'דף הבית', item: BASE },
+          { '@type': 'ListItem', position: 2, name: s.short, item: BASE + s.slug + '/' }
+        ]
+      },
+      faqSchema(s.faq)
     ],
     body
   }));
@@ -843,7 +947,7 @@ ${readFileSync('src/demo-future.html', 'utf8')}
 write('kb.json', JSON.stringify(buildKnowledge()));
 
 // ---------- sitemap + robots ----------
-const urls = ['', ...industries.map(i => i.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),
+const urls = ['', ...industries.map(i => i.slug + '/'), ...services.map(s => s.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),
   ...cases.map(c => `work/${c.slug}/`), ...legal.map(l => l.slug + '/')];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

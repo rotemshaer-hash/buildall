@@ -214,6 +214,7 @@ export function footer(root, nav) {
     <div><b>${BRAND}</b> · בניית אתרים, דפי נחיתה ואפליקציות לעסקים</div>
     <div class="foot-cols">
       ${links('פתרונות לפי תחום', nav.industries, '')}
+      ${links('שירותים', nav.services, '')}
       ${links('מדריכים', nav.guides, 'guides/')}
       ${links('עבודות', nav.cases, 'work/')}
     </div>
