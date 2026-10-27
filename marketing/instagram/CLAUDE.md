@@ -101,11 +101,13 @@ lavfi — לא קובץ מוזיקה אמיתי, אז אין שום סיכון �
 ## תבנית התמונה (ריבוע, 1080x1080)
 
 `marketing/instagram/post-template.html` — תבנית HTML עם placeholders:
-`{{KICKER}}`, `{{H1_LINE1}}`, `{{H1_LINE2_HIGHLIGHT}}`, `{{LEAD}}`,
-`{{PILL1}}`, `{{PILL2}}`, `{{PILL3}}`, `{{LINK}}`. ממלאים, פותחים
-ב-Playwright (`chromium`), viewport 1080x1080, `clip:{x:0,y:0,width:1080,
-height:1080}` כדי למנוע גלישה. הגופנים (Rubik/Assistant) נטענים מ-Google
-Fonts כמו באתר עצמו — אותה שפה חזותית.
+`{{KICKER}}`, `{{H1_LINE1}}`, `{{H1_LINE2_PREFIX}}`, `{{H1_LINE2_HIGHLIGHT}}`,
+`{{H1_LINE2_SUFFIX}}`, `{{LEAD}}`, `{{PILL1}}`, `{{PILL2}}`, `{{PILL3}}`,
+`{{LINK}}`. ממלאים, פותחים ב-Playwright (`chromium`), viewport 1080x1080,
+`clip:{x:0,y:0,width:1080,height:1080}` כדי למנוע גלישה. הגופנים
+(Rubik/Assistant) נטענים מ-Google Fonts כמו באתר עצמו — אותה שפה חזותית.
+`render-post.cjs` נכשל בכוונה (לא כותב תמונה) אם נשאר `{{...}}` לא ממולא —
+כך שפוסט עם placeholder לא יוצא בטעות.
 
 `marketing/instagram/logo-1024.png` — הלוגו המוכן לתמונת פרופיל, אם צריך
 לשלוח שוב.
