@@ -92,9 +92,33 @@ async function askClaude(env, messages) {
   return (data.content?.[0]?.text || '').trim();
 }
 
+const POST_DOWNLOADS = [
+  '3227684812430610481', '9796653701978587765', '2402573806964134574',
+  '12762960489213970446', '7647500113676674682'
+];
+
+async function downloadPost(request, pathname) {
+  const match = pathname.match(/^\/downloads\/2026-10-29\/post-([1-5])\.jpg$/);
+  if (!match) return new Response('Not found', { status: 404 });
+  if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
+  const number = Number(match[1]);
+  try {
+    const source = 'https://static.metricool.com/planner/202610/7696609-file-' + POST_DOWNLOADS[number - 1] + '.jpeg';
+    const upstream = await fetch(source, { method: request.method, redirect: 'error' });
+    if (!upstream.ok) return new Response('Download unavailable', { status: 502 });
+    return new Response(request.method === 'HEAD' ? null : upstream.body, { headers: {
+      'Content-Type': 'image/jpeg',
+      'Content-Disposition': 'attachment; filename="POETEXA-29-10-' + number + '.jpg"',
+      'Cache-Control': 'public, max-age=3600',
+      'X-Content-Type-Options': 'nosniff'
+    } });
+  } catch { return new Response('Download unavailable', { status: 502 }); }
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith('/downloads/')) return downloadPost(request, url.pathname);
 
     if (url.pathname === '/api/chat') {
       if (request.method !== 'POST') return json({ error: 'method' }, 405);
