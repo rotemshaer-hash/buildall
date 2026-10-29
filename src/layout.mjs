@@ -187,7 +187,7 @@ export function navBar(root) {
   const items = [
     ['film','camera','סרטון הדגמה'], ['problems','wrench','נתחיל מהבעיה'],
     ['industries','store','לפי תחום'],
-    ['services','globe','שירותים'], ['auto','zap','אוטומציות'], ['ai','bot','AI'],
+    ['services','globe','שירותים'], ['social','camera','תוכן לרשתות'], ['auto','zap','אוטומציות'], ['ai','bot','AI'],
     ['work','star','עבודות'],
     ['process','check','איך עובדים'], ['contact','message','יצירת קשר']
   ];
@@ -296,6 +296,7 @@ export function contact(lead = FORM_KEY
         <select name="what">
           <option>אתר לעסק</option>
           <option>דף נחיתה</option>
+          <option>תוכן ופרסום לרשתות</option>
           <option>אפליקציה</option>
           <option>מערכת ניהול (עובדים, משמרות, מסמכים, לקוחות)</option>
           <option>AI</option>

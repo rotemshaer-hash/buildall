@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node
 import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { services } from './src/services.mjs';
+import { socialShowcase } from './src/social.mjs';
 import { reviews, REVIEW_URL } from './src/reviews.mjs';
 import { guides } from './src/guides.mjs';
 import { cases } from './src/cases.mjs';
@@ -200,8 +201,8 @@ home = withIcons(home)
 
 write('index.html', page({
   path: '', root: '',
-  title: 'POETEXA | בניית אתרים, אפליקציות ומערכות לעסקים קטנים',
-  description: 'בניית אתרים, דפי נחיתה, אפליקציות ומערכות ניהול לעסקים קטנים, עם שילוב AI: עובדים, משמרות, מסמכים, לקוחות ועוד. מכלי קטן ועד מערכת מלאה – שיחת ייעוץ חינם.',
+  title: 'POETEXA | אוטומציות, אתרים ותוכן לרשתות לעסקים',
+  description: 'מערכות ניהול, אוטומציות AI, דפי נחיתה ותוכן לרשתות: רילסים, פוסטים ותזמון לעסקים. מתכנון ועד פתרון שמתאים לעסק שלך.',
   schemas: [business, videoSchema, faqSchema(homeFaq)],
   body: home
 }));
@@ -391,6 +392,8 @@ ${s.limits.map(t => `      <li>${t}</li>`).join('\n')}
     </ul>
   </div>
 </section>
+
+${s.slug === 'social-content' ? socialShowcase() : ''}
 
 <section class="faq-sec" id="faq">
   <div class="wrap prose">

@@ -120,7 +120,8 @@ console.log('\nסרגל הניווט:');
 // rather than against a list written here — a hard-coded position only breaks the day
 // a section moves, which is exactly the day the check should have helped.
 const chips = [...home.matchAll(/<li><a href="[^"]*#([a-z-]+)">([\s\S]*?)<\/a><\/li>/g)].map(m => ({ id: m[1], name: m[2].replace(/<[^>]+>/g, '').trim() }));
-ok(chips.length === 9, 'תפריט מלא עם תשעה יעדים');
+ok(chips.length === 10, 'תפריט מלא עם עשרה יעדים, כולל תוכן לרשתות');
+ok(chips.some(c => c.id === 'social' && c.name === 'תוכן לרשתות'), 'תפריט כולל את שירות התוכן החדש');
 ok(!home.includes('class="marquee"'), 'פס השירותים החתוך הוסר');
 ok(!home.includes('ניווט באתר'), 'אין שורת ניווט נפרדת וכפולה');
 ok(home.includes('class="film-play"'), 'כפתור ניגון מפורש לסרטון');

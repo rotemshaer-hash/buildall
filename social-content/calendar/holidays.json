@@ -1,0 +1,5147 @@
+{
+  "source": "Hebcal",
+  "source_url": "https://www.hebcal.com/hebcal?v=1&cfg=json&start=2026-01-01&end=2027-12-31&i=on&maj=on&min=on&mod=on&nx=on&mf=on&lg=he-x-NoNikud&hdp=1",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "country": "IL",
+  "israel_schedule": true,
+  "timezone": "Asia/Jerusalem",
+  "range": {
+    "start": "2026-01-01",
+    "end": "2027-12-31"
+  },
+  "fetched_at": "2026-10-28T22:07:15.131Z",
+  "note": "All-day observed dates. No exact sunset times, school vacations, personal events or automatic campaign publication. Recheck current official notices for observance changes.",
+  "events": [
+    {
+      "date": "2026-01-08",
+      "title": "יום השפה העברית",
+      "original": "Hebrew Language Day",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "טבת",
+        "d": "י״ט"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/hebrew-language-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2025-12-25"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-01-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-01-06"
+        }
+      ]
+    },
+    {
+      "date": "2026-01-19",
+      "title": "ראש חודש שבט",
+      "original": "Rosh Chodesh Sh'vat",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "שבט",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-shvat-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-01-05"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-01-12"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-01-17"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-02",
+      "title": "ט״ו בשבט",
+      "original": "Tu BiShvat",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "שבט",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tu-bishvat-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-01-19"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-01-26"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-01-31"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "title": "יום המשפחה",
+      "original": "Family Day",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "שבט",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/family-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-02-15"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "title": "ראש חודש אדר",
+      "original": "Rosh Chodesh Adar",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "שבט",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-02-15"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-18",
+      "title": "ראש חודש אדר",
+      "original": "Rosh Chodesh Adar",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אדר",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-04"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-11"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-02-16"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "title": "ערב פורים",
+      "original": "Erev Purim",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אדר",
+        "d": "י״ג"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/purim-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-03-02",
+      "title": "תענית אסתר",
+      "original": "Ta'anit Esther",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אדר",
+        "d": "י״ג"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/taanit-esther-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-03",
+      "title": "פורים",
+      "original": "Purim",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אדר",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/purim-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-04",
+      "title": "שושן פורים",
+      "original": "Shushan Purim",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אדר",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/shushan-purim-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-02-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-02-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "title": "ראש חודש ניסן",
+      "original": "Rosh Chodesh Nisan",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-nisan-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-05"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-12"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-17"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-28",
+      "title": "יום העליה",
+      "original": "Yom HaAliyah",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haaliyah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-14"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-21"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-26"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "title": "ערב פסח",
+      "original": "Erev Pesach",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-04-01",
+      "title": "תענית בכורות",
+      "original": "Ta'anit Bechorot",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/taanit-bechorot-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-30"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "title": "פסח א׳",
+      "original": "Pesach I",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-19"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-26"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-03-31"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "title": "פסח ב׳ (חוה״מ)",
+      "original": "Pesach II (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "ט״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-01"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "title": "פסח ג׳ (חוה״מ)",
+      "original": "Pesach III (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-02"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-05",
+      "title": "פסח ד׳ (חוה״מ)",
+      "original": "Pesach IV (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-22"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-29"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-03"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-06",
+      "title": "פסח ה׳ (חוה״מ)",
+      "original": "Pesach V (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "י״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-23"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-30"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-04"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "title": "פסח ו׳ (חוה״מ)",
+      "original": "Pesach VI (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "כ׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-03-31"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-05"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "title": "פסח ז׳",
+      "original": "Pesach VII",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "כ״א"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/pesach-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-25"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-06"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "title": "יום השואה",
+      "original": "Yom HaShoah",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "כ״ז"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-hashoah-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-03-31"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-07"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-12"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "title": "ראש חודש אייר",
+      "original": "Rosh Chodesh Iyyar",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "ניסן",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-iyyar-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-15"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-18",
+      "title": "ראש חודש אייר",
+      "original": "Rosh Chodesh Iyyar",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-iyyar-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-04"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-11"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-16"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "title": "יום הזכרון",
+      "original": "Yom HaZikaron",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "ד׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-hazikaron-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-19"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "title": "יום העצמאות",
+      "original": "Yom HaAtzma'ut",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "ה׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haatzmaut-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-20"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "title": "יום הרצל",
+      "original": "Herzl Day",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/herzl-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-13"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-20"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-25"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "title": "פסח שני",
+      "original": "Pesach Sheni",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-sheni-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-04-29"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-05",
+      "title": "ל״ג בעומר",
+      "original": "Lag BaOmer",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/lag-baomer-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-04-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-04-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-05-03"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "title": "יום ירושלים",
+      "original": "Yom Yerushalayim",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אייר",
+        "d": "כ״ח"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-yerushalayim-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-05-01"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-05-08"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-05-13"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "title": "ראש חודש סיון",
+      "original": "Rosh Chodesh Sivan",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "סיון",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-sivan-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-05-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-05-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-05-15"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-21",
+      "title": "ערב שבועות",
+      "original": "Erev Shavuot",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "סיון",
+        "d": "ה׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/shavuot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-05-22",
+      "title": "שבועות",
+      "original": "Shavuot",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "סיון",
+        "d": "ו׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/shavuot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-05-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-05-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "title": "ראש חודש תמוז",
+      "original": "Rosh Chodesh Tamuz",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "סיון",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tamuz-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-06-01"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-06-08"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-06-13"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "title": "ראש חודש תמוז",
+      "original": "Rosh Chodesh Tamuz",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "תמוז",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tamuz-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-06-02"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-06-09"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-06-14"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "title": "צום י״ז בתמוז",
+      "original": "Tzom Tammuz",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "תמוז",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tzom-tammuz-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-06-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-06-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-06-30"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "title": "יום ז׳בוטינסקי",
+      "original": "Jabotinsky Day",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "תמוז",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/jabotinsky-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-06-30"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-07-07"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-07-12"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "ראש חודש אב",
+      "original": "Rosh Chodesh Av",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אב",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-av-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-01"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-07-08"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-07-13"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "title": "ערב תשעה באב",
+      "original": "Erev Tish'a B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אב",
+        "d": "ח׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/tisha-bav-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-07-23",
+      "title": "תשעה באב",
+      "original": "Tish'a B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אב",
+        "d": "ט׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tisha-bav-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-09"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-07-16"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-07-21"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "ט״ו באב",
+      "original": "Tu B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אב",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tu-bav-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-15"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-07-22"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-07-27"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "title": "ראש חודש אלול",
+      "original": "Rosh Chodesh Elul",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אב",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-elul-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-30"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-08-06"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "ראש השנה למעשר בהמה",
+      "original": "Rosh Hashana LaBehemot",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אלול",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-hashana-labehemot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-31"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-08-07"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-08-12"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "ראש חודש אלול",
+      "original": "Rosh Chodesh Elul",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אלול",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-elul-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-07-31"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-08-07"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-08-12"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "title": "סליחות",
+      "original": "Leil Selichot",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אלול",
+        "d": "כ״ג"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/leil-selichot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-08-22"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-08-29"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-03"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "title": "ערב ראש השנה",
+      "original": "Erev Rosh Hashana",
+      "hebrew_date": {
+        "y": "תשפ״ו",
+        "m": "אלול",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-09-12",
+      "title": "ראש השנה 5787",
+      "original": "Rosh Hashana 5787",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-08-29"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-05"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-10"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "title": "ראש השנה ב׳",
+      "original": "Rosh Hashana II",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ב׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-08-30"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-06"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-11"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "title": "צום גדליה",
+      "original": "Tzom Gedaliah",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ג׳"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tzom-gedaliah-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-08-31"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-07"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "title": "ערב יום כיפור",
+      "original": "Erev Yom Kippur",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ט׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/yom-kippur-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-09-21",
+      "title": "יום כיפור",
+      "original": "Yom Kippur",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/yom-kippur-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-19"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "title": "ערב סוכות",
+      "original": "Erev Sukkot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2026-09-26",
+      "title": "סוכות א׳",
+      "original": "Sukkot I",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-12"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-19"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-24"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "title": "סוכות ב׳ (חוה״מ)",
+      "original": "Sukkot II (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ט״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-13"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-20"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "title": "סוכות ג׳ (חוה״מ)",
+      "original": "Sukkot III (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-14"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-21"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "title": "סוכות ד׳ (חוה״מ)",
+      "original": "Sukkot IV (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-15"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-22"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-27"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "title": "סוכות ה׳ (חוה״מ)",
+      "original": "Sukkot V (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "י״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-28"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "title": "סוכות ו׳ (חוה״מ)",
+      "original": "Sukkot VI (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "כ׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "title": "סוכות ז׳ (הושענא רבה)",
+      "original": "Sukkot VII (Hoshana Raba)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "כ״א"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-09-30"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "title": "שמיני עצרת",
+      "original": "Shmini Atzeret",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "כ״ב"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/shmini-atzeret-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-19"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-26"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-01"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "title": "יום הזיכרון לחללי מלחמת חרבות ברזל",
+      "original": "Swords of Iron War Memorial Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "כ״ד"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/swords-of-iron-war-memorial-day-2026?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-09-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "title": "ראש חודש חשון",
+      "original": "Rosh Chodesh Cheshvan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תשרי",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-cheshvan-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-10-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "title": "ראש חודש חשון",
+      "original": "Rosh Chodesh Cheshvan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "חשון",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-cheshvan-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-09-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-10-05"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "title": "שמירת בית הספר ליום העליה",
+      "original": "Yom HaAliyah School Observance",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "חשון",
+        "d": "ז׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haaliyah-school-observance-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-10-04"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-10-11"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-16"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "title": "יום הזכרון ליצחק רבין",
+      "original": "Yitzhak Rabin Memorial Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "חשון",
+        "d": "י״א"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yitzhak-rabin-memorial-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-10-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-10-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "title": "חג הסיגד",
+      "original": "Sigd",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "חשון",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sigd-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-10-26"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-02"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-11-07"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "ראש חודש כסלו",
+      "original": "Rosh Chodesh Kislev",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "חשון",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-kislev-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-10-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-03"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "title": "ראש חודש כסלו",
+      "original": "Rosh Chodesh Kislev",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-kislev-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-10-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-11-09"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "title": "יום בןגוריון",
+      "original": "Ben-Gurion Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "ו׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/ben-gurion-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-02"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-09"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-11-14"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "title": "חנוכה: א׳ נר",
+      "original": "Chanukah: 1 Candle",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-02"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "title": "חנוכה: ב׳ נרות",
+      "original": "Chanukah: 2 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ה"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-03"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "title": "חנוכה: ג׳ נרות",
+      "original": "Chanukah: 3 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-22"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-29"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-04"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "title": "חנוכה: ד׳ נרות",
+      "original": "Chanukah: 4 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-23"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-11-30"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-05"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "title": "חנוכה: ה׳ נרות",
+      "original": "Chanukah: 5 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-06"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "title": "חנוכה: ו׳ נרות",
+      "original": "Chanukah: 6 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-25"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-02"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-07"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "title": "חג הבנות",
+      "original": "Chag HaBanot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chag-habanot-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-26"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-03"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-08"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "title": "חנוכה: ז׳ נרות",
+      "original": "Chanukah: 7 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-26"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-03"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-08"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "title": "ראש חודש טבת",
+      "original": "Rosh Chodesh Tevet",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tevet-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-26"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-03"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-08"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "title": "חנוכה: ח׳ נרות",
+      "original": "Chanukah: 8 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "טבת",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-09"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "title": "ראש חודש טבת",
+      "original": "Rosh Chodesh Tevet",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "טבת",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tevet-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-09"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "title": "חנוכה: יום ח׳",
+      "original": "Chanukah: 8th Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "טבת",
+        "d": "ב׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-11-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-05"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-10"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-20",
+      "title": "עשרה בטבת",
+      "original": "Asara B'Tevet",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "טבת",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/asara-btevet-20261220?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-12-06"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-13"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-18"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-31",
+      "title": "יום השפה העברית",
+      "original": "Hebrew Language Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "טבת",
+        "d": "כ״א"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/hebrew-language-day-2026?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-12-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2026-12-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2026-12-29"
+        }
+      ]
+    },
+    {
+      "date": "2027-01-09",
+      "title": "ראש חודש שבט",
+      "original": "Rosh Chodesh Sh'vat",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "שבט",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-shvat-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2026-12-26"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-01-02"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-01-07"
+        }
+      ]
+    },
+    {
+      "date": "2027-01-23",
+      "title": "ט״ו בשבט",
+      "original": "Tu BiShvat",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "שבט",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tu-bishvat-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-01-09"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-01-16"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-01-21"
+        }
+      ]
+    },
+    {
+      "date": "2027-02-07",
+      "title": "יום המשפחה",
+      "original": "Family Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "שבט",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/family-day-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-01-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-01-31"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-02-05"
+        }
+      ]
+    },
+    {
+      "date": "2027-02-07",
+      "title": "ראש חודש אדר א׳",
+      "original": "Rosh Chodesh Adar I",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "שבט",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-i-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-01-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-01-31"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-02-05"
+        }
+      ]
+    },
+    {
+      "date": "2027-02-08",
+      "title": "ראש חודש אדר א׳",
+      "original": "Rosh Chodesh Adar I",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר א׳",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-i-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-01-25"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-02-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-02-06"
+        }
+      ]
+    },
+    {
+      "date": "2027-02-21",
+      "title": "פורים קטן",
+      "original": "Purim Katan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר א׳",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/purim-katan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-02-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-02-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-02-19"
+        }
+      ]
+    },
+    {
+      "date": "2027-02-22",
+      "title": "שושן פורים קטן",
+      "original": "Shushan Purim Katan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר א׳",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/shushan-purim-katan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-02-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-02-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-02-20"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-09",
+      "title": "ראש חודש אדר ב׳",
+      "original": "Rosh Chodesh Adar II",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר א׳",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-ii-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-02-23"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-03-02"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-03-07"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-10",
+      "title": "ראש חודש אדר ב׳",
+      "original": "Rosh Chodesh Adar II",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר ב׳",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-adar-ii-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-02-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-03-03"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-03-08"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-22",
+      "title": "ערב פורים",
+      "original": "Erev Purim",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר ב׳",
+        "d": "י״ג"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/purim-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-03-22",
+      "title": "תענית אסתר",
+      "original": "Ta'anit Esther",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר ב׳",
+        "d": "י״ג"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/taanit-esther-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-03-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-03-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-03-20"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-23",
+      "title": "פורים",
+      "original": "Purim",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר ב׳",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/purim-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-03-09"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-03-16"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-03-21"
+        }
+      ]
+    },
+    {
+      "date": "2027-03-24",
+      "title": "שושן פורים",
+      "original": "Shushan Purim",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אדר ב׳",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/shushan-purim-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-03-10"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-03-17"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-03-22"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-08",
+      "title": "ראש חודש ניסן",
+      "original": "Rosh Chodesh Nisan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-nisan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-03-25"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-06"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-17",
+      "title": "יום העליה",
+      "original": "Yom HaAliyah",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haaliyah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-15"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-21",
+      "title": "ערב פסח",
+      "original": "Erev Pesach",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-04-21",
+      "title": "תענית בכורות",
+      "original": "Ta'anit Bechorot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/taanit-bechorot-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-19"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-22",
+      "title": "פסח א׳",
+      "original": "Pesach I",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-20"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-23",
+      "title": "פסח ב׳ (חוה״מ)",
+      "original": "Pesach II (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "ט״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-09"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-16"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-21"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-24",
+      "title": "פסח ג׳ (חוה״מ)",
+      "original": "Pesach III (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-10"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-17"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-22"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-25",
+      "title": "פסח ד׳ (חוה״מ)",
+      "original": "Pesach IV (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-11"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-18"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-23"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-26",
+      "title": "פסח ה׳ (חוה״מ)",
+      "original": "Pesach V (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "י״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-12"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-19"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-24"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-27",
+      "title": "פסח ו׳ (חוה״מ)",
+      "original": "Pesach VI (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "כ׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-13"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-20"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-25"
+        }
+      ]
+    },
+    {
+      "date": "2027-04-28",
+      "title": "פסח ז׳",
+      "original": "Pesach VII",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "כ״א"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/pesach-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-14"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-21"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-04-26"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-04",
+      "title": "יום השואה",
+      "original": "Yom HaShoah",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "כ״ז"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-hashoah-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-02"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-07",
+      "title": "ראש חודש אייר",
+      "original": "Rosh Chodesh Iyyar",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "ניסן",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-iyyar-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-23"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-04-30"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-05"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-08",
+      "title": "ראש חודש אייר",
+      "original": "Rosh Chodesh Iyyar",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-iyyar-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-01"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-06"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-11",
+      "title": "יום הזכרון",
+      "original": "Yom HaZikaron",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "ד׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-hazikaron-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-09"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-12",
+      "title": "יום העצמאות",
+      "original": "Yom HaAtzma'ut",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "ה׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haatzmaut-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-04-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-05"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-10"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-17",
+      "title": "יום הרצל",
+      "original": "Herzl Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/herzl-day-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-15"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-21",
+      "title": "פסח שני",
+      "original": "Pesach Sheni",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/pesach-sheni-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-19"
+        }
+      ]
+    },
+    {
+      "date": "2027-05-25",
+      "title": "ל״ג בעומר",
+      "original": "Lag BaOmer",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/lag-baomer-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-11"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-18"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-05-23"
+        }
+      ]
+    },
+    {
+      "date": "2027-06-04",
+      "title": "יום ירושלים",
+      "original": "Yom Yerushalayim",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אייר",
+        "d": "כ״ח"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-yerushalayim-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-06-02"
+        }
+      ]
+    },
+    {
+      "date": "2027-06-06",
+      "title": "ראש חודש סיון",
+      "original": "Rosh Chodesh Sivan",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "סיון",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-sivan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-23"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-05-30"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-06-04"
+        }
+      ]
+    },
+    {
+      "date": "2027-06-10",
+      "title": "ערב שבועות",
+      "original": "Erev Shavuot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "סיון",
+        "d": "ה׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/shavuot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-06-11",
+      "title": "שבועות",
+      "original": "Shavuot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "סיון",
+        "d": "ו׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/shavuot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-05-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-06-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-06-09"
+        }
+      ]
+    },
+    {
+      "date": "2027-07-05",
+      "title": "ראש חודש תמוז",
+      "original": "Rosh Chodesh Tamuz",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "סיון",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tamuz-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-06-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-06-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-07-03"
+        }
+      ]
+    },
+    {
+      "date": "2027-07-06",
+      "title": "ראש חודש תמוז",
+      "original": "Rosh Chodesh Tamuz",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תמוז",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tamuz-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-06-22"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-06-29"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-07-04"
+        }
+      ]
+    },
+    {
+      "date": "2027-07-22",
+      "title": "צום י״ז בתמוז",
+      "original": "Tzom Tammuz",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תמוז",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tzom-tammuz-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-07-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-07-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-07-20"
+        }
+      ]
+    },
+    {
+      "date": "2027-08-03",
+      "title": "יום ז׳בוטינסקי",
+      "original": "Jabotinsky Day",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "תמוז",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/jabotinsky-day-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-07-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-07-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-08-01"
+        }
+      ]
+    },
+    {
+      "date": "2027-08-04",
+      "title": "ראש חודש אב",
+      "original": "Rosh Chodesh Av",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אב",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-av-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-07-21"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-07-28"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-08-02"
+        }
+      ]
+    },
+    {
+      "date": "2027-08-11",
+      "title": "ערב תשעה באב",
+      "original": "Erev Tish'a B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אב",
+        "d": "ח׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/tisha-bav-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-08-12",
+      "title": "תשעה באב",
+      "original": "Tish'a B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אב",
+        "d": "ט׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tisha-bav-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-07-29"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-08-05"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-08-10"
+        }
+      ]
+    },
+    {
+      "date": "2027-08-18",
+      "title": "ט״ו באב",
+      "original": "Tu B'Av",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אב",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tu-bav-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-08-04"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-08-11"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-08-16"
+        }
+      ]
+    },
+    {
+      "date": "2027-09-02",
+      "title": "ראש חודש אלול",
+      "original": "Rosh Chodesh Elul",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אב",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-elul-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-08-19"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-08-26"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-08-31"
+        }
+      ]
+    },
+    {
+      "date": "2027-09-03",
+      "title": "ראש השנה למעשר בהמה",
+      "original": "Rosh Hashana LaBehemot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אלול",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-hashana-labehemot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-08-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-08-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-09-01"
+        }
+      ]
+    },
+    {
+      "date": "2027-09-03",
+      "title": "ראש חודש אלול",
+      "original": "Rosh Chodesh Elul",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אלול",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-elul-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-08-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-08-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-09-01"
+        }
+      ]
+    },
+    {
+      "date": "2027-09-25",
+      "title": "סליחות",
+      "original": "Leil Selichot",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אלול",
+        "d": "כ״ג"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/leil-selichot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-09-11"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-09-18"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-09-23"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-01",
+      "title": "ערב ראש השנה",
+      "original": "Erev Rosh Hashana",
+      "hebrew_date": {
+        "y": "תשפ״ז",
+        "m": "אלול",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-10-02",
+      "title": "ראש השנה 5788",
+      "original": "Rosh Hashana 5788",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-09-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-09-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-09-30"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-03",
+      "title": "ראש השנה ב׳",
+      "original": "Rosh Hashana II",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ב׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-09-19"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-09-26"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-01"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-04",
+      "title": "צום גדליה",
+      "original": "Tzom Gedaliah",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ג׳"
+      },
+      "category": "holiday",
+      "subcategory": "fast",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/tzom-gedaliah-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-09-20"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-09-27"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-02"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-10",
+      "title": "ערב יום כיפור",
+      "original": "Erev Yom Kippur",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ט׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/yom-kippur-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-10-11",
+      "title": "יום כיפור",
+      "original": "Yom Kippur",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "י׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/yom-kippur-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-09-27"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-09"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-15",
+      "title": "ערב סוכות",
+      "original": "Erev Sukkot",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "י״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": true,
+      "begins_previous_evening": false,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": []
+    },
+    {
+      "date": "2027-10-16",
+      "title": "סוכות א׳",
+      "original": "Sukkot I",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ט״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-02"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-09"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-14"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-17",
+      "title": "סוכות ב׳ (חוה״מ)",
+      "original": "Sukkot II (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ט״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-03"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-10"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-15"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-18",
+      "title": "סוכות ג׳ (חוה״מ)",
+      "original": "Sukkot III (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "י״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-04"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-11"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-16"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-19",
+      "title": "סוכות ד׳ (חוה״מ)",
+      "original": "Sukkot IV (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "י״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-05"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-12"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-17"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-20",
+      "title": "סוכות ה׳ (חוה״מ)",
+      "original": "Sukkot V (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "י״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-06"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-13"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-18"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-21",
+      "title": "סוכות ו׳ (חוה״מ)",
+      "original": "Sukkot VI (CH''M)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "כ׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-07"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-14"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-19"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-22",
+      "title": "סוכות ז׳ (הושענא רבה)",
+      "original": "Sukkot VII (Hoshana Raba)",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "כ״א"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-08"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-15"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-20"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-23",
+      "title": "שמיני עצרת",
+      "original": "Shmini Atzeret",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "כ״ב"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": true,
+      "is_eve": false,
+      "begins_previous_evening": true,
+      "source": "https://hebcal.com/h/shmini-atzeret-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-09"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-16"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-21"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-25",
+      "title": "יום הזיכרון לחללי מלחמת חרבות ברזל",
+      "original": "Swords of Iron War Memorial Day",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "כ״ד"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/swords-of-iron-war-memorial-day-2027?i=on&us=js&um=api",
+      "commercial_content": false,
+      "tone": "respectful_no_sales",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-11"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-18"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-23"
+        }
+      ]
+    },
+    {
+      "date": "2027-10-31",
+      "title": "ראש חודש חשון",
+      "original": "Rosh Chodesh Cheshvan",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "תשרי",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-cheshvan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-29"
+        }
+      ]
+    },
+    {
+      "date": "2027-11-01",
+      "title": "ראש חודש חשון",
+      "original": "Rosh Chodesh Cheshvan",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "חשון",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-cheshvan-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-18"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-25"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-10-30"
+        }
+      ]
+    },
+    {
+      "date": "2027-11-07",
+      "title": "שמירת בית הספר ליום העליה",
+      "original": "Yom HaAliyah School Observance",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "חשון",
+        "d": "ז׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yom-haaliyah-school-observance-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-24"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-10-31"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-11-05"
+        }
+      ]
+    },
+    {
+      "date": "2027-11-11",
+      "title": "יום הזכרון ליצחק רבין",
+      "original": "Yitzhak Rabin Memorial Day",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "חשון",
+        "d": "י״א"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/yitzhak-rabin-memorial-day-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-10-28"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-11-04"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-11-09"
+        }
+      ]
+    },
+    {
+      "date": "2027-11-29",
+      "title": "חג הסיגד",
+      "original": "Sigd",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "חשון",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/sigd-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-11-15"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-11-22"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-11-27"
+        }
+      ]
+    },
+    {
+      "date": "2027-11-30",
+      "title": "ראש חודש כסלו",
+      "original": "Rosh Chodesh Kislev",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "חשון",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-kislev-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-11-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-11-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-11-28"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-01",
+      "title": "ראש חודש כסלו",
+      "original": "Rosh Chodesh Kislev",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-kislev-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-11-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-11-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-11-29"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-06",
+      "title": "יום בןגוריון",
+      "original": "Ben-Gurion Day",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "ו׳"
+      },
+      "category": "holiday",
+      "subcategory": "modern",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/ben-gurion-day-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-11-22"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-11-29"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-04"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-24",
+      "title": "חנוכה: א׳ נר",
+      "original": "Chanukah: 1 Candle",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ד"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-10"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-17"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-22"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-25",
+      "title": "חנוכה: ב׳ נרות",
+      "original": "Chanukah: 2 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ה"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-11"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-18"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-23"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-26",
+      "title": "חנוכה: ג׳ נרות",
+      "original": "Chanukah: 3 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ו"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-12"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-19"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-24"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-27",
+      "title": "חנוכה: ד׳ נרות",
+      "original": "Chanukah: 4 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ז"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-13"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-20"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-25"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-28",
+      "title": "חנוכה: ה׳ נרות",
+      "original": "Chanukah: 5 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ח"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-14"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-21"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-26"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-29",
+      "title": "חנוכה: ו׳ נרות",
+      "original": "Chanukah: 6 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "כ״ט"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-15"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-22"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-27"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-30",
+      "title": "חג הבנות",
+      "original": "Chag HaBanot",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "minor",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chag-habanot-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-28"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-30",
+      "title": "חנוכה: ז׳ נרות",
+      "original": "Chanukah: 7 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-28"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-30",
+      "title": "ראש חודש טבת",
+      "original": "Rosh Chodesh Tevet",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "כסלו",
+        "d": "ל׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tevet-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-16"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-23"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-28"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-31",
+      "title": "חנוכה: ח׳ נרות",
+      "original": "Chanukah: 8 Candles",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "טבת",
+        "d": "א׳"
+      },
+      "category": "holiday",
+      "subcategory": "major",
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-29"
+        }
+      ]
+    },
+    {
+      "date": "2027-12-31",
+      "title": "ראש חודש טבת",
+      "original": "Rosh Chodesh Tevet",
+      "hebrew_date": {
+        "y": "תשפ״ח",
+        "m": "טבת",
+        "d": "א׳"
+      },
+      "category": "roshchodesh",
+      "subcategory": null,
+      "yom_tov": false,
+      "is_eve": false,
+      "begins_previous_evening": null,
+      "source": "https://hebcal.com/h/rosh-chodesh-tevet-2027?i=on&us=js&um=api",
+      "commercial_content": true,
+      "tone": "contextual_not_mandatory",
+      "planning_dates": [
+        {
+          "days_before": 14,
+          "date": "2027-12-17"
+        },
+        {
+          "days_before": 7,
+          "date": "2027-12-24"
+        },
+        {
+          "days_before": 2,
+          "date": "2027-12-29"
+        }
+      ]
+    }
+  ]
+}

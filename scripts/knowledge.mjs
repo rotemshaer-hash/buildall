@@ -6,6 +6,7 @@ import { industries } from '../src/industries.mjs';
 import { guides } from '../src/guides.mjs';
 import { cases } from '../src/cases.mjs';
 import { problems } from '../src/problems.mjs';
+import { services as servicePages } from '../src/services.mjs';
 import { PHONE, EMAIL } from '../src/layout.mjs';
 
 const strip = h => h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -31,7 +32,7 @@ export function buildKnowledge() {
   return {
     business: {
       name: 'POETEXA',
-      what: 'בונים לעסקים קטנים כל פתרון דיגיטלי: אתרים, דפי נחיתה, אפליקציות, מערכות ניהול, כלים קטנים ושילוב AI.',
+      what: 'בונים לעסקים קטנים אתרים, דפי נחיתה, אפליקציות, מערכות ניהול ופתרונות AI, וגם מתכננים ומפיקים תוכן לרשתות עם תזמון ומעקב.',
       audience: 'עסקים קטנים שלא רוצים להשקיע הון גדול אבל רוצים להתקדם טכנולוגית.',
       slogan: 'הטכנולוגיה שעסקים גדולים משלמים עליה הון, במחיר של עסק קטן.',
       area: 'עובדים עם עסקים מכל הארץ. כל התהליך יכול להתנהל בוואטסאפ ובטלפון.',
@@ -54,6 +55,7 @@ export function buildKnowledge() {
       ]
     },
     services,
+    servicePages: servicePages.map(s => ({ name: s.short, page: `/${s.slug}/`, about: s.lead, includes: s.integrations, scope: s.limits, faq: s.faq })),
     industries: industries.map(i => ({
       name: i.short, page: `/${i.slug}/`,
       pains: i.pains.map(p => p.t),

@@ -1,0 +1,2029 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//POETEXA//Israel Content Calendar//HE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:POETEXA — חגים ומועדים בישראל
+X-WR-TIMEZONE:Asia/Jerusalem
+BEGIN:VEVENT
+UID:323f7de0fe7437ce582855a5@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260109
+SUMMARY:יום השפה העברית
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/hebrew-language-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9bc58735ee99c2a13aaa92f9@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260119
+DTEND;VALUE=DATE:20260120
+SUMMARY:ראש חודש שבט
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-shvat-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4dd14a5312809e43b5f8cb35@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260202
+DTEND;VALUE=DATE:20260203
+SUMMARY:ט״ו בשבט
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/tu-bishvat-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a50958ffb74eab9ee76d3f4c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+SUMMARY:יום המשפחה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/family-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0c2bbe0ac26b2d6c1212781c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+SUMMARY:ראש חודש אדר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e7e6bc1ea0c61d8fecf8ff35@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+SUMMARY:ראש חודש אדר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5cc9812f448b436ea638a403@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260302
+DTEND;VALUE=DATE:20260303
+SUMMARY:ערב פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/purim-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:351f735358f745259cce5d3e@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260302
+DTEND;VALUE=DATE:20260303
+SUMMARY:תענית אסתר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/taanit-esther-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3b4796068f089457365e9d7a@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260303
+DTEND;VALUE=DATE:20260304
+SUMMARY:פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/purim-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f576f49211608dd86f5b4a9c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260304
+DTEND;VALUE=DATE:20260305
+SUMMARY:שושן פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shushan-purim-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b181926c38c6b0a16260420d@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+SUMMARY:ראש חודש ניסן
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-nisan-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:777673aa1db439d02cd91ba0@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260328
+DTEND;VALUE=DATE:20260329
+SUMMARY:יום העליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haaliyah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:de30096cb2a65678ccd194f5@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260402
+SUMMARY:ערב פסח
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f4e1951f4ad5b508d3ec7191@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260402
+SUMMARY:תענית בכורות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/taanit-bechorot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:75c9e6c3040285aa16e7b28e@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+SUMMARY:פסח א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aa50b5ec6af240629677772c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260404
+SUMMARY:פסח ב׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b05c2629f5a13d549bb487a7@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260405
+SUMMARY:פסח ג׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:af7ac83e26187f530a4bc20c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+SUMMARY:פסח ד׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b1698ceb721e87c4d5a71b9e@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+SUMMARY:פסח ה׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d23056cd4461f3fcc77dfc19@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260407
+DTEND;VALUE=DATE:20260408
+SUMMARY:פסח ו׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:28d52208226620d7c996b1d1@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260408
+DTEND;VALUE=DATE:20260409
+SUMMARY:פסח ז׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bcf5607dad3d61270b8b7570@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260414
+DTEND;VALUE=DATE:20260415
+SUMMARY:יום השואה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-hashoah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8378066c78f70641bea7dc38@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260418
+SUMMARY:ראש חודש אייר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-iyyar-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3c6ee101e29e73fe87ef0d70@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260418
+DTEND;VALUE=DATE:20260419
+SUMMARY:ראש חודש אייר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-iyyar-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2c709897c3179698e3f52328@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260421
+DTEND;VALUE=DATE:20260422
+SUMMARY:יום הזכרון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-hazikaron-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c21ec71c71e5833aa0db83a6@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+SUMMARY:יום העצמאות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haatzmaut-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1a0f7a23d70dd639a73eb41c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260427
+DTEND;VALUE=DATE:20260428
+SUMMARY:יום הרצל
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/herzl-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:93d8b7f3af0658f3fea1cbfb@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+SUMMARY:פסח שני
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-sheni-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:44b4cd42ba552b8e1ca42465@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260505
+DTEND;VALUE=DATE:20260506
+SUMMARY:ל״ג בעומר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/lag-baomer-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a6108043fa9c33b07d501cb1@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260515
+DTEND;VALUE=DATE:20260516
+SUMMARY:יום ירושלים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-yerushalayim-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c19d22059504a99b6e17db71@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260517
+DTEND;VALUE=DATE:20260518
+SUMMARY:ראש חודש סיון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-sivan-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:59e2d28cfc26e4da56edda91@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260521
+DTEND;VALUE=DATE:20260522
+SUMMARY:ערב שבועות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shavuot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:953b2dcbd2e1ef8d6d4e92b0@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260523
+SUMMARY:שבועות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shavuot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2ff6e8569db9af85f7369521@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260615
+DTEND;VALUE=DATE:20260616
+SUMMARY:ראש חודש תמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tamuz-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bfaf02d54ea2f82fd0d5c024@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+SUMMARY:ראש חודש תמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tamuz-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:51cacfccb8de5521de4edd11@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260703
+SUMMARY:צום י״ז בתמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tzom-tammuz-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:949d6565afcc5b5a6aa62e65@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260714
+DTEND;VALUE=DATE:20260715
+SUMMARY:יום ז׳בוטינסקי
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/jabotinsky-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8aec06b9720779de83478999@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY:ראש חודש אב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-av-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2be76124574118dbd0353001@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260723
+SUMMARY:ערב תשעה באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tisha-bav-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a54ff2d438b38b1fecb2369c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:תשעה באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tisha-bav-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ad4ebe0a9a14c6450b1ea5fd@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:ט״ו באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/tu-bav-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bc02c73c95a41ae815975443@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY:ראש חודש אלול
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-elul-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bbd93c4fc865808c2a2ff29b@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:ראש השנה למעשר בהמה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-labehemot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:14d64af619a3521ce49181cb@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260815
+SUMMARY:ראש חודש אלול
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-elul-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2af772db40023bb5d948df79@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260906
+SUMMARY:סליחות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/leil-selichot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:fefba31ca7d0da2417b70903@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260911
+DTEND;VALUE=DATE:20260912
+SUMMARY:ערב ראש השנה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d27cb3e56a15591e9061a4fd@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+SUMMARY:ראש השנה 5787
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dc2e85ca1f8ef62f416fe4ea@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20260914
+SUMMARY:ראש השנה ב׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0b0c686a7cec9f0495aa3305@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+SUMMARY:צום גדליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tzom-gedaliah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dabb18d8b9ef14459934baa4@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:ערב יום כיפור
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-kippur-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:58ab2401cbafc5fa7e3f54ed@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:יום כיפור
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-kippur-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:520f15d416208e5086d7c890@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:ערב סוכות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d3ea97083df096366b20e187@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+SUMMARY:סוכות א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d22a125274dffebc0b19dff6@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:סוכות ב׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1f02f971b0d6f0c59b26502c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:סוכות ג׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1a4f319ee3419295b7e3e149@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260929
+DTEND;VALUE=DATE:20260930
+SUMMARY:סוכות ד׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b5bd824721c73f0138116a54@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:סוכות ה׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:14743b6baf9cc4b8fe5c26e9@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:סוכות ו׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:90e8c7b02c1e1926b9ebe20b@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:סוכות ז׳ (הושענא רבה)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9b91d56e43eaff2fa821c413@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:שמיני עצרת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shmini-atzeret-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:36e0256bffdd4d1f23e771ff@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:יום הזיכרון לחללי מלחמת חרבות ברזל
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/swords-of-iron-war-memorial-day-2026?i=on&us=js&
+ um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b1ca00e30102d17a70547a84@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:ראש חודש חשון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-cheshvan-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7b8fd0ce6815e5acf8b301ff@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:ראש חודש חשון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-cheshvan-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2c2969e605a0f11d5c5604b0@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:שמירת בית הספר ליום העליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haaliyah-school-observance-2026?i=on&us=js&u
+ m=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9d37b5caa211c75fd880e852@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:יום הזכרון ליצחק רבין
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yitzhak-rabin-memorial-day-2026?i=on&us=js&um=ap
+ i
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1d5c256a9196173357d3151c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:חג הסיגד
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sigd-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:6252d48ba24bb7d2becdaa17@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:ראש חודש כסלו
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-kislev-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e0321344807b25a29d30089c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:ראש חודש כסלו
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-kislev-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0888347b7f06f6de9553152a@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:יום בןגוריון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/ben-gurion-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4c1f42e41644124557552076@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:חנוכה: א׳ נר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:360e07ca528db8b780de8fcf@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:חנוכה: ב׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ed65dfca149544b28ceccd50@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:חנוכה: ג׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ab2fffa09fe666cbef643bce@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:חנוכה: ד׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a8bafe5f320af23c18cbffa6@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:חנוכה: ה׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:35048bae9b23e25abeb212fa@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:חנוכה: ו׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4bd01b50768fb658468ee678@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:חג הבנות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chag-habanot-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e8c7cc25bbafe14a5159e362@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:חנוכה: ז׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b79cfcef1a4b6c1d1b4ee874@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:ראש חודש טבת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tevet-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:544b1d277f050fcdc7d2f1e8@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:חנוכה: ח׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4c2bb7b0e6cb9d60afff7ff1@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:ראש חודש טבת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tevet-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:9a57c0c76f21bae1d138186d@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:חנוכה: יום ח׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:28907883e5a4977d5bafc0f0@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+SUMMARY:עשרה בטבת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/asara-btevet-20261220?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2204d81478634d64701f039c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:יום השפה העברית
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/hebrew-language-day-2026?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:bdf7d6ba75ed05ff37b444f7@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:ראש חודש שבט
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-shvat-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:21aa81dbbc85bc23500fc354@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270123
+DTEND;VALUE=DATE:20270124
+SUMMARY:ט״ו בשבט
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/tu-bishvat-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1fa9dcadebe13b36240addcd@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:יום המשפחה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/family-day-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddf81bfa622416e5bd019af7@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270207
+DTEND;VALUE=DATE:20270208
+SUMMARY:ראש חודש אדר א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-i-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1020fb2426999dabaf518168@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270208
+DTEND;VALUE=DATE:20270209
+SUMMARY:ראש חודש אדר א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-i-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:477d51a75934e49a3f5596e9@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+SUMMARY:פורים קטן
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/purim-katan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:6e611017c42d252d7371d781@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270223
+SUMMARY:שושן פורים קטן
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shushan-purim-katan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:82779d902cda97cdbf7dceab@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270310
+SUMMARY:ראש חודש אדר ב׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-ii-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7993215be2c40f80fb88fe70@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270311
+SUMMARY:ראש חודש אדר ב׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-adar-ii-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0f3739aef50a1c2b36c27571@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270322
+DTEND;VALUE=DATE:20270323
+SUMMARY:ערב פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/purim-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a2678bd2ca546f9b5a7e87d6@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270322
+DTEND;VALUE=DATE:20270323
+SUMMARY:תענית אסתר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/taanit-esther-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5e12eb6b419ba7766603b428@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270323
+DTEND;VALUE=DATE:20270324
+SUMMARY:פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/purim-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:43371586f3a6d073426f70bc@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270325
+SUMMARY:שושן פורים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shushan-purim-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cbb4c860f59e58be38bc5f6a@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270408
+DTEND;VALUE=DATE:20270409
+SUMMARY:ראש חודש ניסן
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-nisan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:af2c0e28fe122b11f3746892@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270417
+DTEND;VALUE=DATE:20270418
+SUMMARY:יום העליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haaliyah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:73ab9367cc078916525b2393@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270421
+DTEND;VALUE=DATE:20270422
+SUMMARY:ערב פסח
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:039b4957a672c73effde9781@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270421
+DTEND;VALUE=DATE:20270422
+SUMMARY:תענית בכורות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/taanit-bechorot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d89316e60f6ce2caf21779cc@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270422
+DTEND;VALUE=DATE:20270423
+SUMMARY:פסח א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1bc1591073cedf23f1396011@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+SUMMARY:פסח ב׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e8dc61c13dbd9ad5aaa4baa3@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270424
+DTEND;VALUE=DATE:20270425
+SUMMARY:פסח ג׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:705a22800cda1b4a438b5cc9@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270425
+DTEND;VALUE=DATE:20270426
+SUMMARY:פסח ד׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a98376f7d80895de65c6d497@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+SUMMARY:פסח ה׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:82a0592f1581c4f8418a3dc7@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270427
+DTEND;VALUE=DATE:20270428
+SUMMARY:פסח ו׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:97cc56587427576734344a43@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+SUMMARY:פסח ז׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a70d7750f719a0aad6ef619c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270504
+DTEND;VALUE=DATE:20270505
+SUMMARY:יום השואה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-hashoah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:92d1f321880cdf6d80a6bbca@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270507
+DTEND;VALUE=DATE:20270508
+SUMMARY:ראש חודש אייר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-iyyar-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:235e632ebe3370f64b3a4cc2@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+SUMMARY:ראש חודש אייר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-iyyar-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:37672c95f9351412835201fe@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270511
+DTEND;VALUE=DATE:20270512
+SUMMARY:יום הזכרון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-hazikaron-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:37dfd22b5048e0959a176044@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270513
+SUMMARY:יום העצמאות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haatzmaut-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e08dd54da17e8e4d7cb29529@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+SUMMARY:יום הרצל
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/herzl-day-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3a6e3a5fc30cfdb40b5cdf4b@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270521
+DTEND;VALUE=DATE:20270522
+SUMMARY:פסח שני
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/pesach-sheni-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:262720d47467b5f2d3dc0416@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270525
+DTEND;VALUE=DATE:20270526
+SUMMARY:ל״ג בעומר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/lag-baomer-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e4994bc7d6922604f631e4fb@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270604
+DTEND;VALUE=DATE:20270605
+SUMMARY:יום ירושלים
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-yerushalayim-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ad1c42fab78a86ce949080e1@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270607
+SUMMARY:ראש חודש סיון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-sivan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7a569c172b67a6a583311929@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270610
+DTEND;VALUE=DATE:20270611
+SUMMARY:ערב שבועות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shavuot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1e894b00e5c656f5ab0f59d9@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270611
+DTEND;VALUE=DATE:20270612
+SUMMARY:שבועות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shavuot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2ef7136f725eaa4072470a17@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270705
+DTEND;VALUE=DATE:20270706
+SUMMARY:ראש חודש תמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tamuz-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:644ad2a55a1df0607c7e0dff@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270706
+DTEND;VALUE=DATE:20270707
+SUMMARY:ראש חודש תמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tamuz-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:6735329d11a9279e80b885b4@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270722
+DTEND;VALUE=DATE:20270723
+SUMMARY:צום י״ז בתמוז
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tzom-tammuz-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:568bea48303bd834893bfc36@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270803
+DTEND;VALUE=DATE:20270804
+SUMMARY:יום ז׳בוטינסקי
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/jabotinsky-day-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2851ed52a28eaff3d88b205e@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270804
+DTEND;VALUE=DATE:20270805
+SUMMARY:ראש חודש אב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-av-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b8a91427752c797b3dea2652@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270811
+DTEND;VALUE=DATE:20270812
+SUMMARY:ערב תשעה באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tisha-bav-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:4356fd2561c766ca492556e5@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270812
+DTEND;VALUE=DATE:20270813
+SUMMARY:תשעה באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tisha-bav-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:04bd53a3614b7aa705624067@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270818
+DTEND;VALUE=DATE:20270819
+SUMMARY:ט״ו באב
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/tu-bav-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0c78a4827c74aa6be5a1b60a@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270902
+DTEND;VALUE=DATE:20270903
+SUMMARY:ראש חודש אלול
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-elul-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:35e621c80bbea897ef236e39@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270903
+DTEND;VALUE=DATE:20270904
+SUMMARY:ראש השנה למעשר בהמה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-labehemot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:c7f6cd06cf72e73a33844039@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270903
+DTEND;VALUE=DATE:20270904
+SUMMARY:ראש חודש אלול
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-elul-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:90e1a421b81162c443f8e549@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20270925
+DTEND;VALUE=DATE:20270926
+SUMMARY:סליחות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/leil-selichot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:95ebaeac6d8700c6b8b430cf@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+SUMMARY:ערב ראש השנה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a3aae7e3ccadd97373e2ef16@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271002
+DTEND;VALUE=DATE:20271003
+SUMMARY:ראש השנה 5788
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:70f216c638caac839123b91c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271003
+DTEND;VALUE=DATE:20271004
+SUMMARY:ראש השנה ב׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-hashana-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aacfc981b3c12e90b8f15aaa@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+SUMMARY:צום גדליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/tzom-gedaliah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:36c04dac1491b0d940efd3ec@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271010
+DTEND;VALUE=DATE:20271011
+SUMMARY:ערב יום כיפור
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-kippur-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:3cb6db486f49838b3a6c3764@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271011
+DTEND;VALUE=DATE:20271012
+SUMMARY:יום כיפור
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/yom-kippur-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:640bff3199fbc5d69372aad3@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271015
+DTEND;VALUE=DATE:20271016
+SUMMARY:ערב סוכות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:17d0fc18a6b4ea59acdcae9c@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271016
+DTEND;VALUE=DATE:20271017
+SUMMARY:סוכות א׳
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2e685211fb10219b005f2da4@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271017
+DTEND;VALUE=DATE:20271018
+SUMMARY:סוכות ב׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f44285f29823ef9a9498cb91@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271018
+DTEND;VALUE=DATE:20271019
+SUMMARY:סוכות ג׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0ce72d7e94669b08aada13e6@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271019
+DTEND;VALUE=DATE:20271020
+SUMMARY:סוכות ד׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:7ccb29e7e9f821631a7dd461@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271020
+DTEND;VALUE=DATE:20271021
+SUMMARY:סוכות ה׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:542cb556db7763178ee907bd@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271021
+DTEND;VALUE=DATE:20271022
+SUMMARY:סוכות ו׳ (חוה״מ)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:788ad853a1c8c489923113d2@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271022
+DTEND;VALUE=DATE:20271023
+SUMMARY:סוכות ז׳ (הושענא רבה)
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sukkot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2fb1d90086ef2d9d63944360@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271023
+DTEND;VALUE=DATE:20271024
+SUMMARY:שמיני עצרת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/shmini-atzeret-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8e507122dafa7ac3a1744a66@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271025
+DTEND;VALUE=DATE:20271026
+SUMMARY:יום הזיכרון לחללי מלחמת חרבות ברזל
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. יום בעל אופי רגיש: ללא תוכן מכירת
+ י.
+URL:https://hebcal.com/h/swords-of-iron-war-memorial-day-2027?i=on&us=js&
+ um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2c3bcd33278ac5fda863222a@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271031
+DTEND;VALUE=DATE:20271101
+SUMMARY:ראש חודש חשון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-cheshvan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:000ebf8b028b6c644f610b04@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271101
+DTEND;VALUE=DATE:20271102
+SUMMARY:ראש חודש חשון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-cheshvan-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f01b4beb2857a9c06fcb045f@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271107
+DTEND;VALUE=DATE:20271108
+SUMMARY:שמירת בית הספר ליום העליה
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yom-haaliyah-school-observance-2027?i=on&us=js&u
+ m=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8bcd3277d2604454546e0d34@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271111
+DTEND;VALUE=DATE:20271112
+SUMMARY:יום הזכרון ליצחק רבין
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/yitzhak-rabin-memorial-day-2027?i=on&us=js&um=ap
+ i
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a7f8f587836e5c0e003e5301@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271129
+DTEND;VALUE=DATE:20271130
+SUMMARY:חג הסיגד
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/sigd-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:77c7eaddc0531c887acc7a51@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271130
+DTEND;VALUE=DATE:20271201
+SUMMARY:ראש חודש כסלו
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-kislev-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:356b29dff8541c94e2fbf3f2@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20271202
+SUMMARY:ראש חודש כסלו
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-kislev-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:e097a03d37b0c2787108c512@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271206
+DTEND;VALUE=DATE:20271207
+SUMMARY:יום בןגוריון
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/ben-gurion-day-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:6a27c459e08af818f255f8ff@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271224
+DTEND;VALUE=DATE:20271225
+SUMMARY:חנוכה: א׳ נר
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:0771877ebb00db1cfff3ee14@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+SUMMARY:חנוכה: ב׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:1abe50afadb2d7884d34a618@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271226
+DTEND;VALUE=DATE:20271227
+SUMMARY:חנוכה: ג׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:5ee5b7d462748ff4e1dba996@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271227
+DTEND;VALUE=DATE:20271228
+SUMMARY:חנוכה: ד׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a542af919de58e0af1c5caa2@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271228
+DTEND;VALUE=DATE:20271229
+SUMMARY:חנוכה: ה׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:84ca692cf78b358f25edcf3f@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271229
+DTEND;VALUE=DATE:20271230
+SUMMARY:חנוכה: ו׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:83739169eba791b7197d3049@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271230
+DTEND;VALUE=DATE:20271231
+SUMMARY:חג הבנות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chag-habanot-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:f9b75fb1f462bebc2cd654ec@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271230
+DTEND;VALUE=DATE:20271231
+SUMMARY:חנוכה: ז׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:eb1d5bbf0dc0200efdd3b4fb@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271230
+DTEND;VALUE=DATE:20271231
+SUMMARY:ראש חודש טבת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tevet-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d7b61323c3f7afaadd40f516@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+SUMMARY:חנוכה: ח׳ נרות
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/chanukah-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:8455bc538d66396d7255fce8@poetexa.pages.dev
+DTSTAMP:20261028T220715Z
+DTSTART;VALUE=DATE:20271231
+DTEND;VALUE=DATE:20280101
+SUMMARY:ראש חודש טבת
+DESCRIPTION:מועד בישראל. חגים עשויים להתחיל ב
+ ערב הקודם\; אין כאן זמני שקיעה. מקור: Hebcal\
+ , CC BY 4.0. התאמת התוכן למועד נבדקת בנפרד.
+URL:https://hebcal.com/h/rosh-chodesh-tevet-2027?i=on&us=js&um=api
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

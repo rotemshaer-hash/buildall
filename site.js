@@ -29,7 +29,7 @@ document.addEventListener('click', e => {
   }
   const sel = document.querySelector('#lead [name="what"]');
   if (sel) {
-    const category = a.closest('#manage') ? 'מערכת ניהול' : a.closest('#app') ? 'אפליקציה'
+    const category = /תוכן ופרסום לרשתות/.test(subject) ? 'תוכן ופרסום לרשתות' : a.closest('#manage') ? 'מערכת ניהול' : a.closest('#app') ? 'אפליקציה'
       : subject.includes('דף נחיתה') ? 'דף נחיתה' : a.closest('#web') ? 'אתר לעסק'
       : a.closest('#ai') ? 'AI' : a.closest('#auto') ? 'מערכת ניהול'
       : /עובדים|משמרות|מלאי|דוחות|משימות|מסמכים|לקוחות/.test(subject) ? 'מערכת ניהול'
