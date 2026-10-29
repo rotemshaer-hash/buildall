@@ -92,18 +92,18 @@ async function askClaude(env, messages) {
   return (data.content?.[0]?.text || '').trim();
 }
 
-async function downloadPost(request, pathname, env) {
-  const match = pathname.match(/^\/downloads\/2026-10-29\/post-([1-5])\.jpg$/);
+async function downloadSocialKit(request, pathname, env) {
+  const match = pathname.match(/^\/downloads\/(2026-10-(?:29|30|31)|2026-11-0[1-4])\/(post-[1-5]\.jpg|story-[12]\.jpg|reel\.mp4)$/);
   if (!match) return new Response('Not found', { status: 404 });
   if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
-  const number = Number(match[1]);
+  const [, date, name] = match;
   try {
-    const assetUrl = new URL('/media/instagram-posts/2026-10-29/' + number + '.jpg', request.url);
+    const assetUrl = new URL('/media/social-kit/' + date + '/' + name, request.url);
     const upstream = await env.ASSETS.fetch(new Request(assetUrl, { method: request.method }));
     if (!upstream.ok) return new Response('Download unavailable', { status: 502 });
     return new Response(request.method === 'HEAD' ? null : upstream.body, { headers: {
-      'Content-Type': 'image/jpeg',
-      'Content-Disposition': 'attachment; filename="POETEXA-29-10-' + number + '.jpg"',
+      'Content-Type': name.endsWith('.mp4') ? 'video/mp4' : 'image/jpeg',
+      'Content-Disposition': 'attachment; filename="POETEXA-' + date + '-' + name + '"',
       'Cache-Control': 'public, max-age=3600',
       'X-Content-Type-Options': 'nosniff'
     } });
@@ -113,7 +113,7 @@ async function downloadPost(request, pathname, env) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname.startsWith('/downloads/')) return downloadPost(request, url.pathname, env);
+    if (url.pathname.startsWith('/downloads/')) return downloadSocialKit(request, url.pathname, env);
 
     if (url.pathname === '/api/chat') {
       if (request.method !== 'POST') return json({ error: 'method' }, 405);
