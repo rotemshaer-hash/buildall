@@ -269,10 +269,10 @@ ${i.solutions.map((s, n) => `      <a class="card" id="s${n}" data-wa data-msg="
 
 <section class="services">
   <div class="wrap">
-    <a class="example" data-wa data-msg="${attr(i.short)}" href="#contact">
+    <a class="example" href="${root}${i.slug === 'restaurants' ? 'work/phone-order-ai/#demo' : ['beauty', 'clinics', 'fitness'].includes(i.slug) ? 'demo/landing/' : i.slug === 'contractors' ? 'work/work-it/#demo' : 'work/smart-inbox/#demo'}">
       <span class="eyebrow">דוגמה להמחשה — לא לקוח אמיתי</span>
       <p>${i.example}</p>
-      <span class="ex-go">נדבר על העסק שלך ←</span>
+      <span class="ex-go">לצפייה בהדגמה קשורה ←</span>
     </a>
   </div>
 </section>
@@ -336,6 +336,13 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
 // can link straight to the page that explains exactly that.
 for (const s of services) {
   const root = '../';
+  const exampleHref = {
+    'social-content': '#examples',
+    'automations': '../work/smart-inbox/#demo',
+    'ai': '../work/smart-inbox/#demo',
+    'landing-pages': '../demo/landing/'
+  }[s.slug];
+  if (!exampleHref) throw new Error('Missing example destination for ' + s.slug);
   const body = `<section class="hero hero-sm">
   <i class="blob b1"></i><i class="blob b2"></i>
   <div class="wrap">
@@ -345,6 +352,7 @@ for (const s of services) {
     <p>${s.lead}</p>
     <div class="ctas">
       <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ חינם</a>
+      <a class="btn btn-line" href="${exampleHref}">${s.slug === 'social-content' ? 'לצפייה ברילסים' : 'לצפייה בהדגמה'} <span aria-hidden="true">←</span></a>
     </div>
   </div>
 </section>
@@ -361,10 +369,10 @@ for (const s of services) {
 
 <section class="services">
   <div class="wrap">
-    <a class="example" data-wa data-msg="${attr(s.short)}" href="#contact">
+    <a class="example" href="${exampleHref}">
       <span class="eyebrow">דוגמה להמחשה — לא לקוח אמיתי</span>
       <p>${s.example}</p>
-      <span class="ex-go">נדבר על העסק שלך ←</span>
+      <span class="ex-go">${s.slug === 'social-content' ? 'לצפייה ברילסים' : 'לצפייה בהדגמה'} ←</span>
     </a>
   </div>
 </section>

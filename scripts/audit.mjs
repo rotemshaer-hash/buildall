@@ -22,6 +22,10 @@ console.log(`דפים שנבדקו: ${pages.length}\n`);
 console.log('קישורים וקבצים:');
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
+  // Example cards must navigate to a demonstration, never become WhatsApp links.
+  for (const card of html.matchAll(/<a\b([^>]*class="[^"]*\bexample\b[^"]*"[^>]*)>/g)) {
+    ok(!/\bdata-wa\b|wa\.me|href="#contact"/.test(card[1]), `${page}: כרטיס דוגמה מפנה לפנייה במקום להדגמה`);
+  }
   const rel = page.replace(ROOT, '') || '/index.html';
   const ids = new Set([...html.matchAll(/id="([^"]+)"/g)].map(m => m[1]));
   const hrefs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(m => m[1]);

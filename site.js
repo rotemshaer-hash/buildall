@@ -7,7 +7,7 @@ const WA_NUMBER = (document.querySelector('[data-call]')?.getAttribute('href') |
 const waLink = text => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
 const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של POETEXA ואשמח לשיחת ייעוץ חינם 🙂';
 if (WA_NUMBER) {
-  document.querySelectorAll('[data-wa]').forEach(a => {
+  document.querySelectorAll('a[data-wa]').forEach(a => {
     // data-msg lets a card ask about its own subject; without it the general greeting is sent.
     const subject = a.dataset.msg;
     a.href = waLink(subject ? `${document.body.dataset.from || 'היי, הגעתי מהאתר של POETEXA'}, ואשמח לשמוע על: ${subject} 🙂` : GREETING);
