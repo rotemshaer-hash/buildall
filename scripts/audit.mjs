@@ -92,8 +92,10 @@ for (const page of pages) {
   const html = readFileSync(page, 'utf8');
   const rel = page.replace(ROOT, '');
   ok(html.includes('google-site-verification'), `${rel}: תג האימות של גוגל`);
-  ok(html.includes('id="install"'), `${rel}: שורת ההתקנה כאפליקציה`);
-  ok(html.includes('btn-ai'), `${rel}: כפתור ה-AI בראש הדף`);
+  const standaloneWorksheet = rel === "/tools/time-check/index.html";
+  // This focused worksheet has no shared app-install/header layout. Link and safety checks still run.
+  ok(standaloneWorksheet || html.includes('id="install"'), `${rel}: שורת ההתקנה כאפליקציה`);
+  ok(standaloneWorksheet || html.includes('btn-ai'), `${rel}: כפתור ה-AI בראש הדף`);
   ok(!html.includes('class="fab"'), `${rel}: אין כפתור וואטסאפ צף`);
   ok(!html.includes('ai-fab'), `${rel}: אין כפתור AI צף`);
 }

@@ -15,7 +15,7 @@ import { services } from '../src/services.mjs';
 const FILES = [
   'index.html', '404.html', 'style.css', 'site.js', 'sw.js', 'manifest.webmanifest',
   '_worker.js', 'kb.json',
-  'assets', 'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo/cafe', 'demo/landing',
+  'assets', 'og.jpg', 'robots.txt', 'sitemap.xml', 'icons', 'demo/cafe', 'demo/landing', 'tools/time-check',
   'googlef057313d56875ab6.html',   // Search Console ownership. Google says to keep it for good.
   'accessibility', 'privacy', 'guides', 'work', 'media',
   ...industries.map(i => i.slug), ...services.map(s => s.slug)

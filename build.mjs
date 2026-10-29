@@ -1,7 +1,7 @@
 // Builds the whole site from src/: the home page, a page per industry, sitemap.xml and robots.txt.
 // Run: node build.mjs
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
-import { BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
+import { GSC_VERIFY, BASE, BRAND, FULL_NAME, FORM_KEY, favicon, head, header, navBar, footer, contact, icon, brandRow, business, videoSchema, faqSchema } from './src/layout.mjs';
 import { industries } from './src/industries.mjs';
 import { services } from './src/services.mjs';
 import { socialShowcase } from './src/social.mjs';
@@ -43,6 +43,9 @@ const write = (path, html) => {
   mkdirSync(path.split('/').slice(0, -1).join('/') || '.', { recursive: true });
   writeFileSync(path, html);
 };
+// Shareable, client-side worksheet; never sends visitors' answers to a server.
+write('tools/time-check/index.html', readFileSync('src/time-check.html', 'utf8').replace('<!--GSC-->', `<meta name="google-site-verification" content="${GSC_VERIFY}">`));
+write('tools/time-check/check.js', readFileSync('src/time-check.js', 'utf8'));
 // Tables collapse into one card per row on phones, so each cell carries its column's name.
 const labelTables = html => html.replace(/<table>([\s\S]*?)<\/table>/g, (t, inner) => {
   const heads = [...inner.matchAll(/<th>(.*?)<\/th>/g)].map(m => m[1].replace(/<[^>]+>/g, ''));
