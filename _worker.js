@@ -93,7 +93,7 @@ async function askClaude(env, messages) {
 }
 
 async function downloadSocialKit(request, pathname, env) {
-  const match = pathname.match(/^\/downloads\/(2026-10-(?:29|30|31)|2026-11-0[1-4])\/(post-[1-5]\.jpg|story-[12]\.jpg|reel\.mp4)$/);
+  const match = pathname.match(/^\/downloads\/(2026-10-(?:29|30|31)|2026-11-0[1-5])\/(post-[1-5]\.jpg|story-[12]\.jpg|reel\.mp4)$/);
   if (!match) return new Response('Not found', { status: 404 });
   if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
   const [, date, name] = match;

@@ -52,32 +52,33 @@
   {
     "date": "2026-10-30",
     "weekday": "שישי",
-    "theme": "הקליק הגיע. לאן ממשיכים?",
+    "theme": "דף נחיתה: בדיקת הדרך מהטלפון לפנייה",
     "post": {
       "time": "08:30",
-      "caption": "לפני שמשנים קהל או תקציב, כדאי לבדוק מה פוגש מי שכבר לחץ. ארבע בדיקות פשוטות לעמוד הנחיתה שלך. שמור לפני הקמפיין הבא.\n\n#ניהולעסק #עסקיםקטנים #תהליכיעבודה",
+      "caption": "אתמול הצגנו מה צריך להיות בדף נחיתה. היום בודקים את הדרך מהקליק לפנייה — דווקא מהטלפון. אותה הצעה, פעולה ברורה והמשך מסודר. שמור את הבדיקה לפני הקמפיין הבא.\n\nהדוגמאות בקרוסלה להמחשה.\n#דפינחיתה #עסקיםקטנים #POETEXA",
       "files": [
         {
           "name": "post-1.jpg",
-          "source": "https://static.metricool.com/planner/202610/7696609-file-16992616434291494127.jpeg"
+          "source": "https://static.metricool.com/planner/202610/7696609-file-6980635146122812673.jpeg"
         },
         {
           "name": "post-2.jpg",
-          "source": "https://static.metricool.com/planner/202610/7696609-file-6629517018768696860.jpeg"
+          "source": "https://static.metricool.com/planner/202610/7696609-file-14895803564424218020.jpeg"
         },
         {
           "name": "post-3.jpg",
-          "source": "https://static.metricool.com/planner/202610/7696609-file-2963495715381682341.jpeg"
+          "source": "https://static.metricool.com/planner/202610/7696609-file-5703840484453524475.jpeg"
         },
         {
           "name": "post-4.jpg",
-          "source": "https://static.metricool.com/planner/202610/7696609-file-3535159053623745848.jpeg"
+          "source": "https://static.metricool.com/planner/202610/7696609-file-4051839605189026939.jpeg"
         },
         {
           "name": "post-5.jpg",
-          "source": "https://static.metricool.com/planner/202610/7696609-file-9632057705319257901.jpeg"
+          "source": "https://static.metricool.com/planner/202610/7696609-file-4290167572675497950.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
       "time": "10:30",
@@ -104,7 +105,7 @@
     "weekday": "שבת",
     "theme": "האקסל עובד. ההעתקה פחות.",
     "post": {
-      "time": "18:30",
+      "time": "20:00",
       "caption": "שדרוג טוב מתחיל בבדיקה של מה שכבר עובד. לא כל בעיה מחייבת להחליף את כל המערכת. שמור את השלבים לשיחת האפיון הבאה.\n\n#ניהולעסק #עסקיםקטנים #תהליכיעבודה",
       "files": [
         {
@@ -127,22 +128,23 @@
           "name": "post-5.jpg",
           "source": "https://static.metricool.com/planner/202610/7696609-file-241972453181501139.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
-      "time": "20:30",
+      "time": "20:45",
       "caption": "לפעמים הקובץ בסדר — ורק הדרך שבה המידע מגיע אליו דורשת שיפור. חיבור או ייצוא תלויים בכלים ובצורך שלך; הסרטון מציג תהליך מוצע, לא אינטגרציה שכבר חוברה לעסק. איזה פרט אתה מעתיק פעמיים?\n\n#עסקיםקטנים #אוטומציה #פתרונותלעסקים",
       "name": "reel.mp4",
       "source": "https://static.metricool.com/planner/202610/7696609-file-14029879205673823099.mp4"
     },
     "stories": [
       {
-        "time": "19:00",
+        "time": "20:15",
         "name": "story-1.jpg",
         "source": "https://static.metricool.com/planner/202610/7696609-file-13917634219631793787.jpeg"
       },
       {
-        "time": "21:00",
+        "time": "21:30",
         "name": "story-2.jpg",
         "source": "https://static.metricool.com/planner/202610/7696609-file-12395603784501519205.jpeg"
       }
@@ -177,7 +179,8 @@
           "name": "post-5.jpg",
           "source": "https://static.metricool.com/planner/202610/7696609-file-1785723438784540936.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
       "time": "18:00",
@@ -227,7 +230,8 @@
           "name": "post-5.jpg",
           "source": "https://static.metricool.com/planner/202610/7696609-file-12575608186501890409.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
       "time": "18:00",
@@ -277,7 +281,8 @@
           "name": "post-5.jpg",
           "source": "https://static.metricool.com/planner/202610/7696609-file-8479494294421503471.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
       "time": "18:00",
@@ -327,7 +332,8 @@
           "name": "post-5.jpg",
           "source": "https://static.metricool.com/planner/202610/7696609-file-4469365173653547212.jpeg"
         }
-      ]
+      ],
+      "automatic": true
     },
     "reel": {
       "time": "18:00",
@@ -345,6 +351,57 @@
         "time": "18:45",
         "name": "story-2.jpg",
         "source": "https://static.metricool.com/planner/202610/7696609-file-15494347355455596175.jpeg"
+      }
+    ],
+    "post_uploaded_by_user": false
+  },
+  {
+    "date": "2026-11-05",
+    "weekday": "חמישי",
+    "theme": "משימה ברורה — עד לאישור ביצוע",
+    "post": {
+      "time": "10:00",
+      "caption": "״תטפל בזה״ משאיר הרבה מקום לניחוש. משימה ברורה אומרת מה מבצעים, מי אחראי ואיך מתעדים שהסתיים. בהדגמת Work It באתר אפשר לראות קישור למשימה, אישור ביצוע ותיעוד מסודר.\n\nהקרוסלה והסרטון משתמשים בנתוני דוגמה ובהמחשות.\n#ניהולעובדים #תהליכיעבודה #POETEXA",
+      "automatic": true,
+      "files": [
+        {
+          "name": "post-1.jpg",
+          "source": "https://static.metricool.com/planner/202610/7696609-file-5315793671072411153.jpeg"
+        },
+        {
+          "name": "post-2.jpg",
+          "source": "https://static.metricool.com/planner/202610/7696609-file-6353659515085700593.jpeg"
+        },
+        {
+          "name": "post-3.jpg",
+          "source": "https://static.metricool.com/planner/202610/7696609-file-7583546951197998313.jpeg"
+        },
+        {
+          "name": "post-4.jpg",
+          "source": "https://static.metricool.com/planner/202610/7696609-file-2051191759539691630.jpeg"
+        },
+        {
+          "name": "post-5.jpg",
+          "source": "https://static.metricool.com/planner/202610/7696609-file-12914015934728190226.jpeg"
+        }
+      ]
+    },
+    "reel": {
+      "time": "18:00",
+      "caption": "משימה אחת, שלושה תפקידים: המנהל מגדיר, העובד מבצע והמערכת מרכזת את התיעוד. זו המחשה של תהליך Work It עם נתוני דוגמה, לא שיחה עם עובד אמיתי. להדגמה — הקישור בביו.\n\n#ניהולמשימות #עסקיםקטנים #POETEXA",
+      "name": "reel.mp4",
+      "source": "https://static.metricool.com/planner/202610/7696609-file-1731163556506946433.mp4"
+    },
+    "stories": [
+      {
+        "time": "12:30",
+        "name": "story-1.jpg",
+        "source": "https://static.metricool.com/planner/202610/7696609-file-7197037862207682958.jpeg"
+      },
+      {
+        "time": "18:45",
+        "name": "story-2.jpg",
+        "source": "https://static.metricool.com/planner/202610/7696609-file-6138950266874170443.jpeg"
       }
     ],
     "post_uploaded_by_user": false
