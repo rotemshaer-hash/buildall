@@ -406,6 +406,10 @@ ${s.limits.map(t => `      <li>${t}</li>`).join('\n')}
 
 ${s.slug === 'social-content' ? socialShowcase() : ''}
 
+${(s.sections || []).map((section, index) => `<section class="why-sec" id="detail-${index}">
+  <div class="wrap prose"><h2 class="h2">${section.title}</h2>${section.body}</div>
+</section>`).join('\n')}
+
 <section class="faq-sec" id="faq">
   <div class="wrap prose">
     <div class="sec-head">
@@ -484,7 +488,7 @@ ${items.map(o => `      <a class="ind" href="${root}${dir}${o.slug}/"><span clas
 write('guides/index.html', article({
   root: '../', trail: [['דף הבית', ''], ['מדריכים', 'guides/']],
   title: 'מדריכים לבעלי עסקים: אתרים, אפליקציות וניהול | POETEXA',
-  description: 'מדריכים קצרים וברורים לבעלי עסקים: כמה עולה אתר, אתר או אפליקציה, ואיך לנהל משמרות בלי בלגן.',
+  description: 'מדריכים לבעלי עסקים: אקסל או מערכת ניהול, בחירת אוטומציה ראשונה, אתרים, אפליקציות ומשמרות. דוגמאות וכלים שימושיים לפני שמתחילים.',
   h1: 'מדריכים לבעלי עסקים', lead: 'תשובות ברורות לשאלות שכל בעל עסק שואל, לפני שהוא מוציא שקל.',
   body: `    ${linkCards('', guides, '')}`, wide: true
 }));
@@ -497,7 +501,7 @@ for (const g of guides) {
     body: labelTables(g.body),
     extraSchemas: [{
       '@context': 'https://schema.org', '@type': 'Article', headline: g.h1, description: g.description,
-      datePublished: `${g.date}T09:00:00+03:00`, dateModified: `${g.date}T09:00:00+03:00`, inLanguage: 'he',
+      datePublished: `${g.date}T09:00:00${g.utcOffset || '+03:00'}`, dateModified: `${g.date}T09:00:00${g.utcOffset || '+03:00'}`, inLanguage: 'he',
       author: { '@id': BASE + '#business' }, publisher: { '@id': BASE + '#business' },
       image: BASE + 'og.jpg', mainEntityOfPage: BASE + `guides/${g.slug}/`
     }],
@@ -1080,7 +1084,7 @@ write('kb.json', JSON.stringify(buildKnowledge()));
 
 // ---------- sitemap + robots ----------
 const urls = ['', ...industries.map(i => i.slug + '/'), ...services.map(s => s.slug + '/'), 'guides/', ...guides.map(g => `guides/${g.slug}/`),
-  ...cases.map(c => `work/${c.slug}/`), ...legal.map(l => l.slug + '/')];
+  ...cases.map(c => `work/${c.slug}/`), ...legal.map(l => l.slug + '/'), 'tools/time-check/'];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url><loc>${BASE}${u}</loc></url>`).join('\n')}

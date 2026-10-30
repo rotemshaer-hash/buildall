@@ -55,7 +55,7 @@ export function buildKnowledge() {
       ]
     },
     services,
-    servicePages: servicePages.map(s => ({ name: s.short, page: `/${s.slug}/`, about: s.lead, includes: s.integrations, scope: s.limits, faq: s.faq })),
+    servicePages: servicePages.map(s => ({ name: s.short, page: `/${s.slug}/`, about: s.lead, includes: s.integrations, scope: s.limits, details: (s.sections || []).map(section => ({ title: section.title, text: strip(section.body) })), faq: s.faq })),
     industries: industries.map(i => ({
       name: i.short, page: `/${i.slug}/`,
       pains: i.pains.map(p => p.t),
