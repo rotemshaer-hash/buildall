@@ -34,3 +34,14 @@ for (let attempt = 1; ; attempt++) {
   catch (error) { if (attempt === 3) throw error; console.log(`Verification pending (${attempt}/3): ${error.message}`); await new Promise(resolve => setTimeout(resolve, 3000)); }
 }
 console.log('POETEXA site name, seven canonical pages, sitemap and crawl directives verified. Google indexing is not measured by this check.');
+
+// Also verify the reusable free-check campaign's direct phone downloads.
+for (const name of ['reel.mp4', 'story.jpg', 'cover.jpg']) {
+  const response = await fetch(BASE + 'downloads/free-check/' + name, { signal: AbortSignal.timeout(20000) });
+  assert.equal(response.status, 200, `free-check download: ${name}`);
+  assert(response.headers.get('content-disposition')?.includes('attachment'), `attachment: ${name}`);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  assert(bytes.length > 1000, `nonempty: ${name}`);
+  assert(name.endsWith('.mp4') ? bytes.toString('ascii', 4, 8) === 'ftyp' : bytes[0] === 255 && bytes[1] === 216, `media signature: ${name}`);
+  console.log(`Verified free-check download: ${name} (${bytes.length} bytes)`);
+}

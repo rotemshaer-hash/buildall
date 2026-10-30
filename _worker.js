@@ -94,11 +94,12 @@ async function askClaude(env, messages) {
 
 async function downloadSocialKit(request, pathname, env) {
   const match = pathname.match(/^\/downloads\/(2026-10-(?:29|30|31)|2026-11-0[1-5])\/(post-[1-5]\.jpg|story-[12]\.jpg|reel\.mp4)$/);
-  if (!match) return new Response('Not found', { status: 404 });
+  const freeCheck = pathname.match(/^\/downloads\/free-check\/(reel\.mp4|story\.jpg|cover\.jpg)$/);
+  if (!match && !freeCheck) return new Response('Not found', { status: 404 });
   if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
-  const [, date, name] = match;
+  const [, date, name] = match || [null, 'free-check', freeCheck[1]];
   try {
-    const assetUrl = new URL('/media/social-kit/' + date + '/' + name, request.url);
+    const assetUrl = new URL((freeCheck ? '/media/free-check/' : '/media/social-kit/' + date + '/') + name, request.url);
     const upstream = await env.ASSETS.fetch(new Request(assetUrl, { method: request.method }));
     if (!upstream.ok) return new Response('Download unavailable', { status: 502 });
     return new Response(request.method === 'HEAD' ? null : upstream.body, { headers: {
