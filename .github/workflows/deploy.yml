@@ -43,3 +43,6 @@ jobs:
 
       - name: Verify all manual kit downloads
         run: node scripts/check-social-downloads.mjs
+
+      - name: Verify search identity and SEO pages
+        run: node scripts/verify-search-identity.mjs

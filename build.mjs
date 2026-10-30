@@ -206,7 +206,14 @@ write('index.html', page({
   path: '', root: '',
   title: 'POETEXA | אוטומציות, אתרים ותוכן לרשתות לעסקים',
   description: 'מערכות ניהול, אוטומציות AI, דפי נחיתה ותוכן לרשתות: רילסים, פוסטים ותזמון לעסקים. מתכנון ועד פתרון שמתאים לעסק שלך.',
-  schemas: [business, videoSchema, faqSchema(homeFaq)],
+  schemas: [
+    {
+      '@context': 'https://schema.org', '@type': 'WebSite',
+      '@id': BASE + '#website', name: BRAND, url: BASE,
+      inLanguage: 'he-IL', publisher: { '@id': BASE + '#business' }
+    },
+    business, videoSchema, faqSchema(homeFaq)
+  ],
   body: home
 }));
 

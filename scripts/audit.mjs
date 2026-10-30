@@ -87,6 +87,15 @@ for (const c of ['field-photos','employee-quiz','work-it'])
   ok(readFileSync(join(ROOT, `work/${c}/index.html`),'utf8').includes('מה זה שינה'), `"מה זה שינה" בדף ${c}`);
 ok(existsSync(join(ROOT, 'googlef057313d56875ab6.html')), 'קובץ האימות של גוגל');
 
+// Google's preferred site-name signal belongs on the canonical home page.
+const homeIdentityHtml = readFileSync(join(ROOT, 'index.html'), 'utf8');
+const homeIdentitySchemas = [...homeIdentityHtml.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
+const siteNames = homeIdentitySchemas.filter(s => s['@type'] === 'WebSite');
+ok(siteNames.length === 1, 'דף הבית: הגדרת WebSite יחידה');
+ok(siteNames[0]?.name === 'POETEXA', 'דף הבית: שם האתר POETEXA');
+ok(siteNames[0]?.url === 'https://poetexa.pages.dev/', 'דף הבית: כתובת WebSite קנונית');
+ok(homeIdentityHtml.includes('property="og:site_name" content="POETEXA"'), 'דף הבית: שם עקבי ב־Open Graph');
+
 console.log('\nבכל הדפים:');
 for (const page of pages) {
   const html = readFileSync(page, 'utf8');
