@@ -786,3 +786,26 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     card.addEventListener('pointerleave', () => { card.style.transform = ''; });
   });
 }
+
+
+// Respect reduced-motion preferences for the decorative hero background.
+// CSS alone removes animation but does not stop an autoplaying video.
+(() => {
+  const heroVideo = document.querySelector('.poetexa-hero-video');
+  if (!heroVideo || !window.matchMedia) return;
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const sync = () => {
+    if (preference.matches) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+    } else {
+      heroVideo.setAttribute('autoplay', '');
+      // Browsers may reject autoplay even when muted; that is safe to ignore.
+      const playing = heroVideo.play();
+      if (playing && typeof playing.catch === 'function') playing.catch(() => {});
+    }
+  };
+  sync();
+  if (preference.addEventListener) preference.addEventListener('change', sync);
+  else if (preference.addListener) preference.addListener(sync);
+})();
