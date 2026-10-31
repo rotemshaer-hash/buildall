@@ -1,0 +1,46 @@
+# Safe branch-only validation. No publishing or production credentials.
+name: POETEXA Quality Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - 'work/**'
+      - 'design/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Build and audit without deploying
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out proposed code
+        uses: actions/checkout@v4
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build pages
+        run: node build.mjs
+      - name: Collect dist and run full site audit
+        run: node scripts/dist.mjs
+      - name: Check JavaScript syntax
+        run: |
+          node --check site.js
+          node --check build.mjs
+          node --check scripts/audit.mjs
+      - name: Verify search identity
+        run: node scripts/verify-search-identity.mjs
+      - name: Upload build for review (not a deployment)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poetexa-dist-review
+          path: dist/
+          if-no-files-found: warn
+          retention-days: 7

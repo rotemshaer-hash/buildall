@@ -582,7 +582,9 @@ document.addEventListener('click', e => {
   // conversation, and clear the name/phone the lead form was holding.
   const close = () => {
     panel.hidden = true;
-    heroVideo?.play().catch(() => {});
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      heroVideo?.play().catch(() => {});
+    }
     $('ai-open')?.focus();
     controller?.abort();
     busy = false;
@@ -786,3 +788,27 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     card.addEventListener('pointerleave', () => { card.style.transform = ''; });
   });
 }
+
+
+// Respect reduced-motion preferences for the decorative hero background.
+// CSS alone removes animation but does not stop an autoplaying video.
+(() => {
+  const heroVideo = document.querySelector('.poetexa-hero-video');
+  if (!heroVideo || !window.matchMedia) return;
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const sync = () => {
+    const chatOpen = document.getElementById('ai-panel')?.hidden === false;
+    if (preference.matches || chatOpen) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('autoplay');
+    } else {
+      heroVideo.setAttribute('autoplay', '');
+      // Browsers may reject autoplay even when muted; that is safe to ignore.
+      const playing = heroVideo.play();
+      if (playing && typeof playing.catch === 'function') playing.catch(() => {});
+    }
+  };
+  sync();
+  if (preference.addEventListener) preference.addEventListener('change', sync);
+  else if (preference.addListener) preference.addListener(sync);
+})();
