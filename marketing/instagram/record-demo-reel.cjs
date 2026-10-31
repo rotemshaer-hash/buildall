@@ -27,9 +27,18 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
       viewport: { width: 540, height: 960 },
       recordVideo: { dir: rawDir, size: { width: 540, height: 960 } },
     });
+    const t0 = Date.now();
     const page = await context.newPage();
     await page.goto(config.url, { waitUntil: 'networkidle' });
     await page.waitForTimeout(400);
+    // Chromium's recordVideo starts capturing at context creation, before the
+    // page has navigated/painted — so every raw clip opens with a blank/white
+    // lead-in. Left untrimmed, that shows up as a white flash wherever the
+    // clip lands after concatenation, and throws off every timestamp after it
+    // (captions appear to be "late" or "missing" at a given frame index/time).
+    // Measuring the real elapsed time here and trimming it off with ffmpeg
+    // -ss below keeps the exported clip's timeline matching the script.
+    const trimSec = (Date.now() - t0) / 1000;
 
     await page.evaluate(() => {
       const d = document.createElement('div');
@@ -55,9 +64,9 @@ const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
     const raw = fs.readdirSync(rawDir).find(f => f.endsWith('.webm'));
     const rawPath = path.join(rawDir, raw);
-    execFileSync('ffmpeg', ['-y', '-i', rawPath, '-vf', 'scale=1080:1920:flags=lanczos',
+    execFileSync('ffmpeg', ['-y', '-ss', trimSec.toFixed(3), '-i', rawPath, '-vf', 'scale=1080:1920:flags=lanczos',
       '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-r', '30', outPath], { stdio: 'inherit' });
-    console.log('wrote', outPath);
+    console.log('wrote', outPath, 'trimmed', trimSec.toFixed(3), 's lead-in');
   } finally {
     await browser.close();
     fs.rmSync(rawDir, { recursive: true, force: true });
