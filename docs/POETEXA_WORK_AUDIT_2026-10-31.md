@@ -1,5 +1,15 @@
 # POETEXA — WORK AUDIT / HANDOFF — 2026-10-31
 
+## Resumed execution — 31 October 2026
+- Checkout succeeded on `work/poetexa-audit-20261031`, starting at `803246e`.
+- Build and dist audit completed successfully: 31 generated pages, 32 audited pages, 2,919 checks.
+- Fixed decorative video resuming after chat close despite reduced-motion preference, and resuming on a preference change while chat is open. Eight state assertions passed using the motion controller in Node VM.
+- Regenerated `index.html` to include the previously committed source video attributes (`preload="none"`, `tabindex="-1"`).
+- JavaScript syntax and whitespace checks passed; search-identity verification passed for the public canonical pages and three free-check downloads. These are not visual checks of the branch.
+- **Visual QA is blocked, not completed.** Both `sites-preview start` and `sites-preview status` returned `preview relay unavailable: No such file or directory`. No browser screenshots were captured. Desktop/mobile layout, menu interaction and video playback remain visually unverified. Do not describe this branch as visually approved or polished to completion.
+- Next step: restore the managed preview relay, open this branch's built `dist/`, inspect all pages at 360/390/768/1024/1440 px, fix observed defects, repeat checks and capture final screenshots for owner approval.
+- No merge, deployment, social publication or automation change performed.
+
 ## Safety
 - Working branch: `work/poetexa-audit-20261031`; production main untouched.
 - No merge, deploy, Instagram publication, paid generation, or automation modification is authorized by this document.

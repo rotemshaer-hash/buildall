@@ -582,7 +582,9 @@ document.addEventListener('click', e => {
   // conversation, and clear the name/phone the lead form was holding.
   const close = () => {
     panel.hidden = true;
-    heroVideo?.play().catch(() => {});
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      heroVideo?.play().catch(() => {});
+    }
     $('ai-open')?.focus();
     controller?.abort();
     busy = false;
@@ -795,7 +797,8 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   if (!heroVideo || !window.matchMedia) return;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const sync = () => {
-    if (preference.matches) {
+    const chatOpen = document.getElementById('ai-panel')?.hidden === false;
+    if (preference.matches || chatOpen) {
       heroVideo.pause();
       heroVideo.removeAttribute('autoplay');
     } else {
