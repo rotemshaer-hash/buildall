@@ -68,9 +68,11 @@ const industriesSection = root => `<section class="industries" id="industries">
       <h2 class="h2">מה בונים לעסק כמו שלך</h2>
       <p class="lead">לכל תחום יש בעיות משלו. אלה כמה מהתחומים שאנחנו בונים להם. לא מצאת את שלך? אנחנו POETEXA.</p>
     </div>
+    <details class="svc-g sec-g"><summary><span class="ic">${icon('store')}</span><span class="t"><b>לפתרונות לפי התחום שלך</b><small>מסעדות, חנויות, קליניקות ותחומים נוספים</small></span></summary>
     <div class="ind-grid">
 ${industries.map(i => `      <a class="ind" href="${root}${i.slug}/"><span class="ic">${icon(i.icon)}</span><b>${i.short}</b><span class="go">לפתרונות ${icon('arrow')}</span></a>`).join('\n')}
     </div>
+    </details>
   </div>
 </section>`;
 
@@ -97,9 +99,11 @@ const guidesSection = root => `<section class="guides-strip" id="guides">
       <h2 class="h2">לפני שמחליטים</h2>
       <p class="lead">תשובות ברורות לשאלות שכל בעל עסק שואל, לפני שהוא מוציא שקל.</p>
     </div>
+    <details class="svc-g sec-g"><summary><span class="ic">${icon('learn')}</span><span class="t"><b>למדריכים לפני שמחליטים</b><small>אתר או אפליקציה, אקסל, משמרות ואוטומציה ראשונה</small></span></summary>
     <div class="ind-grid">
 ${guides.map(g => `      <a class="ind" href="${root}guides/${g.slug}/"><span class="ic">${icon(g.icon)}</span><b>${g.short}</b><span class="go">${icon('arrow')}</span></a>`).join('\n')}
     </div>
+    </details>
   </div>
 </section>`;
 
@@ -150,13 +154,9 @@ ${contact()}`
 // The visitor picks what's actually slowing him down and gets the answer in place.
 // Covers lost leads, poor discoverability and onboarding too, not only repetitive
 // work — so the heading can't narrow it to "time" alone.
-const problemsSection = root => `<section class="problems" id="problems">
+const problemsSection = root => `<section class="problems" id="more-problems">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">${icon('wrench')} נתחיל מהבעיה</span>
-      <h2 class="h2">מה הכי מעכב אותך בעסק?</h2>
-      <p class="lead">לא צריך לדעת אם הפתרון הוא אתר, מערכת או אפליקציה. אפשר לבחור את מה שהכי מעיק עליך, ונראה לך מה אפשר לעשות איתו.</p>
-    </div>
+    <details class="svc-g sec-g"><summary><span class="ic">${icon('wrench')}</span><span class="t"><b>עוד מצבים שאפשר לשפר</b><small>פניות, תיעוד, צוות והדרכת עובדים</small></span></summary>
     <div class="prob-grid">
 ${problems.map(p => `      <details class="prob" name="prob">
         <summary><span class="ic">${icon(p.icon)}</span><b>${p.t}</b></summary>
@@ -173,6 +173,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
         <span class="ic">${icon('bulb')}</span><b>יש לי משהו אחר</b>
       </a>
     </div>
+    </details>
   </div>
 </section>`;
 
