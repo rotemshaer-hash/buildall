@@ -191,6 +191,10 @@ export function navBar(root) {
     ['work','star','עבודות'],
     ['process','check','איך עובדים'], ['contact','message','יצירת קשר']
   ];
+  if (!root) {
+    const homeOrder = ['problems', 'work', 'film', 'industries', 'services', 'social', 'auto', 'ai', 'process', 'contact'];
+    items.sort((a, b) => homeOrder.indexOf(a[0]) - homeOrder.indexOf(b[0]));
+  }
   return `<nav class="nav-bar" aria-label="ניווט מהיר">
     <details class="mobile-menu">
       <summary aria-label="פתיחה וסגירה של תפריט האתר" title="תפריט">
