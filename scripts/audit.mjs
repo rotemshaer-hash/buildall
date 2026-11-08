@@ -76,7 +76,8 @@ const heroEndMarker = '<div class="wrap poetexa-bento-wrap">';
 const heroEnd = home.indexOf(heroEndMarker);
 ok(heroEnd !== -1, `סימן הסיום של הפתיח (${heroEndMarker}) קיים בדף`);
 const heroSection = home.slice(home.indexOf('<!-- HERO: POETEXA'), heroEnd === -1 ? undefined : heroEnd);
-ok(h1.includes('העסק שלך'), 'הכותרת הראשית מציגה את הבטחת המותג');
+for (const category of ['אתרים', 'מערכות', 'אוטומציות'])
+  ok(h1.includes(category), `הכותרת הראשית מסבירה מה בונים: ${category}`);
 for (const word of ['מערכות ניהול', 'אפליקציות', 'אוטומציות', 'אתרים'])
   ok(heroSection.includes(word), `הפתיח מזכיר "${word}"`);
 ok(existsSync(join(ROOT, '404.html')), 'דף 404 קיים');
