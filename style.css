@@ -246,6 +246,7 @@ a.card:has(.card-go):after{content:none}
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0;padding:0}
+html,body{overflow-x:clip}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:var(--anchor-gap)}
 body{font:400 18px/1.75 Assistant,Arial,sans-serif;color:var(--text);background:var(--card);-webkit-font-smoothing:antialiased}
 h1,h2,h3,summary,.btn{font-family:Rubik,Arial,sans-serif}
@@ -281,7 +282,7 @@ section{padding-block:clamp(64px,7vw,104px)}
 @keyframes btn-sheen{0%,45%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 22px #087c581c}
 .btn-line,.btn-ghost,.btn-call{color:var(--teal);background:#fff;border-color:var(--line-strong)}
-.btn:hover{box-shadow:var(--sh)}.btn:disabled{cursor:wait;opacity:.65}
+.btn:hover{box-shadow:var(--sh)}.btn:disabled{cursor:wait;background:var(--line-strong);color:var(--muted);box-shadow:none}
 .i{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;color:var(--teal)}
 header{position:sticky;top:0;z-index:30;background:#fffffff5;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 header .wrap{height:var(--head-h);display:flex;align-items:center;justify-content:space-between;gap:24px}

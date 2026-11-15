@@ -174,7 +174,7 @@ export function header(root) {
     <div class="head-actions">
       <a class="btn btn-call" href="tel:${PHONE.tel}" data-call aria-label="חיוג ל־${PHONE.display}"><svg class="i" aria-hidden="true"><use href="#i-call"/></svg><span>התקשר</span></a>
       <button class="btn btn-ai ai-open" id="ai-open" type="button" aria-label="פתיחת צ'אט עם העוזר החכם"><svg class="i" aria-hidden="true"><use href="#i-bot"/></svg><span>שאל AI</span></button>
-      <a aria-label="שיחה בוואטסאפ" class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
+      <a aria-label="שיחה בוואטסאפ" class="btn btn-wa head-cta" data-wa href="${root}#contact"><svg aria-hidden="true"><use href="#wa"/></svg><span class="wa-t">וואטסאפ</span></a>
       ${navBar(root)}
     </div>
   </div>
@@ -260,7 +260,7 @@ export function footer(root, nav) {
       <input aria-label="שם" id="ai-name" placeholder="שם" autocomplete="name" required>
       <input aria-label="טלפון" id="ai-phone" type="tel" placeholder="טלפון" inputmode="tel" autocomplete="tel" required>
     </div>
-    <button class="btn btn-wa" type="submit"><svg><use href="#wa"/></svg>שליחה בוואטסאפ</button>
+    <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#wa"/></svg>שליחה בוואטסאפ</button>
     <button type="button" class="ai-skip" id="ai-skip">לא עכשיו</button>
   </form>
 </div>
@@ -311,7 +311,7 @@ export function contact(lead = FORM_KEY
       <label>במשפט אחד, מה הרעיון?<textarea name="msg" placeholder="לדוגמה: אני רוצה שהעובדים יקבלו את סידור העבודה בקישור"></textarea></label>
       <!-- מלכודת ספאם: שדה שרק בוט ממלא. הוא מוסתר מהעין ומקוראי מסך. -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-      <button class="btn btn-wa" type="submit" data-wa><svg><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>${FORM_KEY ? `
+      <button class="btn btn-wa" type="submit" data-wa><svg aria-hidden="true"><use href="#wa"/></svg>פתח וואטסאפ לתיאום שיחת ייעוץ</button>${FORM_KEY ? `
       <button class="btn btn-line" type="button" id="send-mail"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>או שליחה במייל</button>` : ''}
       <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       <p class="note">ההודעה תיפתח מוכנה בוואטסאפ, ויש ללחוץ שליחה. בלי התחייבות.</p>
