@@ -2,3 +2,4 @@ dist/
 promo/
 node_modules
 __pycache__/
+.hallmark/

@@ -816,13 +816,13 @@ write('demo/landing/index.html', `<!doctype html>
 <title>נועה ברק · פילאטיס | דף נחיתה לדוגמה של ${BRAND}</title>
 <meta name="description" content="דף נחיתה לדוגמה לקמפיין באינסטגרם ובפייסבוק: הצעה אחת, טופס שנפתח במקום, שאלון התאמה, כפתור וואטסאפ ומעקב מאיפה הגיע הליד. נבנה על ידי POETEXA.">
 <link rel="canonical" href="${BASE}demo/landing/">
-<meta name="theme-color" content="#F7F3EB">
+<meta name="theme-color" content="#fafaf7">
 <!-- An instructor who does not exist: keep it out of search so nobody books a class. -->
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="${favicon}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500&family=Funnel+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -832,7 +832,7 @@ write('demo/landing/index.html', `<!doctype html>
 </div>
 ${readFileSync('src/demo-landing.html', 'utf8').replace('א׳–ה׳ 06:30–21:00 · ו׳ 07:00–13:00', demoHoursLabel(DEMO_HOURS))}
 <footer class="l-foot">
-  <p><b>נועה ברק · פילאטיס ואימון אישי</b> · אבן גבירול 00, תל אביב</p>
+  <p><b class="l-foot-name">נועה ברק · פילאטיס ואימון אישי</b><span class="l-foot-addr">אבן גבירול 00, תל אביב</span></p>
   <p class="l-dis">זהו דף נחיתה להדגמה. המאמנת, הכתובת והשעות אינם אמיתיים, התמונה היא איור, ושום פנייה לא נשלחת. <a href="../../">POETEXA</a> בנתה אותו כדי להראות לאן מודעה באינסטגרם או בפייסבוק צריכה לנחות.</p>
 </footer>
 <script>
@@ -879,7 +879,7 @@ ${readFileSync('src/demo-landing.html', 'utf8').replace('א׳–ה׳ 06:30–21:
     bars.innerHTML = Object.keys(LABELS).map(k => {
       const n = taps[k] || 0;
       return '<li><span class="k">' + LABELS[k] + ' <em>' + n + '</em></span>' +
-             '<span class="t"><i style="width:' + (n / top * 100) + '%"></i></span></li>';
+             '<span class="t"><i style="transform:scaleX(' + (n / top) + ')"></i></span></li>';
     }).join('');
   };
   const count = k => { taps[k] = (taps[k] || 0) + 1; draw(); };
@@ -917,7 +917,7 @@ ${readFileSync('src/demo-landing.html', 'utf8').replace('א׳–ה׳ 06:30–21:
       return;
     }
     q.textContent = Q[i][0];
-    bar.style.width = (i / Q.length * 100) + '%';
+    bar.style.transform = 'scaleX(' + (i / Q.length) + ')';
     opts.innerHTML = '';
     for (const a of Q[i][1]) {
       const btn = document.createElement('button');
