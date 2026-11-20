@@ -164,7 +164,7 @@ ${problems.map(p => `      <details class="prob" name="prob">
           <p class="prob-why">${p.why}</p>
           <p class="prob-fix"><b>מה אפשר לעשות:</b> ${p.fix}</p>
           <div class="prob-cta">
-            <a class="btn btn-wa" data-wa data-msg="${attr(p.t)}" href="#contact"><svg><use href="#wa"/></svg>בדיוק זה אצלי</a>
+            <a class="btn btn-wa" data-wa data-msg="${attr(p.t)}" href="#contact"><svg aria-hidden="true"><use href="#wa"/></svg>בדיוק זה אצלי</a>
             ${p.work ? `<a class="btn btn-line" href="${root}work/${p.work}/">ראה את ${p.workName} ←</a>` : ''}
           </div>
         </div>
@@ -246,7 +246,7 @@ for (const i of industries) {
     <h1>${i.h1}</h1>
     <p>${i.lead}</p>
     <div class="ctas">
-      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ</a>
+      <a class="btn btn-wa" data-wa href="#contact"><svg aria-hidden="true"><use href="#wa"/></svg>שיחת ייעוץ</a>
       <a class="btn btn-ghost" href="#solutions">מה אפשר לבנות?</a>
     </div>
   </div>
@@ -362,7 +362,7 @@ for (const s of services) {
     <h1>${s.h1}</h1>
     <p>${s.lead}</p>
     <div class="ctas">
-      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ</a>
+      <a class="btn btn-wa" data-wa href="#contact"><svg aria-hidden="true"><use href="#wa"/></svg>שיחת ייעוץ</a>
       <a class="btn btn-line" href="${exampleHref}">${s.slug === 'social-content' ? 'לצפייה ברילסים' : 'לצפייה בהדגמה'} <span aria-hidden="true">←</span></a>
     </div>
   </div>
@@ -541,7 +541,7 @@ const workItDemo = () => `${demoFab('#demo', '#demo')}
               <select id="d-due"><option>היום</option><option>מחר</option><option>סוף השבוע</option></select>
             </label>
           </div>
-          <button class="btn btn-wa" id="d-send" type="button"><svg><use href="#wa"/></svg>שלח משימה</button>
+          <button class="btn btn-wa" id="d-send" type="button"><svg aria-hidden="true"><use href="#wa"/></svg>שלח משימה</button>
           <ul class="demo-log" id="d-log"><li class="empty">כאן יופיע מה שקורה עם המשימה</li></ul>
           <div class="demo-export" id="d-export" hidden>
             <button class="btn btn-line" type="button" id="d-xlsx"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>ייצוא דוח אקסל</button>
@@ -607,7 +607,7 @@ const autoInboxDemo = () => `${demoFab('#demo', '#demo')}
       <p class="lead">הדגמה חיה שרצה כאן בדף, עם נתוני דוגמה מסומנים — שום הודעה אמיתית לא נשלחת. לוחצים, וצופים איפה האוטומציה פועלת לבד ואיפה אתה מאשר.</p>
     </div>
     <div class="inbox-demo" data-inbox-demo>
-      <button class="btn btn-wa" id="ib-new" type="button"><svg><use href="#wa"/></svg>קבל פנייה לדוגמה</button>
+      <button class="btn btn-wa" id="ib-new" type="button"><svg aria-hidden="true"><use href="#wa"/></svg>קבל פנייה לדוגמה</button>
       <div class="ib-flow">
         <div class="ib-step">
           <span class="ib-step-tag">${icon('message')} הפנייה נכנסת</span>
@@ -643,7 +643,7 @@ const quickQuoteDemo = () => `${demoFab('#demo', '#demo')}
       <p class="lead">הדגמה חיה שרצה כאן בדף, עם נתוני דוגמה מסומנים — שום הודעה אמיתית לא נשלחת. שימו לב: האוטומציה בונה את היקף העבודה, אבל לעולם לא נוגעת במחיר.</p>
     </div>
     <div class="inbox-demo" data-quote-demo>
-      <button class="btn btn-wa" id="qq-new" type="button"><svg><use href="#wa"/></svg>קבל פנייה לדוגמה מלקוח</button>
+      <button class="btn btn-wa" id="qq-new" type="button"><svg aria-hidden="true"><use href="#wa"/></svg>קבל פנייה לדוגמה מלקוח</button>
       <div class="ib-flow">
         <div class="ib-step">
           <span class="ib-step-tag">${icon('message')} הלקוח מתאר עבודה</span>
@@ -680,7 +680,7 @@ const phoneOrderDemo = () => `${demoFab('#demo', '#demo')}
       <p class="lead">הדגמה חיה שרצה כאן בדף, עם שיחה מומצאת — שום שיחה אמיתית לא מתבצעת. ה-AI "מנהל" את השיחה ותופס ממנה את פרטי ההזמנה, בזמן אמת.</p>
     </div>
     <div class="inbox-demo" data-phone-demo>
-      <button class="btn btn-wa" id="po-new" type="button"><svg><use href="#wa"/></svg>קבל שיחה לדוגמה</button>
+      <button class="btn btn-wa" id="po-new" type="button"><svg aria-hidden="true"><use href="#wa"/></svg>קבל שיחה לדוגמה</button>
       <div class="ib-flow">
         <div class="ib-step">
           <span class="ib-step-tag">📞 שיחה נכנסת</span>
