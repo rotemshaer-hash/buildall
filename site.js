@@ -5,7 +5,7 @@
 const WA_NUMBER = (document.querySelector('[data-call]')?.getAttribute('href') || '').replace(/\D/g, '');
 
 const waLink = text => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
-const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של POETEXA ואשמח לשיחת ייעוץ חינם 🙂';
+const GREETING = document.body.dataset.greeting || 'היי, הגעתי מהאתר של POETEXA ואשמח לשיחת ייעוץ 🙂';
 if (WA_NUMBER) {
   document.querySelectorAll('a[data-wa]').forEach(a => {
     // data-msg lets a card ask about its own subject; without it the general greeting is sent.
@@ -356,7 +356,7 @@ document.addEventListener('click', e => {
   // Clearly fictional sample inquiries — nothing here is a real conversation.
   const SAMPLES = [
     { text: 'היי, אפשר לקבוע תור לשבוע הבא?', tag: 'קביעת תור', reply: 'בשמחה! אשלח לך קישור לבחירת מועד פנוי.' },
-    { text: 'מה המחיר בערך לאתר קטן?', tag: 'בקשת הצעת מחיר', reply: 'המחיר נקבע אחרי שיחת ייעוץ חינם כדי שיהיה מדויק. נקבע אחת?' },
+    { text: 'מה המחיר בערך לאתר קטן?', tag: 'בקשת הצעת מחיר', reply: 'המחיר נקבע אחרי שיחת ייעוץ כדי שיהיה מדויק. נקבע אחת?' },
     { text: 'האתר שלי לא נטען, אפשר עזרה?', tag: 'תמיכה טכנית', reply: 'מצטערים על זה! אפשר לשלוח צילום מסך של השגיאה?' },
     { text: 'מעוניין לשמוע עוד על השירותים שלכם', tag: 'כללי', reply: 'כמובן! על מה הכי מעניין אותך לשמוע — אתר, אפליקציה, או אוטומציה?' }
   ];

@@ -246,7 +246,7 @@ for (const i of industries) {
     <h1>${i.h1}</h1>
     <p>${i.lead}</p>
     <div class="ctas">
-      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ חינם</a>
+      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ</a>
       <a class="btn btn-ghost" href="#solutions">מה אפשר לבנות?</a>
     </div>
   </div>
@@ -318,7 +318,7 @@ ${others.map(o => `      <a class="ind" href="${root}${o.slug}/"><span class="ic
 
   write(`${i.slug}/index.html`, page({
     path: i.slug + '/', root, title: i.title, description: i.description,
-    greeting: `היי, הגעתי מהאתר של POETEXA (${i.short}) ואשמח לשיחת ייעוץ חינם 🙂`,
+    greeting: `היי, הגעתי מהאתר של POETEXA (${i.short}) ואשמח לשיחת ייעוץ 🙂`,
     from: `היי, הגעתי מהאתר של POETEXA (${i.short})`,
     schemas: [
       {
@@ -362,7 +362,7 @@ for (const s of services) {
     <h1>${s.h1}</h1>
     <p>${s.lead}</p>
     <div class="ctas">
-      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ חינם</a>
+      <a class="btn btn-wa" data-wa href="#contact"><svg><use href="#wa"/></svg>שיחת ייעוץ</a>
       <a class="btn btn-line" href="${exampleHref}">${s.slug === 'social-content' ? 'לצפייה ברילסים' : 'לצפייה בהדגמה'} <span aria-hidden="true">←</span></a>
     </div>
   </div>
@@ -434,7 +434,7 @@ ${contact('ספר לנו על העסק, ונחזור אליך.')}`;
 
   write(`${s.slug}/index.html`, page({
     path: s.slug + '/', root, title: s.title, description: s.description,
-    greeting: `היי, הגעתי מהאתר של POETEXA (${s.short}) ואשמח לשיחת ייעוץ חינם 🙂`,
+    greeting: `היי, הגעתי מהאתר של POETEXA (${s.short}) ואשמח לשיחת ייעוץ 🙂`,
     from: `היי, הגעתי מהאתר של POETEXA (${s.short})`,
     schemas: [
       {
